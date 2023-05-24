@@ -44,6 +44,8 @@ $app->singleton(
 */
 
 $app->configure('app');
+$app->configure('permission');
+$app->configure('jwt');
 
 /*
 |--------------------------------------------------------------------------
@@ -52,7 +54,9 @@ $app->configure('app');
 */
 
 $app->middleware([
-  
+  'auth'       => App\Http\Middleware\Authenticate::class,
+  'permission' => Spatie\Permission\Middlewares\PermissionMiddleware::class,
+  'role'       => Spatie\Permission\Middlewares\RoleMiddleware::class,
 ]);
 
 $app->routeMiddleware([
@@ -68,13 +72,21 @@ $app->routeMiddleware([
 $app->register(App\Providers\AppServiceProvider::class);
 $app->register(App\Providers\AuthServiceProvider::class);
 $app->register(App\Providers\EventServiceProvider::class);
+$app->register(Spatie\Permission\PermissionServiceProvider::class);
+$app->register(PHPOpenSourceSaver\JWTAuth\Providers\LumenServiceProvider::class);
 $app->register(Flipbox\LumenGenerator\LumenGeneratorServiceProvider::class);
+/*
+|--------------------------------------------------------------------------
+| alias
+|--------------------------------------------------------------------------
+*/
+$app->alias('cache', \Illuminate\Cache\CacheManager::class);
+
 /*
 |--------------------------------------------------------------------------
 | Load The Application Routes
 |--------------------------------------------------------------------------
 */
-
 $app->router->group([
   'namespace' => 'App\Http\Controllers',
 ], function ($router) {
