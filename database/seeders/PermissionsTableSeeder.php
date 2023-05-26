@@ -76,8 +76,6 @@ class PermissionsTableSeeder extends Seeder
 			'SYSTEM-SETTING-VARIABLES',
 			'SYSTEM-USERS-SUPERADMIN',
 			'SYSTEM-USERS-OPERATOR',			
-
-			'SYSTEM-MIGRATION'
 		];
 		$records=[];
 		foreach($modules as $v)
