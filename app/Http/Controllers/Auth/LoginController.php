@@ -47,4 +47,13 @@ class LoginController extends Controller
 	public function username () {
 		return 'username';
 	}
+    /**
+     * Fungsi ini dieksekusi saat berhasil logn
+     *
+     * @return void
+     */
+    protected function authenticated($request, $user)
+    {
+        //
+    }
 }
