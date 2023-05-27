@@ -6,21 +6,19 @@
         <div class="main-hotair">
             <center><img src="{{asset('home/images/BIH.png')}}" style="width:120px;"></center>
             <div class="content-wthree">
-                <h1 style="font-size: 15px;margin-top: 15px;">Bintan In Hand</h1><BR>
+                <h1 style="font-size: 15px;">Bintan In Hand</h1>
+                @error('username')
+                <center><span class="invalid-feedback" role="alert" style="margin-top:-55px;">
+                    <strong style="color:rgb(250, 250, 250);font-size:12px;">{{ $message }}</strong>
+                </span>
+            </center>
+            @enderror
+                   <BR> 
+                    
                 <form  action="{{ route('login') }}" method="post"> 
                     @csrf
                     <input type="username" class="text" name="username" placeholder="Username" required="" autofocus>
-                    @error('username')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                    @enderror
                     <input type="password" class="password" name="password" placeholder="Password" required="" autofocus>
-                    @error('password')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                    @enderror
                     <button class="btn" type="submit">Login</button>
                 </form>                
                 <p class="continue">
