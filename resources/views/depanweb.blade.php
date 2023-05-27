@@ -4,10 +4,10 @@
     <!-- /form -->
     <div class="workinghny-form-grid">
         <div class="main-hotair">
-            <center><img src="{{asset('home/images/ll.png')}}" style="width:120px;"></center>
+            <center><img src="{{asset('home/images/BIH.png')}}" style="width:120px;"></center>
             <div class="content-wthree">
                 <h1 style="font-size: 15px;margin-top: 15px;">Bintan In Hand</h1><BR>
-                <form action="#" method="post"> 
+                <form action="" method="post"> 
                     <input type="email" class="text" name="text" placeholder="Email" required="" autofocus>
                     <input type="password" class="password" name="password" placeholder="Password" required="" autofocus>
                     <button class="btn" type="submit">Login</button>
