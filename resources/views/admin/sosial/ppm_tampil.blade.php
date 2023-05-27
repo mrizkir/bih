@@ -52,8 +52,8 @@
                                     <thead>
                                         <tr style="background:rgb(4, 89, 123);color:white;font-size: 12px;">
                                             <th style="width: 2%;"><center>No</center></th> 
-                                            <th style="width: 78%;">Data Series / Presentase</th> 
-                                            <th style="width: 20%;"><center>AKSI</center></th>
+                                            <th style="width: 80%;">Data Tahun / Series / Presentase</th> 
+                                            <th style="width: 10%;"><center>AKSI</center></th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -65,17 +65,13 @@
                                                     <center>{{$i++}}</center>
                                                 </th>
                                                 <th>
-                                                    <a href="" data-toggle="modal"
-                                                        data-target="#modal">
-                                                        Tahun : 1998<BR></a>
-                                                        Data Series :450<BR>
-                                                        Data Presentase : 67%
+                                                        Tahun : 1998 | Series : 450 | Presentase : 67%
                                                 </th>
                                                  
                                                 <th class="project-actions text-right" style="padding: 10px;">
                                                     <center>
-                                                        <a class="btn btn-info btn-sm"
-                                                            href="/bukutampil/seo/edit" style="font-size: 10px;">
+                                                        <a href="" class="btn btn-info btn-sm" data-toggle="modal" style="font-size: 10px;"
+                                                        data-target="#modaledit">
                                                             <i class="fas fa-pencil-alt"></i> Edit</a> 
                                                     </center>
                                                 </th>
@@ -85,24 +81,20 @@
                                                     <center>{{$i++}}</center>
                                                 </th>
                                                 <th>
-                                                    <a href="" data-toggle="modal"
-                                                        data-target="#modal">
-                                                        Tahun : 1999<BR></a>
-                                                        Data Series : 350<BR>
-                                                        Data Presentase : 87%
+                                                        Tahun : 1999 | Series : 350 | Presentase : 87%
                                                 </th>
                                                  
                                                 <th class="project-actions text-right" style="padding: 10px;">
                                                     <center>
-                                                        <a class="btn btn-info btn-sm"
-                                                            href="/bukutampil/seo/edit" style="font-size: 10px;">
+                                                        <a href="" class="btn btn-info btn-sm" data-toggle="modal" style="font-size: 10px;"
+                                                        data-target="#modaledit">
                                                             <i class="fas fa-pencil-alt"></i> Edit</a> 
                                                     </center>
                                                 </th>
                                             </tr>
 
                                             {{-- VIEW MODAL EDIT --}}
-                                            <div class="modal fade" id="modal" role="dialog">
+                                            <div class="modal fade" id="modaledit" role="dialog">
                                                 <div class="modal-dialog modal-xl">
                                                     <div class="modal-content" style="padding:30px;">
                                                         <div class="container" style="padding:30px;">
@@ -110,8 +102,7 @@
                                                                 <div class="row">
                                                                     <div class="col-12">
                                                                         <span
-                                                                            style="font-size:15px;color:rgb(10, 100, 100);"><b>Edit Data {{$title}}</b></span>
-                                                                         
+                                                                            style="font-size:20px;color:rgb(10, 100, 100);"><b>Edit Data {{$title}}</b></span>
                                                                             <form action="{{ '/bukustore' }}" method="POST" enctype="multipart/form-data">
                                                                                 @csrf
                                                                                 <div class="card-body"> 
