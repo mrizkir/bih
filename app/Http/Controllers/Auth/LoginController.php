@@ -37,4 +37,14 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+    public function showLoginForm()
+    {
+        return view('admin.adminbih', ['title' => '.:: Halaman Login Admin BIH']);
+    }
+    /**
+	 * ganti field email menjadi username
+	*/
+	public function username () {
+		return 'username';
+	}
 }
