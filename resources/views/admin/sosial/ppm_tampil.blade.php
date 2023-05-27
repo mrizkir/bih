@@ -39,7 +39,7 @@
                                         <B style="font-size:12px;"> Tambah Data</B>
                                     </button>
 
-                                    <a href="{{ '/cetakbuku' }}" target="_blank">
+                                    <a href="{{ '' }}" target="_blank">
                                         <button style="float:right;margin-right:10px;" type="button"
                                             class="btn btn-success">
                                             <B><i class="fa fa-print"></i></B>
@@ -51,46 +51,48 @@
                                 <table id="example" class="table table-striped table-bordered" style="width:100%">
                                     <thead>
                                         <tr style="background:rgb(4, 89, 123);color:white;font-size: 12px;">
-                                            <th style="width: 2%;">
-                                                <center>No</center>
-                                            </th>
-                                            <th style="width: 7%;">
-                                                <center>Tahun</center>
-                                            </th>
-                                            <th style="width: 40%;">Data Series</th>
-                                            <th style="width: 40%;">Presentase</th>
-                                            <th style="width: 20%;">
-                                                <center>AKSI</center>
-                                            </th>
+                                            <th style="width: 2%;"><center>No</center></th> 
+                                            <th style="width: 78%;">Data Series / Presentase</th> 
+                                            <th style="width: 20%;"><center>AKSI</center></th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                         
+                                         <?PHP
+                                         $i = 1;
+                                         ?>
                                             <tr style="font-size: 11px;">
                                                 <th>
-                                                    <center>1</center>
+                                                    <center>{{$i++}}</center>
                                                 </th>
                                                 <th>
                                                     <a href="" data-toggle="modal"
                                                         data-target="#modal">
-                                                        <center>sdhdfh</center>
-                                                    </a>
+                                                        Tahun : 1998<BR></a>
+                                                        Data Series :450<BR>
+                                                        Data Presentase : 67%
                                                 </th>
-                                                <th><b>
-                                                        <a href="" data-toggle="modal"
-                                                            data-target="#modal">
-                                                           sdfhsdf
-                                                        </a>
-                                                    </b>
+                                                 
+                                                <th class="project-actions text-right" style="padding: 10px;">
+                                                    <center>
+                                                        <a class="btn btn-info btn-sm"
+                                                            href="/bukutampil/seo/edit" style="font-size: 10px;">
+                                                            <i class="fas fa-pencil-alt"></i> Edit</a> 
+                                                    </center>
                                                 </th>
-                                                <th><b>
+                                            </tr>
+                                            <tr style="font-size: 11px;">
+                                                <th>
+                                                    <center>{{$i++}}</center>
+                                                </th>
+                                                <th>
                                                     <a href="" data-toggle="modal"
                                                         data-target="#modal">
-                                                       sdfhsdf
-                                                    </a>
-                                                </b>
-                                            </th>
-                                                <th class="project-actions text-right" style="padding: 5px;">
+                                                        Tahun : 1999<BR></a>
+                                                        Data Series : 350<BR>
+                                                        Data Presentase : 87%
+                                                </th>
+                                                 
+                                                <th class="project-actions text-right" style="padding: 10px;">
                                                     <center>
                                                         <a class="btn btn-info btn-sm"
                                                             href="/bukutampil/seo/edit" style="font-size: 10px;">
@@ -99,49 +101,52 @@
                                                 </th>
                                             </tr>
 
-                                            {{-- VIEW MODAL STAR --}}
+                                            {{-- VIEW MODAL EDIT --}}
                                             <div class="modal fade" id="modal" role="dialog">
                                                 <div class="modal-dialog modal-xl">
                                                     <div class="modal-content" style="padding:30px;">
                                                         <div class="container" style="padding:30px;">
                                                             <div class="form-group">
                                                                 <div class="row">
-                                                                    <div class="col-4">
-                                                                        <img src=""
-                                                                            style="width:100%;padding:2px;float:left;">
-                                                                    </div>
-                                                                    <div class="col-8">
+                                                                    <div class="col-12">
                                                                         <span
-                                                                            style="font-size:25px;color:rgb(10, 100, 100);"><b>sdg</b></span>
-                                                                        <HR>
-                                                                        <div class="row">
-                                                                            <div class="col-2">
-                                                                                <span
-                                                                                    style="font-size:14px;">Pengarang</span><BR>
-                                                                                <span
-                                                                                    style="font-size:14px;">Penerbit</span><BR>
-                                                                                
-                                                                            </div>
-                                                                            <div class="col-10">
-                                                                                <span style="font-size:14px;">: &nbsp;&nbsp;
-                                                                                    <b>sdgsdgs</b></span><BR>
-                                                                                
-                                                                            </div>
-                                                                        </div>
-                                                                        <HR>
-                                                                        <span
-                                                                            style="font-size:17px;color:rgb(18, 171, 191);"><b>Sinopsis/Deskripsi
-                                                                                :</b></span><BR>
-                                                                        <span style="font-size:12px;">
-                                                                            <p style="text-align: justify;">
-                                                                                 sdgasdg</p>
-                                                                        </span>
-                                                                        <HR>
-                                                                        <img src="{{ asset('home/images/img/qwe.png') }}"
-                                                                            style="width: 4%;margin-right:6px;padding:2px;float:left;">
-                                                                        <h4 class="modal-title"
-                                                                            style="font-size:20px;color:rgb(10, 58, 100);">
-                                                                            Buku SMPN 8 Kota Tanjungpinang</h4>
+                                                                            style="font-size:15px;color:rgb(10, 100, 100);"><b>Edit Data {{$title}}</b></span>
+                                                                         
+                                                                            <form action="{{ '/bukustore' }}" method="POST" enctype="multipart/form-data">
+                                                                                @csrf
+                                                                                <div class="card-body"> 
+                                                                                    <div class="form-group">
+                                                                                        <div class="row">
+                                                                                            <div class="col-4">
+                                                                                                <label>Tahun</label>
+                                                                                        <input type="text" name="tahun"
+                                                                                            class="form-control @error('tahun') is-invalid @enderror"
+                                                                                            value="1912" required>
+                                                                                            </div>
+                                                                                            <div class="col-4">
+                                                                                                <label>Data Series</label>
+                                                                                                <input type="text" name="data_series"
+                                                                                                    class="form-control @error('data_series') is-invalid @enderror"
+                                                                                                    value="234" required>
+                                                                                            </div>
+                                                                                            <div class="col-4">
+                                                                                                <label>Data Presentase</label>
+                                                                                                <input type="text" name="data_presentase"
+                                                                                                    class="form-control @error('data_presentase') is-invalid @enderror"
+                                                                                                    value="34%" required>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    
+                                                
+                                                                                </div>
+                                                
+                                                                                <div class="modal-footer justify-content-between">
+                                                                                    <button type="submit" class="btn btn-info">Simpan</button>
+                                                                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                                                                                </div>
+                                                                            </form> 
+                                                                         
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -175,23 +180,12 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-                {{-- VIEW Buku MODAL --}}
+                {{-- TAMBAH MODAL --}}
                 <div class="modal fade" id="modal-default">
                     <div class="modal-dialog modal-xl">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h4 class="modal-title" style="color:rgb(2, 17, 42)">Input Data Buku SMPN 8 Kota
-                                    Tanjungpinang</h4>
+                                <h4 class="modal-title" style="color:rgb(2, 17, 42)">Tambah Data {{$title}}</h4>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
@@ -199,123 +193,30 @@
 
                             <form action="{{ '/bukustore' }}" method="POST" enctype="multipart/form-data">
                                 @csrf
-                                <div class="card-body">
-                                    <div class="form-group">
-                                        <label>Judul Buku</label>
-                                        <input type="text" name="judul"
-                                            class="form-control @error('judul') is-invalid @enderror"
-                                            placeholder="Ketik Judul Buku" required>
-                                    </div>
+                                <div class="card-body"> 
                                     <div class="form-group">
                                         <div class="row">
                                             <div class="col-4">
-                                                <label>Nomor ISBN</label>
-                                                <input type="text" name="isbn"
-                                                    class="form-control @error('isbn') is-invalid @enderror"
-                                                    placeholder="Nomor ISBN" required>
+                                                <label>Tahun</label>
+                                        <input type="text" name="tahun"
+                                            class="form-control @error('tahun') is-invalid @enderror"
+                                            placeholder="Ketik tahun" required>
                                             </div>
-                                            <div class="col-8">
-                                                <label>Penerbit</label>
-                                                <input type="text" name="penerbit"
-                                                    class="form-control @error('penerbit') is-invalid @enderror"
-                                                    placeholder="Penerbit" required>
+                                            <div class="col-4">
+                                                <label>Data Series</label>
+                                                <input type="text" name="data_series"
+                                                    class="form-control @error('data_series') is-invalid @enderror"
+                                                    placeholder="Ketik Data Series" required>
+                                            </div>
+                                            <div class="col-4">
+                                                <label>Data Presentase</label>
+                                                <input type="text" name="data_presentase"
+                                                    class="form-control @error('data_presentase') is-invalid @enderror"
+                                                    placeholder="Ketik  Data Presentase" required>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="form-group">
-                                        <div class="row">
-                                            <div class="col-4">
-                                                <label>Pengarang Buku</label>
-                                                <input type="text" name="pengarang"
-                                                    class="form-control @error('pengarang') is-invalid @enderror"
-                                                    placeholder="Pengarang" required>
-                                            </div>
-                                            <div class="col-4">
-                                                <label>Halaman Buku</label>
-                                                <input type="text" name="hal"
-                                                    class="form-control @error('hal') is-invalid @enderror"
-                                                    placeholder="45 Halaman" required>
-                                            </div>
-                                            <div class="col-4">
-                                                <label>Eksemplar Buku</label>
-                                                <input type="text" name="eksemplar"
-                                                    class="form-control @error('eksemplar') is-invalid @enderror"
-                                                    placeholder="12 eksemplar" required>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="row">
-                                            <div class="col-4">
-                                                <label>Kode Buku</label>
-                                                <input type="text" name="kdbuku"
-                                                    class="form-control @error('kdbuku') is-invalid @enderror"
-                                                    placeholder="SMP8001" required>
-                                            </div>
-                                            <div class="col-4">
-                                                <label>Lokasi Buku</label>
-                                                <input type="text" name="rak"
-                                                    class="form-control @error('rak') is-invalid @enderror"
-                                                    placeholder="RAK 1" required>
-                                            </div>
-                                            <div class="col-4">
-                                                <label>Kelas</label>
-                                                <select name="kelas" class="form-control selectpicker"
-                                                    data-live-search="true">
-                                                    <option @error('kelas') is-invalid @enderror
-                                                        value=".:: Pilih Kelas ::.">.:: Pilih Kelas ::.</option>
-                                                    <option @error('kelas') is-invalid @enderror value="Kelas 7">Kelas 7
-                                                    </option>
-                                                    <option @error('kelas') is-invalid @enderror value="Kelas 8">Kelas 8
-                                                    </option>
-                                                    <option @error('kelas') is-invalid @enderror value="Kelas 9">Kelas 9
-                                                    </option>
-                                                    <option @error('kelas') is-invalid @enderror value="Kelas 10">Kelas 10
-                                                    </option>
-                                                    <option @error('kelas') is-invalid @enderror value="Kelas 11">Kelas 11
-                                                    </option>
-                                                    <option @error('kelas') is-invalid @enderror value="Kelas 12">Kelas 12
-                                                    </option>
-                                                    <option @error('kelas') is-invalid @enderror value="Umum">Umum
-                                                    </option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <div class="row">
-                                            <div class="col-4">
-                                                <label>Masuk ke Kategori Buku</label>
-                                                
-                                            </div>
-                                            <div class="col-4">
-                                                <label>Menggunakan Bahasa</label>
-                                                 
-                                            </div>
-                                            <div class="col-4">
-                                                <label>Tahun Terbit Buku</label>
-                                                <input class="form-control" id="date" name="date"
-                                                    placeholder="Isi Tanggal Input" type="date" required>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label>Sinopsis/Deskripsi</label>
-                                        <textarea type="text" class="form-control" name="isi" rows="5" placeholder="Ketik Sinopsis Disini"
-                                            required></textarea>
-                                    </div>
-
-                                    <div class="form-group mb-3">
-                                        <div class="row">
-                                            <div class="col-4">
-                                                <label>Input Gambar Cover Buku</label>
-                                                <input type="file" name="gambar" class="form-control"
-                                                    id="inputGroupFile02" required>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    
 
                                 </div>
 
