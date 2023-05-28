@@ -16,6 +16,7 @@ return new class extends Migration
       $table->year('tahun');
       $table->tinyInteger('data_series'); //1 = Data Sementara, 2 = Data Tetap, 3 = Data Estimasi
       $table->decimal('persentase',5,2);      
+      $table->string('jenis_data', 15);
       $table->timestamps();
 
       $table->index('tahun');

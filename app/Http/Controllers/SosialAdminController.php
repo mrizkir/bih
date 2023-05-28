@@ -28,6 +28,7 @@ class SosialAdminController extends Controller
     DataSosialModel::create([
       'tahun' => $request->input('tahun'),
       'data_series' => $request->input('data_series'),
+      'jenis_data' => 'ppm',
       'persentase' => $request->input('data_persentase'),
     ]);
 
