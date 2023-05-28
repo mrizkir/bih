@@ -20,7 +20,7 @@ class SosialAdminController extends Controller
   public function ppmStore(Request $request)
   {
     $this->validate($request, [
-      'tahun' => 'required',
+      'tahun' => 'required|digits:4|min:2020|max:'.date('Y'),
       'data_series' => 'required',
       'data_persentase' => 'required',
     ]);
@@ -31,19 +31,19 @@ class SosialAdminController extends Controller
       'persentase' => $request->input('data_persentase'),
     ]);
 
-    return redirect(route('sosial-ppm.index'))->with(['sukses', 'data berhasil disimpan']);
+    return redirect(route('sosial-ppm.index'))->with('sukses', 'data berhasil disimpan');
   }
   public function ppmUpdate(Request $request, $id)
   {
     $data = DataSosialModel::find($id);
     if (is_null($data))
     {
-      return redirect(route('sosial-ppm.index'))->with(['gagal', 'data gagal disimpan']);
+      return redirect(route('sosial-ppm.index'))->with('gagal', 'data gagal disimpan');
     }
     else
     {
       $this->validate($request, [
-        'tahun' => 'required',
+        'tahun' => 'required|digits:4|min:2020|max:'.date('Y'),
         'data_series' => 'required',
         'data_persentase' => 'required',
       ]);
@@ -53,7 +53,7 @@ class SosialAdminController extends Controller
       $data->persentase = $request->input('data_persentase');
       $data->save();
 
-      return redirect(route('sosial-ppm.index'))->with(['sukses', 'data berhasil diubah']);
+      return redirect(route('sosial-ppm.index'))->with('sukses', 'data berhasil diubah');
     }    
   }
 }

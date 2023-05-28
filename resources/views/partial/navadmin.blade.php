@@ -62,7 +62,7 @@
                        </a> 
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ '' }}" class="nav-link">
+                            <a href="{{ route('sosial-ppm.index') }}" class="nav-link">
                                 <div style="width:30px;height:35px;float:left;">
                                 <i class="far fa-circle nav-icon"
                                     style="color:rgb(255, 255, 255);font-size:10px;"></i>
