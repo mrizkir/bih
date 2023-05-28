@@ -9,7 +9,7 @@
                 <h1 style="font-size: 15px;">Bintan In Hand</h1>
                 @error('username')
                 <center><span class="invalid-feedback" role="alert" style="margin-top:-55px;">
-                    <strong style="color:rgb(250, 250, 250);font-size:12px;">{{ $message }}</strong>
+                    <strong style="color:rgb(255, 0, 0);font-size:12px;">{{ $message }}</strong>
                 </span>
             </center>
             @enderror
