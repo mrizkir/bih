@@ -11,8 +11,8 @@
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="/depan">Home</a></li>
-                            <li class="breadcrumb-item active">{{ $title }}</li>
+                            <li class="breadcrumb-item" style="font-size: 10px;"><a href="/dashboard">Home</a></li>
+                            <li class="breadcrumb-item active" style="font-size: 10px;">{{ $title }}</li>
                         </ol>
                     </div>
                 </div>
@@ -51,102 +51,110 @@
                                 <table id="example" class="table table-striped table-bordered" style="width:100%">
                                     <thead>
                                         <tr style="background:rgb(4, 89, 123);color:white;font-size: 12px;">
-                                            <th style="width: 2%;"><center>No</center></th> 
-                                            <th style="width: 80%;">Data Tahun / Series / Presentase</th> 
-                                            <th style="width: 10%;"><center>AKSI</center></th>
+                                            <th style="width: 2%;">
+                                                <center>No</center>
+                                            </th>
+                                            <th style="width: 80%;">Data Tahun / Series / Presentase</th>
+                                            <th style="width: 10%;">
+                                                <center>AKSI</center>
+                                            </th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                         <?PHP
-                                         $i = 1;
-                                         ?>
-                                            <tr style="font-size: 11px;">
-                                                <th>
-                                                    <center>{{$i++}}</center>
-                                                </th>
-                                                <th>
-                                                        Tahun : 1998 | Series : 450 | Presentase : 67%
-                                                </th>
-                                                 
-                                                <th class="project-actions text-right" style="padding: 10px;">
-                                                    <center>
-                                                        <a href="" class="btn btn-info btn-sm" data-toggle="modal" style="font-size: 10px;"
-                                                        data-target="#modaledit">
-                                                            <i class="fas fa-pencil-alt"></i> Edit</a> 
-                                                    </center>
-                                                </th>
-                                            </tr>
-                                            <tr style="font-size: 11px;">
-                                                <th>
-                                                    <center>{{$i++}}</center>
-                                                </th>
-                                                <th>
-                                                        Tahun : 1999 | Series : 350 | Presentase : 87%
-                                                </th>
-                                                 
-                                                <th class="project-actions text-right" style="padding: 10px;">
-                                                    <center>
-                                                        <a href="" class="btn btn-info btn-sm" data-toggle="modal" style="font-size: 10px;"
-                                                        data-target="#modaledit">
-                                                            <i class="fas fa-pencil-alt"></i> Edit</a> 
-                                                    </center>
-                                                </th>
-                                            </tr>
+                                        <?php $i = 1; ?>
+                                        <tr style="font-size: 11px;">
+                                            <th>
+                                                <center>{{ $i++ }}</center>
+                                            </th>
+                                            <th>
+                                                Tahun : 1998 | Series : 450 | Presentase : 67%
+                                            </th>
 
-                                            {{-- VIEW MODAL EDIT --}}
-                                            <div class="modal fade" id="modaledit" role="dialog">
-                                                <div class="modal-dialog modal-xl">
-                                                    <div class="modal-content" style="padding:30px;">
-                                                        <div class="container" style="padding:30px;">
-                                                            <div class="form-group">
-                                                                <div class="row">
-                                                                    <div class="col-12">
-                                                                        <span
-                                                                            style="font-size:20px;color:rgb(10, 100, 100);"><b>Edit Data {{$title}}</b></span>
-                                                                            <form action="{{ '/bukustore' }}" method="POST" enctype="multipart/form-data">
-                                                                                @csrf
-                                                                                <div class="card-body"> 
-                                                                                    <div class="form-group">
-                                                                                        <div class="row">
-                                                                                            <div class="col-4">
-                                                                                                <label>Tahun</label>
+                                            <th class="project-actions text-right" style="padding: 10px;">
+                                                <center>
+                                                    <a href="" class="btn btn-info btn-sm" data-toggle="modal"
+                                                        style="font-size: 10px;" data-target="#modaledit">
+                                                        <i class="fas fa-pencil-alt"></i> Edit</a>
+                                                </center>
+                                            </th>
+                                        </tr>
+                                        <tr style="font-size: 11px;">
+                                            <th>
+                                                <center>{{ $i++ }}</center>
+                                            </th>
+                                            <th>
+                                                Tahun : 1999 | Series : 350 | Presentase : 87%
+                                            </th>
+
+                                            <th class="project-actions text-right" style="padding: 10px;">
+                                                <center>
+                                                    <a href="" class="btn btn-info btn-sm" data-toggle="modal"
+                                                        style="font-size: 10px;" data-target="#modaledit">
+                                                        <i class="fas fa-pencil-alt"></i> Edit</a>
+                                                </center>
+                                            </th>
+                                        </tr>
+
+                                        {{-- VIEW MODAL EDIT --}}
+                                        <div class="modal fade" id="modaledit" role="dialog">
+                                            <div class="modal-dialog modal-xl">
+                                                <div class="modal-content" style="padding:30px;">
+                                                    <div class="container" style="padding:30px;">
+                                                        <div class="form-group">
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <span
+                                                                        style="font-size:20px;color:rgb(10, 100, 100);"><b>Edit
+                                                                            Data {{ $title }}</b></span>
+                                                                    <form action="{{ '/bukustore' }}" method="POST"
+                                                                        enctype="multipart/form-data">
+                                                                        @csrf
+                                                                        <div class="card-body">
+                                                                            <div class="form-group">
+                                                                                <div class="row">
+                                                                                    <div class="col-4">
+                                                                                        <label>Tahun</label>
                                                                                         <input type="text" name="tahun"
                                                                                             class="form-control @error('tahun') is-invalid @enderror"
                                                                                             value="1912" required>
-                                                                                            </div>
-                                                                                            <div class="col-4">
-                                                                                                <label>Data Series</label>
-                                                                                                <input type="text" name="data_series"
-                                                                                                    class="form-control @error('data_series') is-invalid @enderror"
-                                                                                                    value="234" required>
-                                                                                            </div>
-                                                                                            <div class="col-4">
-                                                                                                <label>Data Presentase</label>
-                                                                                                <input type="text" name="data_presentase"
-                                                                                                    class="form-control @error('data_presentase') is-invalid @enderror"
-                                                                                                    value="34%" required>
-                                                                                            </div>
-                                                                                        </div>
                                                                                     </div>
-                                                                                    
-                                                
+                                                                                    <div class="col-4">
+                                                                                        <label>Data Series</label>
+                                                                                        <input type="text"
+                                                                                            name="data_series"
+                                                                                            class="form-control @error('data_series') is-invalid @enderror"
+                                                                                            value="234" required>
+                                                                                    </div>
+                                                                                    <div class="col-4">
+                                                                                        <label>Data Presentase</label>
+                                                                                        <input type="text"
+                                                                                            name="data_presentase"
+                                                                                            class="form-control @error('data_presentase') is-invalid @enderror"
+                                                                                            value="34%" required>
+                                                                                    </div>
                                                                                 </div>
-                                                
-                                                                                <div class="modal-footer justify-content-between">
-                                                                                    <button type="submit" class="btn btn-info">Simpan</button>
-                                                                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-                                                                                </div>
-                                                                            </form> 
-                                                                         
-                                                                    </div>
+                                                                            </div>
+
+
+                                                                        </div>
+
+                                                                        <div class="modal-footer justify-content-between">
+                                                                            <button type="submit"
+                                                                                class="btn btn-info">Simpan</button>
+                                                                            <button type="button" class="btn btn-danger"
+                                                                                data-dismiss="modal">Cancel</button>
+                                                                        </div>
+                                                                    </form>
+
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            {{-- VIEW MODAL END --}}
-                                        
+                                        </div>
+                                        {{-- VIEW MODAL END --}}
+
                                     </tbody>
                                 </table>
                             </div>
@@ -176,7 +184,7 @@
                     <div class="modal-dialog modal-xl">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h4 class="modal-title" style="color:rgb(2, 17, 42)">Tambah Data {{$title}}</h4>
+                                <h4 class="modal-title" style="color:rgb(2, 17, 42)">Tambah Data {{ $title }}</h4>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
@@ -184,14 +192,14 @@
 
                             <form action="{{ '/bukustore' }}" method="POST" enctype="multipart/form-data">
                                 @csrf
-                                <div class="card-body"> 
+                                <div class="card-body">
                                     <div class="form-group">
                                         <div class="row">
                                             <div class="col-4">
                                                 <label>Tahun</label>
-                                        <input type="text" name="tahun"
-                                            class="form-control @error('tahun') is-invalid @enderror"
-                                            placeholder="Ketik tahun" required>
+                                                <input type="text" name="tahun"
+                                                    class="form-control @error('tahun') is-invalid @enderror"
+                                                    placeholder="Ketik tahun" required>
                                             </div>
                                             <div class="col-4">
                                                 <label>Data Series</label>
@@ -207,7 +215,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    
+
 
                                 </div>
 
