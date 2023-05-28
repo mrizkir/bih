@@ -57,54 +57,66 @@
 
                    <li class="nav-item">
                        <a href="#" class="nav-link">
-                        <img src="{{ asset('administrator/img_mda/h1.png') }}" style="width:12%;margin:3px;"> 
+                           <img src="{{ asset('administrator/img_mda/h1.png') }}" style="width:12%;margin:3px;">
                            <p style="font-size: 10px;">SOSIAL<i class="fas fa-angle-left right"></i></p>
-                       </a>
-                       <ul class="nav nav-treeview">
-                           <li class="nav-item">
-                            <a href="{{ '/ppm' }}" class="nav-link">
+                       </a> 
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ '' }}" class="nav-link">
+                                <div style="width:30px;height:35px;float:left;">
                                 <i class="far fa-circle nav-icon"
                                     style="color:rgb(255, 255, 255);font-size:10px;"></i>
-                                   <p style="font-size: 10px;">Presentasi Penduduk Miskin</p>
-                               </a>
-                           </li>
-                       </ul>
-                       <ul class="nav nav-treeview">
-                           <li class="nav-item">
-                               <a href="{{ '' }}" class="nav-link">
-                                   <i class="far fa-circle nav-icon"
-                                       style="color:rgb(255, 255, 255);font-size:10px;"></i>
-                                   <p style="font-size: 10px;">Angka Rata-Rata Lama Sekolah (RLS)</p>
-                               </a>
-                           </li>
-                       </ul>
-                       <ul class="nav nav-treeview">
-                           <li class="nav-item">
-                               <a href="{{ '' }}" class="nav-link">
-                                   <i class="far fa-circle nav-icon"
-                                       style="color:rgb(255, 255, 255);font-size:10px;"></i>
-                                   <p style="font-size: 10px;">Angka Melek Huruf (AMH)</p>
-                               </a>
-                           </li>
-                       </ul>
-                       <ul class="nav nav-treeview">
-                           <li class="nav-item">
-                               <a href="{{ '' }}" class="nav-link">
-                                   <i class="far fa-circle nav-icon"
-                                       style="color:rgb(255, 255, 255);font-size:10px;"></i>
-                                   <p style="font-size: 10px;">Angka Harapan Hidup (AHH)</p>
-                               </a>
-                           </li>
-                       </ul>
-                       <ul class="nav nav-treeview">
-                           <li class="nav-item">
-                               <a href="{{ '' }}" class="nav-link">
-                                   <i class="far fa-circle nav-icon"
-                                       style="color:rgb(255, 255, 255);font-size:10px;"></i>
-                                   <p style="font-size: 10px;">Angka Kelangsungan Hidup Bayi (AKHB)</p>
-                               </a>
-                           </li>
-                       </ul>
+                                </div>
+                                <p style="font-size: 12px;">Presentasi Penduduk Miskin</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ '' }}" class="nav-link">
+                                <div style="width:30px;height:35px;float:left;">
+                                <i class="far fa-circle nav-icon"
+                                    style="color:rgb(255, 255, 255);font-size:10px;"></i>
+                                </div>
+                                <p style="font-size: 12px;">Angka Rata-Rata Lama Sekolah (RLS)</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ '' }}" class="nav-link">
+                                <div style="width:30px;height:35px;float:left;">
+                                <i class="far fa-circle nav-icon"
+                                    style="color:rgb(255, 255, 255);font-size:10px;"></i>
+                                </div>
+                                <p style="font-size: 12px;">Angka Melek Huruf (AMH)</p>
+                            </a>
+                        </li>
+                    </ul> 
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ '' }}" class="nav-link">
+                                <div style="width:30px;height:35px;float:left;">
+                                <i class="far fa-circle nav-icon"
+                                    style="color:rgb(255, 255, 255);font-size:10px;"></i>
+                                </div>
+                                <p style="font-size: 10px;">Angka Harapan Hidup (AHH)</p>
+                            </a>
+                        </li>
+                    </ul>  
+                     
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ '' }}" class="nav-link">
+                                <div style="width:30px;height:35px;float:left;">
+                                <i class="far fa-circle nav-icon"
+                                    style="color:rgb(255, 255, 255);font-size:10px;"></i>
+                                </div>
+                                <p style="font-size: 10px;">Angka Kelangsungan Hidup Bayi (AKHB)</p>
+                            </a>
+                        </li>
+                    </ul>  
+ 
                        <ul class="nav nav-treeview">
                            <li class="nav-item">
                                <a href="{{ '' }}" class="nav-link">
@@ -211,7 +223,7 @@
 
                    <li class="nav-item">
                        <a href="#" class="nav-link">
-                        <img src="{{ asset('administrator/img_mda/h2.png') }}" style="width:12%;margin:3px;"> 
+                           <img src="{{ asset('administrator/img_mda/h2.png') }}" style="width:12%;margin:3px;">
                            <p style="font-size: 10px;">EKONOMI<i class="fas fa-angle-left right"></i></p>
                        </a>
                        <ul class="nav nav-treeview">
@@ -219,7 +231,52 @@
                                <a href="{{ '/ppm' }}" class="nav-link">
                                    <i class="far fa-circle nav-icon"
                                        style="color:rgb(255, 255, 255);font-size:10px;"></i>
-                                   <p style="font-size: 10px;">Presentasi Penduduk Miskin</p>
+                                   <p style="font-size: 10px;">Petumbuhan Ekonomi</p>
+                               </a>
+                           </li>
+                       </ul>
+                       <ul class="nav nav-treeview">
+                           <li class="nav-item">
+                               <a href="{{ '/ppm' }}" class="nav-link">
+                                   <i class="far fa-circle nav-icon"
+                                       style="color:rgb(255, 255, 255);font-size:10px;"></i>
+                                   <p style="font-size: 10px;">Laju Inflasi</p>
+                               </a>
+                           </li>
+                       </ul>
+                       <ul class="nav nav-treeview">
+                           <li class="nav-item">
+                               <a href="{{ '/ppm' }}" class="nav-link">
+                                   <i class="far fa-circle nav-icon"
+                                       style="color:rgb(255, 255, 255);font-size:10px;"></i>
+                                   <p style="font-size: 10px;">Distribusi PDRB Atas Dasar Harga Berlaku</p>
+                               </a>
+                           </li>
+                       </ul>
+                       <ul class="nav nav-treeview">
+                           <li class="nav-item">
+                               <a href="{{ '/ppm' }}" class="nav-link">
+                                   <i class="far fa-circle nav-icon"
+                                       style="color:rgb(255, 255, 255);font-size:10px;"></i>
+                                   <p style="font-size: 10px;">Distribusi PDRB Atas Dasar Harga Konstan</p>
+                               </a>
+                           </li>
+                       </ul>
+                       <ul class="nav nav-treeview">
+                           <li class="nav-item">
+                               <a href="{{ '/ppm' }}" class="nav-link">
+                                   <i class="far fa-circle nav-icon"
+                                       style="color:rgb(255, 255, 255);font-size:10px;"></i>
+                                   <p style="font-size: 10px;">Kunjungan Wisata</p>
+                               </a>
+                           </li>
+                       </ul>
+                       <ul class="nav nav-treeview">
+                           <li class="nav-item">
+                               <a href="{{ '/ppm' }}" class="nav-link">
+                                   <i class="far fa-circle nav-icon"
+                                       style="color:rgb(255, 255, 255);font-size:10px;"></i>
+                                   <p style="font-size: 10px;">Realisasi Investasi PMA/ PMDN</p>
                                </a>
                            </li>
                        </ul>
@@ -227,7 +284,7 @@
 
                    <li class="nav-item">
                        <a href="#" class="nav-link">
-                        <img src="{{ asset('administrator/img_mda/h3.png') }}" style="width:12%;margin:3px;"> 
+                           <img src="{{ asset('administrator/img_mda/h3.png') }}" style="width:12%;margin:3px;">
                            <p style="font-size: 10px;">PERTANIAN DAN PERIKANAN<i class="fas fa-angle-left right"></i>
                            </p>
                        </a>
@@ -236,7 +293,43 @@
                                <a href="{{ '' }}" class="nav-link">
                                    <i class="far fa-circle nav-icon"
                                        style="color:rgb(255, 255, 255);font-size:10px;"></i>
-                                   <p style="font-size: 10px;">Presentasi Penduduk Miskin</p>
+                                   <p style="font-size: 10px;">Produksi Perikanan Budidaya</p>
+                               </a>
+                           </li>
+                       </ul>
+                       <ul class="nav nav-treeview">
+                           <li class="nav-item">
+                               <a href="{{ '' }}" class="nav-link">
+                                   <i class="far fa-circle nav-icon"
+                                       style="color:rgb(255, 255, 255);font-size:10px;"></i>
+                                   <p style="font-size: 10px;">Produksi Perikanan Tangkap</p>
+                               </a>
+                           </li>
+                       </ul>
+                       <ul class="nav nav-treeview">
+                           <li class="nav-item">
+                               <a href="{{ '' }}" class="nav-link">
+                                   <i class="far fa-circle nav-icon"
+                                       style="color:rgb(255, 255, 255);font-size:10px;"></i>
+                                   <p style="font-size: 10px;">Capaian produksi komoditi unggulan perkebunan</p>
+                               </a>
+                           </li>
+                       </ul>
+                       <ul class="nav nav-treeview">
+                           <li class="nav-item">
+                               <a href="{{ '' }}" class="nav-link">
+                                   <i class="far fa-circle nav-icon"
+                                       style="color:rgb(255, 255, 255);font-size:10px;"></i>
+                                   <p style="font-size: 10px;">Capaian produksi komoditi hortikultura</p>
+                               </a>
+                           </li>
+                       </ul>
+                       <ul class="nav nav-treeview">
+                           <li class="nav-item">
+                               <a href="{{ '' }}" class="nav-link">
+                                   <i class="far fa-circle nav-icon"
+                                       style="color:rgb(255, 255, 255);font-size:10px;"></i>
+                                   <p style="font-size: 10px;">Jumlah Produksi Peternakan</p>
                                </a>
                            </li>
                        </ul>
@@ -244,7 +337,7 @@
 
                    <li class="nav-item">
                        <a href="#" class="nav-link">
-                        <img src="{{ asset('administrator/img_mda/h4.png') }}" style="width:12%;margin:3px;"> 
+                           <img src="{{ asset('administrator/img_mda/h4.png') }}" style="width:12%;margin:3px;">
                            <p style="font-size: 10px;">KEPENDUDUKAN<i class="fas fa-angle-left right"></i></p>
                        </a>
                        <ul class="nav nav-treeview">
@@ -252,7 +345,34 @@
                                <a href="{{ '' }}" class="nav-link">
                                    <i class="far fa-circle nav-icon"
                                        style="color:rgb(255, 255, 255);font-size:10px;"></i>
-                                   <p style="font-size: 10px;">Presentasi Penduduk Miskin</p>
+                                   <p style="font-size: 10px;">Jumlah Penduduk</p>
+                               </a>
+                           </li>
+                       </ul>
+                       <ul class="nav nav-treeview">
+                           <li class="nav-item">
+                               <a href="{{ '' }}" class="nav-link">
+                                   <i class="far fa-circle nav-icon"
+                                       style="color:rgb(255, 255, 255);font-size:10px;"></i>
+                                   <p style="font-size: 10px;">Jumlah Penduduk Berdasarkan Kecamatan Tahun 2021 </p>
+                               </a>
+                           </li>
+                       </ul>
+                       <ul class="nav nav-treeview">
+                           <li class="nav-item">
+                               <a href="{{ '' }}" class="nav-link">
+                                   <i class="far fa-circle nav-icon"
+                                       style="color:rgb(255, 255, 255);font-size:10px;"></i>
+                                   <p style="font-size: 10px;">Jumlah Penduduk Berdasarkan Kelompok Umur</p>
+                               </a>
+                           </li>
+                       </ul>
+                       <ul class="nav nav-treeview">
+                           <li class="nav-item">
+                               <a href="{{ '' }}" class="nav-link">
+                                   <i class="far fa-circle nav-icon"
+                                       style="color:rgb(255, 255, 255);font-size:10px;"></i>
+                                   <p style="font-size: 10px;">Pertumbuhan Penduduk</p>
                                </a>
                            </li>
                        </ul>
@@ -260,7 +380,7 @@
 
                    <li class="nav-item">
                        <a href="#" class="nav-link">
-                        <img src="{{ asset('administrator/img_mda/h5.png') }}" style="width:12%;margin:3px;"> 
+                           <img src="{{ asset('administrator/img_mda/h5.png') }}" style="width:12%;margin:3px;">
                            <p style="font-size: 10px;">INFRASTRUKTUR<i class="fas fa-angle-left right"></i></p>
                        </a>
                        <ul class="nav nav-treeview">
@@ -268,7 +388,25 @@
                                <a href="{{ '' }}" class="nav-link">
                                    <i class="far fa-circle nav-icon"
                                        style="color:rgb(255, 255, 255);font-size:10px;"></i>
-                                   <p style="font-size: 10px;">Presentasi Penduduk Miskin</p>
+                                   <p style="font-size: 10px;">Panjang jalan yang dibangun dan ditingkatkan</p>
+                               </a>
+                           </li>
+                       </ul>
+                       <ul class="nav nav-treeview">
+                           <li class="nav-item">
+                               <a href="{{ '' }}" class="nav-link">
+                                   <i class="far fa-circle nav-icon"
+                                       style="color:rgb(255, 255, 255);font-size:10px;"></i>
+                                   <p style="font-size: 10px;">Persentase Rumah Tangga (RT) yang menggunakan air bersih</p>
+                               </a>
+                           </li>
+                       </ul>
+                       <ul class="nav nav-treeview">
+                           <li class="nav-item">
+                               <a href="{{ '' }}" class="nav-link">
+                                   <i class="far fa-circle nav-icon"
+                                       style="color:rgb(255, 255, 255);font-size:10px;"></i>
+                                   <p style="font-size: 10px;">Persentase tingkat kemantapan jalan (Mantap Sempurna) </p>
                                </a>
                            </li>
                        </ul>
@@ -276,7 +414,7 @@
 
                    <li class="nav-item">
                        <a href="#" class="nav-link">
-                        <img src="{{ asset('administrator/img_mda/h6.png') }}" style="width:12%;margin:3px;"> 
+                           <img src="{{ asset('administrator/img_mda/h6.png') }}" style="width:12%;margin:3px;">
                            <p style="font-size: 10px;">VIDEO BINTAN<i class="fas fa-angle-left right"></i></p>
                        </a>
                        <ul class="nav nav-treeview">
@@ -303,7 +441,7 @@
                            <p style="font-size: 12px;">Lihat Web</p>
                        </a>
                    </li>
-                   <li class="nav-header"></li> 
+                   <li class="nav-header"></li>
                    <li class="nav-header"></li>
 
                    <li class="nav-item" style="margin-top: -40px;">
@@ -319,8 +457,3 @@
        </div>
        <!-- /.sidebar -->
    </aside>
-
-
-
-
-
