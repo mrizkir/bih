@@ -25,4 +25,6 @@ Route::group(['middleware'=>['disablepreventback', 'web', 'auth']], function() {
   Route::post('/ppm/store', [SosialAdminController::class, 'ppmStore'])->name('sosial-ppm.store'); 
   Route::get('/ppm/{id}/edit', [SosialAdminController::class, 'ppmEdit'])->name('sosial-ppm.edit'); 
   Route::put('/ppm/{id}', [SosialAdminController::class, 'ppmUpdate'])->name('sosial-ppm.update'); 
+
+
 });
