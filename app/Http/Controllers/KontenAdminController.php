@@ -10,6 +10,6 @@ class KontenAdminController extends Controller
 {
     public function index()
     {
-        return view('admin.dashboard',   ['title' => 'Konten']);
+        return view('admin.dashboard',   ['title' => 'DASHBOARD']);
     }
 }

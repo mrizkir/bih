@@ -44,7 +44,7 @@
                </div>
                <div class="info">
 
-                   <a href="/edituser" class="d-block"> Administrator</a>
+                   <a href="" class="d-block">Administrator</a>
 
                </div>
            </div>
@@ -57,14 +57,14 @@
 
                    <li class="nav-item">
                        <a href="#" class="nav-link">
-                           <i class="nav-icon fas fa-th" style="color:rgb(95, 194, 15);font-size:12px;"></i>
+                        <img src="{{ asset('administrator/img_mda/h1.png') }}" style="width:12%;margin:3px;"> 
                            <p style="font-size: 10px;">SOSIAL<i class="fas fa-angle-left right"></i></p>
                        </a>
                        <ul class="nav nav-treeview">
                            <li class="nav-item">
-                               <a href="{{ '/ppm' }}" class="nav-link">
-                                   <i class="far fa-circle nav-icon"
-                                       style="color:rgb(255, 255, 255);font-size:10px;"></i>
+                            <a href="{{ '/ppm' }}" class="nav-link">
+                                <i class="far fa-circle nav-icon"
+                                    style="color:rgb(255, 255, 255);font-size:10px;"></i>
                                    <p style="font-size: 10px;">Presentasi Penduduk Miskin</p>
                                </a>
                            </li>
@@ -211,12 +211,12 @@
 
                    <li class="nav-item">
                        <a href="#" class="nav-link">
-                           <i class="nav-icon fas fa-th" style="color:rgb(95, 194, 15);font-size:10px;"></i>
+                        <img src="{{ asset('administrator/img_mda/h2.png') }}" style="width:12%;margin:3px;"> 
                            <p style="font-size: 10px;">EKONOMI<i class="fas fa-angle-left right"></i></p>
                        </a>
                        <ul class="nav nav-treeview">
                            <li class="nav-item">
-                               <a href="{{ '' }}" class="nav-link">
+                               <a href="{{ '/ppm' }}" class="nav-link">
                                    <i class="far fa-circle nav-icon"
                                        style="color:rgb(255, 255, 255);font-size:10px;"></i>
                                    <p style="font-size: 10px;">Presentasi Penduduk Miskin</p>
@@ -227,7 +227,7 @@
 
                    <li class="nav-item">
                        <a href="#" class="nav-link">
-                           <i class="nav-icon fas fa-th" style="color:rgb(95, 194, 15);font-size:10px;"></i>
+                        <img src="{{ asset('administrator/img_mda/h3.png') }}" style="width:12%;margin:3px;"> 
                            <p style="font-size: 10px;">PERTANIAN DAN PERIKANAN<i class="fas fa-angle-left right"></i>
                            </p>
                        </a>
@@ -244,7 +244,7 @@
 
                    <li class="nav-item">
                        <a href="#" class="nav-link">
-                           <i class="nav-icon fas fa-th" style="color:rgb(95, 194, 15);font-size:10px;"></i>
+                        <img src="{{ asset('administrator/img_mda/h4.png') }}" style="width:12%;margin:3px;"> 
                            <p style="font-size: 10px;">KEPENDUDUKAN<i class="fas fa-angle-left right"></i></p>
                        </a>
                        <ul class="nav nav-treeview">
@@ -260,7 +260,7 @@
 
                    <li class="nav-item">
                        <a href="#" class="nav-link">
-                           <i class="nav-icon fas fa-th" style="color:rgb(95, 194, 15);font-size:10px;"></i>
+                        <img src="{{ asset('administrator/img_mda/h5.png') }}" style="width:12%;margin:3px;"> 
                            <p style="font-size: 10px;">INFRASTRUKTUR<i class="fas fa-angle-left right"></i></p>
                        </a>
                        <ul class="nav nav-treeview">
@@ -276,7 +276,7 @@
 
                    <li class="nav-item">
                        <a href="#" class="nav-link">
-                           <i class="nav-icon fas fa-th" style="color:rgb(95, 194, 15);font-size:10px;"></i>
+                        <img src="{{ asset('administrator/img_mda/h6.png') }}" style="width:12%;margin:3px;"> 
                            <p style="font-size: 10px;">VIDEO BINTAN<i class="fas fa-angle-left right"></i></p>
                        </a>
                        <ul class="nav nav-treeview">
@@ -303,7 +303,7 @@
                            <p style="font-size: 12px;">Lihat Web</p>
                        </a>
                    </li>
-                   <li class="nav-header"></li>
+                   <li class="nav-header"></li> 
                    <li class="nav-header"></li>
 
                    <li class="nav-item" style="margin-top: -40px;">
@@ -319,3 +319,8 @@
        </div>
        <!-- /.sidebar -->
    </aside>
+
+
+
+
+
