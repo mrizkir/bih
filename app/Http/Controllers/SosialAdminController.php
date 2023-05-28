@@ -10,7 +10,8 @@ class SosialAdminController extends Controller
 {
   public function ppmIndex()
   {
-    $data = DataSosialModel::orderBy('tahun', 'desc')->get();
+    $data = DataSosialModel::where('jenis_data', 'ppm')
+    ->orderBy('tahun', 'desc')->get();
 
     return view('admin.sosial.ppm_tampil', [
       'title' => 'Persentase Penduduk Miskin (PPM)',
