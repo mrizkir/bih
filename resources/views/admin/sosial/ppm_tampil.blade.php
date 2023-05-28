@@ -46,7 +46,7 @@
                   <thead>
                     <tr style="background:rgb(4, 89, 123);color:white;font-size: 12px;">
                       <th style="width: 2%;" class="text-center">No</th> 
-                      <th style="width: 80%;" class="text-center">Data Tahun / Series / Presentase</th> 
+                      <th style="width: 80%;" class="text-center">Data Tahun / Series / Persentase</th> 
                       <th style="width: 10%;" class="text-center">AKSI</th>
                     </tr>
                   </thead>
@@ -54,57 +54,55 @@
                      @foreach ($data as $k=>$item)
                       <tr style="font-size: 11px;">
                         <td class="text-center">{{$k + 1 }}</th>
-                        <td>Tahun : 1998 | Series : 450 | Presentase : 67%</td>                       
+                        <td><strong>Tahun</strong> : {{$item->tahun}} | <strong>Series</strong> : {{Helper::getJenisDataSeries($item->data_series)}} | <strong>Persentase</strong> : {{$item->persentase}}%</td>                       
                         <td class="project-actions text-center" style="padding: 10px;">                        
-                          <a href="" class="btn btn-info btn-sm" data-toggle="modal" style="font-size: 10px;" data-target="#modaledit">
+                          <a href="" class="btn btn-info btn-sm" data-toggle="modal" style="font-size: 10px;" data-target="#modaledit{{$item->id}}">
                             <i class="fas fa-pencil-alt"></i> Edit
-                          </a>                         
-                        </td>
-                      </tr>
-                     @endforeach    
-                      {{-- VIEW MODAL EDIT --}}
-                      <div class="modal fade" id="modaledit" role="dialog">
-                        <div class="modal-dialog modal-xl">
-                          <div class="modal-content" style="padding:30px;">
-                            <div class="container" style="padding:30px;">
-                              <div class="form-group">
-                                <div class="row">
-                                  <div class="col-12">
-                                    <span style="font-size:20px;color:rgb(10, 100, 100);"><b>Edit Data {{$title}}</b></span>
-                                    <form action="{{ route('sosial-ppm.store') }}" method="POST" enctype="multipart/form-data">
-                                      @csrf
-                                      <div class="card-body"> 
-                                        <div class="form-group">
-                                          <div class="row">
-                                            <div class="col-4">
-                                              <label>Tahun</label>
-                                              <input type="text" name="tahun" class="form-control @error('tahun') is-invalid @enderror" value="1912" required>
+                          </a>                      
+                          {{-- VIEW MODAL EDIT --}}
+                          <div class="modal fade" id="modaledit{{$item->id}}" role="dialog">
+                            <div class="modal-dialog modal-xl">
+                              <div class="modal-content" style="padding:30px;">
+                                <div class="container" style="padding:30px;">
+                                  <div class="form-group">
+                                    <div class="row">
+                                      <div class="col-12">
+                                        <span style="font-size:20px;color:rgb(10, 100, 100);"><b>Edit Data {{$title}}</b></span>                                    
+                                        {!! Form::open(['url'=>route('sosial-ppm.update', ['id' => $item->id]), 'method'=>'put','id'=>'frmedit_' . $item->id,'name'=>'frmedit_' . $item->id])!!}                                       
+                                          <div class="card-body"> 
+                                            <div class="form-group">
+                                              <div class="row">
+                                                <div class="col-4">
+                                                  <label>Tahun</label>
+                                                  <input type="text" name="tahun" class="form-control @error('tahun') is-invalid @enderror" value="{{$item->tahun}}" required>
+                                                </div>
+                                                <div class="col-4">
+                                                  <label>Data Series</label>
+                                                  {!! Form::select('data_series', Helper::getJenisDataSeries(), $item->data_series, ['id'=>'data_series', 'class'=>'form-control']) !!}                                              
+                                                </div>
+                                                <div class="col-4">
+                                                  <label>Data Persentase</label>
+                                                  <input type="text" name="data_persentase" class="form-control @error('data_persentase') is-invalid @enderror" value="{{$item->persentase}}" required>
+                                                </div>
+                                              </div>
                                             </div>
-                                            <div class="col-4">
-                                              <label>Data Series</label>
-                                              <input type="text" name="data_series" class="form-control @error('data_series') is-invalid @enderror" value="234" required>
-                                            </div>
-                                            <div class="col-4">
-                                              <label>Data Presentase</label>
-                                              <input type="text" name="data_presentase" class="form-control @error('data_presentase') is-invalid @enderror" value="34%" required>
-                                            </div>
+                                          </div>                        
+                                          <div class="modal-footer justify-content-between">
+                                            <button type="submit" class="btn btn-info">Simpan</button>
+                                            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
                                           </div>
-                                        </div>
-                                      </div>                        
-                                      <div class="modal-footer justify-content-between">
-                                        <button type="submit" class="btn btn-info">Simpan</button>
-                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                                        {!! Form::close()!!}
                                       </div>
-                                    </form>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
                           </div>
-                        </div>
-                      </div>
-                      {{-- VIEW MODAL END --}}
-                    
+                          {{-- VIEW MODAL END --}}   
+                        </td>
+                      </tr>                                               
+                    @endforeach
                   </tbody>
                 </table>
               </div>
@@ -125,48 +123,34 @@
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-
-              <form action="{{ '/bukustore' }}" method="POST" enctype="multipart/form-data">
-                @csrf
+              {!! Form::open(['url'=>route('sosial-ppm.store'), 'method'=>'post','id'=>'frmadd','name'=>'frmadd'])!!}                                                       
                 <div class="card-body"> 
                   <div class="form-group">
                     <div class="row">
                       <div class="col-4">
                         <label>Tahun</label>
-                    <input type="text" name="tahun"
-                      class="form-control @error('tahun') is-invalid @enderror"
-                      placeholder="Ketik tahun" required>
+                        <input type="text" name="tahun" class="form-control @error('tahun') is-invalid @enderror" placeholder="Ketik tahun" required>
                       </div>
                       <div class="col-4">
                         <label>Data Series</label>
-                        <input type="text" name="data_series"
-                          class="form-control @error('data_series') is-invalid @enderror"
-                          placeholder="Ketik Data Series" required>
+                        {!! Form::select('data_series', Helper::getJenisDataSeries(), old('data_series'), ['id'=>'frmadd_data_series', 'class'=>'form-control']) !!}                                              
                       </div>
                       <div class="col-4">
-                        <label>Data Presentase</label>
-                        <input type="text" name="data_presentase"
-                          class="form-control @error('data_presentase') is-invalid @enderror"
-                          placeholder="Ketik  Data Presentase" required>
+                        <label>Data Persentase</label>
+                        <input type="text" name="data_persentase" class="form-control @error('data_persentase') is-invalid @enderror" placeholder="Ketik Data Persentase" required>
                       </div>
                     </div>
                   </div>
-                  
-
                 </div>
-
                 <div class="modal-footer justify-content-between">
                   <button type="submit" class="btn btn-info">Simpan</button>
                   <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
                 </div>
-              </form>
-
+              {!! Form::close()!!}
             </div>
             <!-- /.modal-content -->
           </div>
           <!-- /.modal-dialog -->
-
-
         </div>
         <!-- /.modal -->
     </section>

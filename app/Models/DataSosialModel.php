@@ -24,13 +24,9 @@ class DataSosialModel extends Model {
    */
   protected $fillable = [        
       'id',   
-      'user_id',   
-      'no_peserta',                   
-      'jadwal_ujian_id',            
-      'mulai_ujian', 
-      'selesai_ujian',         
-      'sisa_waktu',         
-      'status', //0 daftar, 1 finish, 2 batal, 3 arsip
+      'tahun',   
+      'data_series',                   
+      'persentase',                  
   ];
   /**
    * enable auto_increment.
