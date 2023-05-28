@@ -20,5 +20,9 @@ Route::group(['middleware'=>['disablepreventback', 'web', 'auth']], function() {
   Route::get('/dashboard', [KontenadminController::class, 'index'])->name('dashboard'); 
 
 
-  Route::get('/ppm', [SosialAdminController::class, 'ppm'])->name('sosial-presentasi-penduduk-miskin'); 
+  //sosial presentasi penduduk miskin (ppm)
+  Route::get('/ppm', [SosialAdminController::class, 'ppmIndex'])->name('sosial-ppm.index'); 
+  Route::post('/ppm/store', [SosialAdminController::class, 'ppmStore'])->name('sosial-ppm.store'); 
+  Route::get('/ppm/edit', [SosialAdminController::class, 'ppmEdit'])->name('sosial-ppm.edit'); 
+  Route::update('/ppm/update', [SosialAdminController::class, 'ppmUpdate'])->name('sosial-ppm.update'); 
 });
