@@ -26,12 +26,7 @@
             <section style="padding:20px;background:rgb(255, 255, 255);">
               <div style="margin:10px;">
                 <div class="border-0">
-                  @if ($message = Session::get('sukses'))
-                    <div class="alert alert-success alert-block">
-                      <button type="button" class="close" data-dismiss="alert">X</button>
-                      <strong style="color:rgb(0, 0, 0);font-size:23px;">{{ $message }}</strong>
-                    </div>
-                  @endif
+                  @include('layouts.pesan')
                   <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal-default">
                     <b style="font-size:12px;"> Tambah Data</b>
                   </button>
@@ -75,14 +70,38 @@
                                                 <div class="col-4">
                                                   <label>Tahun</label>
                                                   <input type="text" name="tahun" class="form-control @error('tahun') is-invalid @enderror" value="{{$item->tahun}}" required>
+                                                  @if($errors->has('tahun'))
+                                                    <div class="alert alert-danger mt-1 alert-validation-msg" role="alert">
+                                                      <div class="alert-body d-flex align-items-center">
+                                                        <i data-feather="info" class="me-50"></i>
+                                                        {{ $errors->first('tahun') }}
+                                                      </div>
+                                                    </div>
+                                                  @endif
                                                 </div>
                                                 <div class="col-4">
                                                   <label>Data Series</label>
                                                   {!! Form::select('data_series', Helper::getJenisDataSeries(), $item->data_series, ['id'=>'data_series', 'class'=>'form-control']) !!}                                              
+                                                  @if($errors->has('data_series'))
+                                                    <div class="alert alert-danger mt-1 alert-validation-msg" role="alert">
+                                                      <div class="alert-body d-flex align-items-center">
+                                                        <i data-feather="info" class="me-50"></i>
+                                                        {{ $errors->first('data_series') }}
+                                                      </div>
+                                                    </div>
+                                                  @endif
                                                 </div>
                                                 <div class="col-4">
                                                   <label>Data Persentase</label>
                                                   <input type="text" name="data_persentase" class="form-control @error('data_persentase') is-invalid @enderror" value="{{$item->persentase}}" required>
+                                                  @if($errors->has('data_persentase'))
+                                                    <div class="alert alert-danger mt-1 alert-validation-msg" role="alert">
+                                                      <div class="alert-body d-flex align-items-center">
+                                                        <i data-feather="info" class="me-50"></i>
+                                                        {{ $errors->first('data_persentase') }}
+                                                      </div>
+                                                    </div>
+                                                  @endif
                                                 </div>
                                               </div>
                                             </div>
@@ -130,6 +149,14 @@
                       <div class="col-4">
                         <label>Tahun</label>
                         <input type="text" name="tahun" class="form-control @error('tahun') is-invalid @enderror" placeholder="Ketik tahun" required>
+                        @if($errors->has('tahun'))
+                          <div class="alert alert-danger mt-1 alert-validation-msg" role="alert">
+                            <div class="alert-body d-flex align-items-center">
+                              <i data-feather="info" class="me-50"></i>
+                              {{ $errors->first('tahun') }}
+                            </div>
+                          </div>
+                        @endif
                       </div>
                       <div class="col-4">
                         <label>Data Series</label>
@@ -138,6 +165,14 @@
                       <div class="col-4">
                         <label>Data Persentase</label>
                         <input type="text" name="data_persentase" class="form-control @error('data_persentase') is-invalid @enderror" placeholder="Ketik Data Persentase" required>
+                        @if($errors->has('data_persentase'))
+                          <div class="alert alert-danger mt-1 alert-validation-msg" role="alert">
+                            <div class="alert-body d-flex align-items-center">
+                              <i data-feather="info" class="me-50"></i>
+                              {{ $errors->first('data_persentase') }}
+                            </div>
+                          </div>
+                        @endif
                       </div>
                     </div>
                   </div>

@@ -20,7 +20,7 @@ class SosialAdminController extends Controller
   public function ppmStore(Request $request)
   {
     $this->validate($request, [
-      'tahun' => 'required|digits:4|min:2020|max:'.date('Y'),
+      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
       'data_series' => 'required',
       'data_persentase' => 'required',
     ]);
@@ -43,7 +43,7 @@ class SosialAdminController extends Controller
     else
     {
       $this->validate($request, [
-        'tahun' => 'required|digits:4|min:2020|max:'.date('Y'),
+        'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
         'data_series' => 'required',
         'data_persentase' => 'required',
       ]);
