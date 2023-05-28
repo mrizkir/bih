@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 
+
+use App\Http\Controllers\LoginAdminController;
 use App\Http\Controllers\KontenAdminController;
 use App\Http\Controllers\SosialAdminController;
 use App\Http\Controllers\SosialRlsAdminController;
@@ -11,10 +13,12 @@ use App\Http\Controllers\SosialAhhAdminController;
 use App\Http\Controllers\SosialAkhbAdminController;
 
 
+
 Auth::routes(['register' => 'false', 'logout' => false]);
 
-
+ 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/login', [LoginAdminController::class, 'index'])->name('login');
 Route::get('/logout', ['uses' => 'App\Http\Controllers\Auth\LoginController@logout', 'as' => 'logout']);
 
 Route::group(

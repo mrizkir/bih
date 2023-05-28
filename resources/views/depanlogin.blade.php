@@ -1,5 +1,6 @@
 @extends('layouts.depan-login')
-@section('isikonten')
+
+@section('isikontenlogin')
 <div id="block" class="w3lvide-content" data-vide-bg="images/freelan" data-vide-options="position: 0% 50%" style="background-image: url('{{asset('home/images/bb.jpg')}}');">
     <!-- /form -->
     <div class="workinghny-form-grid">
@@ -37,4 +38,5 @@
     </div>
     <!-- //copyright-->
 </div>
+
 @endsection

@@ -8,6 +8,6 @@ class LoginAdminController extends Controller
 {
     public function index()
     {
-        return view('admin.adminbih', ['title' => '.:: Halaman Login Admin BIH']);
+        return view('depanlogin', ['title' => '.:: Halaman Login Admin BIH']);
     }
 }
