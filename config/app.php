@@ -179,7 +179,7 @@ return [
 
 	'aliases' => Facade::defaultAliases()->merge([
 		'Helper' => App\Helpers\Helper::class,
-		'Form' => Collective\Html\FormFacde::class,
+		'Form' => Collective\Html\FormFacade::class,
     'Html' => Collective\Html\HtmlFacde::class,
 	])->toArray(),
 
