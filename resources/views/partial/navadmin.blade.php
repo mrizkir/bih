@@ -73,6 +73,17 @@
              </ul>
              <ul class="nav nav-treeview">
                <li class="nav-item">
+                 <a href="{{ route('sosial-ipm.index') }}" class="nav-link">
+                   <div style="width:30px;height:35px;float:left;">
+                     <i class="far fa-circle nav-icon"
+                       style="color:rgb(255, 255, 255);font-size:10px;"></i>
+                   </div>
+                   <p style="font-size: 12px;">Indeks Pembangunan Manusia (IPM) </p>
+                 </a>
+               </li>
+             </ul>
+             <ul class="nav nav-treeview">
+               <li class="nav-item">
                  <a href="{{ route('sosial-rls.index') }}" class="nav-link">
                    <div style="width:30px;height:35px;float:left;">
                      <i class="far fa-circle nav-icon"
