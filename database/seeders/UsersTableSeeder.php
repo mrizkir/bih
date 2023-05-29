@@ -33,5 +33,21 @@ class UsersTableSeeder extends Seeder
 			'created_at'=>Carbon::now(),
 			'updated_at'=>Carbon::now()
 		]);  
+		$user->assignRole('superadmin');
+
+		$user = User::create([
+			'username'=>'op',
+			'password'=>Hash::make('12345678'),                
+			'name'=>'operator',                
+			'email'=>'op@bintankab.go.id',                
+			'nomor_hp'=>'+61234',
+			'theme'=>'default',
+			'email_verified_at'=>Carbon::now(),
+			'isdeleted'=>false,
+			'default_role'=>'operator',			
+			'created_at'=>Carbon::now(),
+			'updated_at'=>Carbon::now()
+		]);  
+		$user->assignRole('operator');
 	}
 }

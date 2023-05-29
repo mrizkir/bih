@@ -31,5 +31,10 @@ class RolesTableSeeder extends Seeder
 				'updated_at'=>Carbon::now()
 			],			
 		]);
+		$role = Role::findByName('operator');
+		$records=[
+			'DASHBOARD_SHOW',			
+		];
+		$role->syncPermissions($records);		
 	}
 }
