@@ -15,6 +15,7 @@ class SosialAdminController extends Controller
 
     return view('admin.sosial.ppm_tampil', [
       'title' => 'Persentase Penduduk Miskin (PPM)',
+      'sumber' => 'BPS',
       'data' => $data
     ]);
   }

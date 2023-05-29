@@ -12,7 +12,7 @@
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item" style="font-size: 12px;">Sumber : {{$sumber}}</li>
+              <li class="breadcrumb-item" style="font-size: 12px;">Sumber : BPS</li>
               
             </ol>
           </div>
@@ -64,7 +64,7 @@
                                     <div class="row">
                                       <div class="col-12">
                                         <span style="font-size:20px;color:rgb(10, 100, 100);"><b>Edit Data {{$title}}</b></span>                                    
-                                        {{-- {!! Form::open(['url'=>route('sosial-ahm.update', ['id' => $item->id]), 'method'=>'put','id'=>'frmedit_' . $item->id,'name'=>'frmedit_' . $item->id])!!} --}}
+                                        {!! Form::open(['url'=>route('sosial-ppm.update', ['id' => $item->id]), 'method'=>'put','id'=>'frmedit_' . $item->id,'name'=>'frmedit_' . $item->id])!!}                                       
                                           <div class="card-body"> 
                                             <div class="form-group">
                                               <div class="row">
@@ -111,7 +111,7 @@
                                             <button type="submit" class="btn btn-info">Simpan</button>
                                             <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
                                           </div>
-                                        {{-- {!! Form::close()!!} --}}
+                                        {!! Form::close()!!}
                                       </div>
                                     </div>
                                   </div>
@@ -143,7 +143,7 @@
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              {{-- {!! Form::open(['url'=>route('sosial-ahm.store'), 'method'=>'post','id'=>'frmadd','name'=>'frmadd'])!!}                                                        --}}
+              {!! Form::open(['url'=>route('sosial-ppm.store'), 'method'=>'post','id'=>'frmadd','name'=>'frmadd'])!!}                                                       
                 <div class="card-body"> 
                   <div class="form-group">
                     <div class="row">
@@ -182,7 +182,7 @@
                   <button type="submit" class="btn btn-info">Simpan</button>
                   <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
                 </div>
-              {{-- {!! Form::close()!!} --}}
+              {!! Form::close()!!}
             </div>
             <!-- /.modal-content -->
           </div>

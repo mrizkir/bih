@@ -5,14 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\DataSosialModel;
 
-class SosialAhhAdminController extends Controller
+class SosialHlsAdminController extends Controller
 {
-    public function ahhIndex()
+    public function hlsIndex()
     {
       $data = DataSosialModel::orderBy('tahun', 'desc')->get();
   
-      return view('admin.sosial.ahh_tampil', [
-        'title' => 'Angka Harapan Hidup (AHH)',
+      return view('admin.sosial.hls_tampil', [
+        'title' => 'Angka Harapan Lama Sekolah (HLS)',
         'sumber' => 'BPS',
         'data' => $data
       ]);
