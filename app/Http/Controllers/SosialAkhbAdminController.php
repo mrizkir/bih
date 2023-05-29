@@ -13,6 +13,7 @@ class SosialAkhbAdminController extends Controller
   
       return view('admin.sosial.akhb_tampil', [
         'title' => 'Angka Kelangsungan Hidup Bayi (AKHB)',
+        'sumber' => 'BPS',
         'data' => $data
       ]);
     }

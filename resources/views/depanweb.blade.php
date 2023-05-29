@@ -65,7 +65,7 @@
                             data-voffset="['28','28','28','28']" 
                             data-start="500"
                             data-basealign="slide" 
-                            data-transform_in="y:[-300%];opacity:0;s:500;"><span style="color:white;">Bintan In Hand | Kabupeten Bintan | Kepulauan Riau</span></div>
+                            data-transform_in="y:[-300%];opacity:0;s:500;"><span style="color:white;">Bintan In Hand | Kabupaten Bintan | Kepulauan Riau</span></div>
                     </li>
                     <li data-transition="fade">
                         <img src="{{asset('depan/images/2.jpg')}}"
@@ -82,7 +82,7 @@
                             data-voffset="['28','28','28','28']" 
                             data-start="500"
                             data-basealign="slide" 
-                            data-transform_in="y:[-300%];opacity:0;s:500;"><span style="color:yellow;">Bintan In Hand | Kabupeten Bintan | Kepulauan Riau</span></div>
+                            data-transform_in="y:[-300%];opacity:0;s:500;"><span style="color:yellow;">Bintan In Hand | Kabupaten Bintan | Kepulauan Riau</span></div>
                     </li>
                     <li data-transition="fade">
                         <img src="{{asset('depan/images/3.jpg')}}"  
@@ -99,7 +99,7 @@
                             data-voffset="['28','28','28','28']" 
                             data-start="500"
                             data-basealign="slide" 
-                            data-transform_in="y:[-300%];opacity:0;s:500;"><span style="color:white;">Bintan In Hand | Kabupeten Bintan | Kepulauan Riau</span></div>
+                            data-transform_in="y:[-300%];opacity:0;s:500;"><span style="color:white;">Bintan In Hand | Kabupaten Bintan | Kepulauan Riau</span></div>
                     </li>
                      <li data-transition="fade">
                         <img src="{{asset('depan/images/4.jpg')}}"  
@@ -116,7 +116,7 @@
                             data-voffset="['28','28','28','28']" 
                             data-start="500"
                             data-basealign="slide" 
-                            data-transform_in="y:[-300%];opacity:0;s:500;"><span style="color:yellow;">Bintan In Hand | Kabupeten Bintan | Kepulauan Riau</span></div>
+                            data-transform_in="y:[-300%];opacity:0;s:500;"><span style="color:yellow;">Bintan In Hand | Kabupaten Bintan | Kepulauan Riau</span></div>
                     </li>
                 </ul>
             </div>

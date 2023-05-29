@@ -13,6 +13,7 @@ class SosialAhmAdminController extends Controller
   
       return view('admin.sosial.ahm_tampil', [
         'title' => 'Angka Melek Huruf (AMH)',
+        'sumber' => 'BPS',
         'data' => $data
       ]);
     }

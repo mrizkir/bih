@@ -5,14 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\DataSosialModel;
 
-class SosialAhhAdminController extends Controller
+class SosialPpuAdminController extends Controller
 {
-    public function ahhIndex()
+    public function ppuIndex()
     {
       $data = DataSosialModel::orderBy('tahun', 'desc')->get();
   
-      return view('admin.sosial.ahh_tampil', [
-        'title' => 'Angka Harapan Hidup (AHH)',
+      return view('admin.sosial.ppu_tampil', [
+        'title' => 'Persentase Penduduk Usia 15 Tahun ke atas menurut Pendidikan yang Ditamatkan (PPU)',
         'sumber' => 'BPS',
         'data' => $data
       ]);
