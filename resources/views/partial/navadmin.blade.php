@@ -122,7 +122,8 @@
                                        <i class="far fa-circle nav-icon"
                                            style="color:rgb(255, 255, 255);font-size:10px;"></i>
                                    </div>
-                                   <p style="font-size: 12px;">Angka Kematian Ibu Melahirkan per 100.000 kelahiran hidup (AKIM)
+                                   <p style="font-size: 12px;">Angka Kematian Ibu Melahirkan per 100.000 kelahiran hidup
+                                       (AKIM)
                                    </p>
                                </a>
                            </li>
@@ -280,7 +281,7 @@
                                    <p style="font-size: 12px;">Distribusi PDRB Atas Dasar Harga Berlaku (ADHB)</p>
                                </a>
                            </li>
-                       </ul> 
+                       </ul>
                        <ul class="nav nav-treeview">
                            <li class="nav-item">
                                <a href="{{ route('ekonomi-adhk.index') }}" class="nav-link">
@@ -291,7 +292,7 @@
                                    <p style="font-size: 12px;">Distribusi PDRB Atas Dasar Harga Konstan (ADHK)</p>
                                </a>
                            </li>
-                       </ul>  
+                       </ul>
                        <ul class="nav nav-treeview">
                            <li class="nav-item">
                                <a href="{{ route('ekonomi-kw.index') }}" class="nav-link">
@@ -302,7 +303,7 @@
                                    <p style="font-size: 12px;">Kunjungan Wisata (KW)</p>
                                </a>
                            </li>
-                       </ul>   
+                       </ul>
                        <ul class="nav nav-treeview">
                            <li class="nav-item">
                                <a href="{{ route('ekonomi-pma.index') }}" class="nav-link">
@@ -313,7 +314,7 @@
                                    <p style="font-size: 12px;">Realisasi Investasi (PMA/ PMDN)</p>
                                </a>
                            </li>
-                       </ul>    
+                       </ul>
                    </li>
 
                    <li class="nav-item">
@@ -332,7 +333,7 @@
                                    <p style="font-size: 12px;">Produksi Perikanan Budidaya (PPB)</p>
                                </a>
                            </li>
-                       </ul>     
+                       </ul>
                        <ul class="nav nav-treeview">
                            <li class="nav-item">
                                <a href="{{ route('pertanian-ppt.index') }}" class="nav-link">
@@ -343,7 +344,7 @@
                                    <p style="font-size: 12px;">Produksi Perikanan Tangkap(PPT)</p>
                                </a>
                            </li>
-                       </ul>      
+                       </ul>
                        <ul class="nav nav-treeview">
                            <li class="nav-item">
                                <a href="{{ route('pertanian-cpkup.index') }}" class="nav-link">
@@ -351,10 +352,11 @@
                                        <i class="far fa-circle nav-icon"
                                            style="color:rgb(255, 255, 255);font-size:10px;"></i>
                                    </div>
-                                   <p style="font-size: 12px;">Capaian Produksi Komoditi Unggulan Perkebunan (CPKUP)</p>
+                                   <p style="font-size: 12px;">Capaian Produksi Komoditi Unggulan Perkebunan (CPKUP)
+                                   </p>
                                </a>
                            </li>
-                       </ul>       
+                       </ul>
                        <ul class="nav nav-treeview">
                            <li class="nav-item">
                                <a href="{{ route('pertanian-cpkh.index') }}" class="nav-link">
@@ -365,7 +367,7 @@
                                    <p style="font-size: 12px;">Capaian Produksi Komoditi Hortikultura (CPKH)</p>
                                </a>
                            </li>
-                       </ul>        
+                       </ul>
                        <ul class="nav nav-treeview">
                            <li class="nav-item">
                                <a href="{{ route('pertanian-jpp.index') }}" class="nav-link">
@@ -376,14 +378,14 @@
                                    <p style="font-size: 12px;">Jumlah Produksi Peternakan (JPP)</p>
                                </a>
                            </li>
-                       </ul>         
+                       </ul>
                    </li>
 
                    <li class="nav-item">
                        <a href="#" class="nav-link">
                            <img src="{{ asset('administrator/img_mda/h4.png') }}" style="width:12%;margin:3px;">
                            <p style="font-size: 10px;">KEPENDUDUKAN<i class="fas fa-angle-left right"></i></p>
-                       </a>     
+                       </a>
                        <ul class="nav nav-treeview">
                            <li class="nav-item">
                                <a href="{{ route('kependudukan-jp.index') }}" class="nav-link">
@@ -394,7 +396,7 @@
                                    <p style="font-size: 12px;">Jumlah Penduduk (JP)</p>
                                </a>
                            </li>
-                       </ul>       
+                       </ul>
                        <ul class="nav nav-treeview">
                            <li class="nav-item">
                                <a href="{{ route('kependudukan-jpbk.index') }}" class="nav-link">
@@ -402,10 +404,11 @@
                                        <i class="far fa-circle nav-icon"
                                            style="color:rgb(255, 255, 255);font-size:10px;"></i>
                                    </div>
-                                   <p style="font-size: 12px;">Jumlah Penduduk Berdasarkan Kecamatan Tahun 2021 (JPBK)</p>
+                                   <p style="font-size: 12px;">Jumlah Penduduk Berdasarkan Kecamatan Tahun 2021 (JPBK)
+                                   </p>
                                </a>
                            </li>
-                       </ul>          
+                       </ul>
                        <ul class="nav nav-treeview">
                            <li class="nav-item">
                                <a href="{{ route('kependudukan-jpbku.index') }}" class="nav-link">
@@ -416,7 +419,7 @@
                                    <p style="font-size: 12px;">Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU)</p>
                                </a>
                            </li>
-                       </ul>           
+                       </ul>
                        <ul class="nav nav-treeview">
                            <li class="nav-item">
                                <a href="{{ route('kependudukan-pp.index') }}" class="nav-link">
@@ -427,7 +430,7 @@
                                    <p style="font-size: 12px;">Pertumbuhan Penduduk (PP)</p>
                                </a>
                            </li>
-                       </ul>            
+                       </ul>
                    </li>
 
                    <li class="nav-item">
@@ -453,10 +456,11 @@
                                        <i class="far fa-circle nav-icon"
                                            style="color:rgb(255, 255, 255);font-size:10px;"></i>
                                    </div>
-                                   <p style="font-size: 12px;">Persentase Rumah Tangga yang menggunakan air bersih (PRT)</p>
+                                   <p style="font-size: 12px;">Persentase Rumah Tangga yang menggunakan air bersih
+                                       (PRT)</p>
                                </a>
                            </li>
-                       </ul> 
+                       </ul>
                        <ul class="nav nav-treeview">
                            <li class="nav-item">
                                <a href="{{ route('infrastruktur-ptkj.index') }}" class="nav-link">
@@ -467,7 +471,7 @@
                                    <p style="font-size: 12px;">Persentase Tingkat Kemantapan Jalan (PTKJ)</p>
                                </a>
                            </li>
-                       </ul> 
+                       </ul>
                    </li>
 
 
@@ -487,12 +491,29 @@
                                    <p style="font-size: 12px;">Data Video (DV)</p>
                                </a>
                            </li>
-                       </ul>  
+                       </ul>
                    </li>
+                   <li class="nav-header"></li>
+                   <li class="nav-header"></li>
 
 
-
-
+                   <li class="nav-item">
+                       <a href="#" class="nav-link">
+                           <img src="{{ asset('administrator/img_mda/h6.png') }}" style="width:12%;margin:3px;">
+                           <p style="font-size: 10px;">MANAJEMEN USER<i class="fas fa-angle-left right"></i></p>
+                       </a>
+                       <ul class="nav nav-treeview">
+                           <li class="nav-item">
+                               <a href="{{ route('user-iu.index') }}" class="nav-link">
+                                   <div style="width:30px;height:35px;float:left;">
+                                       <i class="far fa-circle nav-icon"
+                                           style="color:rgb(255, 255, 255);font-size:10px;"></i>
+                                   </div>
+                                   <p style="font-size: 12px;">Input User (IU)</p>
+                               </a>
+                           </li>
+                       </ul>
+                   </li>
 
 
                    <li class="nav-header"></li>
