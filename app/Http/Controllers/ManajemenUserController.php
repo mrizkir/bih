@@ -9,7 +9,8 @@ class ManajemenUserController extends Controller
 {
     public function iuIndex()
     {
-        $data = DataSosialModel::orderBy('tahun', 'desc')->get();
+      
+      $data = DataSosialModel::orderBy('tahun', 'desc')->get();
 
       return view('admin.manajemen.user_tampil', [
         'title' => 'Manajemen User', 

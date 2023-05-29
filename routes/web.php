@@ -80,13 +80,13 @@ Route::group(
     Route::get('/dashboard', [KontenadminController::class, 'index'])->name('dashboard');
 
     // =================================SOSIAL===========================================
-    //SOSIAL presentasi penduduk miskin (ppm)
+    //SOSIAL presentasi penduduk miskin (ppm) [m_1_pres_pend_miskin]
     Route::get('/ppm', [SosialAdminController::class, 'ppmIndex'])->name('sosial-ppm.index');
     Route::post('/ppm/store', [SosialAdminController::class, 'ppmStore'])->name('sosial-ppm.store');
     Route::get('/ppm/{id}/edit', [SosialAdminController::class, 'ppmEdit'])->name('sosial-ppm.edit');
     Route::put('/ppm/{id}', [SosialAdminController::class, 'ppmUpdate'])->name('sosial-ppm.update');
 
-    //SOSIAL Angka Rata-Rata Lama Sekolah (RLS)
+    //SOSIAL Angka Rata-Rata Lama Sekolah (RLS) [m_2_lpm]
     Route::get('/rls', [SosialRlsAdminController::class, 'rlsIndex'])->name('sosial-rls.index');
     Route::post('/rls/store', [SosialRlsAdminController::class, 'rlsStore'])->name('sosial-rls.store');
     Route::get('/rls/{id}/edit', [SosialRlsAdminController::class, 'rlsEdit'])->name('sosial-rls.edit');
@@ -283,7 +283,7 @@ Route::group(
     Route::get('/prt/{id}/edit', [KependudukanJpAdminController::class, 'prtEdit'])->name('infrastruktur-prt.edit');
     Route::put('/prt/{id}', [KependudukanJpAdminController::class, 'prtUpdate'])->name('infrastruktur-prt.update');         
       
-    //INFRASTRUKTUR  Persentase Tingkat Kemantapan Jalan (PTKJ);
+    //INFRASTRUKTUR  Persentase Tingkat Kemantapan Jalan (PTKJ); 
     Route::get('/ptkj', [InfrastrukturPtkjAdminController::class, 'ptkjIndex'])->name('infrastruktur-ptkj.index'); 
     Route::post('/ptkj/store', [InfrastrukturPtkjAdminController::class, 'ptkjStore'])->name('infrastruktur-ptkj.store');
     Route::get('/ptkj/{id}/edit', [InfrastrukturPtkjAdminController::class, 'ptkjEdit'])->name('infrastruktur-ptkj.edit');
@@ -296,7 +296,9 @@ Route::group(
 
   //===============================MANAJEMENT=============================================
     //USER USER
-    Route::get('/iu', [ManajemenUserController::class, 'iuIndex'])->name('user-iu.index'); 
+    Route::get('/iu', [ManajemenUserController::class, 'iuIndex'])
+    ->middleware(['role:superadmin'])
+    ->name('user-iu.index'); 
 
   }
 );
