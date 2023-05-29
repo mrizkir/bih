@@ -54,6 +54,9 @@ use App\Http\Controllers\InfrastrukturPtkjAdminController;
 // INFRASTRUKTUR
 use App\Http\Controllers\VideoDvAdminController;
 
+// USER
+use App\Http\Controllers\ManajemenUserController;
+
 
 
 
@@ -290,6 +293,10 @@ Route::group(
     //===============================VIDEO=============================================
     //VIDEO Data Video (DV)
     Route::get('/dv', [VideoDvAdminController::class, 'dvIndex'])->name('video-dv.index'); 
+
+  //===============================MANAJEMENT=============================================
+    //USER USER
+    Route::get('/iu', [ManajemenUserController::class, 'iuIndex'])->name('user-iu.index'); 
 
   }
 );
