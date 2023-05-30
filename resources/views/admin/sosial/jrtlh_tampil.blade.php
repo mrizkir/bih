@@ -3,7 +3,13 @@
 @section('konten')
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-    <!-- Content Header (Page header) --> 
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        
+      </div><!-- /.container-fluid -->
+    </section>
+
     <section class="content">
       <div class="container-fluid">
         <div class="row">
@@ -13,13 +19,9 @@
                 <div class="col-sm-6">
                   <li class="breadcrumb-item active" style="font-size: 20px;"><strong>{{ $title }}</strong></li>
                 </div>
-                <div class="col-sm-6">
-                  <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item" style="font-size: 12px;">Sumber : {{$sumber}}</li>
-                    
-                  </ol>
+                <div class="col-sm-6"> 
                 </div>
-              </div>
+              </div><BR>
               <div style="margin:10px;">
                 <div class="border-0">
                   @include('layouts.pesan')
@@ -59,7 +61,7 @@
                                     <div class="row">
                                       <div class="col-12">
                                         <span style="font-size:20px;color:rgb(10, 100, 100);"><b>Edit Data {{$title}}</b></span>                                    
-                                        {{-- {!! Form::open(['url'=>route('sosial-ahm.update', ['id' => $item->id]), 'method'=>'put','id'=>'frmedit_' . $item->id,'name'=>'frmedit_' . $item->id])!!} --}}
+                                        {!! Form::open(['url'=>route('sosial-ppm.update', ['id' => $item->id]), 'method'=>'put','id'=>'frmedit_' . $item->id,'name'=>'frmedit_' . $item->id])!!}                                       
                                           <div class="card-body"> 
                                             <div class="form-group">
                                               <div class="row">
@@ -106,7 +108,7 @@
                                             <button type="submit" class="btn btn-info">Simpan</button>
                                             <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
                                           </div>
-                                        {{-- {!! Form::close()!!} --}}
+                                        {!! Form::close()!!}
                                       </div>
                                     </div>
                                   </div>
@@ -122,10 +124,14 @@
                 </table>
               </div>
             </section>
- 
+
             <!-- /.col -->
           </div>
         </div><!-- /.container-fluid -->
+
+
+        
+ 
 
         {{-- TAMBAH MODAL --}}
         <div class="modal fade" id="modal-default">
@@ -137,7 +143,7 @@
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              {{-- {!! Form::open(['url'=>route('sosial-ahm.store'), 'method'=>'post','id'=>'frmadd','name'=>'frmadd'])!!}                                                        --}}
+              {!! Form::open(['url'=>route('sosial-ppm.store'), 'method'=>'post','id'=>'frmadd','name'=>'frmadd'])!!}                                                       
                 <div class="card-body"> 
                   <div class="form-group">
                     <div class="row">
@@ -176,7 +182,7 @@
                   <button type="submit" class="btn btn-info">Simpan</button>
                   <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
                 </div>
-              {{-- {!! Form::close()!!} --}}
+              {!! Form::close()!!}
             </div>
             <!-- /.modal-content -->
           </div>
@@ -184,8 +190,6 @@
         </div>
         <!-- /.modal -->
     </section>
-
-    
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->

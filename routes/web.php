@@ -166,11 +166,11 @@ Route::group(
     Route::put('/ig/{id}', [SosialIgAdminController::class, 'igUpdate'])->name('sosial-ig.update');      
     
     //SOSIAL Indeks Daya Beli - Purchasing Power Parity (IDB) - [m_15_idb]
-    Route::get('/idb', [SosialIdbAdminConigtroller::class, 'idbIndex'])->name('sosial-idb.index');  
-    Route::post('/ig/store', [SosialIdbAdminConigtroller::class, 'igStore'])->name('sosial-ig.store');
-    Route::get('/ig/{id}/edit', [SosialIdbAdminConigtroller::class, 'igEdit'])->name('sosial-ig.edit');
-    Route::put('/ig/{id}', [SosialIdbAdminConigtroller::class, 'igUpdate'])->name('sosial-ig.update');        
-
+    Route::get('/idb', [SosialIdbAdminController::class, 'idbIndex'])->name('sosial-idb.index');  
+    Route::post('/ig/store', [SosialIdbAdminController::class, 'igStore'])->name('sosial-ig.store');
+    Route::get('/ig/{id}/edit', [SosialIdbAdminController::class, 'igEdit'])->name('sosial-ig.edit');
+    Route::put('/ig/{id}', [SosialIdbAdminController::class, 'igUpdate'])->name('sosial-ig.update');        
+ 
     //SOSIAL Persentase Penduduk Usia 15 Tahun ke atas menurut Pendidikan yang Ditamatkan (PPU) - [m_16_lulusan_pendidikan]
     Route::get('/ppu', [SosialPpuAdminController::class, 'ppuIndex'])->name('sosial-ppu.index'); 
     Route::post('/ppu/store', [SosialPpuAdminController::class, 'ppuStore'])->name('sosial-ppu.store');

@@ -3,7 +3,12 @@
 @section('konten')
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
- 
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        
+      </div><!-- /.container-fluid -->
+    </section>
 
     <section class="content">
       <div class="container-fluid">
@@ -14,13 +19,9 @@
                 <div class="col-sm-6">
                   <li class="breadcrumb-item active" style="font-size: 20px;"><strong>{{ $title }}</strong></li>
                 </div>
-                <div class="col-sm-6">
-                  <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item" style="font-size: 12px;">Sumber : BPS</li>
-                    
-                  </ol>
+                <div class="col-sm-6"> 
                 </div>
-              </div>
+              </div><BR>
               <div style="margin:10px;">
                 <div class="border-0">
                   @include('layouts.pesan')
@@ -124,10 +125,13 @@
               </div>
             </section>
 
-
             <!-- /.col -->
           </div>
         </div><!-- /.container-fluid -->
+
+
+        
+ 
 
         {{-- TAMBAH MODAL --}}
         <div class="modal fade" id="modal-default">
