@@ -58,7 +58,7 @@
            <li class="nav-item">
              <a href="#" class="nav-link">
                <img src="{{ asset('administrator/img_mda/h1.png') }}" style="width:12%;margin:3px;">
-               <p style="font-size: 10px;">SOSIAL<i class="fas fa-angle-left right"></i></p>
+               <p style="font-size: 10px;">SOSIAL<i class="fas fa-angle-left right" style="margin-top: 10px;"></i></p>
              </a>
              <ul class="nav nav-treeview">
                <li class="nav-item">
@@ -68,6 +68,17 @@
                        style="color:rgb(255, 255, 255);font-size:10px;"></i>
                    </div>
                    <p style="font-size: 12px;">Presentasi Penduduk Miskin (PPM)</p>
+                 </a>
+               </li>
+             </ul>
+             <ul class="nav nav-treeview">
+               <li class="nav-item">
+                 <a href="{{ route('sosial-ipm.index') }}" class="nav-link">
+                   <div style="width:30px;height:35px;float:left;">
+                     <i class="far fa-circle nav-icon"
+                       style="color:rgb(255, 255, 255);font-size:10px;"></i>
+                   </div>
+                   <p style="font-size: 12px;">Indeks Pembangunan Manusia (IPM) </p>
                  </a>
                </li>
              </ul>
@@ -135,7 +146,7 @@
                      <i class="far fa-circle nav-icon"
                        style="color:rgb(255, 255, 255);font-size:10px;"></i>
                    </div>
-                   <p style="font-size: 12px;">Perkembangan Kondisi Ketenagakerjaan (IPK))
+                   <p style="font-size: 12px;">Perkembangan Kondisi Ketenagakerjaan di Kabupaten Bintan (PKK)
                    </p>
                  </a>
                </li>
@@ -231,7 +242,7 @@
              </ul>
              <ul class="nav nav-treeview">
                <li class="nav-item">
-                 <a href="{{ route('sosial-ipgg.index') }}" class="nav-link">
+                 <a href="{{ route('sosial-ipg.index') }}" class="nav-link">
                    <div style="width:30px;height:35px;float:left;">
                      <i class="far fa-circle nav-icon"
                        style="color:rgb(255, 255, 255);font-size:10px;"></i>
@@ -247,7 +258,7 @@
            <li class="nav-item">
              <a href="#" class="nav-link">
                <img src="{{ asset('administrator/img_mda/h2.png') }}" style="width:12%;margin:3px;">
-               <p style="font-size: 10px;">EKONOMI<i class="fas fa-angle-left right"></i></p>
+               <p style="font-size: 10px;">EKONOMI<i class="fas fa-angle-left right" style="margin-top: 10px;"></i></p>
              </a>
              <ul class="nav nav-treeview">
                <li class="nav-item">
@@ -320,7 +331,7 @@
            <li class="nav-item">
              <a href="#" class="nav-link">
                <img src="{{ asset('administrator/img_mda/h3.png') }}" style="width:12%;margin:3px;">
-               <p style="font-size: 10px;">PERTANIAN DAN PERIKANAN<i class="fas fa-angle-left right"></i>
+               <p style="font-size: 10px;">PERTANIAN DAN PERIKANAN<i class="fas fa-angle-left right" style="margin-top: 10px;"></i>
                </p>
              </a>
              <ul class="nav nav-treeview">              
@@ -348,7 +359,7 @@
              <ul class="nav nav-treeview">
                <li class="nav-item">
                  <a href="{{ route('pertanian-cpkup.index') }}" class="nav-link">
-                   <div style="width:30px;height:35px;float:left;">
+                   <div style="width:30px;height:55px;float:left;">
                      <i class="far fa-circle nav-icon"
                        style="color:rgb(255, 255, 255);font-size:10px;"></i>
                    </div>
@@ -384,7 +395,7 @@
            <li class="nav-item">
              <a href="#" class="nav-link">
                <img src="{{ asset('administrator/img_mda/h4.png') }}" style="width:12%;margin:3px;">
-               <p style="font-size: 10px;">KEPENDUDUKAN<i class="fas fa-angle-left right"></i></p>
+               <p style="font-size: 10px;">KEPENDUDUKAN<i class="fas fa-angle-left right" style="margin-top: 10px;"></i></p>
              </a>
              <ul class="nav nav-treeview">
                <li class="nav-item">
@@ -436,7 +447,7 @@
            <li class="nav-item">
              <a href="#" class="nav-link">
                <img src="{{ asset('administrator/img_mda/h5.png') }}" style="width:12%;margin:3px;">
-               <p style="font-size: 10px;">INFRASTRUKTUR<i class="fas fa-angle-left right"></i></p>
+               <p style="font-size: 10px;">INFRASTRUKTUR<i class="fas fa-angle-left right" style="margin-top: 10px;"></i></p>
              </a>
              <ul class="nav nav-treeview">
                <li class="nav-item">
@@ -479,7 +490,7 @@
            <li class="nav-item">
              <a href="#" class="nav-link">
                <img src="{{ asset('administrator/img_mda/h6.png') }}" style="width:12%;margin:3px;">
-               <p style="font-size: 10px;">VIDEO BINTAN<i class="fas fa-angle-left right"></i></p>
+               <p style="font-size: 10px;">VIDEO BINTAN<i class="fas fa-angle-left right" style="margin-top: 10px;"></i></p>
              </a>
              <ul class="nav nav-treeview">
                <li class="nav-item">
@@ -495,10 +506,11 @@
            </li>
            @hasrole('superadmin')
            <li class="nav-header"></li>
+
            <li class="nav-item">
              <a href="#" class="nav-link">
                <img src="{{ asset('administrator/img_mda/h6.png') }}" style="width:12%;margin:3px;">
-               <p style="font-size: 10px;">MANAJEMEN USER<i class="fas fa-angle-left right"></i></p>
+               <p style="font-size: 10px;">MANAJEMEN USER<i class="fas fa-angle-left right" style="margin-top: 10px;"></i></p>
              </a>
              <ul class="nav nav-treeview">
                <li class="nav-item">

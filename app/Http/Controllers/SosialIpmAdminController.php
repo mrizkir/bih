@@ -5,14 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\DataSosialModel;
 
-class SosialPkkAdminController extends Controller
+class SosialIpmAdminController extends Controller
 {
-    public function pkkIndex()
+    public function ipmIndex()
     {
       $data = DataSosialModel::orderBy('tahun', 'desc')->get();
   
-      return view('admin.sosial.pkk_tampil', [
-        'title' => 'Perkembangan Kondisi Ketenagakerjaan di Kabupaten Bintan (PKK)',
+      return view('admin.sosial.ipm_tampil', [
+        'title' => 'Indeks Pembangunan Manusia (IPM)',
         'sumber' => 'BPS',
         'data' => $data
       ]);
