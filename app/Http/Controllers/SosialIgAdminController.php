@@ -11,7 +11,7 @@ class SosialIgAdminController extends Controller
     {
       $data = DataSosialModel::orderBy('tahun', 'desc')->get();
   
-      return view('admin.sosial.ig_tampil', [
+      return view('admin.sosial.14ig_tampil', [
         'title' => 'Indeks Gini (IG)',
         'sumber' => 'BPS',
         'data' => $data

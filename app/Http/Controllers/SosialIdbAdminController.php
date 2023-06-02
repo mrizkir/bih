@@ -11,7 +11,7 @@ class SosialIdbAdminController extends Controller
     {
       $data = DataSosialModel::orderBy('tahun', 'desc')->get();
   
-      return view('admin.sosial.idb_tampil', [
+      return view('admin.sosial.15idb_tampil', [
         'title' => 'Indeks Daya Beli - Purchasing Power Parity (IDB)',
         'sumber' => 'BPS',
         'data' => $data

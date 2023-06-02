@@ -11,7 +11,7 @@ class EkonomiLiAdminController extends Controller
     {
       $data = DataSosialModel::orderBy('tahun', 'desc')->get();
   
-      return view('admin.ekonomi.li_tampil', [
+      return view('admin.ekonomi.2li_tampil', [
         'title' => 'Laju Inflasi (LI)',
         'sumber' => 'BPS',
         'data' => $data

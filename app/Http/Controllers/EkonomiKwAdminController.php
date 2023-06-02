@@ -11,7 +11,7 @@ class EkonomiKwAdminController extends Controller
     {
       $data = DataSosialModel::orderBy('tahun', 'desc')->get();
   
-      return view('admin.ekonomi.kw_tampil', [
+      return view('admin.ekonomi.5kw_tampil', [
         'title' => 'Kunjungan Wisata (KW)',
         'sumber' => 'BPS',
         'data' => $data

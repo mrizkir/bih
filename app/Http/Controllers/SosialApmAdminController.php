@@ -11,7 +11,7 @@ class SosialApmAdminController extends Controller
     {
       $data = DataSosialModel::orderBy('tahun', 'desc')->get();
   
-      return view('admin.sosial.apm_tampil', [
+      return view('admin.sosial.11apm_tampil', [
         'title' => 'Angka partisipasi Murni (APM)',
         'sumber' => 'BPS',
         'data' => $data

@@ -11,7 +11,7 @@ class InfrastrukturPtkjAdminController extends Controller
     {
       $data = DataSosialModel::orderBy('tahun', 'desc')->get();
   
-      return view('admin.infrastruktur.ptkj_tampil', [
+      return view('admin.infrastruktur.3ptkj_tampil', [
         'title' => 'Persentase Tingkat Kemantapan Jalan (PTKJ)',
         'sumber' => 'BPS',
         'data' => $data

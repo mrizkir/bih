@@ -11,7 +11,7 @@ class SosialAhhAdminController extends Controller
     {
       $data = DataSosialModel::orderBy('tahun', 'desc')->get();
   
-      return view('admin.sosial.ahh_tampil', [
+      return view('admin.sosial.5ahh_tampil', [
         'title' => 'Angka Harapan Hidup (AHH)',
         'sumber' => 'BPS',
         'data' => $data

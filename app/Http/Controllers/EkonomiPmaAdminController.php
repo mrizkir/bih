@@ -11,7 +11,7 @@ class EkonomiPmaAdminController extends Controller
     {
       $data = DataSosialModel::orderBy('tahun', 'desc')->get();
   
-      return view('admin.ekonomi.pma_tampil', [
+      return view('admin.ekonomi.6pma_tampil', [
         'title' => 'Realisasi Investasi (PMA/ PMDN)',
         'sumber' => 'BPS',
         'data' => $data

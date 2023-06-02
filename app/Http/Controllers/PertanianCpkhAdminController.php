@@ -11,7 +11,7 @@ class PertanianCpkhAdminController extends Controller
     {
       $data = DataSosialModel::orderBy('tahun', 'desc')->get();
   
-      return view('admin.pertanian.cpkh_tampil', [
+      return view('admin.pertanian.4cpkh_tampil', [
         'title' => 'Capaian Produksi Komoditi Hortikultura (CPKH)',
         'sumber' => 'BPS',
         'data' => $data

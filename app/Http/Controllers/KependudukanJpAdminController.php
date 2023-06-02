@@ -11,7 +11,7 @@ class KependudukanJpAdminController extends Controller
     {
       $data = DataSosialModel::orderBy('tahun', 'desc')->get();
   
-      return view('admin.kependudukan.jp_tampil', [
+      return view('admin.kependudukan.1jp_tampil', [
         'title' => 'Jumlah Penduduk (JP)',
         'sumber' => 'BPS',
         'data' => $data

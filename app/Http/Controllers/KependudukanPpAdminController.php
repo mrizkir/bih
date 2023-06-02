@@ -11,7 +11,7 @@ class KependudukanPpAdminController extends Controller
     {
       $data = DataSosialModel::orderBy('tahun', 'desc')->get();
   
-      return view('admin.kependudukan.pp_tampil', [
+      return view('admin.kependudukan.4pp_tampil', [
         'title' => 'Pertumbuhan Penduduk (PP)',
         'sumber' => 'BPS',
         'data' => $data

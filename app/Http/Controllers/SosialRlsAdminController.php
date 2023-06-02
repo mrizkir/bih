@@ -11,7 +11,7 @@ class SosialRlsAdminController extends Controller
     {
       $data = DataSosialModel::orderBy('tahun', 'desc')->get();
   
-      return view('admin.sosial.rls_tampil', [
+      return view('admin.sosial.3rls_tampil', [
         'title' => 'Angka Rata-Rata Lama Sekolah (RLS)',
         'sumber' => 'BPS',
         'data' => $data

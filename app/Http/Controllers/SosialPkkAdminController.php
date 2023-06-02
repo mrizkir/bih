@@ -11,7 +11,7 @@ class SosialPkkAdminController extends Controller
     {
       $data = DataSosialModel::orderBy('tahun', 'desc')->get();
   
-      return view('admin.sosial.pkk_tampil', [
+      return view('admin.sosial.8pkk_tampil', [
         'title' => 'Perkembangan Kondisi Ketenagakerjaan di Kabupaten Bintan (PKK)',
         'sumber' => 'BPS',
         'data' => $data

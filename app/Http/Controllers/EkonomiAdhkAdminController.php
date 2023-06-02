@@ -11,7 +11,7 @@ class EkonomiAdhkAdminController extends Controller
     {
       $data = DataSosialModel::orderBy('tahun', 'desc')->get();
   
-      return view('admin.ekonomi.adhk_tampil', [
+      return view('admin.ekonomi.4adhk_tampil', [
         'title' => 'Distribusi PDRB Atas Dasar Harga Konstan (ADHK)',
         'sumber' => 'BPS',
         'data' => $data
