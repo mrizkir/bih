@@ -175,6 +175,29 @@
                             </a>
                         </li>
                     </ul>
+                                        <ul class="nav nav-treeview">
+                      <li class="nav-item">
+                          <a href="#" class="nav-link">
+                              <div style="width:30px;height:35px;float:left;">
+                                  <i class="far fa-circle nav-icon"
+                                      style="color:rgb(255, 255, 255);font-size:10px;"></i>
+                              </div>
+                              <p style="font-size: 12px;">Distribusi PDRB Atas Dasar Harga Berlaku (ADHB)<i class="fas fa-angle-left right"
+                                      style="margin-top: 10px;"></i></p>
+                          </a>
+                          <ul class="nav nav-treeview">
+                              <li class="nav-item">
+                                  <a href="#" class="nav-link">
+                                      <div style="width:30px;height:35px;float:left;">
+                                           
+                                      </div>
+                                      <p style="font-size: 12px;">A. Pertanian, Kehutanan dan Perikanan</p>
+                                  </a>
+                              </li>
+
+                          </ul>
+                      </li>
+                  </ul>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a href="{{ route('sosial-apm.index') }}" class="nav-link">
