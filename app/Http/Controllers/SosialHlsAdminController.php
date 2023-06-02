@@ -11,7 +11,7 @@ class SosialHlsAdminController extends Controller
     {
       $data = DataSosialModel::orderBy('tahun', 'desc')->get();
   
-      return view('admin.sosial.hls_tampil', [
+      return view('admin.sosial.12hls_tampil', [
         'title' => 'Angka Harapan Lama Sekolah (HLS)',
         'sumber' => 'BPS',
         'data' => $data

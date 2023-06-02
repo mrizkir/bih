@@ -11,7 +11,7 @@ class SosialAkimAdminController extends Controller
     {
       $data = DataSosialModel::orderBy('tahun', 'desc')->get();
   
-      return view('admin.sosial.akim_tampil', [
+      return view('admin.sosial.7akim_tampil', [
         'title' => 'Angka Kematian Ibu Melahirkan Per 100.000 Kelahiran Hidup',
         'sumber' => 'BPS',
         'data' => $data

@@ -11,7 +11,7 @@ class SosialAkhbAdminController extends Controller
     {
       $data = DataSosialModel::orderBy('tahun', 'desc')->get();
   
-      return view('admin.sosial.akhb_tampil', [
+      return view('admin.sosial.6akhb_tampil', [
         'title' => 'Angka Kelangsungan Hidup Bayi (AKHB)',
         'sumber' => 'BPS',
         'data' => $data

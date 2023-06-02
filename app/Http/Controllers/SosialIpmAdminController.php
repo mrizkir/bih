@@ -11,7 +11,7 @@ class SosialIpmAdminController extends Controller
     {
       $data = DataSosialModel::orderBy('tahun', 'desc')->get();
   
-      return view('admin.sosial.ipm_tampil', [
+      return view('admin.sosial.2ipm_tampil', [
         'title' => 'Indeks Pembangunan Manusia (IPM)',
         'sumber' => 'BPS',
         'data' => $data

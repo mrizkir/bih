@@ -11,7 +11,7 @@ class SosialApkAdminController extends Controller
     {
       $data = DataSosialModel::orderBy('tahun', 'desc')->get();
   
-      return view('admin.sosial.apk_tampil', [
+      return view('admin.sosial.10apk_tampil', [
         'title' => 'Angka Partisipasi Kasar (APK)',
         'sumber' => 'BPS',
         'data' => $data

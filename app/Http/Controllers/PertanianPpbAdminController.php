@@ -11,7 +11,7 @@ class PertanianPpbAdminController extends Controller
     {
       $data = DataSosialModel::orderBy('tahun', 'desc')->get();
   
-      return view('admin.pertanian.ppb_tampil', [
+      return view('admin.pertanian.1ppb_tampil', [
         'title' => 'Produksi Perikanan Budidaya (PPB)',
         'sumber' => 'BPS',
         'data' => $data

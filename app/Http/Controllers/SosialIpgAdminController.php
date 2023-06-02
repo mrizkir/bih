@@ -11,7 +11,7 @@ class SosialIpgAdminController extends Controller
     {
       $data = DataSosialModel::orderBy('tahun', 'desc')->get();
   
-      return view('admin.sosial.ipg_tampil', [
+      return view('admin.sosial.9ipg_tampil', [
         'title' => 'Indeks Pembangunan Gender (IPG)',
         'sumber' => 'BPS',
         'data' => $data

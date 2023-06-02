@@ -11,7 +11,7 @@ class KependudukanJpbkuAdminController extends Controller
     {
       $data = DataSosialModel::orderBy('tahun', 'desc')->get();
   
-      return view('admin.kependudukan.jpbku_tampil', [
+      return view('admin.kependudukan.3jpbku_tampil', [
         'title' => 'Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU)',
         'sumber' => 'BPS',
         'data' => $data

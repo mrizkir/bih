@@ -11,7 +11,7 @@ class InfrastrukturPrtAdminController extends Controller
     {
       $data = DataSosialModel::orderBy('tahun', 'desc')->get();
   
-      return view('admin.infrastruktur.prt_tampil', [
+      return view('admin.infrastruktur.2prt_tampil', [
         'title' => 'Persentase Rumah Tangga yang menggunakan air bersih (PRT)',
         'sumber' => 'BPS',
         'data' => $data

@@ -11,7 +11,7 @@ class PertanianCpkupAdminController extends Controller
     {
       $data = DataSosialModel::orderBy('tahun', 'desc')->get();
   
-      return view('admin.pertanian.cpkup_tampil', [
+      return view('admin.pertanian.3cpkup_tampil', [
         'title' => 'Capaian Produksi Komoditi Unggulan Perkebunan (CPKUP)',
         'sumber' => 'BPS',
         'data' => $data

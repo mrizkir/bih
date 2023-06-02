@@ -13,7 +13,7 @@ class SosialAdminController extends Controller
     $data = DataSosialModel::where('jenis_data', 'ppm')
     ->orderBy('tahun', 'desc')->get();
 
-    return view('admin.sosial.ppm_tampil', [
+    return view('admin.sosial.1ppm_tampil', [
       'title' => 'Persentase Penduduk Miskin (PPM)',
       'sumber' => 'BPS',
       'data' => $data

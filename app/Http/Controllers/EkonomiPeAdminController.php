@@ -11,7 +11,7 @@ class EkonomiPeAdminController extends Controller
     {
       $data = DataSosialModel::orderBy('tahun', 'desc')->get();
   
-      return view('admin.ekonomi.pe_tampil', [
+      return view('admin.ekonomi.1pe_tampil', [
         'title' => 'Petumbuhan Ekonomi (PE)',
         'sumber' => 'BPS',
         'data' => $data

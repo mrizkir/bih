@@ -11,7 +11,7 @@ class PertanianPptAdminController extends Controller
     {
       $data = DataSosialModel::orderBy('tahun', 'desc')->get();
   
-      return view('admin.pertanian.ppt_tampil', [
+      return view('admin.pertanian.2ppt_tampil', [
         'title' => 'Produksi Perikanan Tangkap(PPT)',
         'sumber' => 'BPS',
         'data' => $data

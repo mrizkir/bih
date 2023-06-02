@@ -63,11 +63,6 @@ use App\Http\Controllers\ManajemenUserController;
 
 
 
-
-
-
-
-
 Auth::routes(['register' => 'false', 'logout' => false]);
 
  
@@ -184,6 +179,8 @@ Route::group(
     Route::put('/ppu/{id}', [SosialPpuAdminController::class, 'ppuUpdate'])->name('sosial-ppu.update');        
 
 
+
+
   // =================================EKONOMI===========================================
     //EKONOMI  Petumbuhan Ekonomi (PE) - [m_17_ekonomi]
     Route::get('/pe', [EkonomiPeAdminController::class, 'peIndex'])->name('ekonomi-pe.index'); 
@@ -221,6 +218,8 @@ Route::group(
     Route::get('/pma/{id}/edit', [EkonomiPmaAdminController::class, 'pmaEdit'])->name('ekonomi-pma.edit');
     Route::put('/pma/{id}', [EkonomiPmaAdminController::class, 'pmaUpdate'])->name('ekonomi-pma.update');         
 
+
+
     //==============================PERTANAIN==============================================
     //PERTANAIN Produksi Perikanan Budidaya (PPB) - [m_21_perikanan_budidaya]
     Route::get('/ppb', [PertanianPpbAdminController::class, 'ppbIndex'])->name('pertanian-ppb.index'); 
@@ -252,6 +251,8 @@ Route::group(
     Route::get('/jpp/{id}/edit', [PertanianCpkupAdminController::class, 'jppEdit'])->name('ekonomi-jpp.edit');
     Route::put('/jpp/{id}', [PertanianCpkupAdminController::class, 'jppUpdate'])->name('ekonomi-jpp.update');         
 
+
+
     //===============================KEPENDUDUKAN=============================================
     //KEPENDUDUKAN Jumlah Penduduk (JP) - [mm_26_jml_penduduk]
     Route::get('/jp', [KependudukanJpAdminController::class, 'jpIndex'])->name('kependudukan-jp.index'); 
@@ -277,6 +278,9 @@ Route::group(
     Route::get('/pp/{id}/edit', [KependudukanJpAdminController::class, 'ppEdit'])->name('kependudukan-pp.edit');
     Route::put('/pp/{id}', [KependudukanJpAdminController::class, 'ppUpdate'])->name('kependudukan-pp.update');         
 
+
+
+
       //===============================INFRASTRUKTUR=============================================
     //INFRASTRUKTUR Panjang Jalan Yang Dibangun dan Ditingkatkan (PJDD) - [m_28_jalan]
     Route::get('/pjdd', [InfrastrukturPjddAdminController::class, 'pjddIndex'])->name('infrastruktur-pjdd.index'); 
@@ -297,9 +301,13 @@ Route::group(
     Route::put('/ptkj/{id}', [InfrastrukturPtkjAdminController::class, 'ptkjUpdate'])->name('infrastruktur-ptkj.update');         
 
 
+
+
     //===============================VIDEO=============================================
     //VIDEO Data Video (DV) - [m_video]
     Route::get('/dv', [VideoDvAdminController::class, 'dvIndex'])->name('video-dv.index'); 
+
+
 
   //===============================MANAJEMENT=============================================
     //USER USER

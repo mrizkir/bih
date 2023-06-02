@@ -11,7 +11,7 @@ class SosialJrtlhAdminController extends Controller
     {
       $data = DataSosialModel::orderBy('tahun', 'desc')->get();
   
-      return view('admin.sosial.jrtlh_tampil', [
+      return view('admin.sosial.13jrtlh_tampil', [
         'title' => 'Jumlah Rumah Tidak Layak Huni Yang Direhab (JRTLH)',
         'sumber' => 'BPS',
         'data' => $data

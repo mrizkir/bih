@@ -11,7 +11,7 @@ class PertanianJppAdminController extends Controller
     {
       $data = DataSosialModel::orderBy('tahun', 'desc')->get();
   
-      return view('admin.pertanian.jpp_tampil', [
+      return view('admin.pertanian.5jpp_tampil', [
         'title' => 'Jumlah Produksi Peternakan (JPP)',
         'sumber' => 'BPS',
         'data' => $data
