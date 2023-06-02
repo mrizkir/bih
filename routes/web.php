@@ -172,7 +172,7 @@ Route::group(
     Route::get('/ppu/{id}/edit', [SosialPpuAdminController::class, 'ppuEdit'])->name('sosial-ppu.edit');
     Route::put('/ppu/{id}', [SosialPpuAdminController::class, 'ppuUpdate'])->name('sosial-ppu.update');        
 
-    //SOSIAL  Indeks Pemeberdayaan Gender (IPG) - [mm_17_ipg]
+    //SOSIAL  Indeks Pemberdayaan Gender (IPG) - [m_38_idg]
     Route::get('/ipgg', [SosialIpggAdminController::class, 'ipggIndex'])->name('sosial-ipgg.index'); 
     Route::post('/ppu/store', [SosialPpuAdminController::class, 'ppuStore'])->name('sosial-ppu.store');
     Route::get('/ppu/{id}/edit', [SosialPpuAdminController::class, 'ppuEdit'])->name('sosial-ppu.edit');
