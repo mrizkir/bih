@@ -4,7 +4,7 @@
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-<BR>
+    <br>
     <section class="content">
       <div class="container-fluid">
         <div class="row">
@@ -13,10 +13,7 @@
               <div class="row mb-2">
                 <div class="col-sm-6">
                   <li class="breadcrumb-item active" style="font-size: 20px;"><strong>{{ $title }}</strong></li>
-                </div>
-                <div class="col-sm-6">
-                  
-                </div>
+                </div>                
               </div><BR>
               <div style="margin:10px;">
                 <div class="border-0">
@@ -43,13 +40,13 @@
                      @foreach ($data as $k=>$item)
                       <tr style="font-size: 11px;">
                         <td class="text-center">{{$k + 1 }}</th>
-                        <td><strong>Tahun</strong> : {{$item->tahun}} | <strong>Series</strong> : {{Helper::getJenisDataSeries($item->data_series)}} | <strong>Persentase</strong> : {{$item->persentase}}%</td>                       
+                        <td><strong>Tahun</strong> : {{$item->tahun}} | <strong>Series</strong> : {{Helper::getJenisDataSeries($item->status_data)}} | <strong>Persentase</strong> : {{$item->presentase}}%</td>                       
                         <td class="project-actions text-center" style="padding: 10px;">                        
-                          <a href="" class="btn btn-info btn-sm" data-toggle="modal" style="font-size: 10px;" data-target="#modaledit{{$item->id}}">
+                          <a href="" class="btn btn-info btn-sm" data-toggle="modal" style="font-size: 10px;" data-target="#modaledit{{$item->tahun}}">
                             <i class="fas fa-pencil-alt"></i> Edit
                           </a>                      
                           {{-- VIEW MODAL EDIT --}}
-                          <div class="modal fade" id="modaledit{{$item->id}}" role="dialog">
+                          <div class="modal fade" id="modaledit{{$item->tahun}}" role="dialog">
                             <div class="modal-dialog modal-xl">
                               <div class="modal-content" style="padding:30px;">
                                 <div class="container" style="padding:30px;">
@@ -57,7 +54,7 @@
                                     <div class="row">
                                       <div class="col-12">
                                         <span style="font-size:20px;color:rgb(10, 100, 100);"><b>Edit Data {{$title}}</b></span>                                    
-                                        {!! Form::open(['url'=>route('sosial-ppm.update', ['id' => $item->id]), 'method'=>'put','id'=>'frmedit_' . $item->id,'name'=>'frmedit_' . $item->id])!!}                                       
+                                        {!! Form::open(['url'=>route('sosial-ppm.update', ['id' => $item->tahun]), 'method'=>'put','id'=>'frmedit_' . $item->tahun,'name'=>'frmedit_' . $item->tahun])!!}                                       
                                           <div class="card-body"> 
                                             <div class="form-group">
                                               <div class="row">
@@ -73,26 +70,26 @@
                                                     </div>
                                                   @endif
                                                 </div>
-                                                <div class="col-4">
+                                                <div class="col-4">status_data
                                                   <label>Data Series</label>
-                                                  {!! Form::select('data_series', Helper::getJenisDataSeries(), $item->data_series, ['id'=>'data_series', 'class'=>'form-control']) !!}                                              
-                                                  @if($errors->has('data_series'))
+                                                  {!! Form::select('status_data', Helper::getJenisDataSeries(), $item->status_data, ['id'=>'status_data', 'class'=>'form-control']) !!}                                              
+                                                  @if($errors->has('status_data'))
                                                     <div class="alert alert-danger mt-1 alert-validation-msg" role="alert">
                                                       <div class="alert-body d-flex align-items-center">
                                                         <i data-feather="info" class="me-50"></i>
-                                                        {{ $errors->first('data_series') }}
+                                                        {{ $errors->first('status_data') }}
                                                       </div>
                                                     </div>
                                                   @endif
                                                 </div>
                                                 <div class="col-4">
                                                   <label>Data Persentase</label>
-                                                  <input type="text" name="data_persentase" class="form-control @error('data_persentase') is-invalid @enderror" value="{{$item->persentase}}" required>
-                                                  @if($errors->has('data_persentase'))
+                                                  <input type="text" name="presentase" class="form-control @error('presentase') is-invalid @enderror" value="{{$item->presentase}}" required>
+                                                  @if($errors->has('presentase'))
                                                     <div class="alert alert-danger mt-1 alert-validation-msg" role="alert">
                                                       <div class="alert-body d-flex align-items-center">
                                                         <i data-feather="info" class="me-50"></i>
-                                                        {{ $errors->first('data_persentase') }}
+                                                        {{ $errors->first('presentase') }}
                                                       </div>
                                                     </div>
                                                   @endif
@@ -120,12 +117,8 @@
                 </table>
               </div>
             </section>
-
-
-            <!-- /.col -->
           </div>
-        </div><!-- /.container-fluid -->
-
+        </div>
         {{-- TAMBAH MODAL --}}
         <div class="modal fade" id="modal-default">
           <div class="modal-dialog modal-xl">
@@ -154,16 +147,16 @@
                       </div>
                       <div class="col-4">
                         <label>Data Series</label>
-                        {!! Form::select('data_series', Helper::getJenisDataSeries(), old('data_series'), ['id'=>'frmadd_data_series', 'class'=>'form-control']) !!}                                              
+                        {!! Form::select('status_data', Helper::getJenisDataSeries(), old('status_data'), ['id'=>'frmadd_status_data', 'class'=>'form-control']) !!}                                              
                       </div>
                       <div class="col-4">
                         <label>Data Persentase</label>
-                        <input type="text" name="data_persentase" class="form-control @error('data_persentase') is-invalid @enderror" placeholder="Ketik Data Persentase" required>
-                        @if($errors->has('data_persentase'))
+                        <input type="text" name="presentase" class="form-control @error('presentase') is-invalid @enderror" placeholder="Ketik Data Persentase" required>
+                        @if($errors->has('presentase'))
                           <div class="alert alert-danger mt-1 alert-validation-msg" role="alert">
                             <div class="alert-body d-flex align-items-center">
                               <i data-feather="info" class="me-50"></i>
-                              {{ $errors->first('data_persentase') }}
+                              {{ $errors->first('presentase') }}
                             </div>
                           </div>
                         @endif

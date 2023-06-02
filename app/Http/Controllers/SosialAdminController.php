@@ -10,8 +10,14 @@ class SosialAdminController extends Controller
 {
   public function ppmIndex()
   {
-    $data = DataSosialModel::where('jenis_data', 'ppm')
-    ->orderBy('tahun', 'desc')->get();
+    $data = \DB::table('m_1_pres_pend_miskin')
+    ->select(\DB::raw('
+      tahun,
+      presentase,
+      status_data
+    '))    
+    ->orderBy('tahun', 'desc')
+    ->get();
 
     return view('admin.sosial.ppm_tampil', [
       'title' => 'Persentase Penduduk Miskin (PPM)',
@@ -23,40 +29,42 @@ class SosialAdminController extends Controller
   {
     $this->validate($request, [
       'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
-      'data_series' => 'required',
-      'data_persentase' => 'required',
+      'presentase' => 'required|numeric|min:0|max:100',
+      'status_data' => 'required|in:1,2,3',
     ]);
 
-    DataSosialModel::create([
+    \DB::table('m_1_pres_pend_miskin')
+    ->insert([
       'tahun' => $request->input('tahun'),
-      'data_series' => $request->input('data_series'),
-      'jenis_data' => 'ppm',
-      'persentase' => $request->input('data_persentase'),
+      'presentase' => $request->input('presentase'),      
+      'status_data' => $request->input('status_data'),
     ]);
 
-    return redirect(route('sosial-ppm.index'))->with('sukses', 'data berhasil disimpan');
+    return redirect(route('sosial-ppm.index'))->with('success', 'data berhasil disimpan');
   }
   public function ppmUpdate(Request $request, $id)
   {
-    $data = DataSosialModel::find($id);
+    $data = \DB::table('m_1_pres_pend_miskin')
+    ->where('tahun', $id)
+    ->first();
+
     if (is_null($data))
     {
-      return redirect(route('sosial-ppm.index'))->with('gagal', 'data gagal disimpan');
+      return redirect(route('sosial-ppm.index'))->with('error', 'data gagal disimpan');
     }
     else
     {
-      $this->validate($request, [
-        'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
-        'data_series' => 'required',
-        'data_persentase' => 'required',
+      $this->validate($request, [        
+        'presentase' => 'required|numeric|min:0|max:100',
+        'status_data' => 'required|in:1,2,3',
       ]);
-      
-      $data->tahun = $request->input('tahun');
-      $data->data_series = $request->input('data_series');
-      $data->persentase = $request->input('data_persentase');
-      $data->save();
-
-      return redirect(route('sosial-ppm.index'))->with('sukses', 'data berhasil diubah');
+      \DB::table('m_1_pres_pend_miskin')
+      ->where('tahun', $request->input('tahun'))
+      ->update([
+        'presentase' => $request->input('presentase'),      
+        'status_data' => $request->input('status_data'),
+      ]);
+      return redirect(route('sosial-ppm.index'))->with('success', 'data berhasil diubah');
     }    
   }
 }
