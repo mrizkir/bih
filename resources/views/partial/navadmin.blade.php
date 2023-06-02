@@ -164,49 +164,79 @@
                             </a>
                         </li>
                     </ul>
+
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ route('sosial-apk.index') }}" class="nav-link">
+                            <a href="" class="nav-link">
                                 <div style="width:30px;height:35px;float:left;">
                                     <i class="far fa-circle nav-icon"
                                         style="color:rgb(255, 255, 255);font-size:10px;"></i>
                                 </div>
-                                <p style="font-size: 12px;">Angka Partisipasi Kasar (APK)</p>
+                                <p style="font-size: 12px;">Angka Partisipasi Kasar (APK)<i
+                                        class="fas fa-angle-left right" style="margin-top: 5px;"></i></p>
                             </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('sosial-apk_SD') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">SD 7-12 Tahun</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('sosial-apk_SMP') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">SMP 13-15 Tahun</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('sosial-apk_SMA') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">SMA 16-18 Tahun</p>
+                                    </a>
+                                </li>
+                            </ul>
+
                         </li>
                     </ul>
-                                        <ul class="nav nav-treeview">
-                      <li class="nav-item">
-                          <a href="#" class="nav-link">
-                              <div style="width:30px;height:35px;float:left;">
-                                  <i class="far fa-circle nav-icon"
-                                      style="color:rgb(255, 255, 255);font-size:10px;"></i>
-                              </div>
-                              <p style="font-size: 12px;">Distribusi PDRB Atas Dasar Harga Berlaku (ADHB)<i class="fas fa-angle-left right"
-                                      style="margin-top: 10px;"></i></p>
-                          </a>
-                          <ul class="nav nav-treeview">
-                              <li class="nav-item">
-                                  <a href="#" class="nav-link">
-                                      <div style="width:30px;height:35px;float:left;">
-                                           
-                                      </div>
-                                      <p style="font-size: 12px;">A. Pertanian, Kehutanan dan Perikanan</p>
-                                  </a>
-                              </li>
-
-                          </ul>
-                      </li>
-                  </ul>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ route('sosial-apm.index') }}" class="nav-link">
+                            <a href="" class="nav-link">
                                 <div style="width:30px;height:35px;float:left;">
                                     <i class="far fa-circle nav-icon"
                                         style="color:rgb(255, 255, 255);font-size:10px;"></i>
                                 </div>
-                                <p style="font-size: 12px;">Angka partisipasi Murni (APM)</p>
+                                <p style="font-size: 12px;">Angka partisipasi Murni (APM)<i
+                                        class="fas fa-angle-left right" style="margin-top: 5px;"></i></p>
                             </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('sosial-apm_SD') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">SD 7-12 Tahun</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('sosial-apm_SMP') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">SMP 13-15 Tahun</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('sosial-apm_SMA') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">SMA 16-18 Tahun</p>
+                                    </a>
+                                </li>
+                            </ul>
+
                         </li>
                     </ul>
                     <ul class="nav nav-treeview">
@@ -310,47 +340,306 @@
                     </ul>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ route('ekonomi-adhb.index') }}" class="nav-link">
+                            <a href="" class="nav-link">
                                 <div style="width:30px;height:35px;float:left;">
                                     <i class="far fa-circle nav-icon"
                                         style="color:rgb(255, 255, 255);font-size:10px;"></i>
                                 </div>
-                                <p style="font-size: 12px;">Distribusi PDRB Atas Dasar Harga Berlaku (ADHB)</p>
+                                <p style="font-size: 12px;">Distribusi PDRB Atas Dasar Harga Berlaku (ADHB)<i
+                                        class="fas fa-angle-left right" style="margin-top: 5px;"></i></p>
                             </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('ekonomi-adhk_A') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">A. Pertanian, Kehutanan dan Perikanan</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('ekonomi-adhb_B') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">B. Pertambangan dan Penggalian</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('ekonomi-adhb_C') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">C. Industri Pengolahan</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('ekonomi-adhb_D') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">D. Pengadaan Listrik dan Gas</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('ekonomi-adhb_E') }}" class="nav-link">
+                                        <div style="width:30px;height:55px;float:left;"></div>
+                                        <p style="font-size: 12px;">E. Pengadaan Air, Pengelolaan Sampah, Limbah dan
+                                            Daur Ulang</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('ekonomi-adhb_F') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">F. Konstruksi</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('ekonomi-adhb_G') }}" class="nav-link">
+                                        <div style="width:30px;height:55px;float:left;"></div>
+                                        <p style="font-size: 12px;">G. Perdagangan Besar dan Eceran, Reparasi Mobil dan
+                                            Sepeda Motor</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('ekonomi-adhb_H') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">H. Transportasi dan Pergudangan</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('ekonomi-adhb_I') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">I. Penyediaan Akomodasi dan Makan Minum</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('ekonomi-adhb_J') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">J. Informasi dan Komunikasi</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('ekonomi-adhb_K') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">K. Jasa Keuangan dan Asuransi</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('ekonomi-adhb_L') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">L. Real Estate</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('ekonomi-adhb_MN') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">M,N. Jasa Perusahaan</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('ekonomi-adhb_O') }}" class="nav-link">
+                                        <div style="width:30px;height:55px;float:left;"></div>
+                                        <p style="font-size: 12px;">O. Administrasi Pemerintahan, Pertahanan dan
+                                            Jaminan Sosial Wajib</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('ekonomi-adhb_P') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">P. Jasa Pendidikan</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('ekonomi-adhb_Q') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">Q. Jasa Kesehatan dan Kegiatan Sosial</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('ekonomi-adhb_RSTU') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">R,S,T,U. Jasa Lainnya</p>
+                                    </a>
+                                </li>
+                            </ul>
+
                         </li>
                     </ul>
-                    {{-- <ul class="nav nav-treeview">
-                      <li class="nav-item">
-                          <a href="#" class="nav-link">
-                              <div style="width:30px;height:35px;float:left;">
-                                  <i class="far fa-circle nav-icon"
-                                      style="color:rgb(255, 255, 255);font-size:10px;"></i>
-                              </div>
-                              <p style="font-size: 12px;">Distribusi PDRB Atas Dasar Harga Berlaku (ADHB)<i class="fas fa-angle-left right"
-                                      style="margin-top: 10px;"></i></p>
-                          </a>
-                          <ul class="nav nav-treeview">
-                              <li class="nav-item">
-                                  <a href="#" class="nav-link">
-                                      <div style="width:30px;height:35px;float:left;">
-                                           
-                                      </div>
-                                      <p style="font-size: 12px;">A. Pertanian, Kehutanan dan Perikanan</p>
-                                  </a>
-                              </li>
-
-                          </ul>
-                      </li>
-                  </ul> --}}
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ route('ekonomi-adhk.index') }}" class="nav-link">
+                            <a href="" class="nav-link">
                                 <div style="width:30px;height:35px;float:left;">
                                     <i class="far fa-circle nav-icon"
                                         style="color:rgb(255, 255, 255);font-size:10px;"></i>
                                 </div>
-                                <p style="font-size: 12px;">Distribusi PDRB Atas Dasar Harga Konstan (ADHK)</p>
+                                <p style="font-size: 12px;">Distribusi PDRB Atas Dasar Harga Konstan (ADHK)<i
+                                        class="fas fa-angle-left right" style="margin-top: 5px;"></i></p>
                             </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('ekonomi-adhk_A') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">A. Pertanian, Kehutanan dan Perikanan</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('ekonomi-adhk_B') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">B. Pertambangan dan Penggalian</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('ekonomi-adhk_C') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">C. Industri Pengolahan</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('ekonomi-adhk_D') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">D. Pengadaan Listrik dan Gas</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('ekonomi-adhk_E') }}" class="nav-link">
+                                        <div style="width:30px;height:55px;float:left;"></div>
+                                        <p style="font-size: 12px;">E. Pengadaan Air, Pengelolaan Sampah, Limbah dan
+                                            Daur Ulang</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('ekonomi-adhk_F') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">F. Konstruksi</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('ekonomi-adhk_G') }}" class="nav-link">
+                                        <div style="width:30px;height:55px;float:left;"></div>
+                                        <p style="font-size: 12px;">G. Perdagangan Besar dan Eceran, Reparasi Mobil dan
+                                            Sepeda Motor</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('ekonomi-adhk_H') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">H. Transportasi dan Pergudangan</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('ekonomi-adhk_I') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">I. Penyediaan Akomodasi dan Makan Minum</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('ekonomi-adhk_J') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">J. Informasi dan Komunikasi</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('ekonomi-adhk_K') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">K. Jasa Keuangan dan Asuransi</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('ekonomi-adhk_L') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">L. Real Estate</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('ekonomi-adhk_MN') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">M,N. Jasa Perusahaan</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('ekonomi-adhk_O') }}" class="nav-link">
+                                        <div style="width:30px;height:55px;float:left;"></div>
+                                        <p style="font-size: 12px;">O. Administrasi Pemerintahan, Pertahanan dan
+                                            Jaminan Sosial Wajib</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('ekonomi-adhk_P') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">P. Jasa Pendidikan</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('ekonomi-adhk_Q') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">Q. Jasa Kesehatan dan Kegiatan Sosial</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('ekonomi-adhk_RSTU') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">R,S,T,U. Jasa Lainnya</p>
+                                    </a>
+                                </li>
+                            </ul>
+
                         </li>
                     </ul>
                     <ul class="nav nav-treeview">
@@ -458,146 +747,263 @@
                                 <p style="font-size: 12px;">Jumlah Penduduk (JP)</p>
                             </a>
                         </li>
-                    </ul>
+                    </ul> 
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ route('kependudukan-jpbk.index') }}" class="nav-link">
+                            <a href="" class="nav-link">
                                 <div style="width:30px;height:35px;float:left;">
                                     <i class="far fa-circle nav-icon"
                                         style="color:rgb(255, 255, 255);font-size:10px;"></i>
                                 </div>
-                                <p style="font-size: 12px;">Jumlah Penduduk Berdasarkan Kecamatan Tahun 2021 (JPBK)
-                                </p>
+                                <p style="font-size: 12px;">Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU)<i
+                                        class="fas fa-angle-left right" style="margin-top: 5px;"></i></p>
                             </a>
-                        </li>
-                    </ul>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{ route('kependudukan-jpbku.index') }}" class="nav-link">
-                                <div style="width:30px;height:35px;float:left;">
-                                    <i class="far fa-circle nav-icon"
-                                        style="color:rgb(255, 255, 255);font-size:10px;"></i>
-                                </div>
-                                <p style="font-size: 12px;">Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU)</p>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{ route('kependudukan-pp.index') }}" class="nav-link">
-                                <div style="width:30px;height:35px;float:left;">
-                                    <i class="far fa-circle nav-icon"
-                                        style="color:rgb(255, 255, 255);font-size:10px;"></i>
-                                </div>
-                                <p style="font-size: 12px;">Pertumbuhan Penduduk (PP)</p>
-                            </a>
-                        </li>
-                    </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('A-jpbku_04Tahun') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">0-4 Tahun</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('B-jpbku_59Tahun') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">5-9 Tahun</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('C-jpbku_1014Tahun') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">10-14 Tahun</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('D-jpbku_1519Tahun') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">15-19 Tahun</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('E-jpbku_2024Tahun') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">20-24 Tahun</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('F-jpbku_2529Tahun') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">25-29 Tahun</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('G-jpbku_3034Tahun') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">30-34 Tahun</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('H-jpbku_3539Tahun') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">35-39 Tahun</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('I-jpbku_4044Tahun') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">40-44 Tahun</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('J-jpbku_4549Tahun') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">45-49 Tahun</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('K-jpbku_5054Tahun') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">50-54 Tahun</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('L-jpbku_5459Tahun') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">54-59 Tahun</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('M-jpbku_6064Tahun') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">60-64 Tahun</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('N-jpbku_6569Tahun') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">65-69 Tahun</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('O-jpbku_7074Tahun') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">70-74 Tahun</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('P-jpbku_75Tahun') }}" class="nav-link">
+                                        <div style="width:30px;height:35px;float:left;"></div>
+                                        <p style="font-size: 12px;">75+ Tahun</p>
+                                    </a>
+                                </li>
+                            </ul>
+                    
                 </li>
-
+            </ul>
+            <ul class="nav nav-treeview">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <img src="{{ asset('administrator/img_mda/h5.png') }}" style="width:12%;margin:3px;">
-                        <p style="font-size: 10px;">INFRASTRUKTUR<i class="fas fa-angle-left right"
-                                style="margin-top: 10px;"></i></p>
+                    <a href="{{ route('kependudukan-pp.index') }}" class="nav-link">
+                        <div style="width:30px;height:35px;float:left;">
+                            <i class="far fa-circle nav-icon" style="color:rgb(255, 255, 255);font-size:10px;"></i>
+                        </div>
+                        <p style="font-size: 12px;">Pertumbuhan Penduduk (PP)</p>
                     </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{ route('infrastruktur-pjdd.index') }}" class="nav-link">
-                                <div style="width:30px;height:35px;float:left;">
-                                    <i class="far fa-circle nav-icon"
-                                        style="color:rgb(255, 255, 255);font-size:10px;"></i>
-                                </div>
-                                <p style="font-size: 12px;">Panjang Jalan Yang Dibangun dan Ditingkatkan (PJDD)</p>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{ route('infrastruktur-prt.index') }}" class="nav-link">
-                                <div style="width:30px;height:55px;float:left;">
-                                    <i class="far fa-circle nav-icon"
-                                        style="color:rgb(255, 255, 255);font-size:10px;"></i>
-                                </div>
-                                <p style="font-size: 12px;">Persentase Rumah Tangga yang menggunakan air bersih
-                                    (PRT)</p>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{ route('infrastruktur-ptkj.index') }}" class="nav-link">
-                                <div style="width:30px;height:35px;float:left;">
-                                    <i class="far fa-circle nav-icon"
-                                        style="color:rgb(255, 255, 255);font-size:10px;"></i>
-                                </div>
-                                <p style="font-size: 12px;">Persentase Tingkat Kemantapan Jalan (PTKJ)</p>
-                            </a>
-                        </li>
-                    </ul>
                 </li>
+            </ul>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <img src="{{ asset('administrator/img_mda/h5.png') }}" style="width:12%;margin:3px;">
+                    <p style="font-size: 10px;">INFRASTRUKTUR<i class="fas fa-angle-left right"
+                            style="margin-top: 10px;"></i></p>
+                </a>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="{{ route('infrastruktur-pjdd.index') }}" class="nav-link">
+                            <div style="width:30px;height:35px;float:left;">
+                                <i class="far fa-circle nav-icon"
+                                    style="color:rgb(255, 255, 255);font-size:10px;"></i>
+                            </div>
+                            <p style="font-size: 12px;">Panjang Jalan Yang Dibangun dan Ditingkatkan (PJDD)</p>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="{{ route('infrastruktur-prt.index') }}" class="nav-link">
+                            <div style="width:30px;height:55px;float:left;">
+                                <i class="far fa-circle nav-icon"
+                                    style="color:rgb(255, 255, 255);font-size:10px;"></i>
+                            </div>
+                            <p style="font-size: 12px;">Persentase Rumah Tangga yang menggunakan air bersih
+                                (PRT)</p>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="{{ route('infrastruktur-ptkj.index') }}" class="nav-link">
+                            <div style="width:30px;height:35px;float:left;">
+                                <i class="far fa-circle nav-icon"
+                                    style="color:rgb(255, 255, 255);font-size:10px;"></i>
+                            </div>
+                            <p style="font-size: 12px;">Persentase Tingkat Kemantapan Jalan (PTKJ)</p>
+                        </a>
+                    </li>
+                </ul>
+            </li>
 
 
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <img src="{{ asset('administrator/img_mda/h6.png') }}" style="width:12%;margin:3px;">
+                    <p style="font-size: 10px;">VIDEO BINTAN<i class="fas fa-angle-left right"
+                            style="margin-top: 10px;"></i></p>
+                </a>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                        <a href="{{ route('video-dv.index') }}" class="nav-link">
+                            <div style="width:30px;height:35px;float:left;">
+                                <i class="far fa-circle nav-icon"
+                                    style="color:rgb(255, 255, 255);font-size:10px;"></i>
+                            </div>
+                            <p style="font-size: 12px;">Data Video (DV)</p>
+                        </a>
+                    </li>
+                </ul>
+
+            </li>
+            @hasrole('superadmin')
+                <li class="nav-header"></li>
 
                 <li class="nav-item">
                     <a href="#" class="nav-link">
                         <img src="{{ asset('administrator/img_mda/h6.png') }}" style="width:12%;margin:3px;">
-                        <p style="font-size: 10px;">VIDEO BINTAN<i class="fas fa-angle-left right"
+                        <p style="font-size: 10px;">MANAJEMEN USER<i class="fas fa-angle-left right"
                                 style="margin-top: 10px;"></i></p>
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ route('video-dv.index') }}" class="nav-link">
+                            <a href="{{ route('user-iu.index') }}" class="nav-link">
                                 <div style="width:30px;height:35px;float:left;">
                                     <i class="far fa-circle nav-icon"
                                         style="color:rgb(255, 255, 255);font-size:10px;"></i>
                                 </div>
-                                <p style="font-size: 12px;">Data Video (DV)</p>
+                                <p style="font-size: 12px;">Input User (IU)</p>
                             </a>
                         </li>
                     </ul>
-                    
                 </li>
-                @hasrole('superadmin')
-                    <li class="nav-header"></li>
+            @endhasrole
 
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <img src="{{ asset('administrator/img_mda/h6.png') }}" style="width:12%;margin:3px;">
-                            <p style="font-size: 10px;">MANAJEMEN USER<i class="fas fa-angle-left right"
-                                    style="margin-top: 10px;"></i></p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="{{ route('user-iu.index') }}" class="nav-link">
-                                    <div style="width:30px;height:35px;float:left;">
-                                        <i class="far fa-circle nav-icon"
-                                            style="color:rgb(255, 255, 255);font-size:10px;"></i>
-                                    </div>
-                                    <p style="font-size: 12px;">Input User (IU)</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                @endhasrole
+            <li class="nav-header"></li>
+            <li class="nav-header"></li>
+            <li class="nav-item">
+                <a href="{{ '/' }}" target="_blank" class="nav-link">
+                    <i class="nav-icon far fa-circle text-success"></i>
+                    <p style="font-size: 12px;">Lihat Web</p>
+                </a>
+            </li>
+            <li class="nav-header"></li>
+            <li class="nav-header"></li>
 
-                <li class="nav-header"></li>
-                <li class="nav-header"></li>
-                <li class="nav-item">
-                    <a href="{{ '/' }}" target="_blank" class="nav-link">
-                        <i class="nav-icon far fa-circle text-success"></i>
-                        <p style="font-size: 12px;">Lihat Web</p>
-                    </a>
-                </li>
-                <li class="nav-header"></li>
-                <li class="nav-header"></li>
-
-                <li class="nav-item" style="margin-top: -40px;">
-                    <a href="{{ '/logout' }}" class="nav-link">
-                        <i class="nav-icon far fa-circle text-danger" style="color:rgb(255, 10, 10);"></i>
-                        <p class="text" style="font-size: 12px;">Logout</p>
-                    </a>
-                </li>
+            <li class="nav-item" style="margin-top: -40px;">
+                <a href="{{ '/logout' }}" class="nav-link">
+                    <i class="nav-icon far fa-circle text-danger" style="color:rgb(255, 10, 10);"></i>
+                    <p class="text" style="font-size: 12px;">Logout</p>
+                </a>
+            </li>
 
             </ul>
         </nav>

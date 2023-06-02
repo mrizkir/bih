@@ -57,15 +57,11 @@ use App\Http\Controllers\VideoDvAdminController;
 
 // USER
 use App\Http\Controllers\ManajemenUserController;
-
-
-
-
-
+use Illuminate\Contracts\Cache\Store;
 
 Auth::routes(['register' => 'false', 'logout' => false]);
 
- 
+
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/login', [LoginAdminController::class, 'index'])->name('login');
 Route::get('/logout', ['uses' => 'App\Http\Controllers\Auth\LoginController@logout', 'as' => 'logout']);
@@ -136,11 +132,45 @@ Route::group(
     Route::get('/apk/{id}/edit', [SosialApkAdminController::class, 'apkEdit'])->name('sosial-apk.edit');
     Route::put('/apk/{id}', [SosialApkAdminController::class, 'apkUpdate'])->name('sosial-apk.update');     
 
+    //SOSIAL Angka Partisipasi Kasar (APK) - [m_10_apk]
+    Route::get('/sosial_apk_SD_tampil', [SosialApkAdminController::class, 'apk_SD'])->name('sosial-apk_SD'); 
+    //Store
+    //EDIT
+    //UPDATE
+
+    Route::get('/sosial_apk_SMP_tampil', [SosialApkAdminController::class, 'apk_SMP'])->name('sosial-apk_SMP'); 
+    //Store
+    //EDIT
+    //UPDATE
+        
+    Route::get('/sosial_apk_SMA_tampil', [SosialApkAdminController::class, 'apk_SMA'])->name('sosial-apk_SMA'); 
+    //Store
+    //EDIT
+    //UPDATE 
+    
+
     //SOSIAL Angka partisipasi Murni (APM) - [m_11_apm]
     Route::get('/apm', [SosialApmAdminController::class, 'apmIndex'])->name('sosial-apm.index');
     Route::post('/apm/store', [SosialApmAdminController::class, 'apmStore'])->name('sosial-apm.store');
     Route::get('/apm/{id}/edit', [SosialApmAdminController::class, 'apmEdit'])->name('sosial-apm.edit');
     Route::put('/apm/{id}', [SosialApmAdminController::class, 'apmUpdate'])->name('sosial-apm.update');     
+
+    //SOSIAL Angka partisipasi Murni (APM) - [m_11_apm]
+    Route::get('/sosial_apmSD', [SosialApmAdminController::class, 'apm_SD'])->name('sosial-apm_SD');
+    //Store
+    //EDIT
+    //UPDATE
+
+    Route::get('/sosial_apmSMP', [SosialApmAdminController::class, 'apm_SMP'])->name('sosial-apm_SMP');
+    //Store
+    //EDIT
+    //UPDATE
+
+    Route::get('/sosial_apmSMA', [SosialApmAdminController::class, 'apm_SMA'])->name('sosial-apm_SMA');
+    //Store
+    //EDIT
+    //UPDATE
+
 
     //SOSIAL Angka Harapan Lama Sekolah (HLS) - [m_12_hls]
     Route::get('/hls', [SosialHlsAdminController::class, 'hlsIndex'])->name('sosial-hls.index'); 
@@ -200,11 +230,57 @@ Route::group(
     Route::get('/adhb/{id}/edit', [EkonomiAdhbAdminController::class, 'adhbEdit'])->name('ekonomi-adhb.edit');
     Route::put('/adhb/{id}', [EkonomiAdhbAdminController::class, 'adhbUpdate'])->name('ekonomi-adhb.update');         
 
+    //EKONOMI   Distribusi PDRB Atas Dasar Harga Berlaku (ADHB) - [m_19_pdrb_berlaku]
+    Route::get('/adhb_a', [EkonomiAdhbAdminController::class, 'adhb_a'])->name('ekonomi-adhb_A'); 
+    Route::get('/adhb_b', [EkonomiAdhbAdminController::class, 'adhb_b'])->name('ekonomi-adhb_B'); 
+    Route::get('/adhb_c', [EkonomiAdhbAdminController::class, 'adhb_c'])->name('ekonomi-adhb_C');  
+    Route::get('/adhb_d', [EkonomiAdhbAdminController::class, 'adhb_d'])->name('ekonomi-adhb_D');  
+    Route::get('/adhb_e', [EkonomiAdhbAdminController::class, 'adhb_e'])->name('ekonomi-adhb_E');  
+    Route::get('/adhb_f', [EkonomiAdhbAdminController::class, 'adhb_f'])->name('ekonomi-adhb_F');  
+    Route::get('/adhb_g', [EkonomiAdhbAdminController::class, 'adhb_g'])->name('ekonomi-adhb_G');  
+    Route::get('/adhb_h', [EkonomiAdhbAdminController::class, 'adhb_h'])->name('ekonomi-adhb_H');  
+    Route::get('/adhb_i', [EkonomiAdhbAdminController::class, 'adhb_i'])->name('ekonomi-adhb_I');  
+    Route::get('/adhb_j', [EkonomiAdhbAdminController::class, 'adhb_j'])->name('ekonomi-adhb_J');  
+    Route::get('/adhb_k', [EkonomiAdhbAdminController::class, 'adhb_k'])->name('ekonomi-adhb_K');  
+    Route::get('/adhb_l', [EkonomiAdhbAdminController::class, 'adhb_l'])->name('ekonomi-adhb_L');  
+    Route::get('/adhb_mn', [EkonomiAdhbAdminController::class, 'adhb_mn'])->name('ekonomi-adhb_MN');  
+    Route::get('/adhb_o', [EkonomiAdhbAdminController::class, 'adhb_o'])->name('ekonomi-adhb_O');  
+    Route::get('/adhb_p', [EkonomiAdhbAdminController::class, 'adhb_p'])->name('ekonomi-adhb_P');  
+    Route::get('/adhb_q', [EkonomiAdhbAdminController::class, 'adhb_q'])->name('ekonomi-adhb_Q');  
+    Route::get('/adhb_rstu', [EkonomiAdhbAdminController::class, 'adhb_rstu'])->name('ekonomi-adhb_RSTU'); 
+
+
+
+
     //EKONOMI  Distribusi PDRB Atas Dasar Harga Konstan (ADHK) - [m_19_pdrb_konstan]
     Route::get('/adhk', [EkonomiAdhkAdminController::class, 'adhkIndex'])->name('ekonomi-adhk.index');  
     Route::post('/adhk/store', [EkonomiAdhkAdminController::class, 'adhkStore'])->name('ekonomi-adhk.store');
     Route::get('/adhk/{id}/edit', [EkonomiAdhkAdminController::class, 'adhkEdit'])->name('ekonomi-adhk.edit');
     Route::put('/adhk/{id}', [EkonomiAdhkAdminController::class, 'adhkUpdate'])->name('ekonomi-adhk.update');         
+
+    //EKONOMI  Distribusi PDRB Atas Dasar Harga Konstan (ADHK) - [m_19_pdrb_konstan]
+    Route::get('/adhk_a', [EkonomiAdhkAdminController::class, 'adhk_a'])->name('ekonomi-adhk_A'); 
+    Route::get('/adhk_b', [EkonomiAdhkAdminController::class, 'adhk_b'])->name('ekonomi-adhk_B'); 
+    Route::get('/adhk_c', [EkonomiAdhkAdminController::class, 'adhk_c'])->name('ekonomi-adhk_C'); 
+    Route::get('/adhk_d', [EkonomiAdhkAdminController::class, 'adhk_d'])->name('ekonomi-adhk_D'); 
+    Route::get('/adhk_e', [EkonomiAdhkAdminController::class, 'adhk_e'])->name('ekonomi-adhk_E'); 
+    Route::get('/adhk_f', [EkonomiAdhkAdminController::class, 'adhk_e'])->name('ekonomi-adhk_F'); 
+    Route::get('/adhk_g', [EkonomiAdhkAdminController::class, 'adhk_e'])->name('ekonomi-adhk_G'); 
+    Route::get('/adhk_h', [EkonomiAdhkAdminController::class, 'adhk_e'])->name('ekonomi-adhk_H'); 
+    Route::get('/adhk_i', [EkonomiAdhkAdminController::class, 'adhk_e'])->name('ekonomi-adhk_I'); 
+    Route::get('/adhk_j', [EkonomiAdhkAdminController::class, 'adhk_e'])->name('ekonomi-adhk_J'); 
+    Route::get('/adhk_k', [EkonomiAdhkAdminController::class, 'adhk_e'])->name('ekonomi-adhk_K'); 
+    Route::get('/adhk_l', [EkonomiAdhkAdminController::class, 'adhk_e'])->name('ekonomi-adhk_L'); 
+    Route::get('/adhk_mn', [EkonomiAdhkAdminController::class, 'adhk_e'])->name('ekonomi-adhk_MN'); 
+    Route::get('/adhk_o', [EkonomiAdhkAdminController::class, 'adhk_e'])->name('ekonomi-adhk_O'); 
+    Route::get('/adhk_p', [EkonomiAdhkAdminController::class, 'adhk_e'])->name('ekonomi-adhk_P'); 
+    Route::get('/adhk_q', [EkonomiAdhkAdminController::class, 'adhk_e'])->name('ekonomi-adhk_Q'); 
+    Route::get('/adhk_rstu', [EkonomiAdhkAdminController::class, 'adhk_e'])->name('ekonomi-adhk_RSTU'); 
+
+
+
+
+
 
     //EKONOMI Kunjungan Wisata (KW) - [m_20_kunjungan]
     Route::get('/kw', [EkonomiKwAdminController::class, 'kwIndex'])->name('ekonomi-kw.index');     
@@ -271,6 +347,24 @@ Route::group(
     Route::post('/jpbku/store', [KependudukanJpbkuAdminController::class, 'jpbkuStore'])->name('kependudukan-jpbku.store');
     Route::get('/jpbku/{id}/edit', [KependudukanJpbkuAdminController::class, 'jpbkuEdit'])->name('kependudukan-jpbku.edit');
     Route::put('/jpbku/{id}', [KependudukanJpbkuAdminController::class, 'jpbkuUpdate'])->name('kependudukan-jpbku.update');         
+
+    //KEPENDUDUKAN  Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU) - [m_26_penduduk_umur]
+    Route::get('/jpbku_04Tahun', [KependudukanJpbkuAdminController::class, 'jpbku_04Tahun'])->name('A-jpbku_04Tahun');    
+    Route::get('/jpbku_59Tahun', [KependudukanJpbkuAdminController::class, 'jpbku_59Tahun'])->name('B-jpbku_59Tahun');
+    Route::get('/jpbku_1014Tahun', [KependudukanJpbkuAdminController::class, 'jpbku_1014Tahun'])->name('C-jpbku_1014Tahun'); 
+    Route::get('/jpbku_1519Tahun', [KependudukanJpbkuAdminController::class, 'jpbku_1519Tahun'])->name('D-jpbku_1519Tahun'); 
+    Route::get('/jpbku_2024Tahun', [KependudukanJpbkuAdminController::class, 'jpbku_2024Tahun'])->name('E-jpbku_2024Tahun'); 
+    Route::get('/jpbku_2529Tahun', [KependudukanJpbkuAdminController::class, 'jpbku_2529Tahun'])->name('F-jpbku_2529Tahun'); 
+    Route::get('/jpbku_3034Tahun', [KependudukanJpbkuAdminController::class, 'jpbku_3034Tahun'])->name('G-jpbku_3034Tahun'); 
+    Route::get('/jpbku_3539Tahun', [KependudukanJpbkuAdminController::class, 'jpbku_3539Tahun'])->name('H-jpbku_3539Tahun'); 
+    Route::get('/jpbku_4044Tahun', [KependudukanJpbkuAdminController::class, 'jpbku_4044Tahun'])->name('I-jpbku_4044Tahun'); 
+    Route::get('/jpbku_4549Tahun', [KependudukanJpbkuAdminController::class, 'jpbku_4549Tahun'])->name('J-jpbku_4549Tahun'); 
+    Route::get('/jpbku_5054Tahun', [KependudukanJpbkuAdminController::class, 'jpbku_5054Tahun'])->name('K-jpbku_5054Tahun'); 
+    Route::get('/jpbku_5459Tahun', [KependudukanJpbkuAdminController::class, 'jpbku_5459Tahun'])->name('L-jpbku_5459Tahun'); 
+    Route::get('/jpbku_6064Tahun', [KependudukanJpbkuAdminController::class, 'jpbku_6064Tahun'])->name('M-jpbku_6064Tahun'); 
+    Route::get('/jpbku_6569Tahun', [KependudukanJpbkuAdminController::class, 'jpbku_6569Tahun'])->name('N-jpbku_6569Tahun');  
+    Route::get('/jpbku_7074Tahun', [KependudukanJpbkuAdminController::class, 'jpbku_7074Tahun'])->name('O-jpbku_7074Tahun');  
+    Route::get('/jpbku_75Tahun', [KependudukanJpbkuAdminController::class, 'jpbku_75Tahun'])->name('P-jpbku_75Tahun');  
   
     //KEPENDUDUKAN  Pertumbuhan Penduduk (PP) - [m_27_laju_pertumbuhan]
     Route::get('/pp', [KependudukanPpAdminController::class, 'ppIndex'])->name('kependudukan-pp.index'); 
@@ -311,9 +405,7 @@ Route::group(
 
   //===============================MANAJEMENT=============================================
     //USER USER
-    Route::get('/iu', [ManajemenUserController::class, 'iuIndex'])
-    ->middleware(['role:superadmin'])
-    ->name('user-iu.index'); 
-
+    Route::get('/iu', [ManajemenUserController::class, 'iuIndex'])->middleware(['role:superadmin'])->name('user-iu.index'); 
+    Route::post('/iu/store', [ManajemenUserController::class, 'iuStore'])->middleware(['role:superadmin'])->name('user-iu.store'); 
   }
 );

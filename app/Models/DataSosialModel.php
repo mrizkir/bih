@@ -26,7 +26,7 @@ class DataSosialModel extends Model {
       'id',   
       'tahun',   
       'data_series',                   
-      'jenis_data',                   
+      'jenis_data',            
       'persentase',                  
   ];
   /**
