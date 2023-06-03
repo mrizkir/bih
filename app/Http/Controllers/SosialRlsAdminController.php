@@ -9,7 +9,14 @@ class SosialRlsAdminController extends Controller
 {
     public function rlsIndex()
     {
-      $data = DataSosialModel::orderBy('tahun', 'desc')->get();
+      $data = \DB::table('m_3_rls')
+      ->select(\DB::raw('
+        tahun,
+        rls,
+        status_data
+      '))    
+      ->orderBy('tahun', 'desc')
+      ->get();
   
       return view('admin.sosial.3rls_tampil', [
         'title' => 'Angka Rata-Rata Lama Sekolah (RLS)',

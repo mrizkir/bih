@@ -25,7 +25,7 @@ class DataSosialModel extends Model {
   protected $fillable = [        
       'id',   
       'tahun',   
-      'data_series',                   
+      'data_series',                 
       'jenis_data',            
       'persentase',                  
   ];
