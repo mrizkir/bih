@@ -13,7 +13,8 @@
                             <div class="row mb-2">
                                 <div class="col-sm-6">
                                     <li class="breadcrumb-item active" style="font-size: 20px;">
-                                        <strong>{{ $title }}</strong></li>
+                                        <strong>{{ $title }}</strong>
+                                    </li>
                                 </div>
                             </div><BR>
                             <div style="margin:10px;">
@@ -35,7 +36,7 @@
                                     <thead>
                                         <tr style="background:rgb(4, 89, 123);color:white;font-size: 12px;">
                                             <th style="width: 2%;" class="text-center">No</th>
-                                            <th style="width: 80%;" class="text-center">Data Tahun / Series / RLS
+                                            <th style="width: 80%;" class="text-center">Data kel_umur / Series / RLS
                                             </th>
                                             <th style="width: 10%;" class="text-center">AKSI</th>
                                         </tr>
@@ -44,16 +45,22 @@
                                         @foreach ($data as $k => $item)
                                             <tr style="font-size: 11px;">
                                                 <td class="text-center">{{ $k + 1 }}</th>
-                                                <td><strong>Tahun</strong> : {{ $item->kel_umur }} | <strong>Series</strong> :
+                                                <td><strong>kel_umur</strong> : {{ $item->kel_umur }} | <strong>Series</strong> :
                                                     {{ Helper::getJenisDataSeries($item->status_data) }} |
-                                                    <strong>Laki-Laki </strong> : {{ $item->laki }}  |
-                                                    <strong>Perempuan </strong> : {{ $item->perempuan }} </td>
+                                                    <strong>Laki-Laki </strong> : {{ $item->laki }} |
+                                                    <strong>Perempuan </strong> : {{ $item->perempuan }} 
+                                                </td>
                                                 <td class="project-actions text-center" style="padding: 10px;">
                                                     <a href="" class="btn btn-info btn-sm" data-toggle="modal"
                                                         style="font-size: 10px;"
                                                         data-target="#modaledit{{ $item->kel_umur }}">
                                                         <i class="fas fa-pencil-alt"></i> Edit
                                                     </a>
+                                                    {{-- <a href="{{ 'ahmdel/'.$item->kel_umur }}" class="btn btn-info btn-sm"  
+                                                       style="font-size: 10px;" class="btn btn-danger btn-sm"  
+                                                       onclick="return confirm('Anda Yakin Mau Menghapus ?') ">
+                                                       <i class="fas fa-pencil-alt"></i> Del
+                                                   </a> --}}
 
                                                     {{-- VIEW MODAL EDIT --}}
                                                     <div class="modal fade" id="modaledit{{ $item->kel_umur }}"
@@ -68,7 +75,7 @@
                                                                                     style="font-size:20px;color:rgb(10, 100, 100);"><b>Edit
                                                                                         Data {{ $title }}</b></span>
                                                                                 {!! Form::open([
-                                                                                    'url' => route('sosial-ppm.update', ['id' => $item->kel_umur]),
+                                                                                    'url' => route('sosial-ahm.update', ['id' => $item->kel_umur]),
                                                                                     'method' => 'put',
                                                                                     'id' => 'frmedit_' . $item->kel_umur,
                                                                                     'name' => 'frmedit_' . $item->kel_umur,
@@ -76,10 +83,10 @@
                                                                                 <div class="card-body">
                                                                                     <div class="form-group">
                                                                                         <div class="row">
-                                                                                            <div class="col-4">
-                                                                                                <label>Tahun</label>
+                                                                                            <div class="col-3">
+                                                                                                <label>kel_umur</label>
                                                                                                 <input type="text"
-                                                                                                    name="tahun"
+                                                                                                    name="kel_umur"
                                                                                                     class="form-control @error('kel_umur') is-invalid @enderror"
                                                                                                     value="{{ $item->kel_umur }}"
                                                                                                     required>
@@ -90,12 +97,50 @@
                                                                                                             class="alert-body d-flex align-items-center">
                                                                                                             <i data-feather="info"
                                                                                                                 class="me-50"></i>
-                                                                                                            {{ $errors->first('tahun') }}
+                                                                                                            {{ $errors->first('kel_umur') }}
                                                                                                         </div>
                                                                                                     </div>
                                                                                                 @endif
                                                                                             </div>
-                                                                                            <div class="col-4">status_data
+                                                                                            <div class="col-3">
+                                                                                                <label>Data Laki-Laki</label>
+                                                                                                <input type="text"
+                                                                                                    name="laki"
+                                                                                                    class="form-control @error('laki') is-invalid @enderror"
+                                                                                                    value="{{ $item->laki }}"
+                                                                                                    required>
+                                                                                                @if ($errors->has('laki'))
+                                                                                                    <div class="alert alert-danger mt-1 alert-validation-msg"
+                                                                                                        role="alert">
+                                                                                                        <div
+                                                                                                            class="alert-body d-flex align-items-center">
+                                                                                                            <i data-feather="info"
+                                                                                                                class="me-50"></i>
+                                                                                                            {{ $errors->first('laki') }}
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                @endif
+                                                                                            </div>
+                                                                                            <div class="col-3">
+                                                                                                <label>Data Perempuan</label>
+                                                                                                <input type="text"
+                                                                                                    name="perempuan"
+                                                                                                    class="form-control @error('perempuan') is-invalid @enderror"
+                                                                                                    value="{{ $item->perempuan }}"
+                                                                                                    required>
+                                                                                                @if ($errors->has('perempuan'))
+                                                                                                    <div class="alert alert-danger mt-1 alert-validation-msg"
+                                                                                                        role="alert">
+                                                                                                        <div
+                                                                                                            class="alert-body d-flex align-items-center">
+                                                                                                            <i data-feather="info"
+                                                                                                                class="me-50"></i>
+                                                                                                            {{ $errors->first('perempuan') }}
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                @endif
+                                                                                            </div>
+                                                                                            <div class="col-3">status_data
                                                                                                 <label>Data Series</label>
                                                                                                 {!! Form::select('status_data', Helper::getJenisDataSeries(), $item->status_data, [
                                                                                                     'id' => 'status_data',
@@ -113,26 +158,7 @@
                                                                                                     </div>
                                                                                                 @endif
                                                                                             </div>
-                                                                                            <div class="col-4">
-                                                                                                <label>Data
-                                                                                                    Persentase</label>
-                                                                                                <input type="text"
-                                                                                                    name="presentase"
-                                                                                                    class="form-control @error('presentase') is-invalid @enderror"
-                                                                                                    value="{{ $item->laki }}"
-                                                                                                    required>
-                                                                                                @if ($errors->has('laki'))
-                                                                                                    <div class="alert alert-danger mt-1 alert-validation-msg"
-                                                                                                        role="alert">
-                                                                                                        <div
-                                                                                                            class="alert-body d-flex align-items-center">
-                                                                                                            <i data-feather="info"
-                                                                                                                class="me-50"></i>
-                                                                                                            {{ $errors->first('laki') }}
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                @endif
-                                                                                            </div>
+                                                                                            
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -186,44 +212,58 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            {!! Form::open(['url' => route('sosial-ppm.store'), 'method' => 'post', 'id' => 'frmadd', 'name' => 'frmadd']) !!}
+                            {!! Form::open(['url' => route('sosial-ahm.store'), 'method' => 'post', 'id' => 'frmadd', 'name' => 'frmadd']) !!}
                             <div class="card-body">
                                 <div class="form-group">
                                     <div class="row">
-                                        <div class="col-4">
-                                            <label>Tahun</label>
-                                            <input type="text" name="tahun"
-                                                class="form-control @error('tahun') is-invalid @enderror"
-                                                placeholder="Ketik tahun" required>
-                                            @if ($errors->has('tahun'))
+                                        <div class="col-3">
+                                            <label>Kelompok Umur</label>
+                                            <input type="text" name="kel_umur"
+                                                class="form-control @error('kel_umur') is-invalid @enderror"
+                                                placeholder="Ketik Kelompok Umur" required>
+                                            @if ($errors->has('kel_umur'))
                                                 <div class="alert alert-danger mt-1 alert-validation-msg" role="alert">
                                                     <div class="alert-body d-flex align-items-center">
                                                         <i data-feather="info" class="me-50"></i>
-                                                        {{ $errors->first('tahun') }}
+                                                        {{ $errors->first('kel_umur') }}
                                                     </div>
                                                 </div>
                                             @endif
                                         </div>
-                                        <div class="col-4">
+                                        <div class="col-3">
+                                            <label>Laki-Laki</label>
+                                            <input type="text" name="laki"
+                                                class="form-control @error('laki') is-invalid @enderror"
+                                                placeholder="Ketik Kelompok Laki-Laki" required>
+                                            @if ($errors->has('laki'))
+                                                <div class="alert alert-danger mt-1 alert-validation-msg" role="alert">
+                                                    <div class="alert-body d-flex align-items-center">
+                                                        <i data-feather="info" class="me-50"></i>
+                                                        {{ $errors->first('laki') }}
+                                                    </div>
+                                                </div>
+                                            @endif
+                                        </div>
+                                        <div class="col-3">
+                                            <label>Perempuan</label>
+                                            <input type="text" name="perempuan"
+                                                class="form-control @error('perempuan') is-invalid @enderror"
+                                                placeholder="Ketik Kelompok perempuan" required>
+                                            @if ($errors->has('perempuan'))
+                                                <div class="alert alert-danger mt-1 alert-validation-msg" role="alert">
+                                                    <div class="alert-body d-flex align-items-center">
+                                                        <i data-feather="info" class="me-50"></i>
+                                                        {{ $errors->first('perempuan') }}
+                                                    </div>
+                                                </div>
+                                            @endif
+                                        </div>
+                                        <div class="col-3">
                                             <label>Data Series</label>
                                             {!! Form::select('status_data', Helper::getJenisDataSeries(), old('status_data'), [
                                                 'id' => 'frmadd_status_data',
                                                 'class' => 'form-control',
                                             ]) !!}
-                                        </div>
-                                        <div class="col-4">
-                                            <label>Data Persentase</label>
-                                            <input type="text" name="presentase"
-                                                class="form-control @error('presentase') is-invalid @enderror"
-                                                placeholder="Ketik Data Persentase" required>
-                                            @if ($errors->has('presentase'))
-                                                <div class="alert alert-danger mt-1 alert-validation-msg" role="alert">
-                                                    <div class="alert-body d-flex align-items-center">
-                                                        <i data-feather="info" class="me-50"></i>
-                                                        {{ $errors->first('presentase') }}
-                                                    </div>
-                                                </div>
-                                            @endif
                                         </div>
                                     </div>
                                 </div>

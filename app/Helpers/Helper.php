@@ -27,22 +27,6 @@ class Helper
     }
   }
 
-  private static $defult_role = [
-    1 => 'Super Admin',
-    2 => 'User',
-    3 => 'Operator',
-  ];  
   
-  public static function getJenisDataUser($combo_user = NULL)
-  {
-    if ($combo_user === NULL)
-    {
-      return Helper::$defult_role;
-    }
-    else
-    {
-      return Helper::$defult_role[$combo_user];
-    }
-  }
   
 } 

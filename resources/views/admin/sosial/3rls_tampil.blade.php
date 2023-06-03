@@ -13,7 +13,8 @@
                             <div class="row mb-2">
                                 <div class="col-sm-6">
                                     <li class="breadcrumb-item active" style="font-size: 20px;">
-                                        <strong>{{ $title }}</strong></li>
+                                        <strong>{{ $title }}</strong>
+                                    </li>
                                 </div>
                             </div><BR>
                             <div style="margin:10px;">
@@ -46,13 +47,19 @@
                                                 <td class="text-center">{{ $k + 1 }}</th>
                                                 <td><strong>Tahun</strong> : {{ $item->tahun }} | <strong>Series</strong> :
                                                     {{ Helper::getJenisDataSeries($item->status_data) }} |
-                                                    <strong>RLS </strong> : {{ $item->rls }}%</td>
+                                                    <strong>RLS </strong> : {{ $item->rls }}%
+                                                </td>
                                                 <td class="project-actions text-center" style="padding: 10px;">
                                                     <a href="" class="btn btn-info btn-sm" data-toggle="modal"
                                                         style="font-size: 10px;"
                                                         data-target="#modaledit{{ $item->tahun }}">
                                                         <i class="fas fa-pencil-alt"></i> Edit
                                                     </a>
+                                                    {{-- <a href="{{ 'rlsdel/'.$item->tahun }}" class="btn btn-info btn-sm"  
+                                                       style="font-size: 10px;" class="btn btn-danger btn-sm"  
+                                                       onclick="return confirm('Anda Yakin Mau Menghapus ?') ">
+                                                       <i class="fas fa-pencil-alt"></i> Del
+                                                   </a> --}}
 
                                                     {{-- VIEW MODAL EDIT --}}
                                                     <div class="modal fade" id="modaledit{{ $item->tahun }}"
@@ -67,7 +74,7 @@
                                                                                     style="font-size:20px;color:rgb(10, 100, 100);"><b>Edit
                                                                                         Data {{ $title }}</b></span>
                                                                                 {!! Form::open([
-                                                                                    'url' => route('sosial-ppm.update', ['id' => $item->tahun]),
+                                                                                    'url' => route('sosial-rls.update', ['id' => $item->tahun]),
                                                                                     'method' => 'put',
                                                                                     'id' => 'frmedit_' . $item->tahun,
                                                                                     'name' => 'frmedit_' . $item->tahun,
@@ -114,20 +121,20 @@
                                                                                             </div>
                                                                                             <div class="col-4">
                                                                                                 <label>Data
-                                                                                                    Persentase</label>
+                                                                                                    Rls</label>
                                                                                                 <input type="text"
-                                                                                                    name="presentase"
-                                                                                                    class="form-control @error('presentase') is-invalid @enderror"
+                                                                                                    name="rls"
+                                                                                                    class="form-control @error('rls') is-invalid @enderror"
                                                                                                     value="{{ $item->rls }}"
                                                                                                     required>
-                                                                                                @if ($errors->has('presentase'))
+                                                                                                @if ($errors->has('rls'))
                                                                                                     <div class="alert alert-danger mt-1 alert-validation-msg"
                                                                                                         role="alert">
                                                                                                         <div
                                                                                                             class="alert-body d-flex align-items-center">
                                                                                                             <i data-feather="info"
                                                                                                                 class="me-50"></i>
-                                                                                                            {{ $errors->first('presentase') }}
+                                                                                                            {{ $errors->first('rls') }}
                                                                                                         </div>
                                                                                                     </div>
                                                                                                 @endif
@@ -185,20 +192,20 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            {!! Form::open(['url' => route('sosial-ppm.store'), 'method' => 'post', 'id' => 'frmadd', 'name' => 'frmadd']) !!}
+                            {!! Form::open(['url' => route('sosial-rls.store'), 'method' => 'post', 'id' => 'frmadd', 'name' => 'frmadd']) !!}
                             <div class="card-body">
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-4">
-                                            <label>Tahun</label>
-                                            <input type="text" name="tahun"
-                                                class="form-control @error('tahun') is-invalid @enderror"
-                                                placeholder="Ketik tahun" required>
-                                            @if ($errors->has('tahun'))
+                                            <label>Kelompok Umur</label>
+                                            <input type="text" name="kel_umur"
+                                                class="form-control @error('kel_umur') is-invalid @enderror"
+                                                placeholder="Ketik Kelompok Umur" required>
+                                            @if ($errors->has('kel_umur'))
                                                 <div class="alert alert-danger mt-1 alert-validation-msg" role="alert">
                                                     <div class="alert-body d-flex align-items-center">
                                                         <i data-feather="info" class="me-50"></i>
-                                                        {{ $errors->first('tahun') }}
+                                                        {{ $errors->first('kel_umur') }}
                                                     </div>
                                                 </div>
                                             @endif
@@ -211,15 +218,15 @@
                                             ]) !!}
                                         </div>
                                         <div class="col-4">
-                                            <label>Data Persentase</label>
-                                            <input type="text" name="presentase"
-                                                class="form-control @error('presentase') is-invalid @enderror"
-                                                placeholder="Ketik Data Persentase" required>
-                                            @if ($errors->has('presentase'))
+                                            <label>Data Rls</label>
+                                            <input type="text" name="rls"
+                                                class="form-control @error('rls') is-invalid @enderror"
+                                                placeholder="Ketik Data Rls" required>
+                                            @if ($errors->has('rls'))
                                                 <div class="alert alert-danger mt-1 alert-validation-msg" role="alert">
                                                     <div class="alert-body d-flex align-items-center">
                                                         <i data-feather="info" class="me-50"></i>
-                                                        {{ $errors->first('presentase') }}
+                                                        {{ $errors->first('rls') }}
                                                     </div>
                                                 </div>
                                             @endif

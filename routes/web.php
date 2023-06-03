@@ -77,48 +77,56 @@ Route::group(
     Route::post('/ppm/store', [SosialAdminController::class, 'ppmStore'])->name('sosial-ppm.store');
     Route::get('/ppm/{id}/edit', [SosialAdminController::class, 'ppmEdit'])->name('sosial-ppm.edit');
     Route::put('/ppm/{id}', [SosialAdminController::class, 'ppmUpdate'])->name('sosial-ppm.update');
+    Route::get('/ppmdel/{id}', [SosialAdminController::class, 'ppmDel'])->name('sosial-ppm.del'); 
 
     //SOSIAL Indeks Pembangunan Manusia (IPM)  - [m_2_lpm]
     Route::get('/ipm', [SosialIpmAdminController::class, 'ipmIndex'])->name('sosial-ipm.index');
     Route::post('/ipm/store', [SosialIpmAdminController::class, 'ipmStore'])->name('sosial-ipm.store');
     Route::get('/ipm/{id}/edit', [SosialIpmAdminController::class, 'ipmEdit'])->name('sosial-ipm.edit');
     Route::put('/ipm/{id}', [SosialIpmAdminController::class, 'ipmUpdate'])->name('sosial-ipm.update'); 
+    Route::get('/ipmdel/{id}', [SosialIpmAdminController::class, 'ipmDel'])->name('sosial-ipm.del'); 
 
     //SOSIAL Angka Rata-Rata Lama Sekolah (RLS) - [m_3_rls]
     Route::get('/rls', [SosialRlsAdminController::class, 'rlsIndex'])->name('sosial-rls.index');
     Route::post('/rls/store', [SosialRlsAdminController::class, 'rlsStore'])->name('sosial-rls.store');
     Route::get('/rls/{id}/edit', [SosialRlsAdminController::class, 'rlsEdit'])->name('sosial-rls.edit');
     Route::put('/rls/{id}', [SosialRlsAdminController::class, 'rlsUpdate'])->name('sosial-rls.update');
+    Route::get('/rlsdel/{id}', [SosialRlsAdminController::class, 'rlsDel'])->name('sosial-rls.del');
 
     //SOSIAL Angka Melek Huruf (AMH) - [m_4_amh]
     Route::get('/ahm', [SosialAhmAdminController::class, 'ahmIndex'])->name('sosial-ahm.index');
     Route::post('/ahm/store', [SosialAhmAdminController::class, 'ahmStore'])->name('sosial-ahm.store');
     Route::get('/ahm/{id}/edit', [SosialAhmAdminController::class, 'ahmEdit'])->name('sosial-ahm.edit');
     Route::put('/ahm/{id}', [SosialAhmAdminController::class, 'ahmUpdate'])->name('sosial-ahm.update');
+    Route::get('/ahmdel/{id}', [SosialAhmAdminController::class, 'ahmDel'])->name('sosial-ahm.del');
 
     //SOSIAL Angka Harapan Hidup (AHH) - [m_5_ahh]
     Route::get('/ahh', [SosialAhhAdminController::class, 'ahhIndex'])->name('sosial-ahh.index');
     Route::post('/ahh/store', [SosialAhhAdminController::class, 'ahhStore'])->name('sosial-ahh.store');
     Route::get('/ahh/{id}/edit', [SosialAhhAdminController::class, 'ahhEdit'])->name('sosial-ahh.edit');
     Route::put('/ahh/{id}', [SosialAhhAdminController::class, 'ahhUpdate'])->name('sosial-ahh.update');
+    Route::get('/ahhdel/{id}', [SosialAhhAdminController::class, 'ahhDel'])->name('sosial-ahh.del');
 
     //SOSIAL Angka Kelangsungan Hidup Bayi (AKHB) - [m_6_akhb]
     Route::get('/akhb', [SosialAkhbAdminController::class, 'akhbIndex'])->name('sosial-akhb.index');
     Route::post('/akhb/store', [SosialAkhbAdminController::class, 'akhbStore'])->name('sosial-akhb.store');
     Route::get('/akhb/{id}/edit', [SosialAkhbAdminController::class, 'akhbEdit'])->name('sosial-akhb.edit');
     Route::put('/akhb/{id}', [SosialAkhbAdminController::class, 'akhbUpdate'])->name('sosial-akhb.update');
+    Route::get('/akhbdel/{id}', [SosialAkhbAdminController::class, 'akhbDel'])->name('sosial-akhb.del');
 
     //SOSIAL Angka kematian ibu melahirkan (AKIM) - [m_7_kematian_ibu]
     Route::get('/akim', [SosialAkimAdminController::class, 'akimIndex'])->name('sosial-akim.index');
     Route::post('/akim/store', [SosialAkimAdminController::class, 'akimStore'])->name('sosial-akim.store');
     Route::get('/akim/{id}/edit', [SosialAkimAdminController::class, 'akimEdit'])->name('sosial-akim.edit');
     Route::put('/akim/{id}', [SosialAkimAdminController::class, 'akimUpdate'])->name('sosial-akim.update');
+    Route::get('/akimdel/{id}', [SosialAkimAdminController::class, 'akimDel'])->name('sosial-akim.del');
 
     //SOSIAL Perkembangan Kondisi Ketenagakerjaan di Kabupaten Bintan (PKK) - [m_8_tenaga_kerja]
     Route::get('/pkk', [SosialPkkAdminController::class, 'pkkIndex'])->name('sosial-pkk.index');    
     Route::post('/pkk/store', [SosialPkkAdminController::class, 'pkkStore'])->name('sosial-pkk.store');
     Route::get('/pkk/{id}/edit', [SosialPkkAdminController::class, 'pkkEdit'])->name('sosial-pkk.edit');
     Route::put('/pkk/{id}', [SosialPkkAdminController::class, 'pkkUpdate'])->name('sosial-pkk.update');
+    Route::get('/pkkdel/{id}', [SosialPkkAdminController::class, 'pkkDel'])->name('sosial-pkk.del');
 
     //SOSIAL Indeks Pembangunan Gender (IPG) - [m_9_ipg]
     Route::get('/ipg', [SosialIpgAdminController::class, 'ipgIndex'])->name('sosial-ipg.index'); 
