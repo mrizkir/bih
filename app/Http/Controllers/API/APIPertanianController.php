@@ -9,12 +9,13 @@ class APIPertanianController extends Controller {
   //PERTANIAN Produksi Perikanan Budidaya (PPB) - [m_21_perikanan_budidaya]
 	public function ppbIndex(Request $request)
 	{
-    $data = \DB::table('m_21_perikanan_budidaya')
+    $data = \DB::table('m_21_perikanan_budidaya AS A')
     ->select(\DB::raw('
       tahun,
       jumlah,
-      status_data
+      B.jenis_data AS status_data
     '))    
+    ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
     ->orderBy('tahun', 'desc')
     ->get();
 
@@ -27,12 +28,13 @@ class APIPertanianController extends Controller {
   //PERTANIAN  Produksi Perikanan Tangkap(PPT) - [m_22_perikanan_tangkap]
 	public function pptIndex(Request $request)
 	{
-    $data = \DB::table('m_22_perikanan_tangkap')
+    $data = \DB::table('m_22_perikanan_tangkap AS A')
     ->select(\DB::raw('
       tahun,
       jumlah,
-      status_data
+      B.jenis_data AS status_data
     '))    
+    ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
     ->orderBy('tahun', 'desc')
     ->get();
 
@@ -45,12 +47,13 @@ class APIPertanianController extends Controller {
   //PERTANIAN Capaian Produksi Komoditi Unggulan Perkebunan (CPKUP) - [m_23_perkebunan]
 	public function cpkupIndex(Request $request)
 	{
-    $data = \DB::table('m_23_perkebunan')
+    $data = \DB::table('m_23_perkebunan AS A')
     ->select(\DB::raw('
       tahun,
       jumlah,
-      status_data
+      B.jenis_data AS status_data
     '))    
+    ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
     ->orderBy('tahun', 'desc')
     ->get();
 
@@ -63,12 +66,13 @@ class APIPertanianController extends Controller {
   //PERTANIAN Capaian Produksi Komoditi Hortikultura (CPKH) - [m_24_holtikultura]
 	public function cpkhIndex(Request $request)
 	{
-    $data = \DB::table('m_24_holtikultura')
+    $data = \DB::table('m_24_holtikultura AS A')
     ->select(\DB::raw('
       tahun,
       jumlah,
-      status_data
+      B.jenis_data AS status_data
     '))    
+    ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
     ->orderBy('tahun', 'desc')
     ->get();
 
@@ -81,12 +85,13 @@ class APIPertanianController extends Controller {
   //PERTANIAN Jumlah Produksi Peternakan (JPP) - [m_25_peternakan]
 	public function jppIndex(Request $request)
 	{
-    $data = \DB::table('m_25_peternakan')
+    $data = \DB::table('m_25_peternakan AS A')
     ->select(\DB::raw('
       tahun,
       jumlah,
-      status_data
+      B.jenis_data AS status_data
     '))    
+    ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
     ->orderBy('tahun', 'desc')
     ->get();
 

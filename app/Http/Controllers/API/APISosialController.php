@@ -9,12 +9,13 @@ class APISosialController extends Controller {
   //SOSIAL presentasi penduduk miskin (ppm) - [m_1_pres_pend_miskin]
 	public function ppmIndex(Request $request)
 	{
-    $data = \DB::table('m_1_pres_pend_miskin')
+    $data = \DB::table('m_1_pres_pend_miskin AS A')
     ->select(\DB::raw('
       tahun,
       presentase,
-      status_data
+      B.jenis_data AS status_data
     '))    
+    ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
     ->orderBy('tahun', 'desc')
     ->get();
 
@@ -27,12 +28,13 @@ class APISosialController extends Controller {
   //SOSIAL Indeks Pembangunan Manusia (IPM)  - [m_2_ipm]
   public function ipmIndex(Request $request)
 	{
-    $data = \DB::table('m_2_ipm')
+    $data = \DB::table('m_2_ipm AS A')
     ->select(\DB::raw('
       tahun,
       ipm,
-      status_data
+      B.jenis_data AS status_data
     '))    
+    ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
     ->orderBy('tahun', 'desc')
     ->get();
 
@@ -45,12 +47,13 @@ class APISosialController extends Controller {
   //SOSIAL Angka Rata-Rata Lama Sekolah (RLS) - [m_3_rls]
   public function rlsIndex(Request $request)
 	{
-    $data = \DB::table('m_3_rls')
+    $data = \DB::table('m_3_rls AS A')
     ->select(\DB::raw('
       tahun,
       rls,
-      status_data
+      B.jenis_data AS status_data
     '))    
+    ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
     ->orderBy('tahun', 'desc')
     ->get();
 
@@ -63,13 +66,14 @@ class APISosialController extends Controller {
   //SOSIAL Angka Melek Huruf (AMH) - [m_4_amh]
   public function amhIndex(Request $request)
 	{
-    $data = \DB::table('m_4_amh')
+    $data = \DB::table('m_4_amh AS A')
     ->select(\DB::raw('      
       kel_umur,
       laki,
       perempuan,
-      status_data
+      B.jenis_data AS status_data
     '))    
+    ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
     ->orderBy('kel_umur', 'asc')
     ->get();
 
@@ -82,12 +86,13 @@ class APISosialController extends Controller {
   //SOSIAL Angka Harapan Hidup (AHH) - [m_5_ahh]
   public function ahhIndex(Request $request)
 	{
-    $data = \DB::table('m_5_ahh')
+    $data = \DB::table('m_5_ahh AS A')
     ->select(\DB::raw('      
       tahun,
       ahh,      
-      status_data
+      B.jenis_data AS status_data
     '))    
+    ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
     ->orderBy('tahun', 'desc')
     ->get();
 
@@ -100,12 +105,13 @@ class APISosialController extends Controller {
   //SOSIAL Angka Kelangsungan Hidup Bayi (AKHB) - [m_6_akhb]
   public function akhbIndex(Request $request)
 	{
-    $data = \DB::table('m_6_akhb')
+    $data = \DB::table('m_6_akhb AS A')
     ->select(\DB::raw('      
       tahun,
       pres_akhb,      
-      status_data
-    '))    
+      B.jenis_data AS status_data
+    '))   
+    ->join('m_jenis_data AS B', 'A.status_data', 'B.id') 
     ->orderBy('tahun', 'desc')
     ->get();
 
@@ -118,12 +124,13 @@ class APISosialController extends Controller {
   //SOSIAL Angka kematian ibu melahirkan (AKIM) - [m_7_kematian_ibu]
   public function akimIndex(Request $request)
 	{
-    $data = \DB::table('m_7_kematian_ibu')
+    $data = \DB::table('m_7_kematian_ibu AS A')
     ->select(\DB::raw('      
       tahun,
       kematian_ibu,      
-      status_data
+      B.jenis_data AS status_data
     '))    
+    ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
     ->orderBy('tahun', 'desc')
     ->get();
 
@@ -136,7 +143,7 @@ class APISosialController extends Controller {
   //SOSIAL Perkembangan Kondisi Ketenagakerjaan di Kabupaten Bintan (PKK) - [m_8_tenaga_kerja]
   public function pkkIndex(Request $request)
 	{
-    $data = \DB::table('m_8_tenaga_kerja')
+    $data = \DB::table('m_8_tenaga_kerja AS A')
     ->select(\DB::raw('      
       tahun,
       penduduk_usia_kerja,      
@@ -145,8 +152,9 @@ class APISosialController extends Controller {
       mencari_pekerjaan,      
       tingkat_partisipasi,      
       tingkat_pengangguran,      
-      status_data
+      B.jenis_data AS status_data
     '))    
+    ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
     ->orderBy('tahun', 'desc')
     ->get();
 
@@ -159,14 +167,15 @@ class APISosialController extends Controller {
   //SOSIAL Indeks Pembangunan Gender (IPG) - [m_9_ipg]
   public function ipgIndex(Request $request)
 	{
-    $data = \DB::table('m_9_ipg')
+    $data = \DB::table('m_9_ipg AS A')
     ->select(\DB::raw('      
       tahun,
       laki,      
       perempuan,      
       total,      
-      status_data
+      B.jenis_data AS status_data
     '))    
+    ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
     ->orderBy('tahun', 'desc')
     ->get();
 
@@ -179,14 +188,15 @@ class APISosialController extends Controller {
   //SOSIAL Angka Partisipasi Kasar (APK) - [m_10_apk]
   public function apkIndex(Request $request)
 	{
-    $data = \DB::table('m_10_apk')
+    $data = \DB::table('m_10_apk AS A')
     ->select(\DB::raw('      
       tingkat,
       tahun,
       apk,      
       no,      
-      status_data
-    '))    
+      B.jenis_data AS status_data
+    '))   
+    ->join('m_jenis_data AS B', 'A.status_data', 'B.id') 
     ->orderBy('tahun', 'desc')
     ->get();
 
@@ -199,12 +209,13 @@ class APISosialController extends Controller {
   //SOSIAL Angka partisipasi Murni (APM) - [m_11_apm]
   public function apmIndex(Request $request)
 	{
-    $data = \DB::table('m_11_apm')
+    $data = \DB::table('m_11_apm AS A')
     ->select(\DB::raw('      
       tahun,
       apm,      
-      status_data
-    '))    
+      B.jenis_data AS status_data
+    '))  
+    ->join('m_jenis_data AS B', 'A.status_data', 'B.id')  
     ->orderBy('tahun', 'desc')
     ->get();
 
@@ -217,12 +228,13 @@ class APISosialController extends Controller {
   //SOSIAL Angka Harapan Lama Sekolah (HLS) - [m_12_hls]
   public function hlsIndex(Request $request)
 	{
-    $data = \DB::table('m_12_hls')
+    $data = \DB::table('m_12_hls AS A')
     ->select(\DB::raw('      
       tahun,
       hls,      
-      status_data
+      B.jenis_data AS status_data
     '))    
+    ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
     ->orderBy('tahun', 'desc')
     ->get();
 
@@ -235,12 +247,13 @@ class APISosialController extends Controller {
   //SOSIAL Jumlah Rumah Tidak Layak Huni Yang Direhab (JRTLH) - [m_13_rtlh]
   public function jrtlhIndex(Request $request)
 	{
-    $data = \DB::table('m_13_rtlh')
+    $data = \DB::table('m_13_rtlh AS A')
     ->select(\DB::raw('      
       tahun,
       jumlah_unit,      
-      status_data
+      B.jenis_data AS status_data
     '))    
+    ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
     ->orderBy('tahun', 'desc')
     ->get();
 
@@ -253,12 +266,13 @@ class APISosialController extends Controller {
   //SOSIAL Indeks Gini (IG) - [m_14_gini]
   public function igIndex(Request $request)
 	{
-    $data = \DB::table('m_14_gini')
+    $data = \DB::table('m_14_gini AS A')
     ->select(\DB::raw('      
       tahun,
       gini_ratio,      
-      status_data
+      B.jenis_data AS status_data
     '))    
+    ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
     ->orderBy('tahun', 'desc')
     ->get();
 
@@ -271,12 +285,13 @@ class APISosialController extends Controller {
   //SOSIAL Indeks Daya Beli - Purchasing Power Parity (IDB) - [m_15_idb]
   public function idbIndex(Request $request)
 	{
-    $data = \DB::table('m_15_idb')
+    $data = \DB::table('m_15_idb AS A')
     ->select(\DB::raw('      
       tahun,
       daya_beli,      
-      status_data
+      B.jenis_data AS status_data
     '))    
+    ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
     ->orderBy('tahun', 'desc')
     ->get();
 
@@ -289,15 +304,16 @@ class APISosialController extends Controller {
   //SOSIAL Persentase Penduduk Usia 15 Tahun ke atas menurut Pendidikan yang Ditamatkan (PPU) - [m_16_lulusan_pendidikan]
   public function ppuIndex(Request $request)
 	{
-    $data = \DB::table('m_16_lulusan_pendidikan')
+    $data = \DB::table('m_16_lulusan_pendidikan AS A')
     ->select(\DB::raw('      
       no,
       pendidikan,      
       laki,      
       perempuan,      
       total,      
-      status_data
+      B.jenis_data AS status_data
     '))    
+    ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
     ->orderBy('no', 'asc')
     ->get();
 
@@ -310,12 +326,13 @@ class APISosialController extends Controller {
   // SOSIAL  Indeks Pemberdayaan Gender (IPG) - [m_38_idg]
   public function ipggIndex(Request $request)
 	{
-    $data = \DB::table('m_38_idg')
+    $data = \DB::table('m_38_idg AS A')
     ->select(\DB::raw('      
       tahun,
       idg,      
-      status_data
+      B.jenis_data AS status_data
     '))    
+    ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
     ->orderBy('tahun', 'desc')
     ->get();
 

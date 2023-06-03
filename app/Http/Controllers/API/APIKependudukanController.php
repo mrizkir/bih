@@ -9,14 +9,15 @@ class APIKependudukanController extends Controller {
   //KEPENDUDUKAN Jumlah Penduduk (JP) - [m_36_jumlah_penduduk]
 	public function jpIndex(Request $request)
 	{
-    $data = \DB::table('m_36_jumlah_penduduk')
+    $data = \DB::table('m_36_jumlah_penduduk AS A')
     ->select(\DB::raw('
       tahun,
       laki,
       perempuan,
       total,
-      status_data
-    '))    
+      B.jenis_data AS status_data
+    '))   
+    ->join('m_jenis_data AS B', 'A.status_data', 'B.id') 
     ->orderBy('tahun', 'desc')
     ->get();
 
@@ -29,15 +30,16 @@ class APIKependudukanController extends Controller {
   //KEPENDUDUKAN Jumlah Penduduk Berdasarkan Kecamatan Tahun 2021 (JPBK) - [m_26_penduduk_kecamatan]
 	public function jpbkIndex(Request $request)
 	{
-    $data = \DB::table('m_26_penduduk_kecamatan')
+    $data = \DB::table('m_26_penduduk_kecamatan AS A')
     ->select(\DB::raw('
       id,
       kecamatan,
       laki,
       perempuan,
       sex_ratio,
-      status_data
+      B.jenis_data AS status_data
     '))    
+    ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
     ->orderBy('kecamatan', 'desc')
     ->get();
 
@@ -50,13 +52,14 @@ class APIKependudukanController extends Controller {
   //KEPENDUDUKAN  Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU) - [m_26_penduduk_umur]
 	public function jpbkuIndex(Request $request)
 	{
-    $data = \DB::table('m_26_penduduk_umur')
+    $data = \DB::table('m_26_penduduk_umur AS A')
     ->select(\DB::raw('
       tahun,
       kelompok_umur,
       jumlah,
-      status_data
+      B.jenis_data AS status_data
     '))    
+    ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
     ->orderBy('tahun', 'desc')
     ->get();
 
@@ -69,12 +72,13 @@ class APIKependudukanController extends Controller {
   //KEPENDUDUKAN  Pertumbuhan Penduduk (PP) - [m_27_laju_pertumbuhan]
 	public function ppIndex(Request $request)
 	{
-    $data = \DB::table('m_27_laju_pertumbuhan')
+    $data = \DB::table('m_27_laju_pertumbuhan AS A')
     ->select(\DB::raw('
       tahun,
       laju,
-      status_data
+      B.jenis_data AS status_data
     '))    
+    ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
     ->orderBy('tahun', 'desc')
     ->get();
 
