@@ -4,11 +4,7 @@
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
-        <section class="content-header">
-            <div class="container-fluid">
-
-            </div><!-- /.container-fluid -->
-        </section>
+        <BR>
 
         <section class="content">
             <div class="container-fluid">
@@ -17,13 +13,16 @@
                         <section style="padding:20px;background:rgb(255, 255, 255);">
                             <div class="row mb-2">
                                 <div class="col-sm-6">
-                                    <li class="breadcrumb-item active" style="font-size: 20px;">
-                                        <strong>{{ $title }}</strong>
-                                    </li>
+                                    <li class="breadcrumb-item active" style="font-size: 25px;">
+                                        <strong>{{ $title }}</strong></li>
                                 </div>
                                 <div class="col-sm-6">
                                 </div>
-                            </div><BR>
+                            </div>
+                            <BR><BR>
+                            <div class="row mb-2">
+                                <h4 style="padding:20px;font-size: 20px;">{{ $sumber }}</h4>
+                            </div>
                             <div style="margin:10px;">
                                 <div class="border-0">
                                     @include('layouts.pesan')
@@ -43,7 +42,8 @@
                                     <thead>
                                         <tr style="background:rgb(4, 89, 123);color:white;font-size: 12px;">
                                             <th style="width: 2%;" class="text-center">No</th>
-                                            <th style="width: 80%;" class="text-center">Username / </th>
+                                            <th style="width: 80%;" class="text-center">Data Tahun / Series / Persentase
+                                            </th>
                                             <th style="width: 10%;" class="text-center">AKSI</th>
                                         </tr>
                                     </thead>
@@ -51,10 +51,9 @@
                                         @foreach ($data as $k => $item)
                                             <tr style="font-size: 11px;">
                                                 <td class="text-center">{{ $k + 1 }}</th>
-                                                <td><img src="{{ $item->foto }}"> <strong>Username</strong> :
-                                                    {{ $item->name }} | <strong>No Hp</strong> : {{ $item->nomor_hp }} |
-                                                    <strong>No Hp</strong> : {{ $item->email }}
-                                                </td>
+                                                <td><strong>Tahun</strong> : {{ $item->tahun }} | <strong>Series</strong> :
+                                                    {{ Helper::getJenisDataSeries($item->data_series) }} |
+                                                    <strong>Persentase</strong> : {{ $item->persentase }}%</td>
                                                 <td class="project-actions text-center" style="padding: 10px;">
                                                     <a href="" class="btn btn-info btn-sm" data-toggle="modal"
                                                         style="font-size: 10px;"
@@ -73,12 +72,7 @@
                                                                                 <span
                                                                                     style="font-size:20px;color:rgb(10, 100, 100);"><b>Edit
                                                                                         Data {{ $title }}</b></span>
-                                                                                {!! Form::open([
-                                                                                    'url' => route('sosial-ppm.update', ['id' => $item->id]),
-                                                                                    'method' => 'put',
-                                                                                    'id' => 'frmedit_' . $item->id,
-                                                                                    'name' => 'frmedit_' . $item->id,
-                                                                                ]) !!}
+                                                                                {{-- {!! Form::open(['url'=>route('sosial-ahm.update', ['id' => $item->id]), 'method'=>'put','id'=>'frmedit_' . $item->id,'name'=>'frmedit_' . $item->id])!!} --}}
                                                                                 <div class="card-body">
                                                                                     <div class="form-group">
                                                                                         <div class="row">
@@ -150,7 +144,7 @@
                                                                                         class="btn btn-danger"
                                                                                         data-dismiss="modal">Cancel</button>
                                                                                 </div>
-                                                                                {!! Form::close() !!}
+                                                                                {{-- {!! Form::close()!!} --}}
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -164,17 +158,16 @@
                                         @endforeach
                                     </tbody>
                                 </table>
-                            </div>
-                        </section>
+                            </div>                             
 
+                        </section>
                         <!-- /.col -->
                     </div>
                 </div><!-- /.container-fluid -->
 
 
 
-
-
+                
                 {{-- TAMBAH MODAL --}}
                 <div class="modal fade" id="modal-default">
                     <div class="modal-dialog modal-xl">
@@ -185,73 +178,53 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            {!! Form::open(['url' => route('user-iu.store'), 'method' => 'post', 'id' => 'frmadd', 'name' => 'frmadd']) !!}
+                            {{-- {!! Form::open(['url'=>route('sosial-ahm.store'), 'method'=>'post','id'=>'frmadd','name'=>'frmadd'])!!}                                                        --}}
                             <div class="card-body">
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-4">
-                                            <label>Nama Lengkap</label>
-                                            <input type="text" name="name"
-                                                class="form-control @error('name') is-invalid @enderror"
-                                                placeholder="Ketik Nama Lengkap" required>
+                                            <label>Tahun</label>
+                                            <input type="text" name="tahun"
+                                                class="form-control @error('tahun') is-invalid @enderror"
+                                                placeholder="Ketik tahun" required>
+                                            @if ($errors->has('tahun'))
+                                                <div class="alert alert-danger mt-1 alert-validation-msg" role="alert">
+                                                    <div class="alert-body d-flex align-items-center">
+                                                        <i data-feather="info" class="me-50"></i>
+                                                        {{ $errors->first('tahun') }}
+                                                    </div>
+                                                </div>
+                                            @endif
                                         </div>
                                         <div class="col-4">
-                                            <label>Username / Nickname</label>
-                                            <input type="text" name="username"
-                                                class="form-control @error('username') is-invalid @enderror"
-                                                placeholder="Ketik Username" required>
+                                            <label>Data Series</label>
+                                            {!! Form::select('data_series', Helper::getJenisDataSeries(), old('data_series'), [
+                                                'id' => 'frmadd_data_series',
+                                                'class' => 'form-control',
+                                            ]) !!}
                                         </div>
                                         <div class="col-4">
-                                            <label>Password</label>
-                                            <input type="password" name="password"
-                                                class="form-control @error('password') is-invalid @enderror"
-                                                placeholder="Ketik Password" required>
+                                            <label>Data Persentase</label>
+                                            <input type="text" name="data_persentase"
+                                                class="form-control @error('data_persentase') is-invalid @enderror"
+                                                placeholder="Ketik Data Persentase" required>
+                                            @if ($errors->has('data_persentase'))
+                                                <div class="alert alert-danger mt-1 alert-validation-msg" role="alert">
+                                                    <div class="alert-body d-flex align-items-center">
+                                                        <i data-feather="info" class="me-50"></i>
+                                                        {{ $errors->first('data_persentase') }}
+                                                    </div>
+                                                </div>
+                                            @endif
                                         </div>
                                     </div>
-
-                                    <div class="row" style="margin-top: 22px;">
-                                        <div class="col-4">
-                                            <label>Sebagai</label>
-                                            <select name="defult_role" class="form-control selectpicker" data-live-search="true" required>
-                                              <option @error('defult_role') is-invalid @enderror value=".:: Pilih Level ::.">.:: Pilih Level ::.</option>
-                                              <option @error('defult_role') is-invalid @enderror value="superadmin">Super Admin</option>
-                                              <option @error('defult_role') is-invalid @enderror value="admin">Admin</option>
-                                              <option @error('defult_role') is-invalid @enderror value="user">User</option>
-                                              <option @error('defult_role') is-invalid @enderror value="operator">Operator</option>
-                                          </select>
-                                        </div>
-                                        <div class="col-4">
-                                            <label>No Hp</label>
-                                            <input type="text" name="nomor_hp"
-                                                class="form-control @error('nomor_hp') is-invalid @enderror"
-                                                placeholder="Ketik Nomor Handphone" required>
-                                        </div>
-                                        <div class="col-4">
-                                            <label>Email</label>
-                                            <input type="text" name="email"
-                                                class="form-control @error('email') is-invalid @enderror"
-                                                placeholder="Ketik Email" required>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group mb-3" style="margin-top: 22px;">
-                                        <div class="row">
-                                            <div class="col-4">
-                                                <label>Input Foto</label>
-                                                <input type="file" name="foto" class="form-control"
-                                                    id="inputGroupFile02" required>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
                                 </div>
                             </div>
                             <div class="modal-footer justify-content-between">
                                 <button type="submit" class="btn btn-info">Simpan</button>
                                 <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
                             </div>
-                            {!! Form::close() !!}
+                            {{-- {!! Form::close()!!} --}}
                         </div>
                         <!-- /.modal-content -->
                     </div>

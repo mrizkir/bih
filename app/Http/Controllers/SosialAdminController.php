@@ -33,8 +33,7 @@ class SosialAdminController extends Controller
       'status_data' => 'required|in:1,2,3',
     ]);
 
-    \DB::table('m_1_pres_pend_miskin')
-    ->insert([
+    \DB::table('m_1_pres_pend_miskin')->insert([
       'tahun' => $request->input('tahun'),
       'presentase' => $request->input('presentase'),      
       'status_data' => $request->input('status_data'),
