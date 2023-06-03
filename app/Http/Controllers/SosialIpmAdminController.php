@@ -9,10 +9,17 @@ class SosialIpmAdminController extends Controller
 {
     public function ipmIndex()
     {
-      $data = DataSosialModel::orderBy('tahun', 'desc')->get();
+      $data = \DB::table('m_2_ipm')
+      ->select(\DB::raw('
+        tahun,
+        ipm,
+        status_data
+      '))    
+      ->orderBy('tahun', 'desc')
+      ->get();
   
       return view('admin.sosial.2ipm_tampil', [
-        'title' => 'Indeks Pembangunan Manusia (IPM)',
+        'title' => 'Persentase Penduduk Miskin (PPM)',
         'sumber' => 'BPS',
         'data' => $data
       ]);
