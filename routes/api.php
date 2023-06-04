@@ -57,14 +57,30 @@ Route::group(['prefix'=>'v1', 'middleware'=>'api'], function () use ($router)
   //EKONOMI Realisasi Investasi (PMA/ PMDN) - [m_35_pma]
   Route::get('/ekonomi/pma', [App\Http\Controllers\API\APIEkonomiController::class, 'pmaIndex'])->name('ekonomi-pma.index'); 
 
-  //PERTANAIN Produksi Perikanan Budidaya (PPB) - [m_21_perikanan_budidaya]
+  //PERTANIAN Produksi Perikanan Budidaya (PPB) - [m_21_perikanan_budidaya]
   Route::get('/pertanian/ppb', [App\Http\Controllers\API\APIPertanianController::class, 'ppbIndex'])->name('pertanian-ppb.index');   
-  //PERTANAIN  Produksi Perikanan Tangkap(PPT) - [m_22_perikanan_tangkap]
+  //PERTANIAN  Produksi Perikanan Tangkap(PPT) - [m_22_perikanan_tangkap]
   Route::get('/pertanian/ppt', [App\Http\Controllers\API\APIPertanianController::class, 'pptIndex'])->name('pertanian-ppt.index');   
-  //PERTANAIN Capaian Produksi Komoditi Unggulan Perkebunan (CPKUP) - [m_23_perkebunan]
+  //PERTANIAN Capaian Produksi Komoditi Unggulan Perkebunan (CPKUP) - [m_23_perkebunan]
   Route::get('/pertanian/cpkup', [App\Http\Controllers\API\APIPertanianController::class, 'cpkupIndex'])->name('pertanian-cpkup.index'); 
   //PERTANAIN Capaian Produksi Komoditi Hortikultura (CPKH) - [m_24_holtikultura]
   Route::get('/pertanian/cpkh', [App\Http\Controllers\API\APIPertanianController::class, 'cpkhIndex'])->name('pertanian-cpkh.index');   
   //PERTANAIN Jumlah Produksi Peternakan (JPP) - [m_25_peternakan]
   Route::get('/pertanian/jpp', [App\Http\Controllers\API\APIPertanianController::class, 'jppIndex'])->name('pertanian-jpp.index');   
+
+  //KEPENDUDUKAN Jumlah Penduduk (JP) - [m_36_jumlah_penduduk]
+  Route::get('/kependudukan/jp', [App\Http\Controllers\API\APIKependudukanController::class, 'jpIndex'])->name('kependudukan-jp.index'); 
+  //KEPENDUDUKAN Jumlah Penduduk Berdasarkan Kecamatan Tahun 2021 (JPBK) - [m_26_penduduk_kecamatan]
+  Route::get('/kependudukan/jpbk', [App\Http\Controllers\API\APIKependudukanController::class, 'jpbkIndex'])->name('kependudukan-jpbk.index'); 
+  //KEPENDUDUKAN  Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU) - [m_26_penduduk_umur]
+  Route::get('/kependudukan/jpbku', [App\Http\Controllers\API\APIKependudukanController::class, 'jpbkuIndex'])->name('kependudukan-jpbku.index'); 
+  //KEPENDUDUKAN  Pertumbuhan Penduduk (PP) - [m_27_laju_pertumbuhan]
+  Route::get('/kependudukan/pp', [App\Http\Controllers\API\APIKependudukanController::class, 'ppIndex'])->name('kependudukan-pp.index');  
+
+  //INFRASTRUKTUR Panjang Jalan Yang Dibangun dan Ditingkatkan (PJDD) - [m_28_jalan]
+  Route::get('/infrastruktur/pjdd', [App\Http\Controllers\API\APIInfrastrukturController::class, 'pjddIndex'])->name('infrastruktur-pjdd.index'); 
+  //INFRASTRUKTUR Persentase Rumah Tangga yang menggunakan air bersih (PRT) - [m_29_air]
+  Route::get('/infrastruktur/prt', [App\Http\Controllers\API\APIInfrastrukturController::class, 'prtIndex'])->name('infrastruktur-prt.index'); 
+  //INFRASTRUKTUR  Persentase Tingkat Kemantapan Jalan (PTKJ) - [m_37_kemantapan_jalan]
+  Route::get('/infrastruktur/ptkj', [App\Http\Controllers\API\APIInfrastrukturController::class, 'ptkjIndex'])->name('infrastruktur-ptkj.index'); 
 });
