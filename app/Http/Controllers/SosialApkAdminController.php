@@ -16,7 +16,7 @@ class SosialApkAdminController extends Controller
         'sumber' => 'SD 7-12 Tahun',
         'menu_active' => 'menu-sosial',
         'sub_menu_active' => 'menu-sosial-apk',
-        'page_active' => 'sosial-apk-7-12',
+        'page_active' => 'sosial-apk-sd',
         'data' => $data
       ]);
     }
@@ -39,7 +39,7 @@ class SosialApkAdminController extends Controller
         'sumber' => 'SD 7-12 Tahun',
         'menu_active' => 'menu-sosial',
         'sub_menu_active' => 'menu-sosial-apk',
-        'page_active' => 'sosial-apk-7-12',
+        'page_active' => 'sosial-apk-sd',
         'data' => $data
       ]);
     }
@@ -117,7 +117,7 @@ class SosialApkAdminController extends Controller
         'sumber' => 'SMP 13-15 Tahun',
         'menu_active' => 'menu-sosial',
         'sub_menu_active' => 'menu-sosial-apk',
-        'page_active' => 'sosial-apk-13-15',
+        'page_active' => 'sosial-apk-smp',
         'data' => $data
       ]);
     }
@@ -194,7 +194,7 @@ class SosialApkAdminController extends Controller
         'sumber' => 'SMA 16-18 Tahun',
         'menu_active' => 'menu-sosial',
         'sub_menu_active' => 'menu-sosial-apk',
-        'page_active' => 'sosial-apk-16-18',
+        'page_active' => 'sosial-apk-sma',
         'data' => $data
       ]);
     }

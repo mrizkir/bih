@@ -51,15 +51,15 @@
     <!-- Sidebar Menu -->
     <nav class="mt-2">
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-        <li class="nav-item">
-          <a href="#" class="nav-link">
+        <li class="nav-item{!!Helper::isMenuActive ($menu_active,'menu-sosial',' menu-open')!!}">
+          <a href="#" class="nav-link{!!Helper::isMenuActive ($menu_active,'menu-sosial',' active')!!}">
             <img src="{{ asset('administrator/img_mda/h1.png') }}" style="width:12%;margin:3px;">
             <p style="font-size: 10px;">SOSIAL<i class="fas fa-angle-left right"
                 style="margin-top: 10px;"></i></p>
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="{{ route('sosial-ppm.index') }}" class="nav-link">
+              <a href="{{ route('sosial-ppm.index') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'sosial-ppm',' active')!!}">
                 <div style="width:30px;height:35px;float:left;">
                   <i class="far fa-circle nav-icon"
                     style="color:rgb(255, 255, 255);font-size:10px;"></i>
@@ -70,7 +70,7 @@
           </ul>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="{{ route('sosial-ipm.index') }}" class="nav-link">
+              <a href="{{ route('sosial-ipm.index') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'sosial-ipm',' active')!!}">
                 <div style="width:30px;height:35px;float:left;">
                   <i class="far fa-circle nav-icon"
                     style="color:rgb(255, 255, 255);font-size:10px;"></i>
@@ -81,7 +81,7 @@
           </ul>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="{{ route('sosial-rls.index') }}" class="nav-link">
+              <a href="{{ route('sosial-rls.index') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'sosial-rls',' active')!!}">
                 <div style="width:30px;height:35px;float:left;">
                   <i class="far fa-circle nav-icon"
                     style="color:rgb(255, 255, 255);font-size:10px;"></i>
@@ -92,7 +92,7 @@
           </ul>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="{{ route('sosial-ahm.index') }}" class="nav-link">
+              <a href="{{ route('sosial-ahm.index') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'sosial-ahm',' active')!!}">
                 <div style="width:30px;height:35px;float:left;">
                   <i class="far fa-circle nav-icon"
                     style="color:rgb(255, 255, 255);font-size:10px;"></i>
@@ -103,7 +103,7 @@
           </ul>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="{{ route('sosial-ahh.index') }}" class="nav-link">
+              <a href="{{ route('sosial-ahh.index') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'sosial-ahh',' active')!!}">
                 <div style="width:30px;height:35px;float:left;">
                   <i class="far fa-circle nav-icon"
                     style="color:rgb(255, 255, 255);font-size:10px;"></i>
@@ -114,7 +114,7 @@
           </ul>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="{{ route('sosial-akhb.index') }}" class="nav-link">
+              <a href="{{ route('sosial-akhb.index') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'sosial-akhb',' active')!!}">
                 <div style="width:30px;height:35px;float:left;">
                   <i class="far fa-circle nav-icon"
                     style="color:rgb(255, 255, 255);font-size:10px;"></i>
@@ -125,7 +125,7 @@
           </ul>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="{{ route('sosial-akim.index') }}" class="nav-link">
+              <a href="{{ route('sosial-akim.index') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'sosial-akim',' active')!!}">
                 <div style="width:30px;height:55px;float:left;">
                   <i class="far fa-circle nav-icon"
                     style="color:rgb(255, 255, 255);font-size:10px;"></i>
@@ -138,7 +138,7 @@
           </ul>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="{{ route('sosial-pkk.index') }}" class="nav-link">
+              <a href="{{ route('sosial-pkk.index') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'sosial-pkk',' active')!!}">
                 <div style="width:30px;height:50px;float:left;">
                   <i class="far fa-circle nav-icon"
                     style="color:rgb(255, 255, 255);font-size:10px;"></i>
@@ -151,7 +151,7 @@
           </ul>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="{{ route('sosial-ipg.index') }}" class="nav-link">
+              <a href="{{ route('sosial-ipg.index') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'sosial-ipg',' active')!!}">
                 <div style="width:30px;height:35px;float:left;">
                   <i class="far fa-circle nav-icon"
                     style="color:rgb(255, 255, 255);font-size:10px;"></i>
@@ -161,18 +161,18 @@
             </li>
           </ul>
           <ul class="nav nav-treeview">
-            <li class="nav-item">
+            <li class="nav-item{!!Helper::isMenuActive ($sub_menu_active,'menu-sosial-apk',' menu-open')!!}">
               <a href="" class="nav-link">
                 <div style="width:30px;height:35px;float:left;">
-                  <i class="far fa-circle nav-icon"
-                    style="color:rgb(255, 255, 255);font-size:10px;"></i>
+                  <i class="far fa-circle nav-icon" style="color:rgb(255, 255, 255);font-size:10px;"></i>
                 </div>
-                <p style="font-size: 12px;">Angka Partisipasi Kasar (APK)<i
-                    class="fas fa-angle-left right" style="margin-top: 5px;"></i></p>
+                <p style="font-size: 12px;">Angka Partisipasi Kasar (APK)
+                  <i class="fas fa-angle-left right" style="margin-top: 5px;"></i>
+                </p>
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('sosial-apk_SD') }}" class="nav-link">
+                  <a href="{{ route('sosial-apk_SD') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'sosial-apk-sd',' active')!!}">
                     <div style="width:30px;height:35px;float:left;"></div>
                     <p style="font-size: 12px;">SD 7-12 Tahun</p>
                   </a>
@@ -180,7 +180,7 @@
               </ul>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('sosial-apk_SMP') }}" class="nav-link">
+                  <a href="{{ route('sosial-apk_SMP') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'sosial-apk-smp',' active')!!}">
                     <div style="width:30px;height:35px;float:left;"></div>
                     <p style="font-size: 12px;">SMP 13-15 Tahun</p>
                   </a>
@@ -188,7 +188,44 @@
               </ul>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('sosial-apk_SMA') }}" class="nav-link">
+                  <a href="{{ route('sosial-apk_SMA') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'sosial-apk-sma',' active')!!}">
+                    <div style="width:30px;height:35px;float:left;"></div>
+                    <p style="font-size: 12px;">SMA 16-18 Tahun</p>
+                  </a>
+                </li>
+              </ul>
+
+            </li>
+          </ul>
+          <ul class="nav nav-treeview">
+            <li class="nav-item{!!Helper::isMenuActive ($sub_menu_active,'menu-sosial-apm',' menu-open')!!}">
+              <a href="" class="nav-link">
+                <div style="width:30px;height:35px;float:left;">
+                  <i class="far fa-circle nav-icon" style="color:rgb(255, 255, 255);font-size:10px;"></i>
+                </div>
+                <p style="font-size: 12px;">Angka Partisipasi Murni (APM)
+                  <i class="fas fa-angle-left right" style="margin-top: 5px;"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="{{ route('sosial-apm_SD') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'sosial-apm-sd',' active')!!}">
+                    <div style="width:30px;height:35px;float:left;"></div>
+                    <p style="font-size: 12px;">SD 7-12 Tahun</p>
+                  </a>
+                </li>
+              </ul>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="{{ route('sosial-apm_SMP') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'sosial-apm-smp',' active')!!}">
+                    <div style="width:30px;height:35px;float:left;"></div>
+                    <p style="font-size: 12px;">SMP 13-15 Tahun</p>
+                  </a>
+                </li>
+              </ul>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="{{ route('sosial-apm_SMA') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'sosial-apm-sma',' active')!!}">
                     <div style="width:30px;height:35px;float:left;"></div>
                     <p style="font-size: 12px;">SMA 16-18 Tahun</p>
                   </a>
@@ -199,44 +236,7 @@
           </ul>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="" class="nav-link">
-                <div style="width:30px;height:35px;float:left;">
-                  <i class="far fa-circle nav-icon"
-                    style="color:rgb(255, 255, 255);font-size:10px;"></i>
-                </div>
-                <p style="font-size: 12px;">Angka partisipasi Murni (APM)<i
-                    class="fas fa-angle-left right" style="margin-top: 5px;"></i></p>
-              </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="{{ route('sosial-apm_SD') }}" class="nav-link">
-                    <div style="width:30px;height:35px;float:left;"></div>
-                    <p style="font-size: 12px;">SD 7-12 Tahun</p>
-                  </a>
-                </li>
-              </ul>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="{{ route('sosial-apm_SMP') }}" class="nav-link">
-                    <div style="width:30px;height:35px;float:left;"></div>
-                    <p style="font-size: 12px;">SMP 13-15 Tahun</p>
-                  </a>
-                </li>
-              </ul>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="{{ route('sosial-apm_SMA') }}" class="nav-link">
-                    <div style="width:30px;height:35px;float:left;"></div>
-                    <p style="font-size: 12px;">SMA 16-18 Tahun</p>
-                  </a>
-                </li>
-              </ul>
-
-            </li>
-          </ul>
-          <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a href="{{ route('sosial-hls.index') }}" class="nav-link">
+              <a href="{{ route('sosial-hls.index') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'sosial-hls',' active')!!}">
                 <div style="width:30px;height:35px;float:left;">
                   <i class="far fa-circle nav-icon"
                     style="color:rgb(255, 255, 255);font-size:10px;"></i>
@@ -247,7 +247,7 @@
           </ul>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="{{ route('sosial-jrtlh.index') }}" class="nav-link">
+              <a href="{{ route('sosial-jrtlh.index') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'sosial-jrtlh',' active')!!}">
                 <div style="width:30px;height:35px;float:left;">
                   <i class="far fa-circle nav-icon"
                     style="color:rgb(255, 255, 255);font-size:10px;"></i>
@@ -258,7 +258,7 @@
           </ul>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="{{ route('sosial-ig.index') }}" class="nav-link">
+              <a href="{{ route('sosial-ig.index') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'sosial-ig',' active')!!}">
                 <div style="width:30px;height:35px;float:left;">
                   <i class="far fa-circle nav-icon"
                     style="color:rgb(255, 255, 255);font-size:10px;"></i>
@@ -269,7 +269,7 @@
           </ul>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="{{ route('sosial-idb.index') }}" class="nav-link">
+              <a href="{{ route('sosial-idb.index') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'sosial-idb',' active')!!}">
                 <div style="width:30px;height:35px;float:left;">
                   <i class="far fa-circle nav-icon"
                     style="color:rgb(255, 255, 255);font-size:10px;"></i>
@@ -280,7 +280,7 @@
           </ul>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="{{ route('sosial-ppu.index') }}" class="nav-link">
+              <a href="{{ route('sosial-ppu.index') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'sosial-ppu',' active')!!}">
                 <div style="width:30px;height:75px;float:left;">
                   <i class="far fa-circle nav-icon"
                     style="color:rgb(255, 255, 255);font-size:10px;"></i>
@@ -292,7 +292,7 @@
           </ul>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="{{ route('sosial-ipgg.index') }}" class="nav-link">
+              <a href="{{ route('sosial-ipgg.index') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'sosial-ipgg',' active')!!}">
                 <div style="width:30px;height:35px;float:left;">
                   <i class="far fa-circle nav-icon"
                     style="color:rgb(255, 255, 255);font-size:10px;"></i>
@@ -301,10 +301,7 @@
               </a>
             </li>
           </ul>
-
-
         </li>
-
         <li class="nav-item{!!Helper::isMenuActive ($menu_active,'menu-ekonomi',' menu-open')!!}">
           <a href="#" class="nav-link{!!Helper::isMenuActive ($menu_active,'menu-ekonomi',' active')!!}">
             <img src="{{ asset('administrator/img_mda/h2.png') }}" style="width:12%;margin:3px;">
@@ -504,7 +501,7 @@
               </ul>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('ekonomi-adhk_B') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'ekonomi-adhk-b',' active')!!}"">
+                  <a href="{{ route('ekonomi-adhk_B') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'ekonomi-adhk-b',' active')!!}">
                     <div style="width:30px;height:35px;float:left;"></div>
                     <p style="font-size: 12px;">B. Pertambangan dan Penggalian</p>
                   </a>
@@ -512,7 +509,7 @@
               </ul>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('ekonomi-adhk_C') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'ekonomi-adhk-c',' active')!!}"">
+                  <a href="{{ route('ekonomi-adhk_C') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'ekonomi-adhk-c',' active')!!}">
                     <div style="width:30px;height:35px;float:left;"></div>
                     <p style="font-size: 12px;">C. Industri Pengolahan</p>
                   </a>
@@ -520,7 +517,7 @@
               </ul>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('ekonomi-adhk_D') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'ekonomi-adhk-d',' active')!!}"">
+                  <a href="{{ route('ekonomi-adhk_D') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'ekonomi-adhk-d',' active')!!}">
                     <div style="width:30px;height:35px;float:left;"></div>
                     <p style="font-size: 12px;">D. Pengadaan Listrik dan Gas</p>
                   </a>
@@ -528,7 +525,7 @@
               </ul>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('ekonomi-adhk_E') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'ekonomi-adhk-e',' active')!!}"">
+                  <a href="{{ route('ekonomi-adhk_E') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'ekonomi-adhk-e',' active')!!}">
                     <div style="width:30px;height:55px;float:left;"></div>
                     <p style="font-size: 12px;">E. Pengadaan Air, Pengelolaan Sampah, Limbah dan
                       Daur Ulang</p>
@@ -537,7 +534,7 @@
               </ul>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('ekonomi-adhk_F') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'ekonomi-adhk-f',' active')!!}"">
+                  <a href="{{ route('ekonomi-adhk_F') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'ekonomi-adhk-f',' active')!!}">
                     <div style="width:30px;height:35px;float:left;"></div>
                     <p style="font-size: 12px;">F. Konstruksi</p>
                   </a>
@@ -545,7 +542,7 @@
               </ul>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('ekonomi-adhk_G') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'ekonomi-adhk-g',' active')!!}"">
+                  <a href="{{ route('ekonomi-adhk_G') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'ekonomi-adhk-g',' active')!!}">
                     <div style="width:30px;height:55px;float:left;"></div>
                     <p style="font-size: 12px;">G. Perdagangan Besar dan Eceran, Reparasi Mobil dan
                       Sepeda Motor</p>
@@ -554,7 +551,7 @@
               </ul>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('ekonomi-adhk_H') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'ekonomi-adhk-h',' active')!!}"">
+                  <a href="{{ route('ekonomi-adhk_H') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'ekonomi-adhk-h',' active')!!}">
                     <div style="width:30px;height:35px;float:left;"></div>
                     <p style="font-size: 12px;">H. Transportasi dan Pergudangan</p>
                   </a>
@@ -562,7 +559,7 @@
               </ul>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('ekonomi-adhk_I') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'ekonomi-adhk-i',' active')!!}"">
+                  <a href="{{ route('ekonomi-adhk_I') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'ekonomi-adhk-i',' active')!!}">
                     <div style="width:30px;height:35px;float:left;"></div>
                     <p style="font-size: 12px;">I. Penyediaan Akomodasi dan Makan Minum</p>
                   </a>
@@ -570,7 +567,7 @@
               </ul>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('ekonomi-adhk_J') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'ekonomi-adhk-j',' active')!!}"">
+                  <a href="{{ route('ekonomi-adhk_J') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'ekonomi-adhk-j',' active')!!}">
                     <div style="width:30px;height:35px;float:left;"></div>
                     <p style="font-size: 12px;">J. Informasi dan Komunikasi</p>
                   </a>
@@ -578,7 +575,7 @@
               </ul>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('ekonomi-adhk_K') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'ekonomi-adhk-k',' active')!!}"">
+                  <a href="{{ route('ekonomi-adhk_K') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'ekonomi-adhk-k',' active')!!}">
                     <div style="width:30px;height:35px;float:left;"></div>
                     <p style="font-size: 12px;">K. Jasa Keuangan dan Asuransi</p>
                   </a>
@@ -586,7 +583,7 @@
               </ul>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('ekonomi-adhk_L') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'ekonomi-adhk-l',' active')!!}"">
+                  <a href="{{ route('ekonomi-adhk_L') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'ekonomi-adhk-l',' active')!!}">
                     <div style="width:30px;height:35px;float:left;"></div>
                     <p style="font-size: 12px;">L. Real Estate</p>
                   </a>
@@ -594,7 +591,7 @@
               </ul>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('ekonomi-adhk_MN') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'ekonomi-adhk-mn',' active')!!}"">
+                  <a href="{{ route('ekonomi-adhk_MN') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'ekonomi-adhk-mn',' active')!!}">
                     <div style="width:30px;height:35px;float:left;"></div>
                     <p style="font-size: 12px;">M,N. Jasa Perusahaan</p>
                   </a>
@@ -602,7 +599,7 @@
               </ul>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('ekonomi-adhk_O') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'ekonomi-adhk-o',' active')!!}"">
+                  <a href="{{ route('ekonomi-adhk_O') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'ekonomi-adhk-o',' active')!!}">
                     <div style="width:30px;height:55px;float:left;"></div>
                     <p style="font-size: 12px;">O. Administrasi Pemerintahan, Pertahanan dan
                       Jaminan Sosial Wajib</p>
@@ -611,7 +608,7 @@
               </ul>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('ekonomi-adhk_P') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'ekonomi-adhk-p',' active')!!}"">
+                  <a href="{{ route('ekonomi-adhk_P') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'ekonomi-adhk-p',' active')!!}">
                     <div style="width:30px;height:35px;float:left;"></div>
                     <p style="font-size: 12px;">P. Jasa Pendidikan</p>
                   </a>
@@ -619,7 +616,7 @@
               </ul>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('ekonomi-adhk_Q') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'ekonomi-adhk-q',' active')!!}"">
+                  <a href="{{ route('ekonomi-adhk_Q') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'ekonomi-adhk-q',' active')!!}">
                     <div style="width:30px;height:35px;float:left;"></div>
                     <p style="font-size: 12px;">Q. Jasa Kesehatan dan Kegiatan Sosial</p>
                   </a>
@@ -627,7 +624,7 @@
               </ul>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('ekonomi-adhk_RSTU') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'ekonomi-adhk-rstu',' active')!!}"">
+                  <a href="{{ route('ekonomi-adhk_RSTU') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'ekonomi-adhk-rstu',' active')!!}">
                     <div style="width:30px;height:35px;float:left;"></div>
                     <p style="font-size: 12px;">R,S,T,U. Jasa Lainnya</p>
                   </a>
