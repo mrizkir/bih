@@ -14,6 +14,9 @@ class EkonomiLiAdminController extends Controller
       return view('admin.ekonomi.2li_tampil', [
         'title' => 'Laju Inflasi (LI)',
         'sumber' => 'BPS',
+        'menu_active' => 'menu-ekonomi',
+        'sub_menu_active' => 'none',
+        'page_active' => 'ekonomi-li',
         'data' => $data
       ]);
     }

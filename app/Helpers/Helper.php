@@ -26,7 +26,15 @@ class Helper
       return Helper::$data_series[$jenis];
     }
   }
-
-  
-  
+  /**
+	 * digunakan untuk mendapatkan status aktif menu
+	 */
+	public static function isMenuActive ($current_page_active,$page_name,$callback='active') 
+	{
+		if ($current_page_active == $page_name) {
+			return $callback;
+		}else{
+			return '';
+		}
+	}
 } 

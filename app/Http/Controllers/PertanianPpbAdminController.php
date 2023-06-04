@@ -14,6 +14,9 @@ class PertanianPpbAdminController extends Controller
       return view('admin.pertanian.1ppb_tampil', [
         'title' => 'Produksi Perikanan Budidaya (PPB)',
         'sumber' => 'BPS',
+        'menu_active' => 'menu-pertanian',
+        'sub_menu_active' => 'none',
+        'page_active' => 'pertanian-ppb',        
         'data' => $data
       ]);
     }

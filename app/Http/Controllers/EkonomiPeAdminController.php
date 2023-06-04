@@ -14,6 +14,9 @@ class EkonomiPeAdminController extends Controller
       return view('admin.ekonomi.1pe_tampil', [
         'title' => 'Petumbuhan Ekonomi (PE)',
         'sumber' => 'BPS',
+        'menu_active' => 'menu-ekonomi',
+        'sub_menu_active' => 'none',
+        'page_active' => 'ekonomi-pe',
         'data' => $data
       ]);
     }

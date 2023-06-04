@@ -14,6 +14,9 @@ class KependudukanJpAdminController extends Controller
       return view('admin.kependudukan.1jp_tampil', [
         'title' => 'Jumlah Penduduk (JP)',
         'sumber' => 'BPS',
+        'menu_active' => 'menu-kependudukan',
+        'sub_menu_active' => 'none',
+        'page_active' => 'kependudukan-jp',
         'data' => $data
       ]);
     }

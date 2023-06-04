@@ -14,6 +14,9 @@ class InfrastrukturPtkjAdminController extends Controller
       return view('admin.infrastruktur.3ptkj_tampil', [
         'title' => 'Persentase Tingkat Kemantapan Jalan (PTKJ)',
         'sumber' => 'BPS',
+        'menu_active' => 'menu-infrastruktur',
+        'sub_menu_active' => 'none',
+        'page_active' => 'infrastruktur-ptk',
         'data' => $data
       ]);
     }

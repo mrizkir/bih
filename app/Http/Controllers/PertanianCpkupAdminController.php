@@ -14,6 +14,9 @@ class PertanianCpkupAdminController extends Controller
       return view('admin.pertanian.3cpkup_tampil', [
         'title' => 'Capaian Produksi Komoditi Unggulan Perkebunan (CPKUP)',
         'sumber' => 'BPS',
+        'menu_active' => 'menu-pertanian',
+        'sub_menu_active' => 'none',
+        'page_active' => 'pertanian-cpkup',
         'data' => $data
       ]);
     }

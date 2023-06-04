@@ -14,6 +14,9 @@ class PertanianPptAdminController extends Controller
       return view('admin.pertanian.2ppt_tampil', [
         'title' => 'Produksi Perikanan Tangkap(PPT)',
         'sumber' => 'BPS',
+        'menu_active' => 'menu-pertanian',
+        'sub_menu_active' => 'none',
+        'page_active' => 'pertanian-ppt',
         'data' => $data
       ]);
     }

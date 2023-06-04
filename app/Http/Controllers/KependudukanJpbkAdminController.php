@@ -14,6 +14,9 @@ class KependudukanJpbkAdminController extends Controller
       return view('admin.kependudukan.2jpbk_tampil', [
         'title' => 'Jumlah Penduduk Berdasarkan Kecamatan Tahun 2021 (JPBK)',
         'sumber' => 'BPS',
+        'menu_active' => 'menu-kependudukan',
+        'sub_menu_active' => 'none',
+        'page_active' => 'kependudukan-jpbk',
         'data' => $data
       ]);
     }

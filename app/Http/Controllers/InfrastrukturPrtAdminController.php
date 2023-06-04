@@ -14,6 +14,9 @@ class InfrastrukturPrtAdminController extends Controller
       return view('admin.infrastruktur.2prt_tampil', [
         'title' => 'Persentase Rumah Tangga yang menggunakan air bersih (PRT)',
         'sumber' => 'BPS',
+        'menu_active' => 'menu-infrastruktur',
+        'sub_menu_active' => 'none',
+        'page_active' => 'infrastruktur-prt',
         'data' => $data
       ]);
     }

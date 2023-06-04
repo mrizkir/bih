@@ -13,8 +13,7 @@ use Spatie\Permission\Models\Role;
 class ManajemenUserController extends Controller
 {
     public function iuIndex()
-    { 
-      
+    {       
       $data = User::orderBy('id', 'desc')->get();
 
       $daftar_role = Role::get()
@@ -24,6 +23,9 @@ class ManajemenUserController extends Controller
       
       return view('admin.manajemen.user_tampil', [
         'title' => 'Manajemen User', 
+        'menu_active' => 'menu-manajemen-user',
+        'sub_menu_active' => 'none',
+        'page_active' => 'manajemen-user',
         'sumber' => 'Admin',   
         'data' => $data,
         'daftar_role' => $daftar_role,

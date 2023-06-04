@@ -14,6 +14,9 @@ class PertanianCpkhAdminController extends Controller
       return view('admin.pertanian.4cpkh_tampil', [
         'title' => 'Capaian Produksi Komoditi Hortikultura (CPKH)',
         'sumber' => 'BPS',
+        'menu_active' => 'menu-pertanian',
+        'sub_menu_active' => 'none',
+        'page_active' => 'pertanian-cpkh',
         'data' => $data
       ]);
     }

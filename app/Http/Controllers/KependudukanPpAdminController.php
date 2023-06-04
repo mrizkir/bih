@@ -14,6 +14,9 @@ class KependudukanPpAdminController extends Controller
       return view('admin.kependudukan.4pp_tampil', [
         'title' => 'Pertumbuhan Penduduk (PP)',
         'sumber' => 'BPS',
+        'menu_active' => 'menu-kependudukan',
+        'sub_menu_active' => 'none',
+        'page_active' => 'kependudukan-pp',
         'data' => $data
       ]);
     }

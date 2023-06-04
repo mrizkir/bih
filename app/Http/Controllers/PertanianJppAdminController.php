@@ -14,6 +14,9 @@ class PertanianJppAdminController extends Controller
       return view('admin.pertanian.5jpp_tampil', [
         'title' => 'Jumlah Produksi Peternakan (JPP)',
         'sumber' => 'BPS',
+        'menu_active' => 'menu-pertanian',
+        'sub_menu_active' => 'none',
+        'page_active' => 'pertanian-jpp',
         'data' => $data
       ]);
     }

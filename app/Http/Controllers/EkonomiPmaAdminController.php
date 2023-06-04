@@ -14,6 +14,9 @@ class EkonomiPmaAdminController extends Controller
       return view('admin.ekonomi.6pma_tampil', [
         'title' => 'Realisasi Investasi (PMA/ PMDN)',
         'sumber' => 'BPS',
+        'menu_active' => 'menu-ekonomi',
+        'sub_menu_active' => 'none',
+        'page_active' => 'ekonomi-adhk-pma',
         'data' => $data
       ]);
     }
