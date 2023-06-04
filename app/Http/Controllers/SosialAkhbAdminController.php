@@ -23,7 +23,7 @@ class SosialAkhbAdminController extends Controller
         'sumber' => 'BPS',
         'menu_active' => 'menu-sosial',
         'sub_menu_active' => 'none',
-        'page_active' => 'sosial-akh',
+        'page_active' => 'sosial-akhb',
         'data' => $data
       ]); 
     }
