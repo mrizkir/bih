@@ -9,10 +9,17 @@ class SosialIpggAdminController extends Controller
 {
     public function ipggIndex()
     {
-      $data = DataSosialModel::orderBy('tahun', 'desc')->get();
+      $data = \DB::table('m_38_idg')
+      ->select(\DB::raw('
+        tahun,
+        idg,
+        status_data
+      '))    
+      ->orderBy('tahun', 'desc')
+      ->get();
   
-      return view('admin.sosial.ipgg_tampil', [
-        'title' => 'Indeks Pemeberdayaan Gender (IPG)',
+      return view('admin.sosial.38ipgg_tampil', [
+        'title' => 'Indeks Pemeberdayaan Gender (IPGG)',
         'sumber' => 'BPS',
         'data' => $data
       ]);
