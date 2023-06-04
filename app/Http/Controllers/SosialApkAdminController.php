@@ -14,6 +14,9 @@ class SosialApkAdminController extends Controller
       return view('admin.sosial.10apk_tampil', [
         'title' => 'Angka Partisipasi Kasar (APK)',
         'sumber' => 'SD 7-12 Tahun',
+        'menu_active' => 'menu-sosial',
+        'sub_menu_active' => 'menu-sosial-apk',
+        'page_active' => 'sosial-apk-7-12',
         'data' => $data
       ]);
     }
@@ -34,6 +37,9 @@ class SosialApkAdminController extends Controller
       return view('admin.sosial.sosial_apk_SD_tampil', [
         'title' => 'Angka Partisipasi Kasar (APK)',
         'sumber' => 'SD 7-12 Tahun',
+        'menu_active' => 'menu-sosial',
+        'sub_menu_active' => 'menu-sosial-apk',
+        'page_active' => 'sosial-apk-7-12',
         'data' => $data
       ]);
     }
@@ -109,6 +115,9 @@ class SosialApkAdminController extends Controller
       return view('admin.sosial.sosial_apk_SMP_tampil', [
         'title' => 'Angka Partisipasi Kasar (APK)',
         'sumber' => 'SMP 13-15 Tahun',
+        'menu_active' => 'menu-sosial',
+        'sub_menu_active' => 'menu-sosial-apk',
+        'page_active' => 'sosial-apk-13-15',
         'data' => $data
       ]);
     }
@@ -166,15 +175,6 @@ class SosialApkAdminController extends Controller
         $data->delete();
         return redirect(route('sosial-apk_SMP'))->with('sukses', 'Data Sudah di Hapus');
     }
-
-
-
-
-
-
-
-
-
     public function apk_SMA()
     {
       $data = \DB::table('m_10_apk')
@@ -192,6 +192,9 @@ class SosialApkAdminController extends Controller
       return view('admin.sosial.sosial_apk_SMA_tampil', [
         'title' => 'Angka Partisipasi Kasar (APK)',
         'sumber' => 'SMA 16-18 Tahun',
+        'menu_active' => 'menu-sosial',
+        'sub_menu_active' => 'menu-sosial-apk',
+        'page_active' => 'sosial-apk-16-18',
         'data' => $data
       ]);
     }

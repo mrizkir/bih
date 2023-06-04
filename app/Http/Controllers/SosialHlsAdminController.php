@@ -21,6 +21,9 @@ class SosialHlsAdminController extends Controller
       return view('admin.sosial.12hls_tampil', [
         'title' => 'Angka Harapan Lama Sekolah (HLS)',
         'sumber' => 'BPS',
+        'menu_active' => 'menu-sosial',
+        'sub_menu_active' => 'none',
+        'page_active' => 'sosial-hls',
         'data' => $data
       ]);
     } 

@@ -21,6 +21,9 @@ class SosialIgAdminController extends Controller
       return view('admin.sosial.14ig_tampil', [
         'title' => 'Indeks Gini (IG)',
         'sumber' => 'BPS',
+        'menu_active' => 'menu-sosial',
+        'sub_menu_active' => 'none',
+        'page_active' => 'sosial-ig',
         'data' => $data
       ]);
     }

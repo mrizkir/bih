@@ -21,6 +21,9 @@ class SosialIpggAdminController extends Controller
       return view('admin.sosial.38ipgg_tampil', [
         'title' => 'Indeks Pemeberdayaan Gender (IPGG)',
         'sumber' => 'BPS',
+        'menu_active' => 'menu-sosial',
+        'sub_menu_active' => 'none',
+        'page_active' => 'sosial-ipgg',
         'data' => $data
       ]);
     }

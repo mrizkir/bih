@@ -21,6 +21,9 @@ class SosialAkimAdminController extends Controller
       return view('admin.sosial.7akim_tampil', [
         'title' => 'Angka Kematian Ibu Melahirkan Per 100.000 Kelahiran Hidup',
         'sumber' => 'BPS',
+        'menu_active' => 'menu-sosial',
+        'sub_menu_active' => 'none',
+        'page_active' => 'sosial-akim',
         'data' => $data
       ]);
     }

@@ -24,6 +24,9 @@ class SosialPpuAdminController extends Controller
       return view('admin.sosial.16ppu_tampil', [
         'title' => 'Persentase Penduduk Usia 15 Tahun ke atas menurut Pendidikan yang Ditamatkan (PPU)',
         'sumber' => 'BPS',
+        'menu_active' => 'menu-sosial',
+        'sub_menu_active' => 'none',
+        'page_active' => 'sosial-ppu',
         'data' => $data
       ]);
     }

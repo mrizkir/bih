@@ -21,6 +21,9 @@ class SosialIdbAdminController extends Controller
       return view('admin.sosial.15idb_tampil', [
         'title' => 'Indeks Daya Beli - Purchasing Power Parity (IDB)',
         'sumber' => 'BPS',
+        'menu_active' => 'menu-sosial',
+        'sub_menu_active' => 'none',
+        'page_active' => 'sosial-idb',
         'data' => $data
       ]);
     }

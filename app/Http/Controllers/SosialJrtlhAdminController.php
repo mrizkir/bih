@@ -21,6 +21,9 @@ class SosialJrtlhAdminController extends Controller
       return view('admin.sosial.13jrtlh_tampil', [
         'title' => 'Jumlah Rumah Tidak Layak Huni Yang Direhab (JRTLH)',
         'sumber' => 'BPS',
+        'menu_active' => 'menu-sosial',
+        'sub_menu_active' => 'none',
+        'page_active' => 'sosial-jrtlh',
         'data' => $data
       ]);
     }

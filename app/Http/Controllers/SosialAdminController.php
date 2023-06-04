@@ -21,6 +21,9 @@ class SosialAdminController extends Controller
     return view('admin.sosial.1ppm_tampil', [
       'title' => 'Persentase Penduduk Miskin (PPM)',
       'sumber' => 'BPS',
+      'menu_active' => 'menu-sosial',
+      'sub_menu_active' => 'none',
+      'page_active' => 'sosial-ppm',
       'data' => $data
     ]);
   }

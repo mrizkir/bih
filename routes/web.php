@@ -282,18 +282,18 @@ Route::group(
     Route::get('/adhk_c', [EkonomiAdhkAdminController::class, 'adhk_c'])->name('ekonomi-adhk_C'); 
     Route::get('/adhk_d', [EkonomiAdhkAdminController::class, 'adhk_d'])->name('ekonomi-adhk_D'); 
     Route::get('/adhk_e', [EkonomiAdhkAdminController::class, 'adhk_e'])->name('ekonomi-adhk_E'); 
-    Route::get('/adhk_f', [EkonomiAdhkAdminController::class, 'adhk_e'])->name('ekonomi-adhk_F'); 
-    Route::get('/adhk_g', [EkonomiAdhkAdminController::class, 'adhk_e'])->name('ekonomi-adhk_G'); 
-    Route::get('/adhk_h', [EkonomiAdhkAdminController::class, 'adhk_e'])->name('ekonomi-adhk_H'); 
-    Route::get('/adhk_i', [EkonomiAdhkAdminController::class, 'adhk_e'])->name('ekonomi-adhk_I'); 
-    Route::get('/adhk_j', [EkonomiAdhkAdminController::class, 'adhk_e'])->name('ekonomi-adhk_J'); 
-    Route::get('/adhk_k', [EkonomiAdhkAdminController::class, 'adhk_e'])->name('ekonomi-adhk_K'); 
-    Route::get('/adhk_l', [EkonomiAdhkAdminController::class, 'adhk_e'])->name('ekonomi-adhk_L'); 
-    Route::get('/adhk_mn', [EkonomiAdhkAdminController::class, 'adhk_e'])->name('ekonomi-adhk_MN'); 
-    Route::get('/adhk_o', [EkonomiAdhkAdminController::class, 'adhk_e'])->name('ekonomi-adhk_O'); 
-    Route::get('/adhk_p', [EkonomiAdhkAdminController::class, 'adhk_e'])->name('ekonomi-adhk_P'); 
-    Route::get('/adhk_q', [EkonomiAdhkAdminController::class, 'adhk_e'])->name('ekonomi-adhk_Q'); 
-    Route::get('/adhk_rstu', [EkonomiAdhkAdminController::class, 'adhk_e'])->name('ekonomi-adhk_RSTU'); 
+    Route::get('/adhk_f', [EkonomiAdhkAdminController::class, 'adhk_f'])->name('ekonomi-adhk_F'); 
+    Route::get('/adhk_g', [EkonomiAdhkAdminController::class, 'adhk_g'])->name('ekonomi-adhk_G'); 
+    Route::get('/adhk_h', [EkonomiAdhkAdminController::class, 'adhk_h'])->name('ekonomi-adhk_H'); 
+    Route::get('/adhk_i', [EkonomiAdhkAdminController::class, 'adhk_i'])->name('ekonomi-adhk_I'); 
+    Route::get('/adhk_j', [EkonomiAdhkAdminController::class, 'adhk_j'])->name('ekonomi-adhk_J'); 
+    Route::get('/adhk_k', [EkonomiAdhkAdminController::class, 'adhk_k'])->name('ekonomi-adhk_K'); 
+    Route::get('/adhk_l', [EkonomiAdhkAdminController::class, 'adhk_l'])->name('ekonomi-adhk_L'); 
+    Route::get('/adhk_mn', [EkonomiAdhkAdminController::class, 'adhk_mn'])->name('ekonomi-adhk_MN'); 
+    Route::get('/adhk_o', [EkonomiAdhkAdminController::class, 'adhk_o'])->name('ekonomi-adhk_O'); 
+    Route::get('/adhk_p', [EkonomiAdhkAdminController::class, 'adhk_p'])->name('ekonomi-adhk_P'); 
+    Route::get('/adhk_q', [EkonomiAdhkAdminController::class, 'adhk_q'])->name('ekonomi-adhk_Q'); 
+    Route::get('/adhk_rstu', [EkonomiAdhkAdminController::class, 'adhk_rstu'])->name('ekonomi-adhk_RSTU'); 
 
 
 

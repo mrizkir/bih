@@ -21,6 +21,9 @@ class SosialIpmAdminController extends Controller
       return view('admin.sosial.2ipm_tampil', [
         'title' => 'Indeks Pembangunan Manusia (IPM)',
         'sumber' => 'BPS',
+        'menu_active' => 'menu-sosial',
+        'sub_menu_active' => 'none',
+        'page_active' => 'sosial-ipm',
         'data' => $data
       ]);
     }

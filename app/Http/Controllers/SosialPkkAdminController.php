@@ -26,6 +26,9 @@ class SosialPkkAdminController extends Controller
       return view('admin.sosial.8pkk_tampil', [
         'title' => 'Perkembangan Kondisi Ketenagakerjaan di Kabupaten Bintan (PKK)',
         'sumber' => 'BPS',
+        'menu_active' => 'menu-sosial',
+        'sub_menu_active' => 'none',
+        'page_active' => 'sosial-pkk',
         'data' => $data
       ]);
     }

@@ -21,6 +21,9 @@ class SosialRlsAdminController extends Controller
       return view('admin.sosial.3rls_tampil', [
         'title' => 'Angka Rata-Rata Lama Sekolah (RLS)',
         'sumber' => 'BPS',
+        'menu_active' => 'menu-sosial',
+        'sub_menu_active' => 'none',
+        'page_active' => 'sosial-rls',
         'data' => $data
       ]);
     }

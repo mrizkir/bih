@@ -22,6 +22,9 @@ class SosialAhmAdminController extends Controller
       return view('admin.sosial.4ahm_tampil', [
         'title' => 'Angka Melek Huruf (AMH)',
         'sumber' => 'BPS',
+        'menu_active' => 'menu-sosial',
+        'sub_menu_active' => 'none',
+        'page_active' => 'sosial-ahm',
         'data' => $data
       ]);
     }

@@ -34,6 +34,9 @@ class SosialApmAdminController extends Controller
       return view('admin.sosial.sosial_apm_SD_tampil', [
         'title' => 'Angka partisipasi Murni (APM)',
         'sumber' => 'SD 7-12 Tahun',
+        'menu_active' => 'menu-sosial',
+        'sub_menu_active' => 'menu-sosial-apm',
+        'page_active' => 'sosial-apm-7-12',
         'data' => $data
       ]);
     }
@@ -84,44 +87,38 @@ class SosialApmAdminController extends Controller
       return redirect(route('sosial-apm_SD'))->with('success', 'data berhasil diubah');
     }    
   }
-    public function apmsdDel($id)
-    {
-      $data = \DB::table('m_11_apm')->where('tahun', $id);
+  public function apmsdDel($id)
+  {
+    $data = \DB::table('m_11_apm')->where('tahun', $id);
 
-        $data->delete();
-        return redirect(route('sosial-apm_SD'))->with('sukses', 'Data Sudah di Hapus');
-    }
+      $data->delete();
+      return redirect(route('sosial-apm_SD'))->with('sukses', 'Data Sudah di Hapus');
+  }
+  public function apm_SMP()
+  {
+    $data = \DB::table('m_11_apm')
+    ->select(\DB::raw('
+      tahun,
+      tingkat,
+      APM,
+      no,
+      status_data
+    '))    
+    ->where('no','2')
+    ->orderBy('tahun', 'desc')
+    ->get();
 
+    return view('admin.sosial.sosial_apm_SMP_tampil', [
+      'title' => 'Angka partisipasi Murni (APM)',
+      'sumber' => 'SMP 13-15 Tahun',
+      'menu_active' => 'menu-sosial',
+      'sub_menu_active' => 'menu-sosial-apm',
+      'page_active' => 'sosial-apm-13-15',
+      'data' => $data
+    ]);
+  }
 
-
-
-
-
-
-
-
-    public function apm_SMP()
-    {
-      $data = \DB::table('m_11_apm')
-      ->select(\DB::raw('
-        tahun,
-        tingkat,
-        APM,
-        no,
-        status_data
-      '))    
-      ->where('no','2')
-      ->orderBy('tahun', 'desc')
-      ->get();
-  
-      return view('admin.sosial.sosial_apm_SMP_tampil', [
-        'title' => 'Angka partisipasi Murni (APM)',
-        'sumber' => 'SMP 13-15 Tahun',
-        'data' => $data
-      ]);
-    }
-
-    public function apmsmpStore(Request $request)
+  public function apmsmpStore(Request $request)
   {
     $this->validate($request, [ 
       'tahun' => 'required',
@@ -166,36 +163,39 @@ class SosialApmAdminController extends Controller
       return redirect(route('sosial-apm_SMP'))->with('success', 'data berhasil diubah');
     }    
   }
-    public function apmsmpDel($id)
-    {
-      $data = \DB::table('m_11_apm')->where('tahun', $id);
+  public function apmsmpDel($id)
+  {
+    $data = \DB::table('m_11_apm')->where('tahun', $id);
 
-        $data->delete();
-        return redirect(route('sosial-apm_SMP'))->with('sukses', 'Data Sudah di Hapus');
-    }
+      $data->delete();
+      return redirect(route('sosial-apm_SMP'))->with('sukses', 'Data Sudah di Hapus');
+  }
  
 
-    public function apm_SMA()
-    {
-      $data = \DB::table('m_11_apm')
-      ->select(\DB::raw('
-        tahun,
-        tingkat,
-        APM,
-        no,
-        status_data
-      '))    
-      ->where('no','3')
-      ->orderBy('tahun', 'desc')
-      ->get();
-      return view('admin.sosial.sosial_apm_SMA_tampil', [
-        'title' => 'Angka partisipasi Murni (APM)',
-        'sumber' => 'SMA 16-18 Tahun',
-        'data' => $data
-      ]);
-    }
+  public function apm_SMA()
+  {
+    $data = \DB::table('m_11_apm')
+    ->select(\DB::raw('
+      tahun,
+      tingkat,
+      APM,
+      no,
+      status_data
+    '))    
+    ->where('no','3')
+    ->orderBy('tahun', 'desc')
+    ->get();
+    return view('admin.sosial.sosial_apm_SMA_tampil', [
+      'title' => 'Angka partisipasi Murni (APM)',
+      'sumber' => 'SMA 16-18 Tahun',
+      'menu_active' => 'menu-sosial',
+      'sub_menu_active' => 'menu-sosial-apm',
+      'page_active' => 'sosial-apm-16-18',
+      'data' => $data
+    ]);
+  }
 
-    public function apmsmaStore(Request $request)
+  public function apmsmaStore(Request $request)
   {
     $this->validate($request, [ 
       'tahun' => 'required',
