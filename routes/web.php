@@ -203,25 +203,28 @@ Route::group(
     Route::get('/ig', [SosialIgAdminController::class, 'igIndex'])->name('sosial-ig.index');
     Route::post('/ig/store', [SosialIgAdminController::class, 'igStore'])->name('sosial-ig.store');
     Route::get('/ig/{id}/edit', [SosialIgAdminController::class, 'igEdit'])->name('sosial-ig.edit');
-    Route::put('/ig/{id}', [SosialIgAdminController::class, 'igUpdate'])->name('sosial-ig.update');      
+    Route::put('/ig/{id}', [SosialIgAdminController::class, 'igUpdate'])->name('sosial-ig.update');    
+    Route::get('/igdel/{id}', [SosialIgAdminController::class, 'igDel'])->name('sosial-ig.del');  
     
     //SOSIAL Indeks Daya Beli - Purchasing Power Parity (IDB) - [m_15_idb]
     Route::get('/idb', [SosialIdbAdminController::class, 'idbIndex'])->name('sosial-idb.index');  
-    Route::post('/ig/store', [SosialIdbAdminController::class, 'igStore'])->name('sosial-ig.store');
-    Route::get('/ig/{id}/edit', [SosialIdbAdminController::class, 'igEdit'])->name('sosial-ig.edit');
-    Route::put('/ig/{id}', [SosialIdbAdminController::class, 'igUpdate'])->name('sosial-ig.update');        
+    Route::post('/idb/store', [SosialIdbAdminController::class, 'idbStore'])->name('sosial-idb.store');
+    Route::get('/idb/{id}/edit', [SosialIdbAdminController::class, 'idbEdit'])->name('sosial-idb.edit');
+    Route::put('/idb/{id}', [SosialIdbAdminController::class, 'idbUpdate'])->name('sosial-idb.update');   
+    Route::get('/idbdel/{id}', [SosialIdbAdminController::class, 'idbDel'])->name('sosial-idb.del');     
  
     //SOSIAL Persentase Penduduk Usia 15 Tahun ke atas menurut Pendidikan yang Ditamatkan (PPU) - [m_16_lulusan_pendidikan]
     Route::get('/ppu', [SosialPpuAdminController::class, 'ppuIndex'])->name('sosial-ppu.index'); 
     Route::post('/ppu/store', [SosialPpuAdminController::class, 'ppuStore'])->name('sosial-ppu.store');
     Route::get('/ppu/{id}/edit', [SosialPpuAdminController::class, 'ppuEdit'])->name('sosial-ppu.edit');
-    Route::put('/ppu/{id}', [SosialPpuAdminController::class, 'ppuUpdate'])->name('sosial-ppu.update');        
+    Route::put('/ppu/{id}', [SosialPpuAdminController::class, 'ppuUpdate'])->name('sosial-ppu.update');   
+    Route::get('/ppudel/{id}', [SosialPpuAdminController::class, 'ppuDel'])->name('sosial-ppu.del');     
 
-    //SOSIAL  Indeks Pemberdayaan Gender (IPG) - [m_38_idg]
+    //SOSIAL  Indeks Pemberdayaan Gender (IPGG) - [m_38_idg]
     Route::get('/ipgg', [SosialIpggAdminController::class, 'ipggIndex'])->name('sosial-ipgg.index'); 
-    Route::post('/ppu/store', [SosialPpuAdminController::class, 'ppuStore'])->name('sosial-ppu.store');
-    Route::get('/ppu/{id}/edit', [SosialPpuAdminController::class, 'ppuEdit'])->name('sosial-ppu.edit');
-    Route::put('/ppu/{id}', [SosialPpuAdminController::class, 'ppuUpdate'])->name('sosial-ppu.update');        
+    Route::post('/ipgg/store', [SosialPpuAdminController::class, 'ipggStore'])->name('sosial-ppu.store');
+    Route::get('/ipgg/{id}/edit', [SosialPpuAdminController::class, 'ipggEdit'])->name('sosial-ppu.edit');
+    Route::put('/ipgg/{id}', [SosialPpuAdminController::class, 'ipggUpdate'])->name('sosial-ppu.update');        
 
 
 

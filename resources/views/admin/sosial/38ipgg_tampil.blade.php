@@ -35,29 +35,30 @@
                                     <thead>
                                         <tr style="background:rgb(4, 89, 123);color:white;font-size: 12px;">
                                             <th style="width: 2%;" class="text-center">No</th>
-                                            <th style="width: 80%;" class="text-center">Data {{ $title }} 
+                                            <th style="width: 80%;" class="text-center">Data Tahun / Series / RLS
                                             </th>
                                             <th style="width: 10%;" class="text-center">AKSI</th>
                                         </tr>
-                                    </thead>  
+                                    </thead>
                                     <tbody>
                                         @foreach ($data as $k => $item)
                                             <tr style="font-size: 11px;">
                                                 <td class="text-center">{{ $k + 1 }}</th>
-                                                <td><strong>Tahun</strong> : {{ $item->tahun }} | <strong>Series</strong> :
+                                                <td><strong>Tahun</strong> : {{ $item->tahun }} | 
+                                                    <strong>Series</strong> :
                                                     {{ Helper::getJenisDataSeries($item->status_data) }} |
-                                                    <strong>Gini Ratio</strong> : {{ $item->gini_ratio }}</td>
+                                                    <strong>idg </strong> : {{ $item->idg }}%</td>
                                                 <td class="project-actions text-center" style="padding: 10px;">
                                                     <a href="" class="btn btn-info btn-sm" data-toggle="modal"
                                                         style="font-size: 10px;"
                                                         data-target="#modaledit{{ $item->tahun }}">
                                                         <i class="fas fa-pencil-alt"></i> Edit
                                                     </a>
-                                                    {{-- <a href="{{ 'igdel/'.$item->tahun }}" class="btn btn-info btn-sm"  
-                                                        style="font-size: 10px;" class="btn btn-danger btn-sm"  
-                                                        onclick="return confirm('Anda Yakin Mau Menghapus ?') ">
-                                                        <i class="fas fa-pencil-alt"></i> Del
-                                                    </a> --}} 
+                                                    {{-- <a href="{{ 'idgdel/'.$item->tahun }}" class="btn btn-info btn-sm"  
+                                                       style="font-size: 10px;" class="btn btn-danger btn-sm"  
+                                                       onclick="return confirm('Anda Yakin Mau Menghapus ?') ">
+                                                       <i class="fas fa-pencil-alt"></i> Del
+                                                   </a> --}}
 
                                                     {{-- VIEW MODAL EDIT --}}
                                                     <div class="modal fade" id="modaledit{{ $item->tahun }}"
@@ -72,7 +73,7 @@
                                                                                     style="font-size:20px;color:rgb(10, 100, 100);"><b>Edit
                                                                                         Data {{ $title }}</b></span>
                                                                                 {!! Form::open([
-                                                                                    'url' => route('sosial-ig.update', ['id' => $item->tahun]),
+                                                                                    'url' => route('sosial-ahh.update', ['id' => $item->tahun]),
                                                                                     'method' => 'put',
                                                                                     'id' => 'frmedit_' . $item->tahun,
                                                                                     'name' => 'frmedit_' . $item->tahun,
@@ -118,20 +119,21 @@
                                                                                                 @endif
                                                                                             </div>
                                                                                             <div class="col-4">
-                                                                                                <label>Jumlah</label>
+                                                                                                <label>Data
+                                                                                                    Persentase</label>
                                                                                                 <input type="text"
-                                                                                                    name="gini_ratio"
-                                                                                                    class="form-control @error('gini_ratio') is-invalid @enderror"
-                                                                                                    value="{{ $item->gini_ratio }}"
+                                                                                                    name="idg"
+                                                                                                    class="form-control @error('idg') is-invalid @enderror"
+                                                                                                    value="{{ $item->idg }}"
                                                                                                     required>
-                                                                                                @if ($errors->has('gini_ratio'))
+                                                                                                @if ($errors->has('idg'))
                                                                                                     <div class="alert alert-danger mt-1 alert-validation-msg"
                                                                                                         role="alert">
                                                                                                         <div
                                                                                                             class="alert-body d-flex align-items-center">
                                                                                                             <i data-feather="info"
                                                                                                                 class="me-50"></i>
-                                                                                                            {{ $errors->first('gini_ratio') }}
+                                                                                                            {{ $errors->first('idg') }}
                                                                                                         </div>
                                                                                                     </div>
                                                                                                 @endif
@@ -189,7 +191,7 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            {!! Form::open(['url' => route('sosial-ig.store'), 'method' => 'post', 'id' => 'frmadd', 'name' => 'frmadd']) !!}
+                            {!! Form::open(['url' => route('sosial-ahh.store'), 'method' => 'post', 'id' => 'frmadd', 'name' => 'frmadd']) !!}
                             <div class="card-body">
                                 <div class="form-group">
                                     <div class="row">
@@ -206,7 +208,7 @@
                                                     </div>
                                                 </div>
                                             @endif
-                                        </div> 
+                                        </div>
                                         <div class="col-4">
                                             <label>Data Series</label>
                                             {!! Form::select('status_data', Helper::getJenisDataSeries(), old('status_data'), [
@@ -215,21 +217,21 @@
                                             ]) !!}
                                         </div>
                                         <div class="col-4">
-                                            <label>Data Gini Ratio </label>
-                                            <input type="text" name="gini_ratio"
-                                                class="form-control @error('gini_ratio') is-invalid @enderror"
-                                                placeholder="Ketik Data gini_ratio" required>
-                                            @if ($errors->has('gini_ratio'))
+                                            <label>Data Angka Harapan Hidup</label>
+                                            <input type="text" name="idg"
+                                                class="form-control @error('idg') is-invalid @enderror"
+                                                placeholder="Ketik Data idgh" required>
+                                            @if ($errors->has('idg'))
                                                 <div class="alert alert-danger mt-1 alert-validation-msg" role="alert">
                                                     <div class="alert-body d-flex align-items-center">
                                                         <i data-feather="info" class="me-50"></i>
-                                                        {{ $errors->first('gini_ratio') }}
+                                                        {{ $errors->first('idg') }}
                                                     </div>
                                                 </div>
                                             @endif
                                         </div>
                                     </div>
-                                </div> 
+                                </div>
                             </div>
                             <div class="modal-footer justify-content-between">
                                 <button type="submit" class="btn btn-info">Simpan</button>

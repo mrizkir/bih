@@ -46,7 +46,7 @@ class SosialIgAdminController extends Controller
     $data = \DB::table('m_14_gini')
     ->where('tahun', $id)
     ->first();
-
+ 
     if (is_null($data))
     {
       return redirect(route('sosial-ig.index'))->with('error', 'data gagal disimpan');
