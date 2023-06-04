@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\DataSosialModel;
 
 class SosialAhmAdminController extends Controller
-{
+{ 
     public function ahmIndex()
     {
       $data = \DB::table('m_4_amh')

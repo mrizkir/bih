@@ -133,6 +133,7 @@ Route::group(
     Route::post('/ipg/store', [SosialIpgAdminController::class, 'ipgStore'])->name('sosial-ipg.store');
     Route::get('/ipg/{id}/edit', [SosialIpgAdminController::class, 'ipgEdit'])->name('sosial-ipg.edit');
     Route::put('/ipg/{id}', [SosialIpgAdminController::class, 'ipgUpdate'])->name('sosial-ipg.update');
+    Route::get('/ipgdel/{id}', [SosialIpgAdminController::class, 'ipgDel'])->name('sosial-ipg.del');
     
     //SOSIAL Angka Partisipasi Kasar (APK) - [m_10_apk]
     Route::get('/apk', [SosialApkAdminController::class, 'apkIndex'])->name('sosial-apk.index'); 
@@ -142,19 +143,20 @@ Route::group(
 
     //SOSIAL Angka Partisipasi Kasar (APK) - [m_10_apk]
     Route::get('/sosial_apk_SD_tampil', [SosialApkAdminController::class, 'apk_SD'])->name('sosial-apk_SD'); 
-    //Store
-    //EDIT
+    Route::post('/apksd/store', [SosialApkAdminController::class, 'apksdStore'])->name('sosial-apksd.store');
+    Route::put('/apksd/{id}', [SosialApkAdminController::class, 'apksdUpdate'])->name('sosial-apksd.update'); 
+    Route::get('/apksddel/{id}', [SosialApkAdminController::class, 'apksdDel'])->name('sosial-apk_SD.del');   
     //UPDATE
 
     Route::get('/sosial_apk_SMP_tampil', [SosialApkAdminController::class, 'apk_SMP'])->name('sosial-apk_SMP'); 
-    //Store
-    //EDIT
-    //UPDATE
+    Route::post('/apksmp/store', [SosialApkAdminController::class, 'apksmpStore'])->name('sosial-apksmp.store');
+    Route::put('/apksmp/{id}', [SosialApkAdminController::class, 'apksmpUpdate'])->name('sosial-apksmp.update'); 
+    Route::get('/apksmpdel/{id}', [SosialApkAdminController::class, 'apksmpDel'])->name('sosial-apksmp.del');  
         
     Route::get('/sosial_apk_SMA_tampil', [SosialApkAdminController::class, 'apk_SMA'])->name('sosial-apk_SMA'); 
-    //Store
-    //EDIT
-    //UPDATE 
+    Route::post('/apksma/store', [SosialApkAdminController::class, 'apksmaStore'])->name('sosial-apksma.store');
+    Route::put('/apksma/{id}', [SosialApkAdminController::class, 'apksmaUpdate'])->name('sosial-apksma.update'); 
+    Route::get('/apksmadel/{id}', [SosialApkAdminController::class, 'apksmaDel'])->name('sosial-apksma.del');  
     
 
     //SOSIAL Angka partisipasi Murni (APM) - [m_11_apm]
@@ -164,33 +166,38 @@ Route::group(
     Route::put('/apm/{id}', [SosialApmAdminController::class, 'apmUpdate'])->name('sosial-apm.update');     
 
     //SOSIAL Angka partisipasi Murni (APM) - [m_11_apm]
-    Route::get('/sosial_apmSD', [SosialApmAdminController::class, 'apm_SD'])->name('sosial-apm_SD');
-    //Store
-    //EDIT
-    //UPDATE
+    Route::get('/sosial_apm_SD_tampil', [SosialApmAdminController::class, 'apm_SD'])->name('sosial-apm_SD');
+    Route::post('/apmsd/store', [SosialApmAdminController::class, 'apmsdStore'])->name('sosial-apmsd.store');
+    Route::get('/apmsd/{id}/edit', [SosialApmAdminController::class, 'apmsdEdit'])->name('sosial-apmsd.edit');
+    Route::put('/apmsd/{id}', [SosialApmAdminController::class, 'apmsdUpdate'])->name('sosial-apmsd.update');   
+    Route::get('/apmsddel/{id}', [SosialApmAdminController::class, 'apmsdDel'])->name('sosial-apmsd.del');     
 
     Route::get('/sosial_apmSMP', [SosialApmAdminController::class, 'apm_SMP'])->name('sosial-apm_SMP');
-    //Store
-    //EDIT
-    //UPDATE
+    Route::post('/apmsmp/store', [SosialApmAdminController::class, 'apmsmpStore'])->name('sosial-apmsmp.store');
+    Route::get('/apmsmp/{id}/edit', [SosialApmAdminController::class, 'apmsmpEdit'])->name('sosial-apmsmp.edit');
+    Route::put('/apmsmp/{id}', [SosialApmAdminController::class, 'apmsmpUpdate'])->name('sosial-apmsmp.update');   
+    Route::get('/apmsmpdel/{id}', [SosialApmAdminController::class, 'apmsmpDel'])->name('sosial-apmsmp.del');     
 
     Route::get('/sosial_apmSMA', [SosialApmAdminController::class, 'apm_SMA'])->name('sosial-apm_SMA');
-    //Store
-    //EDIT
-    //UPDATE
+    Route::post('/apmsma/store', [SosialApmAdminController::class, 'apmsmaStore'])->name('sosial-apmsma.store');
+    Route::get('/apmsma/{id}/edit', [SosialApmAdminController::class, 'apmsmaEdit'])->name('sosial-apmsma.edit');
+    Route::put('/apmsma/{id}', [SosialApmAdminController::class, 'apmsmaUpdate'])->name('sosial-apmsma.update');   
+    Route::get('/apmsmadel/{id}', [SosialApmAdminController::class, 'apmsmaDel'])->name('sosial-apmsma.del');  
 
 
     //SOSIAL Angka Harapan Lama Sekolah (HLS) - [m_12_hls]
     Route::get('/hls', [SosialHlsAdminController::class, 'hlsIndex'])->name('sosial-hls.index'); 
-    Route::post('/apm/store', [SosialApmAdminController::class, 'apmStore'])->name('sosial-apm.store');
-    Route::get('/apm/{id}/edit', [SosialApmAdminController::class, 'apmEdit'])->name('sosial-apm.edit');
-    Route::put('/apm/{id}', [SosialApmAdminController::class, 'apmUpdate'])->name('sosial-apm.update');     
+    Route::post('/hls/store', [SosialHlsAdminController::class, 'hlsStore'])->name('sosial-hls.store');
+    Route::get('/hls/{id}/edit', [SosialHlsAdminController::class, 'hlsEdit'])->name('sosial-hls.edit');
+    Route::put('/hls/{id}', [SosialHlsAdminController::class, 'hlsUpdate'])->name('sosial-hls.update');      
+    Route::get('/hlsdel/{id}', [SosialHlsAdminController::class, 'hlsDel'])->name('sosial-hls.del');  
 
     //SOSIAL Jumlah Rumah Tidak Layak Huni Yang Direhab (JRTLH) - [m_13_rtlh]
     Route::get('/jrtlh', [SosialJrtlhAdminController::class, 'jrtlhIndex'])->name('sosial-jrtlh.index');    
     Route::post('/jrtlh/store', [SosialJrtlhAdminController::class, 'jrtlhStore'])->name('sosial-jrtlh.store');
     Route::get('/jrtlh/{id}/edit', [SosialJrtlhAdminController::class, 'jrtlhEdit'])->name('sosial-jrtlh.edit');
-    Route::put('/jrtlh/{id}', [SosialJrtlhAdminController::class, 'jrtlhUpdate'])->name('sosial-jrtlh.update');      
+    Route::put('/jrtlh/{id}', [SosialJrtlhAdminController::class, 'jrtlhUpdate'])->name('sosial-jrtlh.update');  
+    Route::get('/jrtlhdel/{id}', [SosialJrtlhAdminController::class, 'jrtlhDel'])->name('sosial-jrtlh.del');    
   
     //SOSIAL Indeks Gini (IG) - [m_14_gini]
     Route::get('/ig', [SosialIgAdminController::class, 'igIndex'])->name('sosial-ig.index');
