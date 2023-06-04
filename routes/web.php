@@ -212,7 +212,7 @@ Route::group(
     Route::get('/idb/{id}/edit', [SosialIdbAdminController::class, 'idbEdit'])->name('sosial-idb.edit');
     Route::put('/idb/{id}', [SosialIdbAdminController::class, 'idbUpdate'])->name('sosial-idb.update');   
     Route::get('/idbdel/{id}', [SosialIdbAdminController::class, 'idbDel'])->name('sosial-idb.del');     
- 
+  
     //SOSIAL Persentase Penduduk Usia 15 Tahun ke atas menurut Pendidikan yang Ditamatkan (PPU) - [m_16_lulusan_pendidikan]
     Route::get('/ppu', [SosialPpuAdminController::class, 'ppuIndex'])->name('sosial-ppu.index'); 
     Route::post('/ppu/store', [SosialPpuAdminController::class, 'ppuStore'])->name('sosial-ppu.store');
@@ -222,12 +222,13 @@ Route::group(
 
     //SOSIAL  Indeks Pemberdayaan Gender (IPGG) - [m_38_idg]
     Route::get('/ipgg', [SosialIpggAdminController::class, 'ipggIndex'])->name('sosial-ipgg.index'); 
-    Route::post('/ipgg/store', [SosialPpuAdminController::class, 'ipggStore'])->name('sosial-ppu.store');
-    Route::get('/ipgg/{id}/edit', [SosialPpuAdminController::class, 'ipggEdit'])->name('sosial-ppu.edit');
-    Route::put('/ipgg/{id}', [SosialPpuAdminController::class, 'ipggUpdate'])->name('sosial-ppu.update');        
+    Route::post('/ipgg/store', [SosialIpggAdminController::class, 'ipggStore'])->name('sosial-ipgg.store');
+    Route::get('/ipgg/{id}/edit', [SosialIpggAdminController::class, 'ipggEdit'])->name('sosial-ipgg.edit');
+    Route::put('/ipgg/{id}', [SosialIpggAdminController::class, 'ipggUpdate'])->name('sosial-ipgg.update');   
+    Route::get('/ipggdel/{id}', [SosialIpggAdminController::class, 'ipggDel'])->name('sosial-ipgg.del');     
 
 
-
+ 
 
   // =================================EKONOMI===========================================
     //EKONOMI  Petumbuhan Ekonomi (PE) - [m_17_ekonomi]

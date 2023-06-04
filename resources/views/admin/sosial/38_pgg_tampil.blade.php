@@ -35,7 +35,7 @@
                                     <thead>
                                         <tr style="background:rgb(4, 89, 123);color:white;font-size: 12px;">
                                             <th style="width: 2%;" class="text-center">No</th>
-                                            <th style="width: 80%;" class="text-center">Data Tahun / Series / RLS
+                                            <th style="width: 80%;" class="text-center">Data {{$title}}
                                             </th>
                                             <th style="width: 10%;" class="text-center">AKSI</th>
                                         </tr>
@@ -47,19 +47,19 @@
                                                 <td><strong>Tahun</strong> : {{ $item->tahun }} | 
                                                     <strong>Series</strong> :
                                                     {{ Helper::getJenisDataSeries($item->status_data) }} |
-                                                    <strong>idg </strong> : {{ $item->idg }}%</td>
+                                                    <strong>Indeks Pemeberdayaan Gender (IPGG) </strong> : {{ $item->idg }}%</td>
                                                 <td class="project-actions text-center" style="padding: 10px;">
                                                     <a href="" class="btn btn-info btn-sm" data-toggle="modal"
                                                         style="font-size: 10px;"
                                                         data-target="#modaledit{{ $item->tahun }}">
                                                         <i class="fas fa-pencil-alt"></i> Edit
                                                     </a>
-                                                    {{-- <a href="{{ 'idgdel/'.$item->tahun }}" class="btn btn-info btn-sm"  
+                                                    {{-- <a href="{{ 'ipggdel/'.$item->tahun }}" class="btn btn-info btn-sm"  
                                                        style="font-size: 10px;" class="btn btn-danger btn-sm"  
                                                        onclick="return confirm('Anda Yakin Mau Menghapus ?') ">
                                                        <i class="fas fa-pencil-alt"></i> Del
                                                    </a> --}}
-
+ 
                                                     {{-- VIEW MODAL EDIT --}}
                                                     <div class="modal fade" id="modaledit{{ $item->tahun }}"
                                                         role="dialog">
@@ -73,7 +73,7 @@
                                                                                     style="font-size:20px;color:rgb(10, 100, 100);"><b>Edit
                                                                                         Data {{ $title }}</b></span>
                                                                                 {!! Form::open([
-                                                                                    'url' => route('sosial-ahh.update', ['id' => $item->tahun]),
+                                                                                    'url' => route('sosial-ipgg.update', ['id' => $item->tahun]),
                                                                                     'method' => 'put',
                                                                                     'id' => 'frmedit_' . $item->tahun,
                                                                                     'name' => 'frmedit_' . $item->tahun,
@@ -191,7 +191,7 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            {!! Form::open(['url' => route('sosial-ahh.store'), 'method' => 'post', 'id' => 'frmadd', 'name' => 'frmadd']) !!}
+                            {!! Form::open(['url' => route('sosial-ipgg.store'), 'method' => 'post', 'id' => 'frmadd', 'name' => 'frmadd']) !!}
                             <div class="card-body">
                                 <div class="form-group">
                                     <div class="row">
@@ -217,10 +217,10 @@
                                             ]) !!}
                                         </div>
                                         <div class="col-4">
-                                            <label>Data Angka Harapan Hidup</label>
+                                            <label>Data Indeks Pemeberdayaan Gender</label>
                                             <input type="text" name="idg"
                                                 class="form-control @error('idg') is-invalid @enderror"
-                                                placeholder="Ketik Data idgh" required>
+                                                placeholder="Ketik Data IPGG" required>
                                             @if ($errors->has('idg'))
                                                 <div class="alert alert-danger mt-1 alert-validation-msg" role="alert">
                                                     <div class="alert-body d-flex align-items-center">
