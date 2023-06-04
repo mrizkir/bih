@@ -36,7 +36,7 @@ class SosialApmAdminController extends Controller
         'sumber' => 'SD 7-12 Tahun',
         'menu_active' => 'menu-sosial',
         'sub_menu_active' => 'menu-sosial-apm',
-        'page_active' => 'sosial-apm-7-12',
+        'page_active' => 'sosial-apm-sd',
         'data' => $data
       ]);
     }
@@ -113,7 +113,7 @@ class SosialApmAdminController extends Controller
       'sumber' => 'SMP 13-15 Tahun',
       'menu_active' => 'menu-sosial',
       'sub_menu_active' => 'menu-sosial-apm',
-      'page_active' => 'sosial-apm-13-15',
+      'page_active' => 'sosial-apm-smp',
       'data' => $data
     ]);
   }
@@ -190,7 +190,7 @@ class SosialApmAdminController extends Controller
       'sumber' => 'SMA 16-18 Tahun',
       'menu_active' => 'menu-sosial',
       'sub_menu_active' => 'menu-sosial-apm',
-      'page_active' => 'sosial-apm-16-18',
+      'page_active' => 'sosial-apm-sma',
       'data' => $data
     ]);
   }
