@@ -4,8 +4,7 @@
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
-        <BR>
-
+        <br>
         <section class="content">
             <div class="container-fluid">
                 <div class="row">
@@ -13,10 +12,8 @@
                         <section style="padding:20px;background:rgb(255, 255, 255);">
                             <div class="row mb-2">
                                 <div class="col-sm-6">
-                                    <li class="breadcrumb-item active" style="font-size: 25px;">
+                                    <li class="breadcrumb-item active" style="font-size: 20px;">
                                         <strong>{{ $title }}</strong></li>
-                                </div>
-                                <div class="col-sm-6">
                                 </div>
                             </div>
                             <BR><BR>
@@ -42,7 +39,7 @@
                                     <thead>
                                         <tr style="background:rgb(4, 89, 123);color:white;font-size: 12px;">
                                             <th style="width: 2%;" class="text-center">No</th>
-                                            <th style="width: 80%;" class="text-center">Data Tahun / Series / Persentase
+                                            <th style="width: 80%;" class="text-center">Data {{ $title }}
                                             </th>
                                             <th style="width: 10%;" class="text-center">AKSI</th>
                                         </tr>
@@ -51,17 +48,24 @@
                                         @foreach ($data as $k => $item)
                                             <tr style="font-size: 11px;">
                                                 <td class="text-center">{{ $k + 1 }}</th>
-                                                <td><strong>Tahun</strong> : {{ $item->tahun }} | <strong>Series</strong> :
-                                                    {{ Helper::getJenisDataSeries($item->data_series) }} |
-                                                    <strong>Persentase</strong> : {{ $item->persentase }}%</td>
+                                                <td><strong>Tahun</strong> : {{ $item->tahun }} | 
+                                                    <strong>Series</strong> :
+                                                    {{ Helper::getJenisDataSeries($item->status_data) }} |
+                                                    <strong>Angka Partisipasi Murni </strong> : {{ $item->APM }}</td>
                                                 <td class="project-actions text-center" style="padding: 10px;">
                                                     <a href="" class="btn btn-info btn-sm" data-toggle="modal"
                                                         style="font-size: 10px;"
-                                                        data-target="#modaledit{{ $item->id }}">
+                                                        data-target="#modaledit{{ $item->tahun }}">
                                                         <i class="fas fa-pencil-alt"></i> Edit
                                                     </a>
+                                                    {{-- <a href="{{ 'apmsmadel/'.$item->tahun }}" class="btn btn-info btn-sm"  
+                                                       style="font-size: 10px;" class="btn btn-danger btn-sm"  
+                                                       onclick="return confirm('Anda Yakin Mau Menghapus ?') ">
+                                                       <i class="fas fa-pencil-alt"></i> Del
+                                                   </a>  --}}
+ 
                                                     {{-- VIEW MODAL EDIT --}}
-                                                    <div class="modal fade" id="modaledit{{ $item->id }}"
+                                                    <div class="modal fade" id="modaledit{{ $item->tahun }}"
                                                         role="dialog">
                                                         <div class="modal-dialog modal-xl">
                                                             <div class="modal-content" style="padding:30px;">
@@ -72,7 +76,12 @@
                                                                                 <span
                                                                                     style="font-size:20px;color:rgb(10, 100, 100);"><b>Edit
                                                                                         Data {{ $title }}</b></span>
-                                                                                {{-- {!! Form::open(['url'=>route('sosial-ahm.update', ['id' => $item->id]), 'method'=>'put','id'=>'frmedit_' . $item->id,'name'=>'frmedit_' . $item->id])!!} --}}
+                                                                                {!! Form::open([
+                                                                                    'url' => route('sosial-apmsma.update', ['id' => $item->tahun]),
+                                                                                    'method' => 'put',
+                                                                                    'id' => 'frmedit_' . $item->tahun,
+                                                                                    'name' => 'frmedit_' . $item->tahun,
+                                                                                ]) !!}
                                                                                 <div class="card-body">
                                                                                     <div class="form-group">
                                                                                         <div class="row">
@@ -95,40 +104,40 @@
                                                                                                     </div>
                                                                                                 @endif
                                                                                             </div>
-                                                                                            <div class="col-4">
+                                                                                            <div class="col-4">status_data
                                                                                                 <label>Data Series</label>
-                                                                                                {!! Form::select('data_series', Helper::getJenisDataSeries(), $item->data_series, [
-                                                                                                    'id' => 'data_series',
+                                                                                                {!! Form::select('status_data', Helper::getJenisDataSeries(), $item->status_data, [
+                                                                                                    'id' => 'status_data',
                                                                                                     'class' => 'form-control',
                                                                                                 ]) !!}
-                                                                                                @if ($errors->has('data_series'))
+                                                                                                @if ($errors->has('status_data'))
                                                                                                     <div class="alert alert-danger mt-1 alert-validation-msg"
                                                                                                         role="alert">
                                                                                                         <div
                                                                                                             class="alert-body d-flex align-items-center">
                                                                                                             <i data-feather="info"
                                                                                                                 class="me-50"></i>
-                                                                                                            {{ $errors->first('data_series') }}
+                                                                                                            {{ $errors->first('status_data') }}
                                                                                                         </div>
                                                                                                     </div>
                                                                                                 @endif
                                                                                             </div>
                                                                                             <div class="col-4">
                                                                                                 <label>Data
-                                                                                                    Persentase</label>
+                                                                                                    Angka Partisipasi Murni</label>
                                                                                                 <input type="text"
-                                                                                                    name="data_persentase"
-                                                                                                    class="form-control @error('data_persentase') is-invalid @enderror"
-                                                                                                    value="{{ $item->persentase }}"
+                                                                                                    name="APM"
+                                                                                                    class="form-control @error('APM') is-invalid @enderror"
+                                                                                                    value="{{ $item->APM }}"
                                                                                                     required>
-                                                                                                @if ($errors->has('data_persentase'))
+                                                                                                @if ($errors->has('APM'))
                                                                                                     <div class="alert alert-danger mt-1 alert-validation-msg"
                                                                                                         role="alert">
                                                                                                         <div
                                                                                                             class="alert-body d-flex align-items-center">
                                                                                                             <i data-feather="info"
                                                                                                                 class="me-50"></i>
-                                                                                                            {{ $errors->first('data_persentase') }}
+                                                                                                            {{ $errors->first('APM') }}
                                                                                                         </div>
                                                                                                     </div>
                                                                                                 @endif
@@ -144,7 +153,7 @@
                                                                                         class="btn btn-danger"
                                                                                         data-dismiss="modal">Cancel</button>
                                                                                 </div>
-                                                                                {{-- {!! Form::close()!!} --}}
+                                                                                {!! Form::close() !!}
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -158,16 +167,24 @@
                                         @endforeach
                                     </tbody>
                                 </table>
-                            </div>                             
-
+                            </div>
                         </section>
-                        <!-- /.col -->
                     </div>
-                </div><!-- /.container-fluid -->
+                </div>
 
 
 
-                
+
+
+
+
+
+
+
+
+
+
+
                 {{-- TAMBAH MODAL --}}
                 <div class="modal fade" id="modal-default">
                     <div class="modal-dialog modal-xl">
@@ -178,7 +195,7 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            {{-- {!! Form::open(['url'=>route('sosial-ahm.store'), 'method'=>'post','id'=>'frmadd','name'=>'frmadd'])!!}                                                        --}}
+                            {!! Form::open(['url' => route('sosial-apmsma.store'), 'method' => 'post', 'id' => 'frmadd', 'name' => 'frmadd']) !!}
                             <div class="card-body">
                                 <div class="form-group">
                                     <div class="row">
@@ -198,21 +215,21 @@
                                         </div>
                                         <div class="col-4">
                                             <label>Data Series</label>
-                                            {!! Form::select('data_series', Helper::getJenisDataSeries(), old('data_series'), [
-                                                'id' => 'frmadd_data_series',
+                                            {!! Form::select('status_data', Helper::getJenisDataSeries(), old('status_data'), [
+                                                'id' => 'frmadd_status_data',
                                                 'class' => 'form-control',
                                             ]) !!}
                                         </div>
                                         <div class="col-4">
-                                            <label>Data Persentase</label>
-                                            <input type="text" name="data_persentase"
-                                                class="form-control @error('data_persentase') is-invalid @enderror"
-                                                placeholder="Ketik Data Persentase" required>
-                                            @if ($errors->has('data_persentase'))
+                                            <label>Data Angka Partisipasi Murni</label>
+                                            <input type="text" name="APM"
+                                                class="form-control @error('APM') is-invalid @enderror"
+                                                placeholder="Ketik Data APM" required>
+                                            @if ($errors->has('APM'))
                                                 <div class="alert alert-danger mt-1 alert-validation-msg" role="alert">
                                                     <div class="alert-body d-flex align-items-center">
                                                         <i data-feather="info" class="me-50"></i>
-                                                        {{ $errors->first('data_persentase') }}
+                                                        {{ $errors->first('APM') }}
                                                     </div>
                                                 </div>
                                             @endif
@@ -224,7 +241,7 @@
                                 <button type="submit" class="btn btn-info">Simpan</button>
                                 <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
                             </div>
-                            {{-- {!! Form::close()!!} --}}
+                            {!! Form::close() !!}
                         </div>
                         <!-- /.modal-content -->
                     </div>

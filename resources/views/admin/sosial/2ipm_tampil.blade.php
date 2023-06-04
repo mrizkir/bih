@@ -35,11 +35,11 @@
                                     <thead>
                                         <tr style="background:rgb(4, 89, 123);color:white;font-size: 12px;">
                                             <th style="width: 2%;" class="text-center">No</th>
-                                            <th style="width: 80%;" class="text-center">Data Tahun / Series / Persentase
+                                            <th style="width: 80%;" class="text-center">Data {{ $title }} 
                                             </th>
                                             <th style="width: 10%;" class="text-center">AKSI</th>
                                         </tr>
-                                    </thead>
+                                    </thead>  
                                     <tbody>
                                         @foreach ($data as $k => $item)
                                             <tr style="font-size: 11px;">
@@ -53,6 +53,11 @@
                                                         data-target="#modaledit{{ $item->tahun }}">
                                                         <i class="fas fa-pencil-alt"></i> Edit
                                                     </a>
+                                                    {{-- <a href="{{ 'ipmdel/'.$item->tahun }}" class="btn btn-info btn-sm"  
+                                                        style="font-size: 10px;" class="btn btn-danger btn-sm"  
+                                                        onclick="return confirm('Anda Yakin Mau Menghapus ?') ">
+                                                        <i class="fas fa-pencil-alt"></i> Del
+                                                    </a> --}}
 
                                                     {{-- VIEW MODAL EDIT --}}
                                                     <div class="modal fade" id="modaledit{{ $item->tahun }}"
@@ -67,7 +72,7 @@
                                                                                     style="font-size:20px;color:rgb(10, 100, 100);"><b>Edit
                                                                                         Data {{ $title }}</b></span>
                                                                                 {!! Form::open([
-                                                                                    'url' => route('sosial-ppm.update', ['id' => $item->tahun]),
+                                                                                    'url' => route('sosial-ipm.update', ['id' => $item->tahun]),
                                                                                     'method' => 'put',
                                                                                     'id' => 'frmedit_' . $item->tahun,
                                                                                     'name' => 'frmedit_' . $item->tahun,
@@ -114,20 +119,20 @@
                                                                                             </div>
                                                                                             <div class="col-4">
                                                                                                 <label>Data
-                                                                                                    Persentase</label>
+                                                                                                    Ipm</label>
                                                                                                 <input type="text"
-                                                                                                    name="presentase"
-                                                                                                    class="form-control @error('presentase') is-invalid @enderror"
+                                                                                                    name="ipm"
+                                                                                                    class="form-control @error('ipm') is-invalid @enderror"
                                                                                                     value="{{ $item->ipm }}"
                                                                                                     required>
-                                                                                                @if ($errors->has('presentase'))
+                                                                                                @if ($errors->has('ipm'))
                                                                                                     <div class="alert alert-danger mt-1 alert-validation-msg"
                                                                                                         role="alert">
                                                                                                         <div
                                                                                                             class="alert-body d-flex align-items-center">
                                                                                                             <i data-feather="info"
                                                                                                                 class="me-50"></i>
-                                                                                                            {{ $errors->first('presentase') }}
+                                                                                                            {{ $errors->first('ipm') }}
                                                                                                         </div>
                                                                                                     </div>
                                                                                                 @endif
@@ -185,7 +190,7 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            {!! Form::open(['url' => route('sosial-ppm.store'), 'method' => 'post', 'id' => 'frmadd', 'name' => 'frmadd']) !!}
+                            {!! Form::open(['url' => route('sosial-ipm.store'), 'method' => 'post', 'id' => 'frmadd', 'name' => 'frmadd']) !!}
                             <div class="card-body">
                                 <div class="form-group">
                                     <div class="row">
@@ -211,21 +216,21 @@
                                             ]) !!}
                                         </div>
                                         <div class="col-4">
-                                            <label>Data Persentase</label>
-                                            <input type="text" name="presentase"
-                                                class="form-control @error('presentase') is-invalid @enderror"
-                                                placeholder="Ketik Data Persentase" required>
-                                            @if ($errors->has('presentase'))
+                                            <label>Data Ipm </label>
+                                            <input type="text" name="ipm"
+                                                class="form-control @error('ipm') is-invalid @enderror"
+                                                placeholder="Ketik Data Ipm" required>
+                                            @if ($errors->has('ipm'))
                                                 <div class="alert alert-danger mt-1 alert-validation-msg" role="alert">
                                                     <div class="alert-body d-flex align-items-center">
                                                         <i data-feather="info" class="me-50"></i>
-                                                        {{ $errors->first('presentase') }}
+                                                        {{ $errors->first('ipm') }}
                                                     </div>
                                                 </div>
                                             @endif
                                         </div>
                                     </div>
-                                </div>
+                                </div> 
                             </div>
                             <div class="modal-footer justify-content-between">
                                 <button type="submit" class="btn btn-info">Simpan</button>

@@ -36,8 +36,8 @@ class SosialAdminController extends Controller
       'tahun' => $request->input('tahun'),
       'presentase' => $request->input('presentase'),      
       'status_data' => $request->input('status_data'),
-    ]);
-
+    ]); 
+    
     return redirect(route('sosial-ppm.index'))->with('success', 'data berhasil disimpan');
   }
   public function ppmUpdate(Request $request, $id)
@@ -45,7 +45,7 @@ class SosialAdminController extends Controller
     $data = \DB::table('m_1_pres_pend_miskin')
     ->where('tahun', $id)
     ->first();
-
+ 
     if (is_null($data))
     {
       return redirect(route('sosial-ppm.index'))->with('error', 'data gagal disimpan');
@@ -65,4 +65,10 @@ class SosialAdminController extends Controller
       return redirect(route('sosial-ppm.index'))->with('success', 'data berhasil diubah');
     }    
   }
+  public function ppmDel($id)
+    {
+      $data = \DB::table('m_1_pres_pend_miskin')->where('tahun', $id);
+        $data->delete();
+        return redirect(route('sosial-ppm.index'))->with('sukses', 'Data Sudah di Hapus');
+    }
 }
