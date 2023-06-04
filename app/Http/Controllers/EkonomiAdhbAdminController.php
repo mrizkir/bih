@@ -20,7 +20,7 @@ class EkonomiAdhbAdminController extends Controller
       'data' => $data
     ]);
   }
-
+ 
   public function adhb_a()
   {
     $data = DataSosialModel::orderBy('tahun', 'desc')->get();

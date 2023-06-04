@@ -640,7 +640,7 @@
                   <i class="far fa-circle nav-icon"
                     style="color:rgb(255, 255, 255);font-size:10px;"></i>
                 </div>
-                <p style="font-size: 12px;">Kunjungan Wisata (KW)</p>
+                <p style="font-size: 12px;">Kunjungan Wisata  (KW)</p>
               </a>
             </li>
           </ul>
@@ -738,7 +738,18 @@
                 <p style="font-size: 12px;">Jumlah Penduduk (JP)</p>
               </a>
             </li>
-          </ul> 
+          </ul>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="{{ route('kependudukan-jpbk.index') }}" class="nav-link">
+                <div style="width:30px;height:55px;float:left;">
+                  <i class="far fa-circle nav-icon"
+                    style="color:rgb(255, 255, 255);font-size:10px;"></i>
+                </div>
+                <p style="font-size: 12px;">Jumlah Penduduk Berdasarkan Kecamatan Tahun 2021 (JPBKT)</p>
+              </a>
+            </li>
+          </ul>  
           <ul class="nav nav-treeview">
             <li class="nav-item">
               <a href="" class="nav-link">
@@ -891,7 +902,7 @@
         </li>
       </ul>
       </li>
-
+ 
       <li class="nav-item{!!Helper::isMenuActive ($menu_active,'menu-infrastruktur',' menu-open')!!}">
         <a href="#" class="nav-link">
           <img src="{{ asset('administrator/img_mda/h5.png') }}" style="width:12%;margin:3px;">
@@ -923,7 +934,7 @@
         </ul>
         <ul class="nav nav-treeview">
           <li class="nav-item">
-            <a href="{{ route('infrastruktur-ptkj.index') }}" class="nav-link">
+            <a href="{{ route('infrastruktur-ptkj.index') }}" class="nav-link{!!Helper::isMenuActive ($page_active, 'infrastruktur-ptkj', ' active')!!}">
               <div style="width:30px;height:35px;float:left;">
                 <i class="far fa-circle nav-icon"
                   style="color:rgb(255, 255, 255);font-size:10px;"></i>

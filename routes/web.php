@@ -235,19 +235,25 @@ Route::group(
     Route::get('/pe', [EkonomiPeAdminController::class, 'peIndex'])->name('ekonomi-pe.index'); 
     Route::post('/pe/store', [EkonomiPeAdminController::class, 'peStore'])->name('ekonomi-pe.store');
     Route::get('/pe/{id}/edit', [EkonomiPeAdminController::class, 'peEdit'])->name('ekonomi-pe.edit');
-    Route::put('/pe/{id}', [EkonomiPeAdminController::class, 'peUpdate'])->name('ekonomi-pe.update');        
+    Route::put('/pe/{id}', [EkonomiPeAdminController::class, 'peUpdate'])->name('ekonomi-pe.update');   
+    Route::get('/pedel/{id}', [EkonomiPeAdminController::class, 'peDel'])->name('ekonomi-pe.del');
 
     //EKONOMI  Laju Inflasi (LI) - [m_18_inflasi]
     Route::get('/li', [EkonomiLiAdminController::class, 'liIndex'])->name('ekonomi-li.index');  
-    Route::post('/li/store', [EkonomiPeAdminController::class, 'liStore'])->name('ekonomi-li.store');
-    Route::get('/li/{id}/edit', [EkonomiPeAdminController::class, 'liEdit'])->name('ekonomi-li.edit');
-    Route::put('/li/{id}', [EkonomiPeAdminController::class, 'liUpdate'])->name('ekonomi-li.update');         
+    Route::post('/li/store', [EkonomiLiAdminController::class, 'liStore'])->name('ekonomi-li.store');
+    Route::get('/li/{id}/edit', [EkonomiLiAdminController::class, 'liEdit'])->name('ekonomi-li.edit');
+    Route::put('/li/{id}', [EkonomiLiAdminController::class, 'liUpdate'])->name('ekonomi-li.update');    
+    Route::get('/lidel/{id}', [EkonomiLiAdminController::class, 'liDel'])->name('ekonomi-li.del');     
     
     //EKONOMI   Distribusi PDRB Atas Dasar Harga Berlaku (ADHB) - [m_19_pdrb_berlaku]
     Route::get('/adhb', [EkonomiAdhbAdminController::class, 'adhbIndex'])->name('ekonomi-adhb.index');  
     Route::post('/adhb/store', [EkonomiAdhbAdminController::class, 'adhbStore'])->name('ekonomi-adhb.store');
     Route::get('/adhb/{id}/edit', [EkonomiAdhbAdminController::class, 'adhbEdit'])->name('ekonomi-adhb.edit');
     Route::put('/adhb/{id}', [EkonomiAdhbAdminController::class, 'adhbUpdate'])->name('ekonomi-adhb.update');         
+
+
+
+ 
 
     //EKONOMI   Distribusi PDRB Atas Dasar Harga Berlaku (ADHB) - [m_19_pdrb_berlaku]
     Route::get('/adhb_a', [EkonomiAdhbAdminController::class, 'adhb_a'])->name('ekonomi-adhb_A'); 
@@ -303,73 +309,91 @@ Route::group(
 
     //EKONOMI Kunjungan Wisata (KW) - [m_20_kunjungan]
     Route::get('/kw', [EkonomiKwAdminController::class, 'kwIndex'])->name('ekonomi-kw.index');     
-    Route::post('/kw/store', [EkonomiAdhkAdminController::class, 'kwStore'])->name('ekonomi-kw.store');
-    Route::get('/kw/{id}/edit', [EkonomiAdhkAdminController::class, 'kwEdit'])->name('ekonomi-kw.edit');
-    Route::put('/kw/{id}', [EkonomiAdhkAdminController::class, 'kwUpdate'])->name('ekonomi-kw.update');         
+    Route::post('/kw/store', [EkonomiKwAdminController::class, 'kwStore'])->name('ekonomi-kw.store');
+    Route::get('/kw/{id}/edit', [EkonomiKwAdminController::class, 'kwEdit'])->name('ekonomi-kw.edit');
+    Route::put('/kw/{id}', [EkonomiKwAdminController::class, 'kwUpdate'])->name('ekonomi-kw.update');       
+    Route::get('/kwdel/{id}', [EkonomiKwAdminController::class, 'kwDel'])->name('ekonomi-kw.del');  
 
     //EKONOMI Realisasi Investasi (PMA/ PMDN) - [m_35_pma]
     Route::get('/pma', [EkonomiPmaAdminController::class, 'pmaIndex'])->name('ekonomi-pma.index'); 
     Route::post('/pma/store', [EkonomiPmaAdminController::class, 'pmaStore'])->name('ekonomi-pma.store');
     Route::get('/pma/{id}/edit', [EkonomiPmaAdminController::class, 'pmaEdit'])->name('ekonomi-pma.edit');
-    Route::put('/pma/{id}', [EkonomiPmaAdminController::class, 'pmaUpdate'])->name('ekonomi-pma.update');         
-
+    Route::put('/pma/{id}', [EkonomiPmaAdminController::class, 'pmaUpdate'])->name('ekonomi-pma.update');  
+    Route::get('/pmadel/{id}', [EkonomiPmaAdminController::class, 'pmaDel'])->name('ekonomi-pma.del');       
+  
 
 
     //==============================PERTANAIN==============================================
     //PERTANAIN Produksi Perikanan Budidaya (PPB) - [m_21_perikanan_budidaya]
     Route::get('/ppb', [PertanianPpbAdminController::class, 'ppbIndex'])->name('pertanian-ppb.index'); 
-    Route::post('/ppb/store', [PertanianPpbAdminController::class, 'ppbStore'])->name('ekonomi-ppb.store');
-    Route::get('/ppb/{id}/edit', [PertanianPpbAdminController::class, 'ppbEdit'])->name('ekonomi-ppb.edit');
-    Route::put('/ppb/{id}', [PertanianPpbAdminController::class, 'ppbUpdate'])->name('ekonomi-ppb.update');         
+    Route::post('/ppb/store', [PertanianPpbAdminController::class, 'ppbStore'])->name('pertanian-ppb.store');
+    Route::get('/ppb/{id}/edit', [PertanianPpbAdminController::class, 'ppbEdit'])->name('pertanian-ppb.edit');
+    Route::put('/ppb/{id}', [PertanianPpbAdminController::class, 'ppbUpdate'])->name('pertanian-ppb.update'); 
+    Route::get('/ppbdel/{id}', [PertanianPpbAdminController::class, 'ppbDel'])->name('pertanian-ppb.del');        
 
     //PERTANAIN  Produksi Perikanan Tangkap(PPT) - [m_22_perikanan_tangkap]
     Route::get('/ppt', [PertanianPptAdminController::class, 'pptIndex'])->name('pertanian-ppt.index'); 
-    Route::post('/ppt/store', [PertanianPptAdminController::class, 'pptStore'])->name('ekonomi-ppt.store');
-    Route::get('/ppt/{id}/edit', [PertanianPptAdminController::class, 'pptEdit'])->name('ekonomi-ppt.edit');
-    Route::put('/ppt/{id}', [PertanianPptAdminController::class, 'pptUpdate'])->name('ekonomi-ppt.update');         
+    Route::post('/ppt/store', [PertanianPptAdminController::class, 'pptStore'])->name('pertanian-ppt.store');
+    Route::get('/ppt/{id}/edit', [PertanianPptAdminController::class, 'pptEdit'])->name('pertanian-ppt.edit');
+    Route::put('/ppt/{id}', [PertanianPptAdminController::class, 'pptUpdate'])->name('pertanian-ppt.update'); 
+    Route::get('/pptdel/{id}', [PertanianPptAdminController::class, 'pptDel'])->name('pertanian-ppt.del');             
 
     //PERTANAIN Capaian Produksi Komoditi Unggulan Perkebunan (CPKUP) - [m_23_perkebunan]
     Route::get('/cpkup', [PertanianCpkupAdminController::class, 'cpkupIndex'])->name('pertanian-cpkup.index'); 
-    Route::post('/cpkup/store', [PertanianCpkupAdminController::class, 'cpkupStore'])->name('ekonomi-cpkup.store');
-    Route::get('/cpkup/{id}/edit', [PertanianCpkupAdminController::class, 'cpkupEdit'])->name('ekonomi-cpkup.edit');
-    Route::put('/cpkup/{id}', [PertanianCpkupAdminController::class, 'cpkupUpdate'])->name('ekonomi-cpkup.update');         
+    Route::post('/cpkup/store', [PertanianCpkupAdminController::class, 'cpkupStore'])->name('pertanian-cpkup.store');
+    Route::get('/cpkup/{id}/edit', [PertanianCpkupAdminController::class, 'cpkupEdit'])->name('pertanian-cpkup.edit');
+    Route::put('/cpkup/{id}', [PertanianCpkupAdminController::class, 'cpkupUpdate'])->name('pertanian-cpkup.update'); 
+    Route::get('/cpkupdel/{id}', [PertanianCpkupAdminController::class, 'cpkupDel'])->name('pertanian-cpkup.Del');        
 
     //PERTANAIN Capaian Produksi Komoditi Hortikultura (CPKH) - [m_24_holtikultura]
     Route::get('/cpkh', [PertanianCpkhAdminController::class, 'cpkhIndex'])->name('pertanian-cpkh.index'); 
-    Route::post('/cpkh/store', [PertanianCpkupAdminController::class, 'cpkhStore'])->name('ekonomi-cpkh.store');
-    Route::get('/cpkh/{id}/edit', [PertanianCpkupAdminController::class, 'cpkhEdit'])->name('ekonomi-cpkh.edit');
-    Route::put('/cpkh/{id}', [PertanianCpkupAdminController::class, 'cpkhUpdate'])->name('ekonomi-cpkh.update');         
+    Route::post('/cpkh/store', [PertanianCpkhAdminController::class, 'cpkhStore'])->name('pertanian-cpkh.store');
+    Route::get('/cpkh/{id}/edit', [PertanianCpkhAdminController::class, 'cpkhEdit'])->name('pertanian-cpkh.edit');
+    Route::put('/cpkh/{id}', [PertanianCpkhAdminController::class, 'cpkhUpdate'])->name('pertanian-cpkh.update'); 
+    Route::get('/cpkhdel/{id}', [PertanianCpkhAdminController::class, 'cpkhDel'])->name('pertanian-cpkh.del');        
 
     //PERTANAIN Jumlah Produksi Peternakan (JPP) - [m_25_peternakan]
     Route::get('/jpp', [PertanianJppAdminController::class, 'jppIndex'])->name('pertanian-jpp.index'); 
-    Route::post('/jpp/store', [PertanianCpkupAdminController::class, 'jppStore'])->name('ekonomi-jpp.store');
-    Route::get('/jpp/{id}/edit', [PertanianCpkupAdminController::class, 'jppEdit'])->name('ekonomi-jpp.edit');
-    Route::put('/jpp/{id}', [PertanianCpkupAdminController::class, 'jppUpdate'])->name('ekonomi-jpp.update');         
+    Route::post('/jpp/store', [PertanianJppAdminController::class, 'jppStore'])->name('pertanian-jpp.store');
+    Route::get('/jpp/{id}/edit', [PertanianJppAdminController::class, 'jppEdit'])->name('pertanian-jpp.edit');
+    Route::put('/jpp/{id}', [PertanianJppAdminController::class, 'jppUpdate'])->name('pertanian-jpp.update');  
+    Route::get('/jppdel/{id}', [PertanianJppAdminController::class, 'jppDel'])->name('pertanian-jpp.del');       
 
 
 
     //===============================KEPENDUDUKAN=============================================
-    //KEPENDUDUKAN Jumlah Penduduk (JP) - [mm_26_jml_penduduk]
+    //KEPENDUDUKAN Jumlah Penduduk (JP) - [m_36_jumlah_penduduk]
     Route::get('/jp', [KependudukanJpAdminController::class, 'jpIndex'])->name('kependudukan-jp.index'); 
     Route::post('/jp/store', [KependudukanJpAdminController::class, 'jpStore'])->name('kependudukan-jp.store');
     Route::get('/jp/{id}/edit', [KependudukanJpAdminController::class, 'jpEdit'])->name('kependudukan-jp.edit');
-    Route::put('/jp/{id}', [KependudukanJpAdminController::class, 'jpUpdate'])->name('kependudukan-jp.update');         
+    Route::put('/jp/{id}', [KependudukanJpAdminController::class, 'jpUpdate'])->name('kependudukan-jp.update');     
+    Route::get('/jpdel/{id}', [KependudukanJpAdminController::class, 'jpDel'])->name('kependudukan-jp.del');    
   
     //KEPENDUDUKAN Jumlah Penduduk Berdasarkan Kecamatan Tahun 2021 (JPBK) - [m_26_penduduk_kecamatan]
     Route::get('/jpbk', [KependudukanJpbkAdminController::class, 'jpbkIndex'])->name('kependudukan-jpbk.index'); 
     Route::post('/jpbk/store', [KependudukanJpbkAdminController::class, 'jpbkStore'])->name('kependudukan-jpbk.store');
     Route::get('/jpbk/{id}/edit', [KependudukanJpbkAdminController::class, 'jpbkEdit'])->name('kependudukan-jpbk.edit');
-    Route::put('/jpbk/{id}', [KependudukanJpbkAdminController::class, 'jpbkUpdate'])->name('kependudukan-jpbk.update');         
+    Route::put('/jpbk/{id}', [KependudukanJpbkAdminController::class, 'jpbkUpdate'])->name('kependudukan-jpbk.update');  
+    Route::get('/jpbkdel/{id}', [KependudukanJpbkAdminController::class, 'jpbkDel'])->name('kependudukan-jpbk.del');       
   
-    //KEPENDUDUKAN  Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU) - [m_26_penduduk_umur]
-    Route::get('/jpbku', [KependudukanJpbkuAdminController::class, 'jpbkuIndex'])->name('kependudukan-jpbku.index'); 
-    Route::post('/jpbku/store', [KependudukanJpbkuAdminController::class, 'jpbkuStore'])->name('kependudukan-jpbku.store');
-    Route::get('/jpbku/{id}/edit', [KependudukanJpbkuAdminController::class, 'jpbkuEdit'])->name('kependudukan-jpbku.edit');
-    Route::put('/jpbku/{id}', [KependudukanJpbkuAdminController::class, 'jpbkuUpdate'])->name('kependudukan-jpbku.update');         
+    // //KEPENDUDUKAN  Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU) - [m_26_penduduk_umur]
+    // Route::get('/jpbku', [KependudukanJpbkuAdminController::class, 'jpbkuIndex'])->name('kependudukan-jpbku.index'); 
+    // Route::post('/jpbku/store', [KependudukanJpbkuAdminController::class, 'jpbkuStore'])->name('kependudukan-jpbku.store');
+    // Route::get('/jpbku/{id}/edit', [KependudukanJpbkuAdminController::class, 'jpbkuEdit'])->name('kependudukan-jpbku.edit');
+    // Route::put('/jpbku/{id}', [KependudukanJpbkuAdminController::class, 'jpbkuUpdate'])->name('kependudukan-jpbku.update');         
 
     //KEPENDUDUKAN  Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU) - [m_26_penduduk_umur]
-    Route::get('/jpbku_04Tahun', [KependudukanJpbkuAdminController::class, 'jpbku_04Tahun'])->name('A-jpbku_04Tahun');   
+    Route::get('/jpbku_04Tahun', [KependudukanJpbkuAdminController::class, 'jpbku_04Tahun'])->name('A-jpbku_04Tahun');  
+    Route::post('/jpbku_04Tahun/store', [KependudukanJpbkuAdminController::class, 'jpbku_04TahunStore'])->name('jpbku_04Tahun.store');
+    Route::put('/jpbku_04Tahun/{id}', [KependudukanJpbkuAdminController::class, 'jpbku_04TahunUpdate'])->name('jpbku_04Tahun.update');  
+    Route::get('/jpbku_04Tahundel/{id}', [KependudukanJpbkuAdminController::class, 'jpbku_04TahunDel'])->name('jpbku_04Tahun.del'); 
+    
     Route::get('/jpbku_59Tahun', [KependudukanJpbkuAdminController::class, 'jpbku_59Tahun'])->name('B-jpbku_59Tahun');
+    Route::post('/jpbku_59Tahun/store', [KependudukanJpbkuAdminController::class, 'jpbku_59TahunStore'])->name('jpbku_59Tahun.store');
+    Route::put('/jpbku_59Tahun/{id}', [KependudukanJpbkuAdminController::class, 'jpbku_59TahunUpdate'])->name('jpbku_59Tahun.update');
+    Route::get('/jpbku_59Tahundel/{id}', [KependudukanJpbkuAdminController::class, 'jpbku_59TahunDel'])->name('jpbku_59Tahun.del');
+
+
     Route::get('/jpbku_1014Tahun', [KependudukanJpbkuAdminController::class, 'jpbku_1014Tahun'])->name('C-jpbku_1014Tahun'); 
     Route::get('/jpbku_1519Tahun', [KependudukanJpbkuAdminController::class, 'jpbku_1519Tahun'])->name('D-jpbku_1519Tahun'); 
     Route::get('/jpbku_2024Tahun', [KependudukanJpbkuAdminController::class, 'jpbku_2024Tahun'])->name('E-jpbku_2024Tahun'); 
@@ -387,9 +411,10 @@ Route::group(
   
     //KEPENDUDUKAN  Pertumbuhan Penduduk (PP) - [m_27_laju_pertumbuhan]
     Route::get('/pp', [KependudukanPpAdminController::class, 'ppIndex'])->name('kependudukan-pp.index'); 
-    Route::post('/pp/store', [KependudukanJpAdminController::class, 'ppStore'])->name('kependudukan-pp.store');
-    Route::get('/pp/{id}/edit', [KependudukanJpAdminController::class, 'ppEdit'])->name('kependudukan-pp.edit');
-    Route::put('/pp/{id}', [KependudukanJpAdminController::class, 'ppUpdate'])->name('kependudukan-pp.update');         
+    Route::post('/pp/store', [KependudukanPpAdminController::class, 'ppStore'])->name('kependudukan-pp.store');
+    Route::get('/pp/{id}/edit', [KependudukanPpAdminController::class, 'ppEdit'])->name('kependudukan-pp.edit');
+    Route::put('/pp/{id}', [KependudukanPpAdminController::class, 'ppUpdate'])->name('kependudukan-pp.update');   
+    Route::get('/ppdel/{id}', [KependudukanPpAdminController::class, 'ppDel'])->name('kependudukan-pp.del');      
 
 
 
@@ -397,21 +422,24 @@ Route::group(
       //===============================INFRASTRUKTUR=============================================
     //INFRASTRUKTUR Panjang Jalan Yang Dibangun dan Ditingkatkan (PJDD) - [m_28_jalan]
     Route::get('/pjdd', [InfrastrukturPjddAdminController::class, 'pjddIndex'])->name('infrastruktur-pjdd.index'); 
-    Route::post('/pjdd/store', [KependudukanJpAdminController::class, 'pjddStore'])->name('infrastruktur-pjdd.store');
-    Route::get('/pjdd/{id}/edit', [KependudukanJpAdminController::class, 'pjddEdit'])->name('infrastruktur-pjdd.edit');
-    Route::put('/pjdd/{id}', [KependudukanJpAdminController::class, 'pjddUpdate'])->name('infrastruktur-pjdd.update');         
+    Route::post('/pjdd/store', [InfrastrukturPjddAdminController::class, 'pjddStore'])->name('infrastruktur-pjdd.store');
+    Route::get('/pjdd/{id}/edit', [InfrastrukturPjddAdminController::class, 'pjddEdit'])->name('infrastruktur-pjdd.edit');
+    Route::put('/pjdd/{id}', [InfrastrukturPjddAdminController::class, 'pjddUpdate'])->name('infrastruktur-pjdd.update');  
+    Route::get('/pjdddel/{id}', [InfrastrukturPjddAdminController::class, 'pjddDel'])->name('infrastruktur-pjdd.del');       
 
     //INFRASTRUKTUR Persentase Rumah Tangga yang menggunakan air bersih (PRT) - [m_29_air]
     Route::get('/prt', [InfrastrukturPrtAdminController::class, 'prtIndex'])->name('infrastruktur-prt.index'); 
-    Route::post('/prt/store', [KependudukanJpAdminController::class, 'prtStore'])->name('infrastruktur-prt.store');
-    Route::get('/prt/{id}/edit', [KependudukanJpAdminController::class, 'prtEdit'])->name('infrastruktur-prt.edit');
-    Route::put('/prt/{id}', [KependudukanJpAdminController::class, 'prtUpdate'])->name('infrastruktur-prt.update');         
+    Route::post('/prt/store', [InfrastrukturPrtAdminController::class, 'prtStore'])->name('infrastruktur-prt.store');
+    Route::get('/prt/{id}/edit', [InfrastrukturPrtAdminController::class, 'prtEdit'])->name('infrastruktur-prt.edit');
+    Route::put('/prt/{id}', [InfrastrukturPrtAdminController::class, 'prtUpdate'])->name('infrastruktur-prt.update');  
+    Route::get('/prtdel/{id}', [InfrastrukturPrtAdminController::class, 'prtDel'])->name('infrastruktur-prt.del');       
       
     //INFRASTRUKTUR  Persentase Tingkat Kemantapan Jalan (PTKJ) - [m_37_kemantapan_jalan]
     Route::get('/ptkj', [InfrastrukturPtkjAdminController::class, 'ptkjIndex'])->name('infrastruktur-ptkj.index'); 
     Route::post('/ptkj/store', [InfrastrukturPtkjAdminController::class, 'ptkjStore'])->name('infrastruktur-ptkj.store');
     Route::get('/ptkj/{id}/edit', [InfrastrukturPtkjAdminController::class, 'ptkjEdit'])->name('infrastruktur-ptkj.edit');
-    Route::put('/ptkj/{id}', [InfrastrukturPtkjAdminController::class, 'ptkjUpdate'])->name('infrastruktur-ptkj.update');         
+    Route::put('/ptkj/{id}', [InfrastrukturPtkjAdminController::class, 'ptkjUpdate'])->name('infrastruktur-ptkj.update');   
+    Route::get('/ptkjdel/{id}', [InfrastrukturPtkjAdminController::class, 'ptkjDel'])->name('infrastruktur-ptkj.del');      
 
 
 

@@ -1,5 +1,5 @@
 <?php
-
+ 
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -7,22 +7,17 @@ use App\Models\DataSosialModel;
 
 class KependudukanJpbkuAdminController extends Controller
 {
-    public function jpbkuIndex()
-    {
-      $data = DataSosialModel::orderBy('tahun', 'desc')->get();
-  
-      return view('admin.kependudukan.3jpbku_tampil', [
-        'title' => 'Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU)',
-        'sumber' => 'BPS',
-        'menu_active' => 'menu-kependudukan',
-        'sub_menu_active' => 'none',
-        'page_active' => 'kependudukan-jpbku',
-        'data' => $data
-      ]);
-    }
     public function jpbku_04Tahun()
     {
-      $data = DataSosialModel::orderBy('tahun', 'desc')->get(); 
+      $data = \DB::table('m_26_penduduk_umur')
+      ->select(\DB::raw('
+        tahun, 
+        jumlah,  
+        status_data
+      '))    
+      ->where('kelompok_umur','1')
+      ->orderBy('tahun', 'desc')
+      ->get(); 
 
       return view('admin.kependudukan.A_jpbku_04Tahun_tampil', [
         'title' => 'Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU)',
@@ -33,9 +28,70 @@ class KependudukanJpbkuAdminController extends Controller
         'data' => $data
       ]);
     }
+
+    public function jpbku_04TahunStore(Request $request)
+  {
+    $this->validate($request, [
+      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'), 
+      'jumlah' => 'required|numeric|min:0|max:100',
+      'status_data' => 'required|in:1,2,3',
+    ]);
+ 
+    \DB::table('m_26_penduduk_umur')->insert([
+      'tahun' => $request->input('tahun'),
+      'kelompok_umur' => 1,  
+      'jumlah' => $request->input('jumlah'),    
+      'status_data' => $request->input('status_data'),
+    ]); 
+     
+    return redirect(route('A-jpbku_04Tahun'))->with('success', 'data berhasil disimpan');
+  }
+  public function jpbku_04TahunUpdate(Request $request, $id)
+  {
+    $data = \DB::table('m_26_penduduk_umur')
+    ->where('tahun', $id)
+    ->first();
+ 
+    if (is_null($data))
+    {
+      return redirect(route('A-jpbku_04Tahun'))->with('error', 'data gagal disimpan');
+    }
+    else
+    { 
+      $this->validate($request, [        
+        'jumlah' => 'required|numeric|min:0|max:100',
+        'status_data' => 'required|in:1,2,3',
+      ]);
+      \DB::table('m_26_penduduk_umur')
+      ->where('tahun', $request->input('tahun'))
+      ->update([ 
+      'kelompok_umur' => 1,  
+      'jumlah' => $request->input('jumlah'),    
+      'status_data' => $request->input('status_data'),
+      ]);
+      return redirect(route('A-jpbku_04Tahun'))->with('success', 'data berhasil diubah');
+    }    
+  }
+  public function jpbku_04TahunDel($id)
+    {
+      $data = \DB::table('m_26_penduduk_umur')->where('tahun', $id);
+
+        $data->delete();
+        return redirect(route('A-jpbku_04Tahun'))->with('sukses', 'Data Sudah di Hapus');
+    }
+
+//----------------KE 2
     public function jpbku_59Tahun()
     {
-      $data = DataSosialModel::orderBy('tahun', 'desc')->get(); 
+      $data = \DB::table('m_26_penduduk_umur')
+      ->select(\DB::raw('
+        tahun, 
+        jumlah,  
+        status_data
+      '))    
+      ->where('kelompok_umur','2')
+      ->orderBy('tahun', 'desc')
+      ->get(); 
 
       return view('admin.kependudukan.B_jpbku_59Tahun_tampil', [
         'title' => 'Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU)',
@@ -46,6 +102,69 @@ class KependudukanJpbkuAdminController extends Controller
         'data' => $data
       ]);
     }
+
+    public function jpbku_59TahunStore(Request $request)
+  {
+    $this->validate($request, [
+      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'), 
+      'jumlah' => 'required|numeric|min:0|max:100',
+      'status_data' => 'required|in:1,2,3',
+    ]);
+ 
+    \DB::table('m_26_penduduk_umur')->insert([
+      'tahun' => $request->input('tahun'),
+      'kelompok_umur' => 2,  
+      'jumlah' => $request->input('jumlah'),    
+      'status_data' => $request->input('status_data'),
+    ]); 
+     
+    return redirect(route('B-jpbku_59Tahun'))->with('success', 'data berhasil disimpan');
+  }
+  public function jpbku_59TahunUpdate(Request $request, $id)
+  {
+    $data = \DB::table('m_26_penduduk_umur')
+    ->where('tahun', $id)
+    ->first();
+ 
+    if (is_null($data))
+    {
+      return redirect(route('B-jpbku_59Tahun'))->with('error', 'data gagal disimpan');
+    }
+    else
+    { 
+      $this->validate($request, [        
+        'jumlah' => 'required|numeric|min:0|max:100',
+        'status_data' => 'required|in:1,2,3',
+      ]);
+      \DB::table('m_26_penduduk_umur')
+      ->where('tahun', $request->input('tahun'))
+      ->update([ 
+      'kelompok_umur' => 2,  
+      'jumlah' => $request->input('jumlah'),    
+      'status_data' => $request->input('status_data'),
+      ]);
+      return redirect(route('B-jpbku_59Tahun'))->with('success', 'data berhasil diubah');
+    }    
+  }
+  public function jpbku_59TahunDel($id)
+    {
+      $data = \DB::table('m_26_penduduk_umur')->where('tahun', $id);
+
+        $data->delete();
+        return redirect(route('B-jpbku_59Tahun'))->with('sukses', 'Data Sudah di Hapus');
+    }
+
+
+
+
+
+
+
+
+
+
+
+
     public function jpbku_1014Tahun()
     {
       $data = DataSosialModel::orderBy('tahun', 'desc')->get(); 
