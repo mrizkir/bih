@@ -310,7 +310,7 @@ Route::group(
     Route::post('/adhb_k/store', [EkonomiAdhbAdminController::class, 'adhb_kStore'])->name('ekonomi-adhb_K.store');  
     Route::put('/adhb_k/{id}', [EkonomiAdhbAdminController::class, 'adhb_kUpdate'])->name('ekonomi-adhb_K.update');  
     Route::get('/adhb_kdel/{id}', [EkonomiAdhbAdminController::class, 'adhb_kDel'])->name('ekonomi-adhb_K.del');  
-
+ 
     Route::get('/adhb_l', [EkonomiAdhbAdminController::class, 'adhb_l'])->name('ekonomi-adhb_L');  
     Route::post('/adhb_l/store', [EkonomiAdhbAdminController::class, 'adhb_lStore'])->name('ekonomi-adhb_L.store');  
     Route::put('/adhb_l/{id}', [EkonomiAdhbAdminController::class, 'adhb_lUpdate'])->name('ekonomi-adhb_L.update');  
@@ -320,14 +320,14 @@ Route::group(
     Route::post('/adhb_mn/store', [EkonomiAdhbAdminController::class, 'adhb_mnStore'])->name('ekonomi-adhb_MN.store'); 
     Route::put('/adhb_mn/{id}', [EkonomiAdhbAdminController::class, 'adhb_mnUpdate'])->name('ekonomi-adhb_MN.update'); 
     Route::get('/adhb_mndel/{id}', [EkonomiAdhbAdminController::class, 'adhb_mnDel'])->name('ekonomi-adhb_MN.del'); 
-
+ 
     Route::get('/adhb_o', [EkonomiAdhbAdminController::class, 'adhb_o'])->name('ekonomi-adhb_O');  
     Route::post('/adhb_o/store', [EkonomiAdhbAdminController::class, 'adhb_oStore'])->name('ekonomi-adhb_O.store');  
     Route::put('/adhb_o/{id}', [EkonomiAdhbAdminController::class, 'adhb_oUpdate'])->name('ekonomi-adhb_O.update');  
     Route::get('/adhb_odel/{id}', [EkonomiAdhbAdminController::class, 'adhb_oDel'])->name('ekonomi-adhb_O.del');  
 
     Route::get('/adhb_p', [EkonomiAdhbAdminController::class, 'adhb_p'])->name('ekonomi-adhb_P');  
-    Route::post('/adhb_o/store', [EkonomiAdhbAdminController::class, 'adhb_pStore'])->name('ekonomi-adhb_P.store');   
+    Route::post('/adhb_p/store', [EkonomiAdhbAdminController::class, 'adhb_pStore'])->name('ekonomi-adhb_P.store');   
     Route::put('/adhb_p/{id}', [EkonomiAdhbAdminController::class, 'adhb_pUpdate'])->name('ekonomi-adhb_P.update');  
     Route::get('/adhb_pdel/{id}', [EkonomiAdhbAdminController::class, 'adhb_pDel'])->name('ekonomi-adhb_P.del');  
 
@@ -354,26 +354,87 @@ Route::group(
     Route::get('/adhk_a', [EkonomiAdhkAdminController::class, 'adhk_a'])->name('ekonomi-adhk_A'); 
     Route::post('/adhk_a/store', [EkonomiAdhkAdminController::class, 'adhk_aStore'])->name('ekonomi-adhk_A.store'); 
     Route::put('/adhk_a/{id}', [EkonomiAdhkAdminController::class, 'adhk_aUpdate'])->name('ekonomi-adhk_A.update'); 
-    Route::get('/adhk_adel{id}', [EkonomiAdhkAdminController::class, 'adhk_aDel'])->name('ekonomi-adhk_A.del'); 
-
-
-
+    Route::get('/adhk_adel/{id}', [EkonomiAdhkAdminController::class, 'adhk_aDel'])->name('ekonomi-adhk_A.del'); 
+    
     Route::get('/adhk_b', [EkonomiAdhkAdminController::class, 'adhk_b'])->name('ekonomi-adhk_B'); 
-    Route::get('/adhk_c', [EkonomiAdhkAdminController::class, 'adhk_c'])->name('ekonomi-adhk_C'); 
-    Route::get('/adhk_d', [EkonomiAdhkAdminController::class, 'adhk_d'])->name('ekonomi-adhk_D'); 
+    Route::post('/adhk_b/store', [EkonomiAdhkAdminController::class, 'adhk_bStore'])->name('ekonomi-adhk_B.store'); 
+    Route::put('/adhk_b/{id}', [EkonomiAdhkAdminController::class, 'adhk_bUpdate'])->name('ekonomi-adhk_B.update'); 
+    Route::get('/adhk_bdel/{id}', [EkonomiAdhkAdminController::class, 'adhk_bDel'])->name('ekonomi-adhk_B.del'); 
+
+    Route::get('/adhk_c', [EkonomiAdhkAdminController::class, 'adhk_c'])->name('ekonomi-adhk_C');  
+    Route::post('/adhk_c/store', [EkonomiAdhkAdminController::class, 'adhk_cStore'])->name('ekonomi-adhk_C.store');   
+    Route::put('/adhk_c/{id}', [EkonomiAdhkAdminController::class, 'adhk_cUpdate'])->name('ekonomi-adhk_C.update');  
+    Route::get('/adhk_cdel/{id}', [EkonomiAdhkAdminController::class, 'adhk_cDel'])->name('ekonomi-adhk_C.del');  
+
+    Route::get('/adhk_d', [EkonomiAdhkAdminController::class, 'adhk_d'])->name('ekonomi-adhk_D');  
+    Route::post('/adhk_d/store', [EkonomiAdhkAdminController::class, 'adhk_dStore'])->name('ekonomi-adhk_D.store'); 
+    Route::put('/adhk_d/{id}', [EkonomiAdhkAdminController::class, 'adhk_dUpdate'])->name('ekonomi-adhk_D.update');
+    Route::get('/adhk_ddel/{id}', [EkonomiAdhkAdminController::class, 'adhk_dDel'])->name('ekonomi-adhk_D.del');
+
     Route::get('/adhk_e', [EkonomiAdhkAdminController::class, 'adhk_e'])->name('ekonomi-adhk_E'); 
+    Route::post('/adhk_e/store', [EkonomiAdhkAdminController::class, 'adhk_eStore'])->name('ekonomi-adhk_E.store');
+    Route::put('/adhk_e/{id}', [EkonomiAdhkAdminController::class, 'adhk_eUpdate'])->name('ekonomi-adhk_E.update');
+    Route::get('/adhk_edel/{id}', [EkonomiAdhkAdminController::class, 'adhk_eDel'])->name('ekonomi-adhk_E.del');
+
     Route::get('/adhk_f', [EkonomiAdhkAdminController::class, 'adhk_f'])->name('ekonomi-adhk_F'); 
-    Route::get('/adhk_g', [EkonomiAdhkAdminController::class, 'adhk_g'])->name('ekonomi-adhk_G'); 
-    Route::get('/adhk_h', [EkonomiAdhkAdminController::class, 'adhk_h'])->name('ekonomi-adhk_H'); 
-    Route::get('/adhk_i', [EkonomiAdhkAdminController::class, 'adhk_i'])->name('ekonomi-adhk_I'); 
-    Route::get('/adhk_j', [EkonomiAdhkAdminController::class, 'adhk_j'])->name('ekonomi-adhk_J'); 
-    Route::get('/adhk_k', [EkonomiAdhkAdminController::class, 'adhk_k'])->name('ekonomi-adhk_K'); 
-    Route::get('/adhk_l', [EkonomiAdhkAdminController::class, 'adhk_l'])->name('ekonomi-adhk_L'); 
-    Route::get('/adhk_mn', [EkonomiAdhkAdminController::class, 'adhk_mn'])->name('ekonomi-adhk_MN'); 
-    Route::get('/adhk_o', [EkonomiAdhkAdminController::class, 'adhk_o'])->name('ekonomi-adhk_O'); 
-    Route::get('/adhk_p', [EkonomiAdhkAdminController::class, 'adhk_p'])->name('ekonomi-adhk_P'); 
-    Route::get('/adhk_q', [EkonomiAdhkAdminController::class, 'adhk_q'])->name('ekonomi-adhk_Q'); 
+    Route::post('/adhk_f/store', [EkonomiAdhkAdminController::class, 'adhk_fStore'])->name('ekonomi-adhk_F.store');
+    Route::put('/adhk_f/{id}', [EkonomiAdhkAdminController::class, 'adhk_fUpdate'])->name('ekonomi-adhk_F.update');
+    Route::get('/adhk_fdel/{id}', [EkonomiAdhkAdminController::class, 'adhk_fDel'])->name('ekonomi-adhk_F.del');
+    
+    Route::get('/adhk_g', [EkonomiAdhkAdminController::class, 'adhk_g'])->name('ekonomi-adhk_G');
+    Route::post('/adhk_g/store', [EkonomiAdhkAdminController::class, 'adhk_gStore'])->name('ekonomi-adhk_G.store');
+    Route::put('/adhk_g/{id}', [EkonomiAdhkAdminController::class, 'adhk_gUpdate'])->name('ekonomi-adhk_G.update');
+    Route::get('/adhk_gdel/{id}', [EkonomiAdhkAdminController::class, 'adhk_gDel'])->name('ekonomi-adhk_G.del'); 
+    
+    Route::get('/adhk_h', [EkonomiAdhkAdminController::class, 'adhk_h'])->name('ekonomi-adhk_H');     
+    Route::post('/adhk_h/store', [EkonomiAdhkAdminController::class, 'adhk_hStore'])->name('ekonomi-adhk_H.store');     
+    Route::put('/adhk_h/{id}', [EkonomiAdhkAdminController::class, 'adhk_hUpdate'])->name('ekonomi-adhk_H.update');     
+    Route::get('/adhk_hdel/{id}', [EkonomiAdhkAdminController::class, 'adhk_hDel'])->name('ekonomi-adhk_H.del'); 
+        
+    Route::get('/adhk_i', [EkonomiAdhkAdminController::class, 'adhk_i'])->name('ekonomi-adhk_I');          
+    Route::post('/adhk_i/store', [EkonomiAdhkAdminController::class, 'adhk_iStore'])->name('ekonomi-adhk_I.store');          
+    Route::put('/adhk_i/{id}', [EkonomiAdhkAdminController::class, 'adhk_iUpdate'])->name('ekonomi-adhk_I.update');          
+    Route::get('/adhk_idel/{id}', [EkonomiAdhkAdminController::class, 'adhk_iDel'])->name('ekonomi-adhk_I.del');  
+
+    Route::get('/adhk_j', [EkonomiAdhkAdminController::class, 'adhk_j'])->name('ekonomi-adhk_J');  
+    Route::post('/adhk_j/store', [EkonomiAdhkAdminController::class, 'adhk_jStore'])->name('ekonomi-adhk_J.store');
+    Route::put('/adhk_j/{id}', [EkonomiAdhkAdminController::class, 'adhk_jUpdate'])->name('ekonomi-adhk_J.update');
+    Route::get('/adhk_jdel/{id}', [EkonomiAdhkAdminController::class, 'adhk_jDel'])->name('ekonomi-adhk_J.del');
+
+    Route::get('/adhk_k', [EkonomiAdhkAdminController::class, 'adhk_k'])->name('ekonomi-adhk_K');  
+    Route::post('/adhk_k/store', [EkonomiAdhkAdminController::class, 'adhk_kStore'])->name('ekonomi-adhk_K.store');  
+    Route::put('/adhk_k/{id}', [EkonomiAdhkAdminController::class, 'adhk_kUpdate'])->name('ekonomi-adhk_K.update');  
+    Route::get('/adhk_kdel/{id}', [EkonomiAdhkAdminController::class, 'adhk_kDel'])->name('ekonomi-adhk_K.del');  
+ 
+    Route::get('/adhk_l', [EkonomiAdhkAdminController::class, 'adhk_l'])->name('ekonomi-adhk_L');  
+    Route::post('/adhk_l/store', [EkonomiAdhkAdminController::class, 'adhk_lStore'])->name('ekonomi-adhk_L.store');  
+    Route::put('/adhk_l/{id}', [EkonomiAdhkAdminController::class, 'adhk_lUpdate'])->name('ekonomi-adhk_L.update');  
+    Route::get('/adhk_ldel/{id}', [EkonomiAdhkAdminController::class, 'adhk_lDel'])->name('ekonomi-adhk_L.del');  
+
+    Route::get('/adhk_mn', [EkonomiAdhkAdminController::class, 'adhk_mn'])->name('ekonomi-adhk_MN');  
+    Route::post('/adhk_mn/store', [EkonomiAdhkAdminController::class, 'adhk_mnStore'])->name('ekonomi-adhk_MN.store'); 
+    Route::put('/adhk_mn/{id}', [EkonomiAdhkAdminController::class, 'adhk_mnUpdate'])->name('ekonomi-adhk_MN.update'); 
+    Route::get('/adhk_mndel/{id}', [EkonomiAdhkAdminController::class, 'adhk_mnDel'])->name('ekonomi-adhk_MN.del'); 
+ 
+    Route::get('/adhk_o', [EkonomiAdhkAdminController::class, 'adhk_o'])->name('ekonomi-adhk_O');  
+    Route::post('/adhk_o/store', [EkonomiAdhkAdminController::class, 'adhk_oStore'])->name('ekonomi-adhk_O.store');  
+    Route::put('/adhk_o/{id}', [EkonomiAdhkAdminController::class, 'adhk_oUpdate'])->name('ekonomi-adhk_O.update');  
+    Route::get('/adhk_odel/{id}', [EkonomiAdhkAdminController::class, 'adhk_oDel'])->name('ekonomi-adhk_O.del');  
+
+    Route::get('/adhk_p', [EkonomiAdhkAdminController::class, 'adhk_p'])->name('ekonomi-adhk_P');  
+    Route::post('/adhk_p/store', [EkonomiAdhkAdminController::class, 'adhk_pStore'])->name('ekonomi-adhk_P.store');   
+    Route::put('/adhk_p/{id}', [EkonomiAdhkAdminController::class, 'adhk_pUpdate'])->name('ekonomi-adhk_P.update');  
+    Route::get('/adhk_pdel/{id}', [EkonomiAdhkAdminController::class, 'adhk_pDel'])->name('ekonomi-adhk_P.del');  
+
+    Route::get('/adhk_q', [EkonomiAdhkAdminController::class, 'adhk_q'])->name('ekonomi-adhk_Q');  
+    Route::post('/adhk_q/store', [EkonomiAdhkAdminController::class, 'adhk_qStore'])->name('ekonomi-adhk_Q.store'); 
+    Route::put('/adhk_q/{id}', [EkonomiAdhkAdminController::class, 'adhk_qUpdate'])->name('ekonomi-adhk_Q.update'); 
+    Route::get('/adhk_qdel/{id}', [EkonomiAdhkAdminController::class, 'adhk_qDel'])->name('ekonomi-adhk_Q.del'); 
+
     Route::get('/adhk_rstu', [EkonomiAdhkAdminController::class, 'adhk_rstu'])->name('ekonomi-adhk_RSTU'); 
+    Route::post('/adhk_rstu/store', [EkonomiAdhkAdminController::class, 'adhk_rstuStore'])->name('ekonomi-adhk_RSTU.store'); 
+    Route::put('/adhk_rstu/{id}', [EkonomiAdhkAdminController::class, 'adhk_rstuUpdate'])->name('ekonomi-adhk_RSTU.update'); 
+    Route::get('/adhk_rstudel/{id}', [EkonomiAdhkAdminController::class, 'adhk_rstuDel'])->name('ekonomi-adhk_RSTU.del'); 
 
 
 
