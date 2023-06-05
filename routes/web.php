@@ -306,14 +306,40 @@ Route::group(
     Route::put('/adhb_j/{id}', [EkonomiAdhbAdminController::class, 'adhb_jUpdate'])->name('ekonomi-adhb_J.update');
     Route::get('/adhb_jdel/{id}', [EkonomiAdhbAdminController::class, 'adhb_jDel'])->name('ekonomi-adhb_J.del');
 
-
     Route::get('/adhb_k', [EkonomiAdhbAdminController::class, 'adhb_k'])->name('ekonomi-adhb_K');  
+    Route::post('/adhb_k/store', [EkonomiAdhbAdminController::class, 'adhb_kStore'])->name('ekonomi-adhb_K.store');  
+    Route::put('/adhb_k/{id}', [EkonomiAdhbAdminController::class, 'adhb_kUpdate'])->name('ekonomi-adhb_K.update');  
+    Route::get('/adhb_kdel/{id}', [EkonomiAdhbAdminController::class, 'adhb_kDel'])->name('ekonomi-adhb_K.del');  
+
     Route::get('/adhb_l', [EkonomiAdhbAdminController::class, 'adhb_l'])->name('ekonomi-adhb_L');  
+    Route::post('/adhb_l/store', [EkonomiAdhbAdminController::class, 'adhb_lStore'])->name('ekonomi-adhb_L.store');  
+    Route::put('/adhb_l/{id}', [EkonomiAdhbAdminController::class, 'adhb_lUpdate'])->name('ekonomi-adhb_L.update');  
+    Route::get('/adhb_ldel/{id}', [EkonomiAdhbAdminController::class, 'adhb_lDel'])->name('ekonomi-adhb_L.del');  
+
     Route::get('/adhb_mn', [EkonomiAdhbAdminController::class, 'adhb_mn'])->name('ekonomi-adhb_MN');  
+    Route::post('/adhb_mn/store', [EkonomiAdhbAdminController::class, 'adhb_mnStore'])->name('ekonomi-adhb_MN.store'); 
+    Route::put('/adhb_mn/{id}', [EkonomiAdhbAdminController::class, 'adhb_mnUpdate'])->name('ekonomi-adhb_MN.update'); 
+    Route::get('/adhb_mndel/{id}', [EkonomiAdhbAdminController::class, 'adhb_mnDel'])->name('ekonomi-adhb_MN.del'); 
+
     Route::get('/adhb_o', [EkonomiAdhbAdminController::class, 'adhb_o'])->name('ekonomi-adhb_O');  
+    Route::post('/adhb_o/store', [EkonomiAdhbAdminController::class, 'adhb_oStore'])->name('ekonomi-adhb_O.store');  
+    Route::put('/adhb_o/{id}', [EkonomiAdhbAdminController::class, 'adhb_oUpdate'])->name('ekonomi-adhb_O.update');  
+    Route::get('/adhb_odel/{id}', [EkonomiAdhbAdminController::class, 'adhb_oDel'])->name('ekonomi-adhb_O.del');  
+
     Route::get('/adhb_p', [EkonomiAdhbAdminController::class, 'adhb_p'])->name('ekonomi-adhb_P');  
+    Route::post('/adhb_o/store', [EkonomiAdhbAdminController::class, 'adhb_pStore'])->name('ekonomi-adhb_P.store');   
+    Route::put('/adhb_p/{id}', [EkonomiAdhbAdminController::class, 'adhb_pUpdate'])->name('ekonomi-adhb_P.update');  
+    Route::get('/adhb_pdel/{id}', [EkonomiAdhbAdminController::class, 'adhb_pDel'])->name('ekonomi-adhb_P.del');  
+
     Route::get('/adhb_q', [EkonomiAdhbAdminController::class, 'adhb_q'])->name('ekonomi-adhb_Q');  
+    Route::post('/adhb_q/store', [EkonomiAdhbAdminController::class, 'adhb_qStore'])->name('ekonomi-adhb_Q.store'); 
+    Route::put('/adhb_q/{id}', [EkonomiAdhbAdminController::class, 'adhb_qUpdate'])->name('ekonomi-adhb_Q.update'); 
+    Route::get('/adhb_qdel/{id}', [EkonomiAdhbAdminController::class, 'adhb_qDel'])->name('ekonomi-adhb_Q.del'); 
+
     Route::get('/adhb_rstu', [EkonomiAdhbAdminController::class, 'adhb_rstu'])->name('ekonomi-adhb_RSTU'); 
+    Route::post('/adhb_rstu/store', [EkonomiAdhbAdminController::class, 'adhb_rstuStore'])->name('ekonomi-adhb_RSTU.store'); 
+    Route::put('/adhb_rstu/{id}', [EkonomiAdhbAdminController::class, 'adhb_rstuUpdate'])->name('ekonomi-adhb_RSTU.update'); 
+    Route::get('/adhb_rstudel/{id}', [EkonomiAdhbAdminController::class, 'adhb_rstuDel'])->name('ekonomi-adhb_RSTU.del'); 
 
 
 
@@ -428,7 +454,7 @@ Route::group(
     Route::post('/jpbku_04Tahun/store', [KependudukanJpbkuAdminController::class, 'jpbku_04TahunStore'])->name('jpbku_04Tahun.store');
     Route::put('/jpbku_04Tahun/{id}', [KependudukanJpbkuAdminController::class, 'jpbku_04TahunUpdate'])->name('jpbku_04Tahun.update');  
     Route::get('/jpbku_04Tahundel/{id}', [KependudukanJpbkuAdminController::class, 'jpbku_04TahunDel'])->name('jpbku_04Tahun.del'); 
-    
+     
     Route::get('/jpbku_59Tahun', [KependudukanJpbkuAdminController::class, 'jpbku_59Tahun'])->name('B-jpbku_59');
     Route::post('/jpbku_59Tahun/store', [KependudukanJpbkuAdminController::class, 'jpbku_59TahunStore'])->name('jpbku_59Tahun.store');
     Route::put('/jpbku_59Tahun/{id}', [KependudukanJpbkuAdminController::class, 'jpbku_59TahunUpdate'])->name('jpbku_59Tahun.update');
