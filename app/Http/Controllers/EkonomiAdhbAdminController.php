@@ -843,93 +843,585 @@ class EkonomiAdhbAdminController extends Controller
 
   public function adhb_k()
   {
-    $data = DataSosialModel::orderBy('tahun', 'desc')->get();
+    $data = \DB::table('m_19_pdrb_berlaku')
+    ->select(\DB::raw('  
+      tahun,
+      jumlah,
+      status_data,
+      uraian
+    '))    
+    ->where('uraian',11)
+    ->orderBy('tahun', 'desc')
+    ->get();
+
+    $kt = \DB::table('m_uraian_pdrb')
+    ->where('id', $data[0]->uraian)
+    ->first(); 
 
     return view('admin.ekonomi.ekonomi_adhb_K_tampil', [
       'title' => 'Distribusi PDRB Atas Dasar Harga Berlaku (ADHB)',
-      'sumber' => 'K. Jasa Keuangan dan Asuransi',
+      'sumber' => $kt->kategori.'. '.$kt->uraian,
       'menu_active' => 'menu-ekonomi',
       'sub_menu_active' => 'menu-ekonomi-adhb',
       'page_active' => 'ekonomi-adhb-k',
       'data' => $data
     ]);
   }
+
+  public function adhb_kStore(Request $request)
+  {
+    $this->validate($request, [
+      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
+      'jumlah' => 'required|numeric|min:0|max:100',
+      'status_data' => 'required|in:1,2,3',
+    ]);
+ 
+    \DB::table('m_19_pdrb_berlaku')->insert([
+      'tahun' => $request->input('tahun'),
+      'jumlah' => $request->input('jumlah'),  
+      'uraian' => 11,     
+      'status_data' => $request->input('status_data'),
+    ]); 
+     
+    return redirect(route('ekonomi-adhb_K'))->with('success', 'data berhasil disimpan');
+  }
+  public function adhb_kUpdate(Request $request, $id)
+  {
+    $data = \DB::table('m_19_pdrb_berlaku')
+    ->where('tahun', $id)
+    ->first();
+
+    if (is_null($data)) 
+    {
+      return redirect(route('ekonomi-adhb_K'))->with('error', 'data gagal disimpan');
+    }
+    else
+    {
+      $this->validate($request, [        
+        'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
+        'jumlah' => 'required|numeric|min:0|max:100',
+        'status_data' => 'required|in:1,2,3',
+      ]);
+      \DB::table('m_19_pdrb_berlaku')
+      ->where('tahun', $id)
+      ->update([
+        'tahun' => $request->input('tahun'),
+        'jumlah' => $request->input('jumlah'),
+        'uraian' => 11,      
+        'status_data' => $request->input('status_data'),
+      ]);
+      return redirect(route('ekonomi-adhb_K'))->with('success', 'data berhasil diubah');
+    }    
+  }
+  public function adhb_kDel($id)
+    {
+      $data = \DB::table('m_19_pdrb_berlaku')->where('tahun', $id);
+      $data->delete();
+        return redirect(route('ekonomi-adhb_K'))->with('sukses', 'Data Sudah di Hapus');
+    }
+
+
+
+
   public function adhb_l()
   {
-    $data = DataSosialModel::orderBy('tahun', 'desc')->get();
+     $data = \DB::table('m_19_pdrb_berlaku')
+    ->select(\DB::raw('  
+      tahun,
+      jumlah,
+      status_data,
+      uraian
+    '))    
+    ->where('uraian',12)
+    ->orderBy('tahun', 'desc')
+    ->get();
+
+    $kt = \DB::table('m_uraian_pdrb')
+    ->where('id', $data[0]->uraian)
+    ->first(); 
 
     return view('admin.ekonomi.ekonomi_adhb_L_tampil', [
-      'title' => 'Distribusi PDRB Atas Dasar Harga Berlaku (ADHB)',
-      'sumber' => 'L. Real Estate',
+      'title' => 'Distribusi PDRB Atas Dasar Harga Berlaku (ADHB)', 
+      'sumber' => $kt->kategori.'. '.$kt->uraian,
       'menu_active' => 'menu-ekonomi',
       'sub_menu_active' => 'menu-ekonomi-adhb',
       'page_active' => 'ekonomi-adhb-l',
       'data' => $data
     ]);
   }
+
+  public function adhb_lStore(Request $request)
+  {
+    $this->validate($request, [
+      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
+      'jumlah' => 'required|numeric|min:0|max:100',
+      'status_data' => 'required|in:1,2,3',
+    ]);
+ 
+    \DB::table('m_19_pdrb_berlaku')->insert([
+      'tahun' => $request->input('tahun'),
+      'jumlah' => $request->input('jumlah'),  
+      'uraian' => 12,     
+      'status_data' => $request->input('status_data'),
+    ]); 
+     
+    return redirect(route('ekonomi-adhb_L'))->with('success', 'data berhasil disimpan');
+  }
+  public function adhb_lUpdate(Request $request, $id)
+  {
+    $data = \DB::table('m_19_pdrb_berlaku')
+    ->where('tahun', $id)
+    ->first();
+
+    if (is_null($data)) 
+    {
+      return redirect(route('ekonomi-adhb_L'))->with('error', 'data gagal disimpan');
+    }
+    else
+    {
+      $this->validate($request, [        
+        'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
+        'jumlah' => 'required|numeric|min:0|max:100',
+        'status_data' => 'required|in:1,2,3',
+      ]);
+      \DB::table('m_19_pdrb_berlaku')
+      ->where('tahun', $id)
+      ->update([
+        'tahun' => $request->input('tahun'),
+        'jumlah' => $request->input('jumlah'),
+        'uraian' => 12,      
+        'status_data' => $request->input('status_data'),
+      ]);
+      return redirect(route('ekonomi-adhb_L'))->with('success', 'data berhasil diubah');
+    }    
+  }
+  public function adhb_lDel($id)
+    {
+      $data = \DB::table('m_19_pdrb_berlaku')->where('tahun', $id);
+      $data->delete();
+        return redirect(route('ekonomi-adhb_L'))->with('sukses', 'Data Sudah di Hapus');
+    }
+
+
+
+
+
   public function adhb_mn()
   {
-    $data = DataSosialModel::orderBy('tahun', 'desc')->get();
+    $data = \DB::table('m_19_pdrb_berlaku')
+    ->select(\DB::raw('  
+      tahun,
+      jumlah,
+      status_data,
+      uraian
+    '))    
+    ->where('uraian',13)
+    ->orderBy('tahun', 'desc')
+    ->get();
+
+    $kt = \DB::table('m_uraian_pdrb')
+    ->where('id', $data[0]->uraian)
+    ->first();  
 
     return view('admin.ekonomi.ekonomi_adhb_MN_tampil', [
       'title' => 'Distribusi PDRB Atas Dasar Harga Berlaku (ADHB)',
-      'sumber' => 'M,N. Jasa Perusahaan',
+      'sumber' => $kt->kategori.'. '.$kt->uraian,
       'menu_active' => 'menu-ekonomi',
       'sub_menu_active' => 'menu-ekonomi-adhb',
       'page_active' => 'ekonomi-adhb-mn',
       'data' => $data
     ]);
   }
+
+  public function adhb_mnStore(Request $request)
+  {
+    $this->validate($request, [
+      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
+      'jumlah' => 'required|numeric|min:0|max:100',
+      'status_data' => 'required|in:1,2,3',
+    ]);
+ 
+    \DB::table('m_19_pdrb_berlaku')->insert([
+      'tahun' => $request->input('tahun'),
+      'jumlah' => $request->input('jumlah'),  
+      'uraian' => 13,     
+      'status_data' => $request->input('status_data'),
+    ]); 
+     
+    return redirect(route('ekonomi-adhb_MN'))->with('success', 'data berhasil disimpan');
+  }
+  public function adhb_mnUpdate(Request $request, $id)
+  {
+    $data = \DB::table('m_19_pdrb_berlaku')
+    ->where('tahun', $id)
+    ->first();
+
+    if (is_null($data)) 
+    {
+      return redirect(route('ekonomi-adhb_MN'))->with('error', 'data gagal disimpan');
+    }
+    else
+    {
+      $this->validate($request, [        
+        'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
+        'jumlah' => 'required|numeric|min:0|max:100',
+        'status_data' => 'required|in:1,2,3',
+      ]);
+      \DB::table('m_19_pdrb_berlaku')
+      ->where('tahun', $id)
+      ->update([
+        'tahun' => $request->input('tahun'),
+        'jumlah' => $request->input('jumlah'),
+        'uraian' => 13,      
+        'status_data' => $request->input('status_data'),
+      ]);
+      return redirect(route('ekonomi-adhb_MN'))->with('success', 'data berhasil diubah');
+    }    
+  }
+  public function adhb_mnDel($id)
+    {
+      $data = \DB::table('m_19_pdrb_berlaku')->where('tahun', $id);
+      $data->delete();
+        return redirect(route('ekonomi-adhb_MN'))->with('sukses', 'Data Sudah di Hapus');
+    }
+
+
+
+
   public function adhb_o()
   {
-    $data = DataSosialModel::orderBy('tahun', 'desc')->get();
+    $data = \DB::table('m_19_pdrb_berlaku')
+    ->select(\DB::raw('  
+      tahun,
+      jumlah,
+      status_data,
+      uraian
+    '))    
+    ->where('uraian',14)
+    ->orderBy('tahun', 'desc')
+    ->get();
 
+    $kt = \DB::table('m_uraian_pdrb')
+    ->where('id', $data[0]->uraian)
+    ->first();  
+
+  
     return view('admin.ekonomi.ekonomi_adhb_O_tampil', [
       'title' => 'Distribusi PDRB Atas Dasar Harga Berlaku (ADHB)',
-      'sumber' => 'O. Administrasi Pemerintahan, Pertahanan dan Jaminan Sosial Wajib',
+      'sumber' => $kt->kategori.'. '.$kt->uraian,
       'menu_active' => 'menu-ekonomi',
       'sub_menu_active' => 'menu-ekonomi-adhb',
       'page_active' => 'ekonomi-adhb-o',
       'data' => $data
     ]);
   }
+
+  public function adhb_oStore(Request $request)
+  {
+    $this->validate($request, [
+      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
+      'jumlah' => 'required|numeric|min:0|max:100',
+      'status_data' => 'required|in:1,2,3',
+    ]);
+ 
+    \DB::table('m_19_pdrb_berlaku')->insert([
+      'tahun' => $request->input('tahun'),
+      'jumlah' => $request->input('jumlah'),  
+      'uraian' => 14,     
+      'status_data' => $request->input('status_data'),
+    ]); 
+     
+    return redirect(route('ekonomi-adhb_O'))->with('success', 'data berhasil disimpan');
+  }
+  public function adhb_oUpdate(Request $request, $id)
+  {
+    $data = \DB::table('m_19_pdrb_berlaku')
+    ->where('tahun', $id)
+    ->first();
+
+    if (is_null($data)) 
+    {
+      return redirect(route('ekonomi-adhb_O'))->with('error', 'data gagal disimpan');
+    }
+    else
+    {
+      $this->validate($request, [        
+        'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
+        'jumlah' => 'required|numeric|min:0|max:100',
+        'status_data' => 'required|in:1,2,3',
+      ]);
+      \DB::table('m_19_pdrb_berlaku')
+      ->where('tahun', $id)
+      ->update([
+        'tahun' => $request->input('tahun'),
+        'jumlah' => $request->input('jumlah'),
+        'uraian' => 14,      
+        'status_data' => $request->input('status_data'),
+      ]);
+      return redirect(route('ekonomi-adhb_O'))->with('success', 'data berhasil diubah');
+    }    
+  }
+  public function adhb_oDel($id)
+    {
+      $data = \DB::table('m_19_pdrb_berlaku')->where('tahun', $id);
+      $data->delete();
+        return redirect(route('ekonomi-adhb_O'))->with('sukses', 'Data Sudah di Hapus');
+    }
+
+
+
+
+
+
+
+
+
+
   public function adhb_p()
   {
-    $data = DataSosialModel::orderBy('tahun', 'desc')->get();
+    $data = \DB::table('m_19_pdrb_berlaku')
+    ->select(\DB::raw('  
+      tahun,
+      jumlah,
+      status_data,
+      uraian
+    '))    
+    ->where('uraian',15)
+    ->orderBy('tahun', 'desc')
+    ->get();
+
+    $kt = \DB::table('m_uraian_pdrb')
+    ->where('id', $data[0]->uraian)
+    ->first();  
+ 
 
     return view('admin.ekonomi.ekonomi_adhb_P_tampil', [
       'title' => 'Distribusi PDRB Atas Dasar Harga Berlaku (ADHB)',
-      'sumber' => 'P. Jasa Pendidikan',
+      'sumber' => $kt->kategori.'. '.$kt->uraian,
       'menu_active' => 'menu-ekonomi',
       'sub_menu_active' => 'menu-ekonomi-adhb',
       'page_active' => 'ekonomi-adhb-p',
       'data' => $data
     ]);
   }
+
+  public function adhb_pStore(Request $request)
+  {
+    $this->validate($request, [
+      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
+      'jumlah' => 'required|numeric|min:0|max:100',
+      'status_data' => 'required|in:1,2,3',
+    ]);
+ 
+    \DB::table('m_19_pdrb_berlaku')->insert([
+      'tahun' => $request->input('tahun'),
+      'jumlah' => $request->input('jumlah'),  
+      'uraian' => 15,     
+      'status_data' => $request->input('status_data'),
+    ]); 
+     
+    return redirect(route('ekonomi-adhb_P'))->with('success', 'data berhasil disimpan');
+  }
+  public function adhb_pUpdate(Request $request, $id)
+  {
+    $data = \DB::table('m_19_pdrb_berlaku')
+    ->where('tahun', $id)
+    ->first();
+
+    if (is_null($data)) 
+    {
+      return redirect(route('ekonomi-adhb_P'))->with('error', 'data gagal disimpan');
+    }
+    else
+    {
+      $this->validate($request, [        
+        'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
+        'jumlah' => 'required|numeric|min:0|max:100',
+        'status_data' => 'required|in:1,2,3',
+      ]);
+      \DB::table('m_19_pdrb_berlaku')
+      ->where('tahun', $id)
+      ->update([
+        'tahun' => $request->input('tahun'),
+        'jumlah' => $request->input('jumlah'),
+        'uraian' => 15,      
+        'status_data' => $request->input('status_data'),
+      ]);
+      return redirect(route('ekonomi-adhb_P'))->with('success', 'data berhasil diubah');
+    }    
+  }
+  public function adhb_pDel($id)
+    {
+      $data = \DB::table('m_19_pdrb_berlaku')->where('tahun', $id);
+      $data->delete();
+        return redirect(route('ekonomi-adhb_P'))->with('sukses', 'Data Sudah di Hapus');
+    }
+
+
+
+
+
   public function adhb_q()
   {
-    $data = DataSosialModel::orderBy('tahun', 'desc')->get();
+    $data = \DB::table('m_19_pdrb_berlaku')
+    ->select(\DB::raw('  
+      tahun,
+      jumlah,
+      status_data,
+      uraian
+    '))    
+    ->where('uraian',16)
+    ->orderBy('tahun', 'desc')
+    ->get();
+
+    $kt = \DB::table('m_uraian_pdrb')
+    ->where('id', $data[0]->uraian)
+    ->first();   
 
     return view('admin.ekonomi.ekonomi_adhb_Q_tampil', [
       'title' => 'Distribusi PDRB Atas Dasar Harga Berlaku (ADHB)',
-      'sumber' => 'Q. Jasa Kesehatan dan Kegiatan Sosial',
+      'sumber' => $kt->kategori.'. '.$kt->uraian,
       'menu_active' => 'menu-ekonomi',
       'sub_menu_active' => 'menu-ekonomi-adhb',
       'page_active' => 'ekonomi-adhb-q',
       'data' => $data
     ]);
   }
+
+  public function adhb_qStore(Request $request)
+  {
+    $this->validate($request, [
+      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
+      'jumlah' => 'required|numeric|min:0|max:100',
+      'status_data' => 'required|in:1,2,3',
+    ]);
+ 
+    \DB::table('m_19_pdrb_berlaku')->insert([
+      'tahun' => $request->input('tahun'),
+      'jumlah' => $request->input('jumlah'),  
+      'uraian' => 16,     
+      'status_data' => $request->input('status_data'),
+    ]); 
+     
+    return redirect(route('ekonomi-adhb_Q'))->with('success', 'data berhasil disimpan');
+  }
+  public function adhb_qUpdate(Request $request, $id)
+  {
+    $data = \DB::table('m_19_pdrb_berlaku')
+    ->where('tahun', $id)
+    ->first();
+
+    if (is_null($data)) 
+    {
+      return redirect(route('ekonomi-adhb_Q'))->with('error', 'data gagal disimpan');
+    }
+    else
+    {
+      $this->validate($request, [        
+        'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
+        'jumlah' => 'required|numeric|min:0|max:100',
+        'status_data' => 'required|in:1,2,3',
+      ]);
+      \DB::table('m_19_pdrb_berlaku')
+      ->where('tahun', $id)
+      ->update([
+        'tahun' => $request->input('tahun'),
+        'jumlah' => $request->input('jumlah'),
+        'uraian' => 16,      
+        'status_data' => $request->input('status_data'),
+      ]);
+      return redirect(route('ekonomi-adhb_Q'))->with('success', 'data berhasil diubah');
+    }    
+  }
+  public function adhb_qDel($id)
+    {
+      $data = \DB::table('m_19_pdrb_berlaku')->where('tahun', $id);
+      $data->delete();
+        return redirect(route('ekonomi-adhb_Q'))->with('sukses', 'Data Sudah di Hapus');
+    }
+
+
+
+
+
   public function adhb_rstu()
   {
-    $data = DataSosialModel::orderBy('tahun', 'desc')->get();
+    $data = \DB::table('m_19_pdrb_berlaku')
+    ->select(\DB::raw('  
+      tahun,
+      jumlah,
+      status_data,
+      uraian
+    '))    
+    ->where('uraian',17)
+    ->orderBy('tahun', 'desc')
+    ->get();
+
+    $kt = \DB::table('m_uraian_pdrb')
+    ->where('id', $data[0]->uraian)
+    ->first();    
 
     return view('admin.ekonomi.ekonomi_adhb_RSTU_tampil', [
       'title' => 'Distribusi PDRB Atas Dasar Harga Berlaku (ADHB)',
-      'sumber' => 'R,S,T,U. Jasa Lainnya',
+      'sumber' => $kt->kategori.'. '.$kt->uraian,
       'menu_active' => 'menu-ekonomi',
       'sub_menu_active' => 'menu-ekonomi-adhb',
       'page_active' => 'ekonomi-adhb-rstu',
       'data' => $data
     ]);
   }
+
+  public function adhb_rstuStore(Request $request)
+  {
+    $this->validate($request, [
+      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
+      'jumlah' => 'required|numeric|min:0|max:100',
+      'status_data' => 'required|in:1,2,3',
+    ]);
+ 
+    \DB::table('m_19_pdrb_berlaku')->insert([
+      'tahun' => $request->input('tahun'),
+      'jumlah' => $request->input('jumlah'),  
+      'uraian' => 16,     
+      'status_data' => $request->input('status_data'),
+    ]); 
+     
+    return redirect(route('ekonomi-adhb_RSTU'))->with('success', 'data berhasil disimpan');
+  }
+  public function adhb_rstuUpdate(Request $request, $id)
+  {
+    $data = \DB::table('m_19_pdrb_berlaku')
+    ->where('tahun', $id)
+    ->first();
+
+    if (is_null($data)) 
+    {
+      return redirect(route('ekonomi-adhb_RSTU'))->with('error', 'data gagal disimpan');
+    }
+    else
+    {
+      $this->validate($request, [        
+        'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
+        'jumlah' => 'required|numeric|min:0|max:100',
+        'status_data' => 'required|in:1,2,3',
+      ]);
+      \DB::table('m_19_pdrb_berlaku')
+      ->where('tahun', $id)
+      ->update([
+        'tahun' => $request->input('tahun'),
+        'jumlah' => $request->input('jumlah'),
+        'uraian' => 16,      
+        'status_data' => $request->input('status_data'),
+      ]);
+      return redirect(route('ekonomi-adhb_RSTU'))->with('success', 'data berhasil diubah');
+    }    
+  }
+  public function adhb_rstuDel($id)
+    {
+      $data = \DB::table('m_19_pdrb_berlaku')->where('tahun', $id);
+      $data->delete();
+        return redirect(route('ekonomi-adhb_RSTU'))->with('sukses', 'Data Sudah di Hapus');
+    }
+
+
 }
