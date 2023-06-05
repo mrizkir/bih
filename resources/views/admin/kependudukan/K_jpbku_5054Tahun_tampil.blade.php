@@ -58,7 +58,7 @@
                                                         data-target="#modaledit{{ $item->tahun }}">
                                                         <i class="fas fa-pencil-alt"></i> Edit
                                                     </a>
-                                                    {{-- <a href="{{ 'jpbku_4549del/'.$item->tahun }}" class="btn btn-info btn-sm"  
+                                                    {{-- <a href="{{ 'jpbku_5054del/'.$item->tahun }}" class="btn btn-info btn-sm"  
                                                        style="font-size: 10px;" class="btn btn-danger btn-sm"  
                                                        onclick="return confirm('Anda Yakin Mau Menghapus ?') ">
                                                        <i class="fas fa-pencil-alt"></i> Del
@@ -77,7 +77,7 @@
                                                                                     style="font-size:20px;color:rgb(10, 100, 100);"><b>Edit
                                                                                         Data {{ $title }}</b></span>
                                                                                 {!! Form::open([
-                                                                                    'url' => route('jpbku_4549.update', ['id' => $item->tahun]),
+                                                                                    'url' => route('jpbku_5054.update', ['id' => $item->tahun]),
                                                                                     'method' => 'put',
                                                                                     'id' => 'frmedit_' . $item->tahun,
                                                                                     'name' => 'frmedit_' . $item->tahun,
@@ -194,7 +194,7 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            {!! Form::open(['url' => route('jpbku_4549.store'), 'method' => 'post', 'id' => 'frmadd', 'name' => 'frmadd']) !!}
+                            {!! Form::open(['url' => route('jpbku_5054.store'), 'method' => 'post', 'id' => 'frmadd', 'name' => 'frmadd']) !!}
                             <div class="card-body">
                                 <div class="form-group">
                                     <div class="row">

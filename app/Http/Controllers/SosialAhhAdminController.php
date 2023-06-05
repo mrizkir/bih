@@ -49,13 +49,13 @@ class SosialAhhAdminController extends Controller
     $data = \DB::table('m_5_ahh')
     ->where('tahun', $id)
     ->first();
-
+ 
     if (is_null($data))
     {
       return redirect(route('sosial-ahh.index'))->with('error', 'data gagal disimpan');
     }
     else
-    {
+    { 
       $this->validate($request, [        
         'ahh' => 'required|numeric|min:0|max:100',
         'status_data' => 'required|in:1,2,3',

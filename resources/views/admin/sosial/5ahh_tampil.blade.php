@@ -39,7 +39,7 @@
                                             </th>
                                             <th style="width: 10%;" class="text-center">AKSI</th>
                                         </tr>
-                                    </thead>
+                                    </thead> 
                                     <tbody>
                                         @foreach ($data as $k => $item)
                                             <tr style="font-size: 11px;">

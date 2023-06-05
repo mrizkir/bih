@@ -640,7 +640,7 @@
                   <i class="far fa-circle nav-icon"
                     style="color:rgb(255, 255, 255);font-size:10px;"></i>
                 </div>
-                <p style="font-size: 12px;">Kunjungan Wisata (KW)</p>
+                <p style="font-size: 12px;">Kunjungan Wisata  (KW)</p>
               </a>
             </li>
           </ul>
@@ -738,7 +738,18 @@
                 <p style="font-size: 12px;">Jumlah Penduduk (JP)</p>
               </a>
             </li>
-          </ul> 
+          </ul>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="{{ route('kependudukan-jpbk.index') }}" class="nav-link">
+                <div style="width:30px;height:55px;float:left;">
+                  <i class="far fa-circle nav-icon"
+                    style="color:rgb(255, 255, 255);font-size:10px;"></i>
+                </div>
+                <p style="font-size: 12px;">Jumlah Penduduk Berdasarkan Kecamatan Tahun 2021 (JPBKT)</p>
+              </a>
+            </li>
+          </ul>  
           <ul class="nav nav-treeview">
             <li class="nav-item">
               <a href="" class="nav-link">
@@ -751,7 +762,7 @@
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('A-jpbku_04Tahun') }}" class="nav-link">
+                  <a href="{{ route('A-jpbku_04') }}" class="nav-link">
                     <div style="width:30px;height:35px;float:left;"></div>
                     <p style="font-size: 12px;">0-4 Tahun</p>
                   </a>
@@ -759,7 +770,7 @@
               </ul>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('B-jpbku_59Tahun') }}" class="nav-link">
+                  <a href="{{ route('B-jpbku_59') }}" class="nav-link">
                     <div style="width:30px;height:35px;float:left;"></div>
                     <p style="font-size: 12px;">5-9 Tahun</p>
                   </a>
@@ -767,7 +778,7 @@
               </ul>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('C-jpbku_1014Tahun') }}" class="nav-link">
+                  <a href="{{ route('C-jpbku_1014') }}" class="nav-link">
                     <div style="width:30px;height:35px;float:left;"></div>
                     <p style="font-size: 12px;">10-14 Tahun</p>
                   </a>
@@ -775,7 +786,7 @@
               </ul>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('D-jpbku_1519Tahun') }}" class="nav-link">
+                  <a href="{{ route('D-jpbku_1519') }}" class="nav-link">
                     <div style="width:30px;height:35px;float:left;"></div>
                     <p style="font-size: 12px;">15-19 Tahun</p>
                   </a>
@@ -783,7 +794,7 @@
               </ul>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('E-jpbku_2024Tahun') }}" class="nav-link">
+                  <a href="{{ route('E-jpbku_2024') }}" class="nav-link">
                     <div style="width:30px;height:35px;float:left;"></div>
                     <p style="font-size: 12px;">20-24 Tahun</p>
                   </a>
@@ -791,7 +802,7 @@
               </ul>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('F-jpbku_2529Tahun') }}" class="nav-link">
+                  <a href="{{ route('F-jpbku_2529') }}" class="nav-link">
                     <div style="width:30px;height:35px;float:left;"></div>
                     <p style="font-size: 12px;">25-29 Tahun</p>
                   </a>
@@ -799,7 +810,7 @@
               </ul>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('G-jpbku_3034Tahun') }}" class="nav-link">
+                  <a href="{{ route('G-jpbku_3034') }}" class="nav-link">
                     <div style="width:30px;height:35px;float:left;"></div>
                     <p style="font-size: 12px;">30-34 Tahun</p>
                   </a>
@@ -807,7 +818,7 @@
               </ul>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('H-jpbku_3539Tahun') }}" class="nav-link">
+                  <a href="{{ route('H-jpbku_3539') }}" class="nav-link">
                     <div style="width:30px;height:35px;float:left;"></div>
                     <p style="font-size: 12px;">35-39 Tahun</p>
                   </a>
@@ -815,7 +826,7 @@
               </ul>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('I-jpbku_4044Tahun') }}" class="nav-link">
+                  <a href="{{ route('I-jpbku_4044') }}" class="nav-link">
                     <div style="width:30px;height:35px;float:left;"></div>
                     <p style="font-size: 12px;">40-44 Tahun</p>
                   </a>
@@ -823,7 +834,7 @@
               </ul>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('J-jpbku_4549Tahun') }}" class="nav-link">
+                  <a href="{{ route('J-jpbku_4549') }}" class="nav-link">
                     <div style="width:30px;height:35px;float:left;"></div>
                     <p style="font-size: 12px;">45-49 Tahun</p>
                   </a>
@@ -831,7 +842,7 @@
               </ul>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('K-jpbku_5054Tahun') }}" class="nav-link">
+                  <a href="{{ route('K-jpbku_5054') }}" class="nav-link">
                     <div style="width:30px;height:35px;float:left;"></div>
                     <p style="font-size: 12px;">50-54 Tahun</p>
                   </a>
@@ -839,7 +850,7 @@
               </ul>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('L-jpbku_5459Tahun') }}" class="nav-link">
+                  <a href="{{ route('L-jpbku_5459') }}" class="nav-link">
                     <div style="width:30px;height:35px;float:left;"></div>
                     <p style="font-size: 12px;">54-59 Tahun</p>
                   </a>
@@ -847,7 +858,7 @@
               </ul>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('M-jpbku_6064Tahun') }}" class="nav-link">
+                  <a href="{{ route('M-jpbku_6064') }}" class="nav-link">
                     <div style="width:30px;height:35px;float:left;"></div>
                     <p style="font-size: 12px;">60-64 Tahun</p>
                   </a>
@@ -855,7 +866,7 @@
               </ul>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('N-jpbku_6569Tahun') }}" class="nav-link">
+                  <a href="{{ route('N-jpbku_6569') }}" class="nav-link">
                     <div style="width:30px;height:35px;float:left;"></div>
                     <p style="font-size: 12px;">65-69 Tahun</p>
                   </a>
@@ -863,7 +874,7 @@
               </ul>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('O-jpbku_7074Tahun') }}" class="nav-link">
+                  <a href="{{ route('O-jpbku_7074') }}" class="nav-link">
                     <div style="width:30px;height:35px;float:left;"></div>
                     <p style="font-size: 12px;">70-74 Tahun</p>
                   </a>
@@ -871,7 +882,7 @@
               </ul>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('P-jpbku_75Tahun') }}" class="nav-link">
+                  <a href="{{ route('P-jpbku_75') }}" class="nav-link">
                     <div style="width:30px;height:35px;float:left;"></div>
                     <p style="font-size: 12px;">75+ Tahun</p>
                   </a>
@@ -891,7 +902,7 @@
         </li>
       </ul>
       </li>
-
+ 
       <li class="nav-item{!!Helper::isMenuActive ($menu_active,'menu-infrastruktur',' menu-open')!!}">
         <a href="#" class="nav-link">
           <img src="{{ asset('administrator/img_mda/h5.png') }}" style="width:12%;margin:3px;">
@@ -923,7 +934,7 @@
         </ul>
         <ul class="nav nav-treeview">
           <li class="nav-item">
-            <a href="{{ route('infrastruktur-ptkj.index') }}" class="nav-link">
+            <a href="{{ route('infrastruktur-ptkj.index') }}" class="nav-link{!!Helper::isMenuActive ($page_active, 'infrastruktur-ptkj', ' active')!!}">
               <div style="width:30px;height:35px;float:left;">
                 <i class="far fa-circle nav-icon"
                   style="color:rgb(255, 255, 255);font-size:10px;"></i>
