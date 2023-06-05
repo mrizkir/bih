@@ -248,7 +248,7 @@ class KependudukanJpbkuAdminController extends Controller
         'sumber' => '15-19 Tahun',
         'menu_active' => 'menu-kependudukan',
         'sub_menu_active' => 'menu-kependudukan-jpbku',
-        'page_active' => 'kependudukan-jpbku-15-10',
+        'page_active' => 'kependudukan-jpbku-15-19',
         'data' => $data
       ]);
     }
