@@ -58,12 +58,13 @@
                                                         data-target="#modaledit{{ $item->tahun }}">
                                                         <i class="fas fa-pencil-alt"></i> Edit
                                                     </a>
-                                                    {{-- <a href="{{ 'adhb_bdel/'.$item->tahun }}" class="btn btn-info btn-sm"  
+                                                    @hasrole('superadmin')
+                                                    <a href="{{ 'adhb_bdel/'.$item->tahun }}" class="btn btn-info btn-sm"  
                                                        style="font-size: 10px;" class="btn btn-danger btn-sm"  
                                                        onclick="return confirm('Anda Yakin Mau Menghapus ?') ">
                                                        <i class="fas fa-pencil-alt"></i> Del
-                                                   </a>  --}}
- 
+                                                   </a> 
+                                                   @endhasrole
                                                     {{-- VIEW MODAL EDIT --}}
                                                     <div class="modal fade" id="modaledit{{ $item->tahun }}"
                                                         role="dialog">
