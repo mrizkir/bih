@@ -22,8 +22,6 @@
   </ul>
 </nav>
 <!-- /.navbar -->
-
-
 <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
   <!-- Brand Logo -->
@@ -657,8 +655,8 @@
           </ul>
         </li>
 
-        <li class="nav-item">
-          <a href="#" class="nav-link">
+        <li class="nav-item{!!Helper::isMenuActive ($menu_active,'menu-pertanian',' menu-open')!!}">
+          <a href="#" class="nav-link{!!Helper::isMenuActive ($menu_active,'menu-pertanian',' active')!!}">
             <img src="{{ asset('administrator/img_mda/h3.png') }}" style="width:12%;margin:3px;">
             <p style="font-size: 10px;">PERTANIAN DAN PERIKANAN<i class="fas fa-angle-left right"
                 style="margin-top: 10px;"></i>
@@ -666,7 +664,7 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="{{ route('pertanian-ppb.index') }}" class="nav-link">
+              <a href="{{ route('pertanian-ppb.index') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'pertanian-ppb',' active')!!}">
                 <div style="width:30px;height:35px;float:left;">
                   <i class="far fa-circle nav-icon"
                     style="color:rgb(255, 255, 255);font-size:10px;"></i>
@@ -677,7 +675,7 @@
           </ul>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="{{ route('pertanian-ppt.index') }}" class="nav-link">
+              <a href="{{ route('pertanian-ppt.index') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'pertanian-ppt',' active')!!}">
                 <div style="width:30px;height:35px;float:left;">
                   <i class="far fa-circle nav-icon"
                     style="color:rgb(255, 255, 255);font-size:10px;"></i>
@@ -688,7 +686,7 @@
           </ul>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="{{ route('pertanian-cpkup.index') }}" class="nav-link">
+              <a href="{{ route('pertanian-cpkup.index') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'pertanian-cpkup',' active')!!}">
                 <div style="width:30px;height:55px;float:left;">
                   <i class="far fa-circle nav-icon"
                     style="color:rgb(255, 255, 255);font-size:10px;"></i>
@@ -700,7 +698,7 @@
           </ul>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="{{ route('pertanian-cpkh.index') }}" class="nav-link">
+              <a href="{{ route('pertanian-cpkh.index') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'pertanian-cpkh',' active')!!}">
                 <div style="width:30px;height:35px;float:left;">
                   <i class="far fa-circle nav-icon"
                     style="color:rgb(255, 255, 255);font-size:10px;"></i>
@@ -711,7 +709,7 @@
           </ul>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="{{ route('pertanian-jpp.index') }}" class="nav-link">
+              <a href="{{ route('pertanian-jpp.index') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'pertanian-jpp',' active')!!}">
                 <div style="width:30px;height:35px;float:left;">
                   <i class="far fa-circle nav-icon"
                     style="color:rgb(255, 255, 255);font-size:10px;"></i>
@@ -722,15 +720,15 @@
           </ul>
         </li>
 
-        <li class="nav-item">
-          <a href="#" class="nav-link">
+        <li class="nav-item{!!Helper::isMenuActive ($menu_active,'menu-kependudukan',' menu-open')!!}">
+          <a href="#" class="nav-link{!!Helper::isMenuActive ($menu_active,'menu-kependudukan',' active')!!}">
             <img src="{{ asset('administrator/img_mda/h4.png') }}" style="width:12%;margin:3px;">
             <p style="font-size: 10px;">KEPENDUDUKAN<i class="fas fa-angle-left right"
                 style="margin-top: 10px;"></i></p>
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="{{ route('kependudukan-jp.index') }}" class="nav-link">
+              <a href="{{ route('kependudukan-jp.index') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'kependudukan-jp',' active')!!}">
                 <div style="width:30px;height:35px;float:left;">
                   <i class="far fa-circle nav-icon"
                     style="color:rgb(255, 255, 255);font-size:10px;"></i>
@@ -741,7 +739,7 @@
           </ul>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="{{ route('kependudukan-jpbk.index') }}" class="nav-link">
+              <a href="{{ route('kependudukan-jpbk.index') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'kependudukan-jpbk',' active')!!}">
                 <div style="width:30px;height:55px;float:left;">
                   <i class="far fa-circle nav-icon"
                     style="color:rgb(255, 255, 255);font-size:10px;"></i>
@@ -751,7 +749,7 @@
             </li>
           </ul>  
           <ul class="nav nav-treeview">
-            <li class="nav-item">
+            <li class="nav-item{!!Helper::isMenuActive ($sub_menu_active,'menu-kependudukan-jpbku',' menu-open')!!}">
               <a href="" class="nav-link">
                 <div style="width:30px;height:35px;float:left;">
                   <i class="far fa-circle nav-icon"
@@ -762,7 +760,7 @@
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('A-jpbku_04') }}" class="nav-link">
+                  <a href="{{ route('A-jpbku_04') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'kependudukan-jpbku-0-4',' active')!!}">
                     <div style="width:30px;height:35px;float:left;"></div>
                     <p style="font-size: 12px;">0-4 Tahun</p>
                   </a>
@@ -770,7 +768,7 @@
               </ul>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('B-jpbku_59') }}" class="nav-link">
+                  <a href="{{ route('B-jpbku_59') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'kependudukan-jpbku-5-9',' active')!!}">
                     <div style="width:30px;height:35px;float:left;"></div>
                     <p style="font-size: 12px;">5-9 Tahun</p>
                   </a>
@@ -778,7 +776,7 @@
               </ul>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('C-jpbku_1014') }}" class="nav-link">
+                  <a href="{{ route('C-jpbku_1014') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'kependudukan-jpbku-10-14',' active')!!}">
                     <div style="width:30px;height:35px;float:left;"></div>
                     <p style="font-size: 12px;">10-14 Tahun</p>
                   </a>
@@ -786,7 +784,7 @@
               </ul>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('D-jpbku_1519') }}" class="nav-link">
+                  <a href="{{ route('D-jpbku_1519') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'kependudukan-jpbku-15-19',' active')!!}">
                     <div style="width:30px;height:35px;float:left;"></div>
                     <p style="font-size: 12px;">15-19 Tahun</p>
                   </a>
@@ -794,7 +792,7 @@
               </ul>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('E-jpbku_2024') }}" class="nav-link">
+                  <a href="{{ route('E-jpbku_2024') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'kependudukan-jpbku-20-24',' active')!!}">
                     <div style="width:30px;height:35px;float:left;"></div>
                     <p style="font-size: 12px;">20-24 Tahun</p>
                   </a>
@@ -802,7 +800,7 @@
               </ul>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('F-jpbku_2529') }}" class="nav-link">
+                  <a href="{{ route('F-jpbku_2529') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'kependudukan-jpbku-25-29',' active')!!}">
                     <div style="width:30px;height:35px;float:left;"></div>
                     <p style="font-size: 12px;">25-29 Tahun</p>
                   </a>
@@ -810,7 +808,7 @@
               </ul>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('G-jpbku_3034') }}" class="nav-link">
+                  <a href="{{ route('G-jpbku_3034') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'kependudukan-jpbku-30-34',' active')!!}">
                     <div style="width:30px;height:35px;float:left;"></div>
                     <p style="font-size: 12px;">30-34 Tahun</p>
                   </a>
@@ -818,7 +816,7 @@
               </ul>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('H-jpbku_3539') }}" class="nav-link">
+                  <a href="{{ route('H-jpbku_3539') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'kependudukan-jpbku-35-39',' active')!!}">
                     <div style="width:30px;height:35px;float:left;"></div>
                     <p style="font-size: 12px;">35-39 Tahun</p>
                   </a>
@@ -826,7 +824,7 @@
               </ul>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('I-jpbku_4044') }}" class="nav-link">
+                  <a href="{{ route('I-jpbku_4044') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'kependudukan-jpbku-40-44',' active')!!}">
                     <div style="width:30px;height:35px;float:left;"></div>
                     <p style="font-size: 12px;">40-44 Tahun</p>
                   </a>
@@ -834,7 +832,7 @@
               </ul>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('J-jpbku_4549') }}" class="nav-link">
+                  <a href="{{ route('J-jpbku_4549') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'kependudukan-jpbku-45-49',' active')!!}">
                     <div style="width:30px;height:35px;float:left;"></div>
                     <p style="font-size: 12px;">45-49 Tahun</p>
                   </a>
@@ -842,7 +840,7 @@
               </ul>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('K-jpbku_5054') }}" class="nav-link">
+                  <a href="{{ route('K-jpbku_5054') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'kependudukan-jpbku-50-54',' active')!!}">
                     <div style="width:30px;height:35px;float:left;"></div>
                     <p style="font-size: 12px;">50-54 Tahun</p>
                   </a>
@@ -850,7 +848,7 @@
               </ul>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('L-jpbku_5459') }}" class="nav-link">
+                  <a href="{{ route('L-jpbku_5459') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'kependudukan-jpbku-54-59',' active')!!}">
                     <div style="width:30px;height:35px;float:left;"></div>
                     <p style="font-size: 12px;">54-59 Tahun</p>
                   </a>
@@ -858,7 +856,7 @@
               </ul>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('M-jpbku_6064') }}" class="nav-link">
+                  <a href="{{ route('M-jpbku_6064') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'kependudukan-jpbku-60-64',' active')!!}">
                     <div style="width:30px;height:35px;float:left;"></div>
                     <p style="font-size: 12px;">60-64 Tahun</p>
                   </a>
@@ -866,7 +864,7 @@
               </ul>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('N-jpbku_6569') }}" class="nav-link">
+                  <a href="{{ route('N-jpbku_6569') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'kependudukan-jpbku-65-69',' active')!!}">
                     <div style="width:30px;height:35px;float:left;"></div>
                     <p style="font-size: 12px;">65-69 Tahun</p>
                   </a>
@@ -874,7 +872,7 @@
               </ul>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('O-jpbku_7074') }}" class="nav-link">
+                  <a href="{{ route('O-jpbku_7074') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'kependudukan-jpbku-70-74',' active')!!}">
                     <div style="width:30px;height:35px;float:left;"></div>
                     <p style="font-size: 12px;">70-74 Tahun</p>
                   </a>
@@ -882,7 +880,7 @@
               </ul>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('P-jpbku_75') }}" class="nav-link">
+                  <a href="{{ route('P-jpbku_75') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'kependudukan-jpbku-75-n',' active')!!}">
                     <div style="width:30px;height:35px;float:left;"></div>
                     <p style="font-size: 12px;">75+ Tahun</p>
                   </a>
@@ -893,7 +891,7 @@
       </ul>
       <ul class="nav nav-treeview">
         <li class="nav-item">
-          <a href="{{ route('kependudukan-pp.index') }}" class="nav-link">
+          <a href="{{ route('kependudukan-pp.index') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'kependudukan-pp',' active')!!}">
             <div style="width:30px;height:35px;float:left;">
               <i class="far fa-circle nav-icon" style="color:rgb(255, 255, 255);font-size:10px;"></i>
             </div>
@@ -904,7 +902,7 @@
       </li>
  
       <li class="nav-item{!!Helper::isMenuActive ($menu_active,'menu-infrastruktur',' menu-open')!!}">
-        <a href="#" class="nav-link">
+        <a href="#" class="nav-link{!!Helper::isMenuActive ($menu_active,'menu-infrastruktur',' active')!!}">
           <img src="{{ asset('administrator/img_mda/h5.png') }}" style="width:12%;margin:3px;">
           <p style="font-size: 10px;">INFRASTRUKTUR<i class="fas fa-angle-left right"
               style="margin-top: 10px;"></i></p>
@@ -947,15 +945,15 @@
 
 
 
-      <li class="nav-item">
-        <a href="#" class="nav-link">
+      <li class="nav-item{!!Helper::isMenuActive ($menu_active,'video-bintan',' menu-open')!!}">
+        <a href="#" class="nav-link{!!Helper::isMenuActive ($menu_active,'video-bintan',' active')!!}">
           <img src="{{ asset('administrator/img_mda/h6.png') }}" style="width:12%;margin:3px;">
           <p style="font-size: 10px;">VIDEO BINTAN<i class="fas fa-angle-left right"
               style="margin-top: 10px;"></i></p>
         </a>
         <ul class="nav nav-treeview">
           <li class="nav-item">
-            <a href="{{ route('video-dv.index') }}" class="nav-link">
+            <a href="{{ route('video-dv.index') }}" class="nav-link{!!Helper::isMenuActive ($page_active, 'video-dv', ' active')!!}">
               <div style="width:30px;height:35px;float:left;">
                 <i class="far fa-circle nav-icon"
                   style="color:rgb(255, 255, 255);font-size:10px;"></i>
@@ -968,16 +966,15 @@
       </li>
       @hasrole('superadmin')
         <li class="nav-header"></li>
-
-        <li class="nav-item">
-          <a href="#" class="nav-link">
+        <li class="nav-item{!!Helper::isMenuActive ($menu_active,'menu-manajemen-user',' menu-open')!!}">
+          <a href="#" class="nav-link{!!Helper::isMenuActive ($menu_active,'menu-manajemen-user',' active')!!}">
             <img src="{{ asset('administrator/img_mda/h6.png') }}" style="width:12%;margin:3px;">
             <p style="font-size: 10px;">MANAJEMEN USER<i class="fas fa-angle-left right"
                 style="margin-top: 10px;"></i></p>
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="{{ route('user-iu.index') }}" class="nav-link">
+              <a href="{{ route('user-iu.index') }}" class="nav-link{!!Helper::isMenuActive ($page_active, 'manajemen-user', ' active')!!}">
                 <div style="width:30px;height:35px;float:left;">
                   <i class="far fa-circle nav-icon"
                     style="color:rgb(255, 255, 255);font-size:10px;"></i>

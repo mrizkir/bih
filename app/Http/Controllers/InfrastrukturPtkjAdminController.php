@@ -23,7 +23,7 @@ class InfrastrukturPtkjAdminController extends Controller
         'sumber' => 'BPS',
         'menu_active' => 'menu-infrastruktur',
         'sub_menu_active' => 'none',
-        'page_active' => 'infrastruktur-ptk',
+        'page_active' => 'infrastruktur-ptkj',
         'data' => $data
       ]);
     }

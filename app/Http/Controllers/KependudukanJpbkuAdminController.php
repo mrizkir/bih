@@ -23,7 +23,7 @@ class KependudukanJpbkuAdminController extends Controller
         'title' => 'Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU)',
         'sumber' => '0-4 Tahun',
         'menu_active' => 'menu-kependudukan',
-        'sub_menu_active' => 'none',
+        'sub_menu_active' => 'menu-kependudukan-jpbku',
         'page_active' => 'kependudukan-jpbku-0-4',
         'data' => $data
       ]);
@@ -97,7 +97,7 @@ class KependudukanJpbkuAdminController extends Controller
         'title' => 'Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU)',
         'sumber' => '5-9 Tahun',
         'menu_active' => 'menu-kependudukan',
-        'sub_menu_active' => 'none',
+        'sub_menu_active' => 'menu-kependudukan-jpbku',
         'page_active' => 'kependudukan-jpbku-5-9',
         'data' => $data
       ]);
@@ -171,7 +171,7 @@ class KependudukanJpbkuAdminController extends Controller
         'title' => 'Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU)',
         'sumber' => '10-14 Tahun',
         'menu_active' => 'menu-kependudukan',
-        'sub_menu_active' => 'none',
+        'sub_menu_active' => 'menu-kependudukan-jpbku',
         'page_active' => 'kependudukan-jpbku-10-14',
         'data' => $data
       ]);
@@ -247,7 +247,7 @@ class KependudukanJpbkuAdminController extends Controller
         'title' => 'Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU)',
         'sumber' => '15-19 Tahun',
         'menu_active' => 'menu-kependudukan',
-        'sub_menu_active' => 'none',
+        'sub_menu_active' => 'menu-kependudukan-jpbku',
         'page_active' => 'kependudukan-jpbku-15-10',
         'data' => $data
       ]);
@@ -324,7 +324,7 @@ class KependudukanJpbkuAdminController extends Controller
         'title' => 'Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU)',
         'sumber' => '20-24 Tahun',
         'menu_active' => 'menu-kependudukan',
-        'sub_menu_active' => 'none',
+        'sub_menu_active' => 'menu-kependudukan-jpbku',
         'page_active' => 'kependudukan-jpbku-20-24',
         'data' => $data
       ]);
@@ -401,7 +401,7 @@ class KependudukanJpbkuAdminController extends Controller
         'title' => 'Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU)',
         'sumber' => '25-29 Tahun',
         'menu_active' => 'menu-kependudukan',
-        'sub_menu_active' => 'none',
+        'sub_menu_active' => 'menu-kependudukan-jpbku',
         'page_active' => 'kependudukan-jpbku-25-29',
         'data' => $data
       ]);
@@ -479,7 +479,7 @@ class KependudukanJpbkuAdminController extends Controller
         'title' => 'Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU)',
         'sumber' => '30-34 Tahun',
         'menu_active' => 'menu-kependudukan',
-        'sub_menu_active' => 'none',
+        'sub_menu_active' => 'menu-kependudukan-jpbku',
         'page_active' => 'kependudukan-jpbku-30-34',
         'data' => $data
       ]);
@@ -554,7 +554,7 @@ class KependudukanJpbkuAdminController extends Controller
         'title' => 'Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU)',
         'sumber' => '35-39 Tahun',
         'menu_active' => 'menu-kependudukan',
-        'sub_menu_active' => 'none',
+        'sub_menu_active' => 'menu-kependudukan-jpbku',
         'page_active' => 'kependudukan-jpbku-35-39',
         'data' => $data
       ]);
@@ -629,7 +629,7 @@ class KependudukanJpbkuAdminController extends Controller
         'title' => 'Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU)',
         'sumber' => '40-44 Tahun',
         'menu_active' => 'menu-kependudukan',
-        'sub_menu_active' => 'none',
+        'sub_menu_active' => 'menu-kependudukan-jpbku',
         'page_active' => 'kependudukan-jpbku-40-44',
         'data' => $data
       ]);
@@ -704,7 +704,7 @@ class KependudukanJpbkuAdminController extends Controller
         'title' => 'Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU)',
         'sumber' => '45-49 Tahun',
         'menu_active' => 'menu-kependudukan',
-        'sub_menu_active' => 'none',
+        'sub_menu_active' => 'menu-kependudukan-jpbku',
         'page_active' => 'kependudukan-jpbku-45-49',
         'data' => $data
       ]);
@@ -780,7 +780,7 @@ class KependudukanJpbkuAdminController extends Controller
         'title' => 'Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU)',
         'sumber' => '50-54 Tahun',
         'menu_active' => 'menu-kependudukan',
-        'sub_menu_active' => 'none',
+        'sub_menu_active' => 'menu-kependudukan-jpbku',
         'page_active' => 'kependudukan-jpbku-50-54',
         'data' => $data
       ]);
@@ -856,7 +856,7 @@ class KependudukanJpbkuAdminController extends Controller
         'title' => 'Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU)',
         'sumber' => '54-59 Tahun',
         'menu_active' => 'menu-kependudukan',
-        'sub_menu_active' => 'none',
+        'sub_menu_active' => 'menu-kependudukan-jpbku',
         'page_active' => 'kependudukan-jpbku-54-59',
         'data' => $data
       ]);
@@ -932,7 +932,7 @@ class KependudukanJpbkuAdminController extends Controller
         'title' => 'Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU)',
         'sumber' => '60-64 Tahun',
         'menu_active' => 'menu-kependudukan',
-        'sub_menu_active' => 'none',
+        'sub_menu_active' => 'menu-kependudukan-jpbku',
         'page_active' => 'kependudukan-jpbku-60-64',
         'data' => $data
       ]);
@@ -1011,7 +1011,7 @@ class KependudukanJpbkuAdminController extends Controller
         'title' => 'Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU)',
         'sumber' => '65-69 Tahun',
         'menu_active' => 'menu-kependudukan',
-        'sub_menu_active' => 'none',
+        'sub_menu_active' => 'menu-kependudukan-jpbku',
         'page_active' => 'kependudukan-jpbku-65-69',
         'data' => $data
       ]);
@@ -1089,7 +1089,7 @@ class KependudukanJpbkuAdminController extends Controller
         'title' => 'Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU)',
         'sumber' => '70-74 Tahun',
         'menu_active' => 'menu-kependudukan',
-        'sub_menu_active' => 'none',
+        'sub_menu_active' => 'menu-kependudukan-jpbku',
         'page_active' => 'kependudukan-jpbku-70-74',
         'data' => $data
       ]);
@@ -1165,7 +1165,7 @@ class KependudukanJpbkuAdminController extends Controller
         'title' => 'Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU)',
         'sumber' => '75+ Tahun',
         'menu_active' => 'menu-kependudukan',
-        'sub_menu_active' => 'none',
+        'sub_menu_active' => 'menu-kependudukan-jpbku',
         'page_active' => 'kependudukan-jpbku-75-n',
         'data' => $data
       ]);
