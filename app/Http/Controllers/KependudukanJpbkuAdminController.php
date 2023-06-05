@@ -1177,7 +1177,7 @@ class KependudukanJpbkuAdminController extends Controller
       'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'), 
       'jumlah' => 'required|numeric|min:0|max:100',
       'status_data' => 'required|in:1,2,3',
-    ]);
+    ]); 
  
     \DB::table('m_26_penduduk_umur')->insert([
       'tahun' => $request->input('tahun'),
