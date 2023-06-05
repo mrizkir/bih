@@ -375,39 +375,91 @@ Route::group(
     Route::get('/jpbk/{id}/edit', [KependudukanJpbkAdminController::class, 'jpbkEdit'])->name('kependudukan-jpbk.edit');
     Route::put('/jpbk/{id}', [KependudukanJpbkAdminController::class, 'jpbkUpdate'])->name('kependudukan-jpbk.update');  
     Route::get('/jpbkdel/{id}', [KependudukanJpbkAdminController::class, 'jpbkDel'])->name('kependudukan-jpbk.del');       
-  
-    // //KEPENDUDUKAN  Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU) - [m_26_penduduk_umur]
-    // Route::get('/jpbku', [KependudukanJpbkuAdminController::class, 'jpbkuIndex'])->name('kependudukan-jpbku.index'); 
-    // Route::post('/jpbku/store', [KependudukanJpbkuAdminController::class, 'jpbkuStore'])->name('kependudukan-jpbku.store');
-    // Route::get('/jpbku/{id}/edit', [KependudukanJpbkuAdminController::class, 'jpbkuEdit'])->name('kependudukan-jpbku.edit');
-    // Route::put('/jpbku/{id}', [KependudukanJpbkuAdminController::class, 'jpbkuUpdate'])->name('kependudukan-jpbku.update');         
-
+   
     //KEPENDUDUKAN  Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU) - [m_26_penduduk_umur]
-    Route::get('/jpbku_04Tahun', [KependudukanJpbkuAdminController::class, 'jpbku_04Tahun'])->name('A-jpbku_04Tahun');  
+    Route::get('/jpbku_04Tahun', [KependudukanJpbkuAdminController::class, 'jpbku_04Tahun'])->name('A-jpbku_04');  
     Route::post('/jpbku_04Tahun/store', [KependudukanJpbkuAdminController::class, 'jpbku_04TahunStore'])->name('jpbku_04Tahun.store');
     Route::put('/jpbku_04Tahun/{id}', [KependudukanJpbkuAdminController::class, 'jpbku_04TahunUpdate'])->name('jpbku_04Tahun.update');  
     Route::get('/jpbku_04Tahundel/{id}', [KependudukanJpbkuAdminController::class, 'jpbku_04TahunDel'])->name('jpbku_04Tahun.del'); 
     
-    Route::get('/jpbku_59Tahun', [KependudukanJpbkuAdminController::class, 'jpbku_59Tahun'])->name('B-jpbku_59Tahun');
+    Route::get('/jpbku_59Tahun', [KependudukanJpbkuAdminController::class, 'jpbku_59Tahun'])->name('B-jpbku_59');
     Route::post('/jpbku_59Tahun/store', [KependudukanJpbkuAdminController::class, 'jpbku_59TahunStore'])->name('jpbku_59Tahun.store');
     Route::put('/jpbku_59Tahun/{id}', [KependudukanJpbkuAdminController::class, 'jpbku_59TahunUpdate'])->name('jpbku_59Tahun.update');
     Route::get('/jpbku_59Tahundel/{id}', [KependudukanJpbkuAdminController::class, 'jpbku_59TahunDel'])->name('jpbku_59Tahun.del');
 
 
-    Route::get('/jpbku_1014Tahun', [KependudukanJpbkuAdminController::class, 'jpbku_1014Tahun'])->name('C-jpbku_1014Tahun'); 
-    Route::get('/jpbku_1519Tahun', [KependudukanJpbkuAdminController::class, 'jpbku_1519Tahun'])->name('D-jpbku_1519Tahun'); 
-    Route::get('/jpbku_2024Tahun', [KependudukanJpbkuAdminController::class, 'jpbku_2024Tahun'])->name('E-jpbku_2024Tahun'); 
-    Route::get('/jpbku_2529Tahun', [KependudukanJpbkuAdminController::class, 'jpbku_2529Tahun'])->name('F-jpbku_2529Tahun'); 
-    Route::get('/jpbku_3034Tahun', [KependudukanJpbkuAdminController::class, 'jpbku_3034Tahun'])->name('G-jpbku_3034Tahun'); 
-    Route::get('/jpbku_3539Tahun', [KependudukanJpbkuAdminController::class, 'jpbku_3539Tahun'])->name('H-jpbku_3539Tahun'); 
-    Route::get('/jpbku_4044Tahun', [KependudukanJpbkuAdminController::class, 'jpbku_4044Tahun'])->name('I-jpbku_4044Tahun'); 
-    Route::get('/jpbku_4549Tahun', [KependudukanJpbkuAdminController::class, 'jpbku_4549Tahun'])->name('J-jpbku_4549Tahun'); 
-    Route::get('/jpbku_5054Tahun', [KependudukanJpbkuAdminController::class, 'jpbku_5054Tahun'])->name('K-jpbku_5054Tahun'); 
-    Route::get('/jpbku_5459Tahun', [KependudukanJpbkuAdminController::class, 'jpbku_5459Tahun'])->name('L-jpbku_5459Tahun'); 
-    Route::get('/jpbku_6064Tahun', [KependudukanJpbkuAdminController::class, 'jpbku_6064Tahun'])->name('M-jpbku_6064Tahun'); 
-    Route::get('/jpbku_6569Tahun', [KependudukanJpbkuAdminController::class, 'jpbku_6569Tahun'])->name('N-jpbku_6569Tahun');  
-    Route::get('/jpbku_7074Tahun', [KependudukanJpbkuAdminController::class, 'jpbku_7074Tahun'])->name('O-jpbku_7074Tahun');  
-    Route::get('/jpbku_75Tahun', [KependudukanJpbkuAdminController::class, 'jpbku_75Tahun'])->name('P-jpbku_75Tahun');  
+    Route::get('/jpbku_1014Tahun', [KependudukanJpbkuAdminController::class, 'jpbku_1014Tahun'])->name('C-jpbku_1014');
+    Route::post('/jpbku_1014Tahun/store', [KependudukanJpbkuAdminController::class, 'jpbku_1014TahunStore'])->name('jpbku_1014Tahun.store');   
+    Route::put('/jpbku_1014Tahun/{id}', [KependudukanJpbkuAdminController::class, 'jpbku_1014TahunUpdate'])->name('jpbku_1014Tahun.update');
+    Route::get('/jpbku_1014Tahundel/{id}', [KependudukanJpbkuAdminController::class, 'jpbku_1014TahunDel'])->name('C-jpbku_1014Tahun.del');
+    
+    Route::get('/jpbku_1519', [KependudukanJpbkuAdminController::class, 'jpbku_1519'])->name('D-jpbku_1519');
+    Route::post('/jpbku_1519/store', [KependudukanJpbkuAdminController::class, 'jpbku_1519Store'])->name('jpbku_1519.store');   
+    Route::put('/jpbku_1519/{id}', [KependudukanJpbkuAdminController::class, 'jpbku_1519Update'])->name('jpbku_1519.update');
+    Route::get('/jpbku_1519del/{id}', [KependudukanJpbkuAdminController::class, 'jpbku_1519Del'])->name('jpbku_1519.del');
+ 
+    Route::get('/jpbku_2024', [KependudukanJpbkuAdminController::class, 'jpbku_2024'])->name('E-jpbku_2024'); 
+    Route::post('/jpbku_2024/store', [KependudukanJpbkuAdminController::class, 'jpbku_2024Store'])->name('jpbku_2024.store'); 
+    Route::put('/jpbku_2024/{id}', [KependudukanJpbkuAdminController::class, 'jpbku_2024Update'])->name('jpbku_2024.update'); 
+    Route::get('/jpbku_2024del/{id}', [KependudukanJpbkuAdminController::class, 'jpbku_2024Del'])->name('jpbku_2024.del'); 
+
+    Route::get('/jpbku_2529', [KependudukanJpbkuAdminController::class, 'jpbku_2529'])->name('F-jpbku_2529'); 
+    Route::post('/jpbku_2529/store', [KependudukanJpbkuAdminController::class, 'jpbku_2529Store'])->name('jpbku_2529.store');
+    Route::put('/jpbku_2529/{id}', [KependudukanJpbkuAdminController::class, 'jpbku_2529Update'])->name('jpbku_2529.update');
+    Route::get('/jpbku_2529del/{id}', [KependudukanJpbkuAdminController::class, 'jpbku_2529Del'])->name('jpbku_2529.del');
+
+    Route::get('/jpbku_3034', [KependudukanJpbkuAdminController::class, 'jpbku_3034'])->name('G-jpbku_3034'); 
+    Route::post('/jpbku_3034/store', [KependudukanJpbkuAdminController::class, 'jpbku_3034Store'])->name('jpbku_3034.store'); 
+    Route::put('/jpbku_3034/{id}', [KependudukanJpbkuAdminController::class, 'jpbku_3034Update'])->name('jpbku_3034.update'); 
+    Route::get('/jpbku_3034del/{id}', [KependudukanJpbkuAdminController::class, 'jpbku_3034Del'])->name('jpbku_3034.del'); 
+
+    Route::get('/jpbku_3539', [KependudukanJpbkuAdminController::class, 'jpbku_3539'])->name('H-jpbku_3539');
+    Route::post('/jpbku_3539/store', [KependudukanJpbkuAdminController::class, 'jpbku_3539Store'])->name('jpbku_3539.store');
+    Route::put('/jpbku_3539/{id}', [KependudukanJpbkuAdminController::class, 'jpbku_3539Update'])->name('jpbku_3539.update');
+    Route::get('/jpbku_3539del/{id}', [KependudukanJpbkuAdminController::class, 'jpbku_3539Del'])->name('jpbku_3539.del');
+
+    Route::get('/jpbku_4044', [KependudukanJpbkuAdminController::class, 'jpbku_4044'])->name('I-jpbku_4044'); 
+    Route::post('/jpbku_4044/store', [KependudukanJpbkuAdminController::class, 'jpbku_4044Store'])->name('jpbku_4044.store'); 
+    Route::put('/jpbku_4044/{id}', [KependudukanJpbkuAdminController::class, 'jpbku_4044Update'])->name('jpbku_4044.update'); 
+    Route::get('/jpbku_4044del/{id}', [KependudukanJpbkuAdminController::class, 'jpbku_4044Del'])->name('jpbku_4044.del'); 
+
+    Route::get('/jpbku_4549', [KependudukanJpbkuAdminController::class, 'jpbku_4549'])->name('J-jpbku_4549');
+    Route::post('/jpbku_4549/store', [KependudukanJpbkuAdminController::class, 'jpbku_4549Store'])->name('jpbku_4549.store'); 
+    Route::put('/jpbku_4549/{id}', [KependudukanJpbkuAdminController::class, 'jpbku_4549Update'])->name('jpbku_4549.update'); 
+    Route::get('/jpbku_4549del/{id}', [KependudukanJpbkuAdminController::class, 'jpbku_4549Del'])->name('jpbku_4549.del'); 
+    
+    Route::get('/jpbku_5054', [KependudukanJpbkuAdminController::class, 'jpbku_5054'])->name('K-jpbku_5054'); 
+    Route::post('/jpbku_5054/store', [KependudukanJpbkuAdminController::class, 'jpbku_5054Store'])->name('jpbku_5054.store'); 
+    Route::put('/jpbku_5054/{id}', [KependudukanJpbkuAdminController::class, 'jpbku_5054Update'])->name('jpbku_5054.update'); 
+    Route::get('/jpbku_5054del/{id}', [KependudukanJpbkuAdminController::class, 'jpbku_5054Del'])->name('jpbku_5054.del'); 
+
+    Route::get('/jpbku_5459', [KependudukanJpbkuAdminController::class, 'jpbku_5459'])->name('L-jpbku_5459'); 
+    Route::post('/jpbku_5459/store', [KependudukanJpbkuAdminController::class, 'jpbku_5459Store'])->name('jpbku_5459.store'); 
+    Route::put('/jpbku_5459/{id}', [KependudukanJpbkuAdminController::class, 'jpbku_5459Update'])->name('jpbku_5459.update'); 
+    Route::get('/jpbku_5459del/{id}', [KependudukanJpbkuAdminController::class, 'jpbku_5459Del'])->name('jpbku_5459.del'); 
+
+
+    Route::get('/jpbku_6064', [KependudukanJpbkuAdminController::class, 'jpbku_6064'])->name('M-jpbku_6064'); 
+    Route::post('/jpbku_6064/store', [KependudukanJpbkuAdminController::class, 'jpbku_6064Store'])->name('jpbku_6064.store');
+    Route::put('/jpbku_6064/{id}', [KependudukanJpbkuAdminController::class, 'jpbku_6064Update'])->name('jpbku_6064.update');
+    Route::get('/jpbku_6064del/{id}', [KependudukanJpbkuAdminController::class, 'jpbku_6064Del'])->name('jpbku_6064.del');
+
+
+    Route::get('/jpbku_6569', [KependudukanJpbkuAdminController::class, 'jpbku_6569'])->name('N-jpbku_6569'); 
+    Route::post('/jpbku_6569/store', [KependudukanJpbkuAdminController::class, 'jpbku_6569Store'])->name('jpbku_6569.store'); 
+    Route::put('/jpbku_6569/{id}', [KependudukanJpbkuAdminController::class, 'jpbku_6569Update'])->name('jpbku_6569.update'); 
+    Route::get('/jpbku_6569del/{id}', [KependudukanJpbkuAdminController::class, 'jpbku_6569Del'])->name('jpbku_6569.del'); 
+    
+    
+    Route::get('/jpbku_7074', [KependudukanJpbkuAdminController::class, 'jpbku_7074'])->name('O-jpbku_7074');  
+    Route::post('/jpbku_7074/store', [KependudukanJpbkuAdminController::class, 'jpbku_7074Store'])->name('jpbku_7074.store');   
+    Route::put('/jpbku_7074/{id}', [KependudukanJpbkuAdminController::class, 'jpbku_7074Update'])->name('jpbku_7074.update');   
+    Route::get('/jpbku_7074del/{id}', [KependudukanJpbkuAdminController::class, 'jpbku_7074Del'])->name('jpbku_7074.del');  
+
+    Route::get('/jpbku_75', [KependudukanJpbkuAdminController::class, 'jpbku_75'])->name('P-jpbku_75');  
+    Route::post('/jpbku_75/store', [KependudukanJpbkuAdminController::class, 'jpbku_75Store'])->name('jpbku_75.store');    
+    Route::put('/jpbku_75/{id}', [KependudukanJpbkuAdminController::class, 'jpbku_75Update'])->name('jpbku_75.update');   
+    Route::get('/jpbku_75del/{id}', [KependudukanJpbkuAdminController::class, 'jpbku_75Del'])->name('jpbku_75,del'); 
   
     //KEPENDUDUKAN  Pertumbuhan Penduduk (PP) - [m_27_laju_pertumbuhan]
     Route::get('/pp', [KependudukanPpAdminController::class, 'ppIndex'])->name('kependudukan-pp.index'); 
