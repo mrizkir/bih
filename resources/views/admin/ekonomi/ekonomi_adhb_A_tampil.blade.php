@@ -50,7 +50,7 @@
                                                 <td><strong>Tahun</strong> : {{ $item->tahun }} | 
                                                     <strong>Data Series</strong> :
                                                     {{ Helper::getJenisDataSeries($item->status_data) }} |
-                                                    <strong>Pertumbuhan Ekonomi </strong> : {{ $item->jumlah }} 
+                                                    <strong>Jumlah </strong> : {{ $item->jumlah }} 
                                                 </td>
                                                 <td class="project-actions text-center" style="padding: 10px;">
                                                     <a href="" class="btn btn-info btn-sm" data-toggle="modal"
@@ -105,7 +105,7 @@
                                                                                                     </div>
                                                                                                 @endif
                                                                                             </div>
-                                                                                            <div class="col-4">status_data
+                                                                                            <div class="col-4">
                                                                                                 <label>Data Series</label>
                                                                                                 {!! Form::select('status_data', Helper::getJenisDataSeries(), $item->status_data, [
                                                                                                     'id' => 'status_data',

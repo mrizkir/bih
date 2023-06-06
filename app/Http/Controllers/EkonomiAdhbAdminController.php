@@ -7,7 +7,7 @@ use App\Models\DataSosialModel;
 
 class EkonomiAdhbAdminController extends Controller
 {
-   
+    
  
   public function adhb_a()
   { 
@@ -1106,12 +1106,12 @@ class EkonomiAdhbAdminController extends Controller
     ->first();  
 
   
-    return view('admin.ekonomi.ekonomi_adhb_O_tampil', [
+    return view('admin.ekonomi.ekonomi_adhb_o_tampil', [
       'title' => 'Distribusi PDRB Atas Dasar Harga Berlaku (ADHB)',
       'sumber' => $kt->kategori.'. '.$kt->uraian,
       'menu_active' => 'menu-ekonomi',
       'sub_menu_active' => 'menu-ekonomi-adhb',
-      'page_active' => 'ekonomi-adhb-o',
+      'page_active' => 'ekonomi-adhb',
       'data' => $data
     ]);
   }
@@ -1131,7 +1131,7 @@ class EkonomiAdhbAdminController extends Controller
       'status_data' => $request->input('status_data'),
     ]); 
      
-    return redirect(route('ekonomi-adhb_O'))->with('success', 'data berhasil disimpan');
+    return redirect(route('ekonomi-adhb_T'))->with('success', 'data berhasil disimpan');
   }
   public function adhb_oUpdate(Request $request, $id)
   {
@@ -1141,7 +1141,7 @@ class EkonomiAdhbAdminController extends Controller
 
     if (is_null($data)) 
     {
-      return redirect(route('ekonomi-adhb_O'))->with('error', 'data gagal disimpan');
+      return redirect(route('ekonomi-adhb_T'))->with('error', 'data gagal disimpan');
     }
     else
     {
@@ -1158,14 +1158,14 @@ class EkonomiAdhbAdminController extends Controller
         'uraian' => 14,      
         'status_data' => $request->input('status_data'),
       ]);
-      return redirect(route('ekonomi-adhb_O'))->with('success', 'data berhasil diubah');
+      return redirect(route('ekonomi-adhb_T'))->with('success', 'data berhasil diubah');
     }    
   }
   public function adhb_oDel($id)
     {
       $data = \DB::table('m_19_pdrb_berlaku')->where('tahun', $id);
       $data->delete();
-        return redirect(route('ekonomi-adhb_O'))->with('sukses', 'Data Sudah di Hapus');
+        return redirect(route('ekonomi-adhb_T'))->with('sukses', 'Data Sudah di Hapus');
     }
 
 

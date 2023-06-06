@@ -435,7 +435,7 @@
                     <p style="font-size: 12px;">L. Real Estate</p>
                   </a>
                 </li>
-              </ul>
+              </ul> 
               <ul class="nav nav-treeview">
                 <li class="nav-item">
                   <a href="{{ route('ekonomi-adhb_MN') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'ekonomi-adhb-mn',' active')!!}">
