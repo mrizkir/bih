@@ -1111,7 +1111,7 @@ class EkonomiAdhbAdminController extends Controller
       'sumber' => $kt->kategori.'. '.$kt->uraian,
       'menu_active' => 'menu-ekonomi',
       'sub_menu_active' => 'menu-ekonomi-adhb',
-      'page_active' => 'ekonomi-adhb',
+      'page_active' => 'ekonomi-adhb-o',
       'data' => $data
     ]);
   }

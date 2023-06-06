@@ -25,7 +25,7 @@ class EkonomiKwAdminController extends Controller
         'sumber' => 'BPS',
         'menu_active' => 'menu-ekonomi',
         'sub_menu_active' => 'none',
-        'page_active' => 'ekonomi-adhk-kw',
+        'page_active' => 'ekonomi-kw',
         'data' => $data
       ]);
     }

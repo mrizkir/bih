@@ -149,7 +149,7 @@
           </ul>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="{{ route('sosial-ipg.index') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'sosial-ipg',' active')!!}">
+              <a href="{{ route('sosial-ipg.index') }}" class="nav-link{!!Helper::isMenuActive ($page_active, 'sosial-ipg',' active')!!}">
                 <div style="width:30px;height:35px;float:left;">
                   <i class="far fa-circle nav-icon"
                     style="color:rgb(255, 255, 255);font-size:10px;"></i>
@@ -633,7 +633,7 @@
           </ul>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="{{ route('ekonomi-kw.index') }}" class="nav-link">
+              <a href="{{ route('ekonomi-kw.index') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'ekonomi-kw',' active')!!}">
                 <div style="width:30px;height:35px;float:left;">
                   <i class="far fa-circle nav-icon"
                     style="color:rgb(255, 255, 255);font-size:10px;"></i>
@@ -644,7 +644,7 @@
           </ul>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="{{ route('ekonomi-pma.index') }}" class="nav-link">
+              <a href="{{ route('ekonomi-pma.index') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'ekonomi-pma',' active')!!}">
                 <div style="width:30px;height:35px;float:left;">
                   <i class="far fa-circle nav-icon"
                     style="color:rgb(255, 255, 255);font-size:10px;"></i>

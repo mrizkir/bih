@@ -23,7 +23,7 @@ class EkonomiPmaAdminController extends Controller
         'sumber' => 'BPS',
         'menu_active' => 'menu-ekonomi',
         'sub_menu_active' => 'none',
-        'page_active' => 'ekonomi-adhk-pma',
+        'page_active' => 'ekonomi-pma',
         'data' => $data
       ]);
     }
