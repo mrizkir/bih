@@ -45,9 +45,9 @@
                                             <tr style="font-size: 11px;">
                                                 <td class="text-center">{{ $k + 1 }}</th>
                                                 <td><strong>Tahun</strong> : {{ $item->tahun }} | 
-                                                    <strong>Series</strong> :
+                                                    <strong>Data Series</strong> :
                                                     {{ Helper::getJenisDataSeries($item->status_data) }} |
-                                                    <strong>Indeks Pemeberdayaan Gender (IPGG) </strong> : {{ $item->idg }}%</td>
+                                                    <strong>Nilai</strong> : {{ $item->idg }}</td>
                                                 <td class="project-actions text-center" style="padding: 10px;">
                                                     <a href="" class="btn btn-info btn-sm" data-toggle="modal"
                                                         style="font-size: 10px;"

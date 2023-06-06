@@ -45,9 +45,9 @@
                                             <tr style="font-size: 11px;">
                                                 <td class="text-center">{{ $k + 1 }}</th>
                                                 <td><strong>Tahun</strong> : {{ $item->tahun }} | 
-                                                    <strong>Series</strong> :
+                                                    <strong>Data Series</strong> :
                                                     {{ Helper::getJenisDataSeries($item->status_data) }} |
-                                                    <strong>jumlah </strong> : {{ $item->jumlah }}</td>
+                                                    <strong>Jumlah </strong> : {{ $item->jumlah }}</td>
                                                 <td class="project-actions text-center" style="padding: 10px;">
                                                     <a href="" class="btn btn-info btn-sm" data-toggle="modal"
                                                         style="font-size: 10px;"
@@ -100,7 +100,7 @@
                                                                                                     </div>
                                                                                                 @endif
                                                                                             </div>
-                                                                                            <div class="col-4">status_data
+                                                                                            <div class="col-4">
                                                                                                 <label>Data Series</label>
                                                                                                 {!! Form::select('status_data', Helper::getJenisDataSeries(), $item->status_data, [
                                                                                                     'id' => 'status_data',
@@ -119,8 +119,7 @@
                                                                                                 @endif
                                                                                             </div>
                                                                                             <div class="col-4">
-                                                                                                <label>Data
-                                                                                                    Persentase</label>
+                                                                                                <label>Data Realisasi Investasi</label>
                                                                                                 <input type="text"
                                                                                                     name="jumlah"
                                                                                                     class="form-control @error('jumlah') is-invalid @enderror"
@@ -217,7 +216,7 @@
                                             ]) !!}
                                         </div>
                                         <div class="col-4">
-                                            <label>Data Angka Harapan Hidup</label>
+                                            <label>Data Realisasi Investasi</label>
                                             <input type="text" name="jumlah"
                                                 class="form-control @error('jumlah') is-invalid @enderror"
                                                 placeholder="Ketik Data jumlahh" required>

@@ -47,8 +47,9 @@
                                                 <td class="text-center">{{ $k + 1 }}</th>
                                                 <td><strong>tahun</strong> : {{ $item->tahun }} | <strong>Series</strong> :
                                                     {{ Helper::getJenisDataSeries($item->status_data) }} |
-                                                    <strong>Laki-Laki </strong> : {{ $item->laki }} |
-                                                    <strong>Perempuan </strong> : {{ $item->perempuan }}
+                                                    <strong>Laki-Laki </strong> : {{ $item->laki }}% |
+                                                    <strong>Perempuan </strong> : {{ $item->perempuan }}% |
+                                                    <strong>Total </strong> : {{ $item->total }}%
                                                 </td>
                                                 <td class="project-actions text-center" style="padding: 10px;">
                                                     <a href="" class="btn btn-info btn-sm" data-toggle="modal"

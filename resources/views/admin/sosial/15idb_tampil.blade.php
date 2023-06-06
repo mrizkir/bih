@@ -46,7 +46,7 @@
                                                 <td class="text-center">{{ $k + 1 }}</th>
                                                 <td><strong>Tahun</strong> : {{ $item->tahun }} | <strong>Series</strong> :
                                                     {{ Helper::getJenisDataSeries($item->status_data) }} |
-                                                    <strong>Gini Ratio</strong> : {{ $item->daya_beli }}</td>
+                                                    <strong>Indeks Daya Beli</strong> : {{ $item->daya_beli }}</td>
                                                 <td class="project-actions text-center" style="padding: 10px;">
                                                     <a href="" class="btn btn-info btn-sm" data-toggle="modal"
                                                         style="font-size: 10px;"

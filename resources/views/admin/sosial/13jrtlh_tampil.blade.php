@@ -46,7 +46,7 @@
                                                 <td class="text-center">{{ $k + 1 }}</th>
                                                 <td><strong>Tahun</strong> : {{ $item->tahun }} | <strong>Series</strong> :
                                                     {{ Helper::getJenisDataSeries($item->status_data) }} |
-                                                    <strong>Presentase</strong> : {{ $item->jml }}</td>
+                                                    <strong>Presentase</strong> : {{ $item->jumlah_unit }}</td>
                                                 <td class="project-actions text-center" style="padding: 10px;">
                                                     <a href="" class="btn btn-info btn-sm" data-toggle="modal"
                                                         style="font-size: 10px;"
@@ -120,18 +120,18 @@
                                                                                             <div class="col-4">
                                                                                                 <label>Jumlah</label>
                                                                                                 <input type="text"
-                                                                                                    name="jml"
-                                                                                                    class="form-control @error('jml') is-invalid @enderror"
-                                                                                                    value="{{ $item->jml }}"
+                                                                                                    name="jumlah_unit"
+                                                                                                    class="form-control @error('jumlah_unit') is-invalid @enderror"
+                                                                                                    value="{{ $item->jumlah_unit }}"
                                                                                                     required>
-                                                                                                @if ($errors->has('jml'))
+                                                                                                @if ($errors->has('jumlah_unit'))
                                                                                                     <div class="alert alert-danger mt-1 alert-validation-msg"
                                                                                                         role="alert">
                                                                                                         <div
                                                                                                             class="alert-body d-flex align-items-center">
                                                                                                             <i data-feather="info"
                                                                                                                 class="me-50"></i>
-                                                                                                            {{ $errors->first('jml') }}
+                                                                                                            {{ $errors->first('jumlah_unit') }}
                                                                                                         </div>
                                                                                                     </div>
                                                                                                 @endif
@@ -216,14 +216,14 @@
                                         </div>
                                         <div class="col-4">
                                             <label>Data Jumlah </label>
-                                            <input type="text" name="jml"
-                                                class="form-control @error('jml') is-invalid @enderror"
-                                                placeholder="Ketik Data jml" required>
-                                            @if ($errors->has('jml'))
+                                            <input type="text" name="jumlah_unit"
+                                                class="form-control @error('jumlah_unit') is-invalid @enderror"
+                                                placeholder="Ketik Data jumlah_unit" required>
+                                            @if ($errors->has('jumlah_unit'))
                                                 <div class="alert alert-danger mt-1 alert-validation-msg" role="alert">
                                                     <div class="alert-body d-flex align-items-center">
                                                         <i data-feather="info" class="me-50"></i>
-                                                        {{ $errors->first('jml') }}
+                                                        {{ $errors->first('jumlah_unit') }}
                                                     </div>
                                                 </div>
                                             @endif

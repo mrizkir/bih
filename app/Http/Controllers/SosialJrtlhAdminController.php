@@ -12,7 +12,7 @@ class SosialJrtlhAdminController extends Controller
       $data = \DB::table('m_13_rtlh')
       ->select(\DB::raw('
         tahun,
-        jml,
+        jumlah_unit,
         status_data
       '))    
       ->orderBy('tahun', 'desc')
@@ -32,13 +32,13 @@ class SosialJrtlhAdminController extends Controller
   {
     $this->validate($request, [
       'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
-      'jml' => 'required|numeric|min:0|max:100',
+      'jumlah_unit' => 'required|numeric|min:0|max:100',
       'status_data' => 'required|in:1,2,3',
     ]);
  
     \DB::table('m_13_rtlh')->insert([
       'tahun' => $request->input('tahun'),
-      'jml' => $request->input('jml'),      
+      'jumlah_unit' => $request->input('jumlah_unit'),      
       'status_data' => $request->input('status_data'),
     ]); 
      
@@ -57,13 +57,13 @@ class SosialJrtlhAdminController extends Controller
     else
     {
       $this->validate($request, [        
-        'jml' => 'required|numeric|min:0|max:100',
+        'jumlah_unit' => 'required|numeric|min:0|max:100',
         'status_data' => 'required|in:1,2,3',
       ]);
       \DB::table('m_13_rtlh')
       ->where('tahun', $request->input('tahun'))
       ->update([
-        'jml' => $request->input('jml'),      
+        'jumlah_unit' => $request->input('jumlah_unit'),      
         'status_data' => $request->input('status_data'),
       ]);
       return redirect(route('sosial-jrtlh.index'))->with('success', 'data berhasil diubah');
