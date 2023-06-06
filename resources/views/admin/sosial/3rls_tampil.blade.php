@@ -36,7 +36,7 @@
                                     <thead>
                                         <tr style="background:rgb(4, 89, 123);color:white;font-size: 12px;">
                                             <th style="width: 2%;" class="text-center">No</th>
-                                            <th style="width: 80%;" class="text-center">Data Tahun / Series / RLS
+                                            <th style="width: 80%;" class="text-center">Data {{ $title }}
                                             </th>
                                             <th style="width: 10%;" class="text-center">AKSI</th>
                                         </tr>
@@ -47,7 +47,7 @@
                                                 <td class="text-center">{{ $k + 1 }}</th>
                                                 <td><strong>Tahun</strong> : {{ $item->tahun }} | <strong>Series</strong> :
                                                     {{ Helper::getJenisDataSeries($item->status_data) }} |
-                                                    <strong>RLS </strong> : {{ $item->rls }}%
+                                                    <strong>Presentase </strong> : {{ $item->rls }}%
                                                 </td>
                                                 <td class="project-actions text-center" style="padding: 10px;">
                                                     <a href="" class="btn btn-info btn-sm" data-toggle="modal"

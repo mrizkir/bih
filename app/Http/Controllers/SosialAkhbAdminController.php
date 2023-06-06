@@ -12,7 +12,7 @@ class SosialAkhbAdminController extends Controller
       $data = \DB::table('m_6_akhb')
       ->select(\DB::raw('
         tahun,
-        akhb,
+        pres_akhb,
         status_data
       '))     
       ->orderBy('tahun', 'desc')
@@ -32,13 +32,13 @@ class SosialAkhbAdminController extends Controller
   {
     $this->validate($request, [
       'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
-      'akhb' => 'required|numeric|min:0|max:100',
+      'pres_akhb' => 'required|numeric|min:0|max:100',
       'status_data' => 'required|in:1,2,3',
     ]);
  
     \DB::table('m_6_akhb')->insert([
       'tahun' => $request->input('tahun'),
-      'akhb' => $request->input('akhb'),      
+      'pres_akhb' => $request->input('pres_akhb'),      
       'status_data' => $request->input('status_data'),
     ]); 
      
@@ -57,13 +57,13 @@ class SosialAkhbAdminController extends Controller
     else
     {
       $this->validate($request, [        
-        'akhb' => 'required|numeric|min:0|max:100',
+        'pres_akhb' => 'required|numeric|min:0|max:100',
         'status_data' => 'required|in:1,2,3',
       ]);
       \DB::table('m_6_akhb')
       ->where('tahun', $request->input('tahun'))
       ->update([
-        'akhb' => $request->input('akhb'),      
+        'pres_akhb' => $request->input('pres_akhb'),      
         'status_data' => $request->input('status_data'),
       ]);
       return redirect(route('sosial-akhb.index'))->with('success', 'data berhasil diubah');

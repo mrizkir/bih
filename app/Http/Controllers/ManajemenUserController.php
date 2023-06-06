@@ -43,7 +43,6 @@ class ManajemenUserController extends Controller
             'foto' => 'required | image|mimes:jpeg,png,jpg,gif,svg|max:1024'
         ]);
 
-     
         if ($request->file('foto')) {
             $data['foto'] = $request->file('foto')->store('img_user');
         } 

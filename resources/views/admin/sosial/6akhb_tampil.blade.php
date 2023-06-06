@@ -35,7 +35,7 @@
                                     <thead>
                                         <tr style="background:rgb(4, 89, 123);color:white;font-size: 12px;">
                                             <th style="width: 2%;" class="text-center">No</th>
-                                            <th style="width: 80%;" class="text-center">Data Tahun / Series / RLS
+                                            <th style="width: 80%;" class="text-center">Data {{ $title }}
                                             </th>
                                             <th style="width: 10%;" class="text-center">AKSI</th>
                                         </tr>
@@ -47,7 +47,7 @@
                                                 <td><strong>Tahun</strong> : {{ $item->tahun }} | 
                                                     <strong>Series</strong> :
                                                     {{ Helper::getJenisDataSeries($item->status_data) }} |
-                                                    <strong>Data AKHB </strong> : {{ $item->akhb }}%</td>
+                                                    <strong>Data Angka Kelangsungan Hidup Bayi  </strong> : {{ $item->pres_akhb }}%</td>
                                                 <td class="project-actions text-center" style="padding: 10px;">
                                                     <a href="" class="btn btn-info btn-sm" data-toggle="modal"
                                                         style="font-size: 10px;"
@@ -122,18 +122,18 @@
                                                                                                 <label>Data
                                                                                                     Persentase</label>
                                                                                                 <input type="text"
-                                                                                                    name="akhb"
-                                                                                                    class="form-control @error('akhb') is-invalid @enderror"
-                                                                                                    value="{{ $item->akhb }}"
+                                                                                                    name="pres_akhb"
+                                                                                                    class="form-control @error('pres_akhb') is-invalid @enderror"
+                                                                                                    value="{{ $item->pres_akhb }}"
                                                                                                     required>
-                                                                                                @if ($errors->has('akhb'))
+                                                                                                @if ($errors->has('pres_akhb'))
                                                                                                     <div class="alert alert-danger mt-1 alert-validation-msg"
                                                                                                         role="alert">
                                                                                                         <div
                                                                                                             class="alert-body d-flex align-items-center">
                                                                                                             <i data-feather="info"
                                                                                                                 class="me-50"></i>
-                                                                                                            {{ $errors->first('akhb') }}
+                                                                                                            {{ $errors->first('pres_akhb') }}
                                                                                                         </div>
                                                                                                     </div>
                                                                                                 @endif
@@ -218,14 +218,14 @@
                                         </div>
                                         <div class="col-4">
                                             <label>Data Angka Harapan Hidup</label>
-                                            <input type="text" name="akhb"
-                                                class="form-control @error('akhb') is-invalid @enderror"
-                                                placeholder="Ketik Data akhb" required>
-                                            @if ($errors->has('akhb'))
+                                            <input type="text" name="pres_akhb"
+                                                class="form-control @error('pres_akhb') is-invalid @enderror"
+                                                placeholder="Ketik Data pres_akhb" required>
+                                            @if ($errors->has('pres_akhb'))
                                                 <div class="alert alert-danger mt-1 alert-validation-msg" role="alert">
                                                     <div class="alert-body d-flex align-items-center">
                                                         <i data-feather="info" class="me-50"></i>
-                                                        {{ $errors->first('akhb') }}
+                                                        {{ $errors->first('pres_akhb') }}
                                                     </div>
                                                 </div>
                                             @endif
