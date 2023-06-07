@@ -44,14 +44,16 @@ Route::group(['prefix'=>'v1', 'middleware'=>'api'], function () use ($router)
   //SOSIAL  Indeks Pemberdayaan Gender (IPG) - [m_38_idg]
   Route::get('/sosial/ipgg', [App\Http\Controllers\API\APISosialController::class, 'ipggIndex'])->name('sosial-ipgg.index'); 
   
+  //EKONOMI  uraian pdrb - [m_uraian_pdrb]
+  Route::get('/ekonomi/uraian', [App\Http\Controllers\API\APIEkonomiController::class, 'uraianIndex'])->name('ekonomi-uraian.index');   
   //EKONOMI  Petumbuhan Ekonomi (PE) - [m_17_ekonomi]
   Route::get('/ekonomi/pe', [App\Http\Controllers\API\APIEkonomiController::class, 'peIndex'])->name('ekonomi-pe.index');   
   //EKONOMI  Laju Inflasi (LI) - [m_18_inflasi]
   Route::get('/ekonomi/li', [App\Http\Controllers\API\APIEkonomiController::class, 'liIndex'])->name('ekonomi-li.index');    
   //EKONOMI   Distribusi PDRB Atas Dasar Harga Berlaku (ADHB) - [m_19_pdrb_berlaku]
-  Route::get('/ekonomi/adhb', [App\Http\Controllers\API\APIEkonomiController::class, 'adhbIndex'])->name('ekonomi-adhb.index');  
+  Route::post('/ekonomi/adhb', [App\Http\Controllers\API\APIEkonomiController::class, 'adhbIndex'])->name('ekonomi-adhb.index');  
   //EKONOMI  Distribusi PDRB Atas Dasar Harga Konstan (ADHK) - [m_19_pdrb_konstan]
-  Route::get('/ekonomi/adhk', [App\Http\Controllers\API\APIEkonomiController::class, 'adhkIndex'])->name('ekonomi-adhk.index');    
+  Route::post('/ekonomi/adhk', [App\Http\Controllers\API\APIEkonomiController::class, 'adhkIndex'])->name('ekonomi-adhk.index');    
   //EKONOMI Kunjungan Wisata (KW) - [m_20_kunjungan]
   Route::get('/ekonomi/kw', [App\Http\Controllers\API\APIEkonomiController::class, 'kwIndex'])->name('ekonomi-kw.index');  
   //EKONOMI Realisasi Investasi (PMA/ PMDN) - [m_35_pma]
