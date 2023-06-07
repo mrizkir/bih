@@ -64,13 +64,19 @@
                                                         role="dialog">
                                                         <div class="modal-dialog modal-xl">
                                                             <div class="modal-content" style="padding:30px;">
+                                                                <div class="modal-header">
+                                                                    <h4 class="modal-title" style="color:rgb(10, 100, 100);">
+                                                                        Edit Data {{ $title }}</h4>
+                                                                    <button type="button" class="close"
+                                                                        data-dismiss="modal" aria-label="Close">
+                                                                        <span aria-hidden="true">&times;</span>
+                                                                    </button>
+                                                                </div>
                                                                 <div class="container" style="padding:30px;">
                                                                     <div class="form-group">
                                                                         <div class="row">
                                                                             <div class="col-12">
-                                                                                <span
-                                                                                    style="font-size:20px;color:rgb(10, 100, 100);"><b>Edit
-                                                                                        Data {{ $title }}</b></span>
+                                                                                <BR>
                                                                                 {!! Form::open([
                                                                                     'url' => route('sosial-ppm.update', ['id' => $item->tahun]),
                                                                                     'method' => 'put',
@@ -99,7 +105,7 @@
                                                                                                     </div>
                                                                                                 @endif
                                                                                             </div>
-                                                                                            <div class="col-4">status_data
+                                                                                            <div class="col-4">
                                                                                                 <label>Data Series</label>
                                                                                                 {!! Form::select('status_data', Helper::getJenisDataSeries(), $item->status_data, [
                                                                                                     'id' => 'status_data',

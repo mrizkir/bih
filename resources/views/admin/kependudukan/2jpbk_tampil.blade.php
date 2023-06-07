@@ -50,7 +50,7 @@
                                                     {{ Helper::getJenisDataSeries($item->status_data) }} <BR>
                                                     <strong>Laki-Laki </strong> : {{ $item->laki }} |
                                                     <strong>Perempuan </strong> : {{ $item->perempuan }} |
-                                                    <strong>sex_ratio </strong> : {{ $item->sex_ratio }}
+                                                    <strong>Sex Ratio </strong> : {{ $item->sex_ratio }}
                                                 </td>
                                                 <td class="project-actions text-center" style="padding: 10px;">
                                                     <a href="" class="btn btn-info btn-sm" data-toggle="modal"
@@ -68,14 +68,19 @@
                                                     <div class="modal fade" id="modaledit{{ $item->id }}"
                                                         role="dialog">
                                                         <div class="modal-dialog modal-xl">
-                                                            <div class="modal-content" style="padding:30px;">
+                                                            <div class="modal-content" style="padding:10px;">
+                                                                <div class="modal-header">
+                                                                    <h4 class="modal-title" style="color:rgb(10, 100, 100);">
+                                                                        Edit Data {{ $title }}</h4>
+                                                                    <button type="button" class="close"
+                                                                        data-dismiss="modal" aria-label="Close">
+                                                                        <span aria-hidden="true">&times;</span>
+                                                                    </button>
+                                                                </div>
                                                                 <div class="container" style="padding:30px;">
                                                                     <div class="form-group">
                                                                         <div class="row">
-                                                                            <div class="col-12">
-                                                                                <span
-                                                                                    style="font-size:20px;color:rgb(10, 100, 100);"><b>Edit
-                                                                                        Data {{ $title }}</b></span>
+                                                                            <div class="col-12"> 
                                                                                 {!! Form::open([
                                                                                     'url' => route('kependudukan-jpbk.update', ['id' => $item->id]),
                                                                                     'method' => 'put',
@@ -166,7 +171,7 @@
                                                                                                 @endif
                                                                                             </div>
                                                                                             <div class="col-3">
-                                                                                                <label>sex_ratio</label>
+                                                                                                <label>Sex Ratio</label>
                                                                                                 <input type="text"
                                                                                                     name="sex_ratio"
                                                                                                     class="form-control @error('sex_ratio') is-invalid @enderror"
@@ -294,10 +299,10 @@
                                             @endif
                                         </div>
                                         <div class="col-3">
-                                            <label>sex_ratio</label>
+                                            <label>Sex Ratio</label>
                                             <input type="text" name="sex_ratio"
                                                 class="form-control @error('sex_ratio') is-invalid @enderror"
-                                                placeholder="Ketik sex_ratio" required>
+                                                placeholder="Ketik Sex Ratio" required>
                                             @if ($errors->has('sex_ratio'))
                                                 <div class="alert alert-danger mt-1 alert-validation-msg" role="alert">
                                                     <div class="alert-body d-flex align-items-center">

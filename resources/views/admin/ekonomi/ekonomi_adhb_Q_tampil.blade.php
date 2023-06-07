@@ -68,14 +68,11 @@
                                                     <div class="modal fade" id="modaledit{{ $item->tahun }}"
                                                         role="dialog">
                                                         <div class="modal-dialog modal-xl">
-                                                            <div class="modal-content" style="padding:30px;">
+                                                            <div class="modal-content" style="padding:10px;">
                                                                 <div class="container" style="padding:30px;">
                                                                     <div class="form-group">
                                                                         <div class="row">
-                                                                            <div class="col-12">
-                                                                                <span
-                                                                                    style="font-size:20px;color:rgb(10, 100, 100);"><b>Edit
-                                                                                        Data {{ $title }}</b></span>
+                                                                            <div class="col-12"> 
                                                                                 {!! Form::open([
                                                                                     'url' => route('ekonomi-adhb_Q.update', ['id' => $item->tahun]),
                                                                                     'method' => 'put',

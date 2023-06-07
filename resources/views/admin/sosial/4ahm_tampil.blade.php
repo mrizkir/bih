@@ -67,13 +67,19 @@
                                                         role="dialog">
                                                         <div class="modal-dialog modal-xl">
                                                             <div class="modal-content" style="padding:30px;">
-                                                                <div class="container" style="padding:30px;">
+                                                                <div class="modal-header">
+                                                                    <h4 class="modal-title" style="color:rgb(10, 100, 100);">
+                                                                        Edit Data {{ $title }}</h4>
+                                                                    <button type="button" class="close"
+                                                                        data-dismiss="modal" aria-label="Close">
+                                                                        <span aria-hidden="true">&times;</span>
+                                                                    </button>
+                                                                </div>
+                                                                <div class="container" style="padding:10px;">
                                                                     <div class="form-group">
                                                                         <div class="row">
                                                                             <div class="col-12">
-                                                                                <span
-                                                                                    style="font-size:20px;color:rgb(10, 100, 100);"><b>Edit
-                                                                                        Data {{ $title }}</b></span>
+                                                                                <BR>
                                                                                 {!! Form::open([
                                                                                     'url' => route('sosial-ahm.update', ['id' => $item->kel_umur]),
                                                                                     'method' => 'put',
@@ -84,7 +90,7 @@
                                                                                     <div class="form-group">
                                                                                         <div class="row">
                                                                                             <div class="col-3">
-                                                                                                <label>kel_umur</label>
+                                                                                                <label>Kelompok Umur</label>
                                                                                                 <input type="text"
                                                                                                     name="kel_umur"
                                                                                                     class="form-control @error('kel_umur') is-invalid @enderror"
@@ -140,7 +146,7 @@
                                                                                                     </div>
                                                                                                 @endif
                                                                                             </div>
-                                                                                            <div class="col-3">status_data
+                                                                                            <div class="col-3">
                                                                                                 <label>Data Series</label>
                                                                                                 {!! Form::select('status_data', Helper::getJenisDataSeries(), $item->status_data, [
                                                                                                     'id' => 'status_data',
