@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\DataSosialModel;
 
 class SosialHlsAdminController extends Controller
-{
+{ 
     public function hlsIndex()
     {
       $data = \DB::table('m_12_hls')
@@ -68,7 +68,7 @@ class SosialHlsAdminController extends Controller
       ]);
       return redirect(route('sosial-hls.index'))->with('success', 'data berhasil diubah');
     }    
-  }
+  } 
   public function hlsDel($id)
     {
       $data = \DB::table('m_12_hls')->where('tahun', $id);
@@ -76,4 +76,24 @@ class SosialHlsAdminController extends Controller
         $data->delete();
         return redirect(route('sosial-hls.index'))->with('sukses', 'Data Sudah di Hapus');
     }
+    public function hlsCetak()
+  {
+    $data = \DB::table('m_12_hls')
+    ->select(\DB::raw('
+    tahun,
+    hls,
+    status_data
+    '))    
+    ->orderBy('tahun', 'desc')
+    ->get();
+
+    return view('admin.sosial.12hlscetak', [
+      'title' => 'Angka Harapan Lama Sekolah (HLS)',
+      'sumber' => 'BPS',
+      'menu_active' => 'menu-sosial',
+      'sub_menu_active' => 'none',
+      'page_active' => 'sosial-hls',
+      'data' => $data
+    ]);
+  }
 }

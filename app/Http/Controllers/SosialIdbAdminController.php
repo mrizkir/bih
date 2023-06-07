@@ -76,4 +76,24 @@ class SosialIdbAdminController extends Controller
         $data->delete();
         return redirect(route('sosial-idb.index'))->with('sukses', 'Data Sudah di Hapus');
     }
+    public function idbCetak()
+  {
+    $data = \DB::table('m_15_idb')
+    ->select(\DB::raw('
+    tahun,
+    daya_beli,
+    status_data
+    '))    
+    ->orderBy('tahun', 'desc')
+    ->get();
+
+    return view('admin.sosial.15idbcetak', [
+      'title' => 'Indeks Daya Beli - Purchasing Power Parity (IDB)',
+      'sumber' => 'BPS',
+      'menu_active' => 'menu-sosial',
+      'sub_menu_active' => 'none',
+      'page_active' => 'sosial-idb',
+      'data' => $data
+    ]);
+  }
 }

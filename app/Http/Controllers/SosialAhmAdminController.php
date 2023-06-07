@@ -83,5 +83,27 @@ class SosialAhmAdminController extends Controller
         $data->delete();
         return redirect(route('sosial-ahm.index'))->with('sukses', 'Data Sudah di Hapus');
     }
+
+    public function ahmCetak()
+  {
+    $data = \DB::table('m_4_amh')
+    ->select(\DB::raw('
+    kel_umur,
+    laki,
+    perempuan,
+      status_data
+    '))    
+    ->orderBy('kel_umur', 'desc')
+    ->get();
+
+    return view('admin.sosial.4ahmcetak', [
+      'title' => 'Angka Melek Huruf (AMH)',
+      'sumber' => 'BPS',
+      'menu_active' => 'menu-sosial',
+      'sub_menu_active' => 'none',
+      'page_active' => 'sosial-ahm',
+      'data' => $data
+    ]);
+  }
 }
  

@@ -87,4 +87,28 @@ class SosialPpuAdminController extends Controller
         $data->delete();
         return redirect(route('sosial-ppu.index'))->with('sukses', 'Data Sudah di Hapus');
     }
+
+    public function ppuCetak()
+  {
+    $data = \DB::table('m_16_lulusan_pendidikan')
+    ->select(\DB::raw('
+    no,
+    pendidikan,
+    laki,
+    perempuan,
+    total,
+    status_data 
+  '))    
+  ->orderBy('no', 'desc')
+  ->get();
+
+    return view('admin.sosial.16ppucetak', [
+      'title' => 'Indeks Daya Beli - Purchasing Power Parity (IDB)',
+      'sumber' => 'BPS',
+      'menu_active' => 'menu-sosial',
+      'sub_menu_active' => 'none',
+      'page_active' => 'sosial-idb',
+      'data' => $data
+    ]);
+  }
 }

@@ -87,7 +87,7 @@ class SosialIpmAdminController extends Controller
     ->orderBy('tahun', 'desc')
     ->get();
 
-    return view('admin.sosial.1ipm_cetak', [
+    return view('admin.sosial.2ipm_cetak', [
       'title' => 'Indeks Pembangunan Manusia (IPM)',
       'sumber' => 'BPS',
       'menu_active' => 'menu-sosial',

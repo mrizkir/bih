@@ -75,4 +75,25 @@ class SosialRlsAdminController extends Controller
         $data->delete();
         return redirect(route('sosial-rls.index'))->with('sukses', 'Data Sudah di Hapus');
     }
+
+    public function rlsCetak()
+  {
+    $data = \DB::table('m_3_rls')
+    ->select(\DB::raw('
+      tahun,
+      rls,
+      status_data
+    '))    
+    ->orderBy('tahun', 'desc')
+    ->get();
+
+    return view('admin.sosial.3rlscetak', [
+      'title' => 'Angka Rata-Rata Lama Sekolah (RLS)',
+      'sumber' => 'BPS',
+      'menu_active' => 'menu-sosial',
+      'sub_menu_active' => 'none',
+      'page_active' => 'sosial-rls',
+      'data' => $data
+    ]);
+  }
 }

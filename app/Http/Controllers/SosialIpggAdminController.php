@@ -76,4 +76,25 @@ class SosialIpggAdminController extends Controller
         $data->delete();
         return redirect(route('sosial-ipgg.index'))->with('sukses', 'Data Sudah di Hapus');
     }
+
+    public function ipggCetak()
+  {
+    $data = \DB::table('m_38_idg')
+    ->select(\DB::raw('
+    tahun,
+    idg,
+    status_data
+  '))    
+  ->orderBy('tahun', 'desc')
+  ->get();
+
+    return view('admin.sosial.38_pggcetak', [
+      'title' => 'Indeks Pemeberdayaan Gender (IPGG)',
+      'sumber' => 'BPS',
+      'menu_active' => 'menu-sosial',
+      'sub_menu_active' => 'none',
+      'page_active' => 'sosial-ipgg',
+      'data' => $data
+    ]);
+  }
 }

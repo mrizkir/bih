@@ -76,4 +76,24 @@ class SosialJrtlhAdminController extends Controller
         $data->delete();
         return redirect(route('sosial-jrtlh.index'))->with('sukses', 'Data Sudah di Hapus');
     }
+    public function jrtlhCetak()
+  {
+    $data = \DB::table('m_13_rtlh')
+    ->select(\DB::raw('
+    tahun,
+    jumlah_unit,
+    status_data
+    '))    
+    ->orderBy('tahun', 'desc')
+    ->get();
+
+    return view('admin.sosial.13jrtlhcetak', [
+      'title' => 'Jumlah Rumah Tidak Layak Huni Yang Direhab (JRTLH)',
+      'sumber' => 'BPS',
+      'menu_active' => 'menu-sosial',
+      'sub_menu_active' => 'none',
+      'page_active' => 'sosial-jrtlh',
+      'data' => $data
+    ]);
+  }
 }

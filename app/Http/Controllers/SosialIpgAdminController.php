@@ -88,4 +88,29 @@ class SosialIpgAdminController extends Controller
         $data->delete();
         return redirect(route('sosial-ipg.index'))->with('sukses', 'Data Sudah di Hapus');
     }
+
+
+    
+    public function ipgCetak()
+  {
+    $data = \DB::table('m_9_ipg')
+    ->select(\DB::raw('
+    tahun, 
+    laki,
+    perempuan,
+    total,
+    status_data
+    '))    
+    ->orderBy('tahun', 'desc')
+    ->get();
+
+    return view('admin.sosial.9ipgcetak', [
+      'title' => 'Indeks Pembangunan Gender (IPG)',
+      'sumber' => 'BPS',
+      'menu_active' => 'menu-sosial',
+      'sub_menu_active' => 'none',
+      'page_active' => 'sosial-ipg',
+      'data' => $data
+    ]);
+  }
 }

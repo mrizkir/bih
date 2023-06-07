@@ -86,7 +86,7 @@ class SosialAdminController extends Controller
     ->orderBy('tahun', 'desc')
     ->get();
 
-    return view('admin.sosial.1ppm_cetak', [
+    return view('admin.sosial.2ppm_cetak', [
       'title' => 'Persentase Penduduk Miskin (PPM)',
       'sumber' => 'BPS',
       'menu_active' => 'menu-sosial',

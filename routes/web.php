@@ -94,7 +94,7 @@ Route::group(
     Route::get('/rls/{id}/edit', [SosialRlsAdminController::class, 'rlsEdit'])->name('sosial-rls.edit');
     Route::put('/rls/{id}', [SosialRlsAdminController::class, 'rlsUpdate'])->name('sosial-rls.update');
     Route::get('/rlsdel/{id}', [SosialRlsAdminController::class, 'rlsDel'])->name('sosial-rls.del');
-    Route::get('/rlscetak', [SosialRlsAdminController::class, 'rlsCetak'])->name('sosial-rls.cetak');
+    Route::get('/rlscetak', [SosialRlsAdminController::class, 'rlsCetak'])->name('rlscetak');
 
     //SOSIAL Angka Melek Huruf (AMH) - [m_4_amh]
     Route::get('/ahm', [SosialAhmAdminController::class, 'ahmIndex'])->name('sosial-ahm.index');
@@ -102,7 +102,7 @@ Route::group(
     Route::get('/ahm/{id}/edit', [SosialAhmAdminController::class, 'ahmEdit'])->name('sosial-ahm.edit');
     Route::put('/ahm/{id}', [SosialAhmAdminController::class, 'ahmUpdate'])->name('sosial-ahm.update');
     Route::get('/ahmdel/{id}', [SosialAhmAdminController::class, 'ahmDel'])->name('sosial-ahm.del');
-    Route::get('/ahmcetak', [SosialAhmAdminController::class, 'ahmCetak'])->name('sosial-ahm.cetak');
+    Route::get('/ahmcetak', [SosialAhmAdminController::class, 'ahmCetak'])->name('ahmcetak');
 
     //SOSIAL Angka Harapan Hidup (AHH) - [m_5_ahh]
     Route::get('/ahh', [SosialAhhAdminController::class, 'ahhIndex'])->name('sosial-ahh.index');
@@ -110,7 +110,7 @@ Route::group(
     Route::get('/ahh/{id}/edit', [SosialAhhAdminController::class, 'ahhEdit'])->name('sosial-ahh.edit');
     Route::put('/ahh/{id}', [SosialAhhAdminController::class, 'ahhUpdate'])->name('sosial-ahh.update');
     Route::get('/ahhdel/{id}', [SosialAhhAdminController::class, 'ahhDel'])->name('sosial-ahh.del');
-    Route::get('/ahhcetak', [SosialAhhAdminController::class, 'ahhCetak'])->name('sosial-ahh.cetak');
+    Route::get('/ahhcetak', [SosialAhhAdminController::class, 'ahhCetak'])->name('ahhcetak');
 
     //SOSIAL Angka Kelangsungan Hidup Bayi (AKHB) - [m_6_akhb]
     Route::get('/akhb', [SosialAkhbAdminController::class, 'akhbIndex'])->name('sosial-akhb.index');
@@ -118,7 +118,7 @@ Route::group(
     Route::get('/akhb/{id}/edit', [SosialAkhbAdminController::class, 'akhbEdit'])->name('sosial-akhb.edit');
     Route::put('/akhb/{id}', [SosialAkhbAdminController::class, 'akhbUpdate'])->name('sosial-akhb.update');
     Route::get('/akhbdel/{id}', [SosialAkhbAdminController::class, 'akhbDel'])->name('sosial-akhb.del');
-    Route::get('/akhbcetak', [SosialAkhbAdminController::class, 'akhbCetak'])->name('sosial-akhb.cetak');
+    Route::get('/akhbcetak', [SosialAkhbAdminController::class, 'akhbCetak'])->name('akhbcetak');
 
     //SOSIAL Angka kematian ibu melahirkan (AKIM) - [m_7_kematian_ibu]
     Route::get('/akim', [SosialAkimAdminController::class, 'akimIndex'])->name('sosial-akim.index');
@@ -126,7 +126,7 @@ Route::group(
     Route::get('/akim/{id}/edit', [SosialAkimAdminController::class, 'akimEdit'])->name('sosial-akim.edit');
     Route::put('/akim/{id}', [SosialAkimAdminController::class, 'akimUpdate'])->name('sosial-akim.update');
     Route::get('/akimdel/{id}', [SosialAkimAdminController::class, 'akimDel'])->name('sosial-akim.del');
-    Route::get('/akimcetak', [SosialAkimAdminController::class, 'akimCetak'])->name('sosial-akim.cetak');
+    Route::get('/akimcetak', [SosialAkimAdminController::class, 'akimCetak'])->name('akimcetak');
 
     //SOSIAL Perkembangan Kondisi Ketenagakerjaan di Kabupaten Bintan (PKK) - [m_8_tenaga_kerja]
     Route::get('/pkk', [SosialPkkAdminController::class, 'pkkIndex'])->name('sosial-pkk.index');    
@@ -134,7 +134,7 @@ Route::group(
     Route::get('/pkk/{id}/edit', [SosialPkkAdminController::class, 'pkkEdit'])->name('sosial-pkk.edit');
     Route::put('/pkk/{id}', [SosialPkkAdminController::class, 'pkkUpdate'])->name('sosial-pkk.update');
     Route::get('/pkkdel/{id}', [SosialPkkAdminController::class, 'pkkDel'])->name('sosial-pkk.del');
-    Route::get('/pkkcetak', [SosialPkkAdminController::class, 'pkkCetak'])->name('sosial-pkk.cetak');  
+    Route::get('/pkkcetak', [SosialPkkAdminController::class, 'pkkCetak'])->name('pkkcetak');  
 
     //SOSIAL Indeks Pembangunan Gender (IPG) - [m_9_ipg]
     Route::get('/ipg', [SosialIpgAdminController::class, 'ipgIndex'])->name('sosial-ipg.index'); 
@@ -142,34 +142,34 @@ Route::group(
     Route::get('/ipg/{id}/edit', [SosialIpgAdminController::class, 'ipgEdit'])->name('sosial-ipg.edit');
     Route::put('/ipg/{id}', [SosialIpgAdminController::class, 'ipgUpdate'])->name('sosial-ipg.update');
     Route::get('/ipgdel/{id}', [SosialIpgAdminController::class, 'ipgDel'])->name('sosial-ipg.del');
-    Route::get('/ipgcetak', [SosialIpgAdminController::class, 'ipgCetak'])->name('sosial-ipg.cetak'); 
+    Route::get('/ipgcetak', [SosialIpgAdminController::class, 'ipgCetak'])->name('ipgcetak'); 
     
     //SOSIAL Angka Partisipasi Kasar (APK) - [m_10_apk]
     Route::get('/apk', [SosialApkAdminController::class, 'apkIndex'])->name('sosial-apk.index'); 
     Route::post('/apk/store', [SosialApkAdminController::class, 'apkStore'])->name('sosial-apk.store');
     Route::get('/apk/{id}/edit', [SosialApkAdminController::class, 'apkEdit'])->name('sosial-apk.edit');
     Route::put('/apk/{id}', [SosialApkAdminController::class, 'apkUpdate'])->name('sosial-apk.update');   
-    Route::get('/apkcetak', [SosialApkAdminController::class, 'apkCetak'])->name('sosial-apk.cetak');  
+    Route::get('/apkcetak', [SosialApkAdminController::class, 'apkCetak'])->name('apkcetak');  
 
     //SOSIAL Angka Partisipasi Kasar (APK) - [m_10_apk]
     Route::get('/sosial_apk_SD_tampil', [SosialApkAdminController::class, 'apk_SD'])->name('sosial-apk_SD'); 
     Route::post('/apksd/store', [SosialApkAdminController::class, 'apksdStore'])->name('sosial-apksd.store');
     Route::put('/apksd/{id}', [SosialApkAdminController::class, 'apksdUpdate'])->name('sosial-apksd.update'); 
     Route::get('/apksddel/{id}', [SosialApkAdminController::class, 'apksdDel'])->name('sosial-apk_SD.del');   
-    Route::get('/sosial_apk_SD_cetak', [SosialApkAdminController::class, 'apk_SDCetak'])->name('sosial-apk_SDCetak'); 
+    Route::get('/sosial_apk_SD_cetak', [SosialApkAdminController::class, 'apk_SDCetak'])->name('apk_SDCetak'); 
     //UPDATE
 
     Route::get('/sosial_apk_SMP_tampil', [SosialApkAdminController::class, 'apk_SMP'])->name('sosial-apk_SMP'); 
     Route::post('/apksmp/store', [SosialApkAdminController::class, 'apksmpStore'])->name('sosial-apksmp.store');
     Route::put('/apksmp/{id}', [SosialApkAdminController::class, 'apksmpUpdate'])->name('sosial-apksmp.update'); 
     Route::get('/apksmpdel/{id}', [SosialApkAdminController::class, 'apksmpDel'])->name('sosial-apksmp.del');  
-    Route::get('/sosial_apk_SMP_cetak', [SosialApkAdminController::class, 'apk_SMPCetak'])->name('sosial-apk_SMPCetak');
+    Route::get('/sosial_apk_SMP_cetak', [SosialApkAdminController::class, 'apk_SMPCetak'])->name('apk_SMPCetak');
         
     Route::get('/sosial_apk_SMA_tampil', [SosialApkAdminController::class, 'apk_SMA'])->name('sosial-apk_SMA'); 
     Route::post('/apksma/store', [SosialApkAdminController::class, 'apksmaStore'])->name('sosial-apksma.store');
     Route::put('/apksma/{id}', [SosialApkAdminController::class, 'apksmaUpdate'])->name('sosial-apksma.update'); 
     Route::get('/apksmadel/{id}', [SosialApkAdminController::class, 'apksmaDel'])->name('sosial-apksma.del'); 
-    Route::get('/sosial_apk_SMA_cetak', [SosialApkAdminController::class, 'apk_SMACetak'])->name('sosial-apk_SMACetak');  
+    Route::get('/sosial_apk_SMA_cetak', [SosialApkAdminController::class, 'apk_SMACetak'])->name('apk_SMACetak');  
     
 
     //SOSIAL Angka partisipasi Murni (APM) - [m_11_apm]
@@ -177,7 +177,7 @@ Route::group(
     Route::post('/apm/store', [SosialApmAdminController::class, 'apmStore'])->name('sosial-apm.store');
     Route::get('/apm/{id}/edit', [SosialApmAdminController::class, 'apmEdit'])->name('sosial-apm.edit');
     Route::put('/apm/{id}', [SosialApmAdminController::class, 'apmUpdate'])->name('sosial-apm.update'); 
-    Route::get('/apmcetak', [SosialApmAdminController::class, 'apmCetak'])->name('sosial-apm.cetak');    
+    Route::get('/apmcetak', [SosialApmAdminController::class, 'apmCetak'])->name('apmcetak');    
 
     //SOSIAL Angka partisipasi Murni (APM) - [m_11_apm]
     Route::get('/sosial_apm_SD_tampil', [SosialApmAdminController::class, 'apm_SD'])->name('sosial-apm_SD');
@@ -185,21 +185,21 @@ Route::group(
     Route::get('/apmsd/{id}/edit', [SosialApmAdminController::class, 'apmsdEdit'])->name('sosial-apmsd.edit');
     Route::put('/apmsd/{id}', [SosialApmAdminController::class, 'apmsdUpdate'])->name('sosial-apmsd.update');   
     Route::get('/apmsddel/{id}', [SosialApmAdminController::class, 'apmsdDel'])->name('sosial-apmsd.del');   
-    Route::get('/sosial_apm_SD_cetak', [SosialApmAdminController::class, 'apm_SDCetak'])->name('sosial-apm_SDCetak');  
+    Route::get('/sosial_apm_SD_cetak', [SosialApmAdminController::class, 'apm_SDCetak'])->name('apm_SDCetak');  
 
     Route::get('/sosial_apmSMP', [SosialApmAdminController::class, 'apm_SMP'])->name('sosial-apm_SMP');
     Route::post('/apmsmp/store', [SosialApmAdminController::class, 'apmsmpStore'])->name('sosial-apmsmp.store');
     Route::get('/apmsmp/{id}/edit', [SosialApmAdminController::class, 'apmsmpEdit'])->name('sosial-apmsmp.edit');
     Route::put('/apmsmp/{id}', [SosialApmAdminController::class, 'apmsmpUpdate'])->name('sosial-apmsmp.update');   
     Route::get('/apmsmpdel/{id}', [SosialApmAdminController::class, 'apmsmpDel'])->name('sosial-apmsmp.del');   
-    Route::get('/sosial_apmSMcetak', [SosialApmAdminController::class, 'apm_SMPCetak'])->name('sosial-apm_SMPCetak');  
+    Route::get('/sosial_apmSMcetak', [SosialApmAdminController::class, 'apm_SMPCetak'])->name('apm_SMPCetak');  
 
     Route::get('/sosial_apmSMA', [SosialApmAdminController::class, 'apm_SMA'])->name('sosial-apm_SMA');
     Route::post('/apmsma/store', [SosialApmAdminController::class, 'apmsmaStore'])->name('sosial-apmsma.store');
     Route::get('/apmsma/{id}/edit', [SosialApmAdminController::class, 'apmsmaEdit'])->name('sosial-apmsma.edit');
     Route::put('/apmsma/{id}', [SosialApmAdminController::class, 'apmsmaUpdate'])->name('sosial-apmsma.update');   
     Route::get('/apmsmadel/{id}', [SosialApmAdminController::class, 'apmsmaDel'])->name('sosial-apmsma.del');  
-    Route::get('/sosial_apmSMAcetak', [SosialApmAdminController::class, 'apm_SMACetak'])->name('sosial-apm_SMACetak');
+    Route::get('/sosial_apmSMAcetak', [SosialApmAdminController::class, 'apm_SMACetak'])->name('apm_SMACetak');
 
 
     //SOSIAL Angka Harapan Lama Sekolah (HLS) - [m_12_hls]
@@ -208,7 +208,7 @@ Route::group(
     Route::get('/hls/{id}/edit', [SosialHlsAdminController::class, 'hlsEdit'])->name('sosial-hls.edit');
     Route::put('/hls/{id}', [SosialHlsAdminController::class, 'hlsUpdate'])->name('sosial-hls.update');      
     Route::get('/hlsdel/{id}', [SosialHlsAdminController::class, 'hlsDel'])->name('sosial-hls.del');  
-    Route::get('/hlscetak', [SosialHlsAdminController::class, 'hlsCetak'])->name('sosial-hls.cetak'); 
+    Route::get('/hlscetak', [SosialHlsAdminController::class, 'hlsCetak'])->name('hlscetak'); 
 
     //SOSIAL Jumlah Rumah Tidak Layak Huni Yang Direhab (JRTLH) - [m_13_rtlh]
     Route::get('/jrtlh', [SosialJrtlhAdminController::class, 'jrtlhIndex'])->name('sosial-jrtlh.index');    
@@ -216,7 +216,7 @@ Route::group(
     Route::get('/jrtlh/{id}/edit', [SosialJrtlhAdminController::class, 'jrtlhEdit'])->name('sosial-jrtlh.edit');
     Route::put('/jrtlh/{id}', [SosialJrtlhAdminController::class, 'jrtlhUpdate'])->name('sosial-jrtlh.update');  
     Route::get('/jrtlhdel/{id}', [SosialJrtlhAdminController::class, 'jrtlhDel'])->name('sosial-jrtlh.del');  
-    Route::get('/jrtlhcetak', [SosialJrtlhAdminController::class, 'jrtlhCetak'])->name('sosial-jrtlh.cetak');   
+    Route::get('/jrtlhcetak', [SosialJrtlhAdminController::class, 'jrtlhCetak'])->name('jrtlhcetak');   
   
     //SOSIAL Indeks Gini (IG) - [m_14_gini]
     Route::get('/ig', [SosialIgAdminController::class, 'igIndex'])->name('sosial-ig.index');
@@ -224,7 +224,7 @@ Route::group(
     Route::get('/ig/{id}/edit', [SosialIgAdminController::class, 'igEdit'])->name('sosial-ig.edit');
     Route::put('/ig/{id}', [SosialIgAdminController::class, 'igUpdate'])->name('sosial-ig.update');    
     Route::get('/igdel/{id}', [SosialIgAdminController::class, 'igDel'])->name('sosial-ig.del');  
-    Route::get('/igcetak', [SosialIgAdminController::class, 'igCetak'])->name('sosial-ig.cetak');
+    Route::get('/igcetak', [SosialIgAdminController::class, 'igCetak'])->name('igcetak');
     
     //SOSIAL Indeks Daya Beli - Purchasing Power Parity (IDB) - [m_15_idb]
     Route::get('/idb', [SosialIdbAdminController::class, 'idbIndex'])->name('sosial-idb.index');  
@@ -232,7 +232,7 @@ Route::group(
     Route::get('/idb/{id}/edit', [SosialIdbAdminController::class, 'idbEdit'])->name('sosial-idb.edit');
     Route::put('/idb/{id}', [SosialIdbAdminController::class, 'idbUpdate'])->name('sosial-idb.update');   
     Route::get('/idbdel/{id}', [SosialIdbAdminController::class, 'idbDel'])->name('sosial-idb.del');     
-    Route::get('/idbcetak', [SosialIdbAdminController::class, 'idbCetal'])->name('sosial-idbcetak'); 
+    Route::get('/idbcetak', [SosialIdbAdminController::class, 'idbCetak'])->name('idbcetak'); 
   
     //SOSIAL Persentase Penduduk Usia 15 Tahun ke atas menurut Pendidikan yang Ditamatkan (PPU) - [m_16_lulusan_pendidikan]
     Route::get('/ppu', [SosialPpuAdminController::class, 'ppuIndex'])->name('sosial-ppu.index'); 
@@ -240,7 +240,7 @@ Route::group(
     Route::get('/ppu/{id}/edit', [SosialPpuAdminController::class, 'ppuEdit'])->name('sosial-ppu.edit');
     Route::put('/ppu/{id}', [SosialPpuAdminController::class, 'ppuUpdate'])->name('sosial-ppu.update');   
     Route::get('/ppudel/{id}', [SosialPpuAdminController::class, 'ppuDel'])->name('sosial-ppu.del');     
-    Route::get('/ppucetak', [SosialPpuAdminController::class, 'ppuCetak'])->name('sosial-ppu.cetak'); 
+    Route::get('/ppucetak', [SosialPpuAdminController::class, 'ppuCetak'])->name('ppucetak'); 
 
     //SOSIAL  Indeks Pemberdayaan Gender (IPGG) - [m_38_idg]
     Route::get('/ipgg', [SosialIpggAdminController::class, 'ipggIndex'])->name('sosial-ipgg.index'); 
@@ -248,7 +248,7 @@ Route::group(
     Route::get('/ipgg/{id}/edit', [SosialIpggAdminController::class, 'ipggEdit'])->name('sosial-ipgg.edit');
     Route::put('/ipgg/{id}', [SosialIpggAdminController::class, 'ipggUpdate'])->name('sosial-ipgg.update');   
     Route::get('/ipggdel/{id}', [SosialIpggAdminController::class, 'ipggDel'])->name('sosial-ipgg.del');    
-    Route::get('/ipggcetak', [SosialIpggAdminController::class, 'ipggCetak'])->name('sosial-ipgg.cetak');   
+    Route::get('/ipggcetak', [SosialIpggAdminController::class, 'ipggCetak'])->name('ipggcetak');   
 
 
  
@@ -260,7 +260,7 @@ Route::group(
     Route::get('/pe/{id}/edit', [EkonomiPeAdminController::class, 'peEdit'])->name('ekonomi-pe.edit');
     Route::put('/pe/{id}', [EkonomiPeAdminController::class, 'peUpdate'])->name('ekonomi-pe.update');   
     Route::get('/pedel/{id}', [EkonomiPeAdminController::class, 'peDel'])->name('ekonomi-pe.del');
-    Route::get('/pecetak', [EkonomiPeAdminController::class, 'peCetak'])->name('ekonomi-pe.cetak'); 
+    Route::get('/pecetak', [EkonomiPeAdminController::class, 'peCetak'])->name('pecetak'); 
 
     //EKONOMI  Laju Inflasi (LI) - [m_18_inflasi]
     Route::get('/li', [EkonomiLiAdminController::class, 'liIndex'])->name('ekonomi-li.index');  
@@ -268,14 +268,14 @@ Route::group(
     Route::get('/li/{id}/edit', [EkonomiLiAdminController::class, 'liEdit'])->name('ekonomi-li.edit');
     Route::put('/li/{id}', [EkonomiLiAdminController::class, 'liUpdate'])->name('ekonomi-li.update');    
     Route::get('/lidel/{id}', [EkonomiLiAdminController::class, 'liDel'])->name('ekonomi-li.del');
-    Route::get('/licetak', [EkonomiLiAdminController::class, 'liCetak'])->name('ekonomi-li.cetak');      
+    Route::get('/licetak', [EkonomiLiAdminController::class, 'liCetak'])->name('licetak');      
     
     //EKONOMI   Distribusi PDRB Atas Dasar Harga Berlaku (ADHB) - [m_19_pdrb_berlaku]
     Route::get('/adhb', [EkonomiAdhbAdminController::class, 'adhbIndex'])->name('ekonomi-adhb.index');  
     Route::post('/adhb/store', [EkonomiAdhbAdminController::class, 'adhbStore'])->name('ekonomi-adhb.store');
     Route::get('/adhb/{id}/edit', [EkonomiAdhbAdminController::class, 'adhbEdit'])->name('ekonomi-adhb.edit');
     Route::put('/adhb/{id}', [EkonomiAdhbAdminController::class, 'adhbUpdate'])->name('ekonomi-adhb.update');   
-    Route::get('/adhbcetak', [EkonomiAdhbAdminController::class, 'adhbCetak'])->name('ekonomi-adhb.cetak');      
+    Route::get('/adhbcetak', [EkonomiAdhbAdminController::class, 'adhbCetak'])->name('adhbcetak');      
 
 
 

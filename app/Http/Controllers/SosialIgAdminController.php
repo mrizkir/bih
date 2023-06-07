@@ -76,4 +76,25 @@ class SosialIgAdminController extends Controller
         $data->delete();
         return redirect(route('sosial-ig.index'))->with('sukses', 'Data Sudah di Hapus');
     }
+
+    public function igCetak()
+  {
+    $data = \DB::table('m_14_gini')
+    ->select(\DB::raw('
+    tahun,
+    gini_ratio,
+    status_data
+    '))    
+    ->orderBy('tahun', 'desc')
+    ->get();
+
+    return view('admin.sosial.14igcetak', [
+      'title' => 'Indeks Gini (IG)',
+      'sumber' => 'BPS',
+      'menu_active' => 'menu-sosial',
+      'sub_menu_active' => 'none',
+      'page_active' => 'sosial-ig',
+      'data' => $data
+    ]);
+  }
 }

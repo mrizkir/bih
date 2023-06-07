@@ -76,4 +76,25 @@ class SosialAkhbAdminController extends Controller
         $data->delete();
         return redirect(route('sosial-akhb.index'))->with('sukses', 'Data Sudah di Hapus');
     }
+
+    public function akhbCetak()
+  {
+    $data = \DB::table('m_6_akhb')
+    ->select(\DB::raw('
+    tahun,
+    pres_akhb,
+      status_data
+    '))    
+    ->orderBy('tahun', 'desc')
+    ->get();
+
+    return view('admin.sosial.6akhbcetak', [
+      'title' => 'Angka Kelangsungan Hidup Bayi (AKHB)',
+      'sumber' => 'BPS',
+      'menu_active' => 'menu-sosial',
+      'sub_menu_active' => 'none',
+      'page_active' => 'sosial-akhb',
+      'data' => $data
+    ]);
+  }
 }

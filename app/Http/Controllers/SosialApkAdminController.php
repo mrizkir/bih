@@ -97,6 +97,33 @@ class SosialApkAdminController extends Controller
         return redirect(route('sosial-apk_SD'))->with('sukses', 'Data Sudah di Hapus');
     }
 
+    public function apk_SDCetak()
+  {
+    $data = \DB::table('m_10_apk')
+    ->select(\DB::raw('
+    tahun,
+    tingkat,
+    APK,
+    no,
+    status_data
+  '))    
+  ->where('no','1')
+  ->orderBy('tahun', 'desc')
+  ->get();
+
+    return view('admin.sosial.sosial_apk_SDcetak', [
+      'title' => 'Angka Partisipasi Kasar (APK)',
+      'sumber' => 'SD 7-12 Tahun',
+      'menu_active' => 'menu-sosial',
+      'sub_menu_active' => 'menu-sosial-apk',
+      'page_active' => 'sosial-apk-sd',
+      'data' => $data
+    ]);
+  }
+
+
+  //----------------------------------------------------------------
+
     public function apk_SMP()
     {
       $data = \DB::table('m_10_apk')
@@ -175,6 +202,34 @@ class SosialApkAdminController extends Controller
         $data->delete();
         return redirect(route('sosial-apk_SMP'))->with('sukses', 'Data Sudah di Hapus');
     }
+
+    public function apk_SMPCetak()
+  {
+    $data = \DB::table('m_10_apk')
+    ->select(\DB::raw('
+    tahun,
+    tingkat,
+    APK,
+    no,
+    status_data
+  '))    
+  ->where('no','2')
+  ->orderBy('tahun', 'desc')
+  ->get();
+
+    return view('admin.sosial.sosial_apk_SDcetak', [
+      'title' => 'Angka Partisipasi Kasar (APK)',
+      'sumber' => 'SMP 13-15 Tahun',
+      'menu_active' => 'menu-sosial',
+      'sub_menu_active' => 'menu-sosial-apk',
+      'page_active' => 'sosial-apk-smp',
+      'data' => $data
+    ]);
+  }
+
+//----------------------------------------------------------------
+
+
     public function apk_SMA()
     {
       $data = \DB::table('m_10_apk')
@@ -251,4 +306,29 @@ class SosialApkAdminController extends Controller
         $data->delete();
         return redirect(route('sosial-apk_SMA'))->with('sukses', 'Data Sudah di Hapus');
     }
+
+    public function apk_SMACetak()
+  {
+    $data = \DB::table('m_10_apk')
+    ->select(\DB::raw('
+    tahun,
+    tingkat,
+    APK,
+    no,
+    status_data
+  '))    
+  ->where('no','3')
+  ->orderBy('tahun', 'desc')
+  ->get();
+
+    return view('admin.sosial.sosial_apk_SDcetak', [
+      'title' => 'Angka Partisipasi Kasar (APK)',
+      'sumber' => 'SMA 16-18 Tahun',
+      'menu_active' => 'menu-sosial',
+      'sub_menu_active' => 'menu-sosial-apk',
+      'page_active' => 'sosial-apk-smp',
+      'data' => $data
+    ]);
+  }
+ 
 }

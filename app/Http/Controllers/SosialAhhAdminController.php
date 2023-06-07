@@ -76,4 +76,25 @@ class SosialAhhAdminController extends Controller
         $data->delete();
         return redirect(route('sosial-ahh.index'))->with('sukses', 'Data Sudah di Hapus');
     }
+
+    public function ahhCetak()
+  {
+    $data = \DB::table('m_5_ahh')
+    ->select(\DB::raw('
+    tahun,
+    ahh, 
+      status_data
+    '))    
+    ->orderBy('tahun', 'desc')
+    ->get();
+
+    return view('admin.sosial.5ahhcetak', [
+      'title' => 'Angka Harapan Hidup (AHH)',
+      'sumber' => 'BPS',
+      'menu_active' => 'menu-sosial',
+      'sub_menu_active' => 'none',
+      'page_active' => 'sosial-ahh',
+      'data' => $data
+    ]);
+  }
 }

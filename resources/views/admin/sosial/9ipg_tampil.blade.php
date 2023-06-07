@@ -24,7 +24,7 @@
                                         data-target="#modal-default">
                                         <b style="font-size:12px;"> Tambah Data</b>
                                     </button>
-                                    <a href="{{ '' }}" target="_blank">
+                                    <a href="{{ route('ipgcetak') }}" target="_blank">
                                         <button style="float:right;margin-right:10px;" type="button"
                                             class="btn btn-success">
                                             <b><i class="fa fa-print"></i></b>
@@ -45,7 +45,7 @@
                                         @foreach ($data as $k => $item)
                                             <tr style="font-size: 11px;">
                                                 <td class="text-center">{{ $k + 1 }}</th>
-                                                <td><strong>tahun</strong> : {{ $item->tahun }} | <strong>Series</strong> :
+                                                <td><strong>Tahun</strong> : {{ $item->tahun }} | <strong>Series</strong> :
                                                     {{ Helper::getJenisDataSeries($item->status_data) }} |
                                                     <strong>Laki-Laki </strong> : {{ $item->laki }}% |
                                                     <strong>Perempuan </strong> : {{ $item->perempuan }}% |
