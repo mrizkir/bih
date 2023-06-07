@@ -6,6 +6,23 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class APIEkonomiController extends Controller {  
+  //EKONOMI  list uraian - [m_uraian_pdrb]
+  public function uraianIndex(Request $request)
+	{
+    $data = \DB::table('m_uraian_pdrb AS A')
+    ->select(\DB::raw('
+      id,
+      kategori,
+      uraian
+    '))            
+    ->get();
+
+    return response()->json([
+      'status'=>'100',
+      'message'=>'EKONOMI list uraian - [m_uraian_pdrb] berhasil diperoleh',      
+      'result'=>$data
+    ], 200);
+  }
   //EKONOMI  Petumbuhan Ekonomi (PE) - [m_17_ekonomi]
 	public function peIndex(Request $request)
 	{

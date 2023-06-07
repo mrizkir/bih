@@ -9,9 +9,6 @@ Route::get('/sosial/', function () use ($router) {
 
 Route::group(['prefix'=>'v1', 'middleware'=>'api'], function () use ($router)
 {
-  //Daftar Uraian [m_uraian_pdrb]
-
-  Route::get('/ekonomi/pe', [App\Http\Controllers\API\APIEkonomiController::class, 'peIndex'])->name('ekonomi-pe.index');   
   //SOSIAL presentasi penduduk miskin (ppm) - [m_1_pres_pend_miskin]
   $router->get('/sosial/ppm', [App\Http\Controllers\API\APISosialController::class, 'ppmIndex'])->name('sosial-ppm.index');	
   //SOSIAL Indeks Pembangunan Manusia (IPM)  - [m_2_ipm]
@@ -47,6 +44,8 @@ Route::group(['prefix'=>'v1', 'middleware'=>'api'], function () use ($router)
   //SOSIAL  Indeks Pemberdayaan Gender (IPG) - [m_38_idg]
   Route::get('/sosial/ipgg', [App\Http\Controllers\API\APISosialController::class, 'ipggIndex'])->name('sosial-ipgg.index'); 
   
+  //EKONOMI  uraian pdrb - [m_uraian_pdrb]
+  Route::get('/ekonomi/uraian', [App\Http\Controllers\API\APIEkonomiController::class, 'uraianIndex'])->name('ekonomi-uraian.index');   
   //EKONOMI  Petumbuhan Ekonomi (PE) - [m_17_ekonomi]
   Route::get('/ekonomi/pe', [App\Http\Controllers\API\APIEkonomiController::class, 'peIndex'])->name('ekonomi-pe.index');   
   //EKONOMI  Laju Inflasi (LI) - [m_18_inflasi]
