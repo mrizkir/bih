@@ -36,7 +36,8 @@
                                     <thead>
                                         <tr style="background:rgb(4, 89, 123);color:white;font-size: 12px;">
                                             <th style="width: 2%;" class="text-center">No</th>
-                                            <th style="width: 80%;" class="text-center">Data Perkembangan Kondisi Ketenagakerjaan di Kabupaten Bintan (PKK)
+                                            <th style="width: 80%;" class="text-center">Data Perkembangan Kondisi
+                                                Ketenagakerjaan di Kabupaten Bintan (PKK)
                                             </th>
                                             <th style="width: 10%;" class="text-center">AKSI</th>
                                         </tr>
@@ -48,14 +49,14 @@
                                                 <td><strong>Tahun</strong> : {{ $item->tahun }} |
                                                     <strong>Series</strong> :
                                                     {{ Helper::getJenisDataSeries($item->status_data) }} <BR>
-                                                    <strong>Penduduk Usia Kerja </strong> : {{ $item->penduduk_usia_kerja }}
+                                                    <strong>Penduduk Usia Kerja (Orang) </strong> : {{ $item->penduduk_usia_kerja }}
                                                     |
                                                     <strong>Angkatan Pencari Kerja </strong> : {{ $item->angkatan_kerja }} |
                                                     <strong>Bekerja </strong> : {{ $item->bekerja }} |
                                                     <strong>Mencari Pekerjaan </strong> : {{ $item->mencari_pekerjaan }} |
-                                                    <strong>Tingkat Partisipasi </strong> : {{ $item->tingkat_partisipasi }}
+                                                    <strong>Tingkat Partisipasi Angkatan Kerja (%)</strong> : {{ $item->tingkat_partisipasi }}
                                                     |
-                                                    <strong>Tingkat Pengangguran </strong> :
+                                                    <strong>Tingkat Pengangguran Terbuka (%)</strong> :
                                                     {{ $item->tingkat_pengangguran }}
                                                 </td>
                                                 <td class="project-actions text-center" style="padding: 10px;">
@@ -76,9 +77,10 @@
 
                                                         <div class="modal-dialog modal-xl">
 
-                                                            <div class="modal-content" style="padding:30px;">
+                                                            <div class="modal-content" style="padding:20px;">
                                                                 <div class="modal-header">
-                                                                    <h4 class="modal-title" style="color:rgb(2, 17, 42)">
+                                                                    <h4 class="modal-title"
+                                                                        style="color:rgb(10, 100, 100);">
                                                                         Edit Data {{ $title }}</h4>
                                                                     <button type="button" class="close"
                                                                         data-dismiss="modal" aria-label="Close">
@@ -98,23 +100,29 @@
                                                                                 ]) !!}
 
                                                                                 <div class="card-body">
-                                <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-4">
-                                            <label>Tahun</label>
-                                            <input type="text" name="tahun"
-                                                class="form-control @error('tahun') is-invalid @enderror"
-                                                placeholder="Ketik tahun"  value="{{ $item->tahun }}" required>
-                                            @if ($errors->has('tahun'))
-                                                <div class="alert alert-danger mt-1 alert-validation-msg" role="alert">
-                                                    <div class="alert-body d-flex align-items-center">
-                                                        <i data-feather="info" class="me-50"></i>
-                                                        {{ $errors->first('tahun') }}
-                                                    </div>
-                                                </div>
-                                            @endif
-                                        </div>
-                                        <div class="col-3">status_data
+                                                                                    <div class="form-group">
+                                                                                        <div class="row">
+                                                                                            <div class="col-3">
+                                                                                                <label>Tahun</label>
+                                                                                                <input type="text"
+                                                                                                    name="tahun"
+                                                                                                    class="form-control @error('tahun') is-invalid @enderror"
+                                                                                                    placeholder="Ketik tahun"
+                                                                                                    value="{{ $item->tahun }}"
+                                                                                                    required>
+                                                                                                @if ($errors->has('tahun'))
+                                                                                                    <div class="alert alert-danger mt-1 alert-validation-msg"
+                                                                                                        role="alert">
+                                                                                                        <div
+                                                                                                            class="alert-body d-flex align-items-center">
+                                                                                                            <i data-feather="info"
+                                                                                                                class="me-50"></i>
+                                                                                                            {{ $errors->first('tahun') }}
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                @endif
+                                                                                            </div>
+                                                                                            <div class="col-3">
                                                                                                 <label>Data Series</label>
                                                                                                 {!! Form::select('status_data', Helper::getJenisDataSeries(), $item->status_data, [
                                                                                                     'id' => 'status_data',
@@ -131,101 +139,142 @@
                                                                                                         </div>
                                                                                                     </div>
                                                                                                 @endif
-                                         </div>
-                                    </div><BR>
-                                    <div class="row">
-                                        <div class="col-3">
-                                            <label>Data Penduduk Usia Kerja</label>
-                                            <input type="text" name="penduduk_usia_kerja"
-                                                class="form-control @error('penduduk_usia_kerja') is-invalid @enderror"
-                                                placeholder="Ketik Data PUK" value="{{ $item->penduduk_usia_kerja }}" required>
-                                            @if ($errors->has('penduduk_usia_kerja'))
-                                                <div class="alert alert-danger mt-1 alert-validation-msg" role="alert">
-                                                    <div class="alert-body d-flex align-items-center">
-                                                        <i data-feather="info" class="me-50"></i>
-                                                        {{ $errors->first('penduduk_usia_kerja') }}
-                                                    </div>
-                                                </div>
-                                            @endif
-                                        </div>
-                                        <div class="col-3">
-                                            <label>Data Penduduk Angkatan Kerja</label>
-                                            <input type="text" name="angkatan_kerja"
-                                                class="form-control @error('angkatan_kerja') is-invalid @enderror"
-                                                placeholder="Ketik Data Angkatan Kerja" value="{{ $item->angkatan_kerja }}" required>
-                                            @if ($errors->has('angkatan_kerja'))
-                                                <div class="alert alert-danger mt-1 alert-validation-msg" role="alert">
-                                                    <div class="alert-body d-flex align-items-center">
-                                                        <i data-feather="info" class="me-50"></i>
-                                                        {{ $errors->first('angkatan_kerja') }}
-                                                    </div>
-                                                </div>
-                                            @endif
-                                        </div>
-                                        <div class="col-3">
-                                            <label>Data Bekerja</label>
-                                            <input type="text" name="bekerja"
-                                                class="form-control @error('bekerja') is-invalid @enderror"
-                                                placeholder="Ketik Data Bekerja"  value="{{ $item->bekerja }}" required>
-                                            @if ($errors->has('bekerja'))
-                                                <div class="alert alert-danger mt-1 alert-validation-msg" role="alert">
-                                                    <div class="alert-body d-flex align-items-center">
-                                                        <i data-feather="info" class="me-50"></i>
-                                                        {{ $errors->first('bekerja') }}
-                                                    </div>
-                                                </div>
-                                            @endif
-                                        </div>
-                                        <div class="col-3">
-                                            <label>Data Mencari Pekerjaan</label>
-                                            <input type="text" name="mencari_pekerjaan"
-                                                class="form-control @error('mencari_pekerjaan') is-invalid @enderror"
-                                                placeholder="Data Mencari Pekerjaan"  value="{{ $item->mencari_pekerjaan }}" required>
-                                            @if ($errors->has('mencari_pekerjaan'))
-                                                <div class="alert alert-danger mt-1 alert-validation-msg" role="alert">
-                                                    <div class="alert-body d-flex align-items-center">
-                                                        <i data-feather="info" class="me-50"></i>
-                                                        {{ $errors->first('mencari_pekerjaan') }}
-                                                    </div>
-                                                </div>
-                                            @endif
-                                        </div>
-                                    </div><BR>
-                                    <div class="row">
-                                        <div class="col-3">
-                                            <label>Data Tingkat Partisipasi</label>
-                                            <input type="text" name="tingkat_partisipasi"
-                                                class="form-control @error('tingkat_partisipasi') is-invalid @enderror"
-                                                placeholder="Data TP" value="{{ $item->tingkat_partisipasi }}" required>
-                                            @if ($errors->has('tingkat_partisipasi'))
-                                                <div class="alert alert-danger mt-1 alert-validation-msg" role="alert">
-                                                    <div class="alert-body d-flex align-items-center">
-                                                        <i data-feather="info" class="me-50"></i>
-                                                        {{ $errors->first('tingkat_partisipasi') }}
-                                                    </div>
-                                                </div>
-                                            @endif
-                                        </div>
-                                        <div class="col-3">
-                                            <label>Data Tingkat Pengangguran</label>
-                                            <input type="text" name="tingkat_pengangguran"
-                                                class="form-control @error('tingkat_pengangguran') is-invalid @enderror"
-                                                placeholder="Data Tingkat Pengangguran" value="{{ $item->tingkat_pengangguran }}" required>
-                                            @if ($errors->has('tingkat_pengangguran'))
-                                                <div class="alert alert-danger mt-1 alert-validation-msg" role="alert">
-                                                    <div class="alert-body d-flex align-items-center">
-                                                        <i data-feather="info" class="me-50"></i>
-                                                        {{ $errors->first('tingkat_pengangguran') }}
-                                                    </div>
-                                                </div>
-                                            @endif
-                                        </div>
+                                                                                            </div>
+                                                                                        </div><BR>
+                                                                                        <div class="row">
+                                                                                            <div class="col-3">
+                                                                                                <label>Data Penduduk Usia
+                                                                                                    Kerja</label>
+                                                                                                <input type="text"
+                                                                                                    name="penduduk_usia_kerja"
+                                                                                                    class="form-control @error('penduduk_usia_kerja') is-invalid @enderror"
+                                                                                                    placeholder="Ketik Data PUK"
+                                                                                                    value="{{ $item->penduduk_usia_kerja }}"
+                                                                                                    required>
+                                                                                                @if ($errors->has('penduduk_usia_kerja'))
+                                                                                                    <div class="alert alert-danger mt-1 alert-validation-msg"
+                                                                                                        role="alert">
+                                                                                                        <div
+                                                                                                            class="alert-body d-flex align-items-center">
+                                                                                                            <i data-feather="info"
+                                                                                                                class="me-50"></i>
+                                                                                                            {{ $errors->first('penduduk_usia_kerja') }}
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                @endif
+                                                                                            </div>
+                                                                                            <div class="col-3">
+                                                                                                <label>Data Penduduk
+                                                                                                    Angkatan Kerja</label>
+                                                                                                <input type="text"
+                                                                                                    name="angkatan_kerja"
+                                                                                                    class="form-control @error('angkatan_kerja') is-invalid @enderror"
+                                                                                                    placeholder="Ketik Data Angkatan Kerja"
+                                                                                                    value="{{ $item->angkatan_kerja }}"
+                                                                                                    required>
+                                                                                                @if ($errors->has('angkatan_kerja'))
+                                                                                                    <div class="alert alert-danger mt-1 alert-validation-msg"
+                                                                                                        role="alert">
+                                                                                                        <div
+                                                                                                            class="alert-body d-flex align-items-center">
+                                                                                                            <i data-feather="info"
+                                                                                                                class="me-50"></i>
+                                                                                                            {{ $errors->first('angkatan_kerja') }}
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                @endif
+                                                                                            </div>
+                                                                                            <div class="col-3">
+                                                                                                <label>Data Bekerja</label>
+                                                                                                <input type="text"
+                                                                                                    name="bekerja"
+                                                                                                    class="form-control @error('bekerja') is-invalid @enderror"
+                                                                                                    placeholder="Ketik Data Bekerja"
+                                                                                                    value="{{ $item->bekerja }}"
+                                                                                                    required>
+                                                                                                @if ($errors->has('bekerja'))
+                                                                                                    <div class="alert alert-danger mt-1 alert-validation-msg"
+                                                                                                        role="alert">
+                                                                                                        <div
+                                                                                                            class="alert-body d-flex align-items-center">
+                                                                                                            <i data-feather="info"
+                                                                                                                class="me-50"></i>
+                                                                                                            {{ $errors->first('bekerja') }}
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                @endif
+                                                                                            </div>
+                                                                                            <div class="col-3">
+                                                                                                <label>Data Mencari
+                                                                                                    Pekerjaan</label>
+                                                                                                <input type="text"
+                                                                                                    name="mencari_pekerjaan"
+                                                                                                    class="form-control @error('mencari_pekerjaan') is-invalid @enderror"
+                                                                                                    placeholder="Data Mencari Pekerjaan"
+                                                                                                    value="{{ $item->mencari_pekerjaan }}"
+                                                                                                    required>
+                                                                                                @if ($errors->has('mencari_pekerjaan'))
+                                                                                                    <div class="alert alert-danger mt-1 alert-validation-msg"
+                                                                                                        role="alert">
+                                                                                                        <div
+                                                                                                            class="alert-body d-flex align-items-center">
+                                                                                                            <i data-feather="info"
+                                                                                                                class="me-50"></i>
+                                                                                                            {{ $errors->first('mencari_pekerjaan') }}
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                @endif
+                                                                                            </div>
+                                                                                        </div><BR>
+                                                                                        <div class="row">
+                                                                                            <div class="col-3">
+                                                                                                <label>Data Tingkat
+                                                                                                    Partisipasi</label>
+                                                                                                <input type="text"
+                                                                                                    name="tingkat_partisipasi"
+                                                                                                    class="form-control @error('tingkat_partisipasi') is-invalid @enderror"
+                                                                                                    placeholder="Data TP"
+                                                                                                    value="{{ $item->tingkat_partisipasi }}"
+                                                                                                    required>
+                                                                                                @if ($errors->has('tingkat_partisipasi'))
+                                                                                                    <div class="alert alert-danger mt-1 alert-validation-msg"
+                                                                                                        role="alert">
+                                                                                                        <div
+                                                                                                            class="alert-body d-flex align-items-center">
+                                                                                                            <i data-feather="info"
+                                                                                                                class="me-50"></i>
+                                                                                                            {{ $errors->first('tingkat_partisipasi') }}
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                @endif
+                                                                                            </div>
+                                                                                            <div class="col-3">
+                                                                                                <label>Data Tingkat
+                                                                                                    Pengangguran</label>
+                                                                                                <input type="text"
+                                                                                                    name="tingkat_pengangguran"
+                                                                                                    class="form-control @error('tingkat_pengangguran') is-invalid @enderror"
+                                                                                                    placeholder="Data Tingkat Pengangguran"
+                                                                                                    value="{{ $item->tingkat_pengangguran }}"
+                                                                                                    required>
+                                                                                                @if ($errors->has('tingkat_pengangguran'))
+                                                                                                    <div class="alert alert-danger mt-1 alert-validation-msg"
+                                                                                                        role="alert">
+                                                                                                        <div
+                                                                                                            class="alert-body d-flex align-items-center">
+                                                                                                            <i data-feather="info"
+                                                                                                                class="me-50"></i>
+                                                                                                            {{ $errors->first('tingkat_pengangguran') }}
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                @endif
+                                                                                            </div>
 
-                                    </div>
+                                                                                        </div>
 
 
-                                </div>
-                            </div>
+                                                                                    </div>
+                                                                                </div>
                                                                                 <div
                                                                                     class="modal-footer justify-content-between">
                                                                                     <button type="submit"
@@ -269,7 +318,7 @@
                 {{-- TAMBAH MODAL --}}
                 <div class="modal fade" id="modal-default">
                     <div class="modal-dialog modal-xl">
-                        <div class="modal-content">
+                        <div class="modal-content" style="padding:20px;">
                             <div class="modal-header">
                                 <h4 class="modal-title" style="color:rgb(2, 17, 42)">Tambah Data {{ $title }}</h4>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -280,7 +329,7 @@
                             <div class="card-body">
                                 <div class="form-group">
                                     <div class="row">
-                                        <div class="col-4">
+                                        <div class="col-3">
                                             <label>Tahun</label>
                                             <input type="text" name="tahun"
                                                 class="form-control @error('tahun') is-invalid @enderror"
@@ -294,7 +343,7 @@
                                                 </div>
                                             @endif
                                         </div>
-                                        <div class="col-4">
+                                        <div class="col-3">
                                             <label>Data Series</label>
                                             {!! Form::select('status_data', Helper::getJenisDataSeries(), old('status_data'), [
                                                 'id' => 'frmadd_status_data',
