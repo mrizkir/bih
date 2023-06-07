@@ -121,7 +121,7 @@ class APISosialController extends Controller {
       B.jenis_data AS status_data
     '))       
     ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
-    ->orderBy('tahun', 'asc')
+    ->orderBy('kel_umur', 'asc')
     ->limit(1)
     ->get();
 
@@ -448,6 +448,7 @@ class APISosialController extends Controller {
       gini_ratio,      
       B.jenis_data AS status_data
     '))    
+    ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
     ->orderBy('tahun', 'desc')
     ->limit(1)
     ->get();
@@ -478,6 +479,7 @@ class APISosialController extends Controller {
       daya_beli,      
       B.jenis_data AS status_data
     '))
+    ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
     ->orderBy('tahun', 'desc')
     ->limit(1)
     ->get();
@@ -514,7 +516,8 @@ class APISosialController extends Controller {
       total,      
       B.jenis_data AS status_data
     '))    
-    ->orderBy('tahun', 'desc')
+    ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
+    ->orderBy('no', 'desc')
     ->limit(1)
     ->get();
 
@@ -544,6 +547,7 @@ class APISosialController extends Controller {
       idg,      
       B.jenis_data AS status_data
     '))    
+    ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
     ->orderBy('tahun', 'desc')
     ->limit(1)
     ->get();
