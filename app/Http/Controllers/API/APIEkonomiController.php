@@ -51,7 +51,7 @@ class APIEkonomiController extends Controller {
       'status'=>'100',
       'message'=>'EKONOMI  Petumbuhan Ekonomi (PE) - [m_17_ekonomi] berhasil diperoleh',
       'last_data'=>$last_data,
-      'result'=>$data
+      'result'=>$data,
     ], 200);
   }
   //EKONOMI  Laju Inflasi (LI) - [m_18_inflasi]
