@@ -91,8 +91,34 @@ class EkonomiAdhbAdminController extends Controller
         return redirect(route('ekonomi-adhb_A'))->with('sukses', 'Data Sudah di Hapus');
     }
 
+    public function adhb_aCetak()
+  {
+    $data = \DB::table('m_19_pdrb_berlaku')
+    ->select(\DB::raw('
+    tahun,
+    jumlah,
+    status_data,
+    uraian
+  '))    
+  ->where('uraian',1)
+  ->orderBy('tahun', 'desc')
+  ->get();
 
+  $kt = \DB::table('m_uraian_pdrb')
+  ->where('id', $data[0]->uraian)
+  ->first();
 
+    return view('admin.ekonomi.ekonomi_adhb_Acetak', [
+      'title' => 'Distribusi PDRB Atas Dasar Harga Berlaku (ADHB)',
+      'sumber' => $kt->kategori.'. '.$kt->uraian,
+      'menu_active' => 'menu-ekonomi',
+      'sub_menu_active' => 'menu-ekonomi-adhb',
+      'page_active' => 'ekonomi-adhb-a',
+      'data' => $data
+    ]);
+  }
+    
+//----------------------------------------------------------------
 
   public function adhb_b()
   {
@@ -176,6 +202,36 @@ class EkonomiAdhbAdminController extends Controller
         return redirect(route('ekonomi-adhb_B'))->with('sukses', 'Data Sudah di Hapus');
     }
  
+    public function adhb_bCetak()
+  {
+    $data = \DB::table('m_19_pdrb_berlaku')
+    ->select(\DB::raw('
+    tahun,
+    jumlah,
+    status_data,
+    uraian
+  '))    
+  ->where('uraian',2)
+  ->orderBy('tahun', 'desc')
+  ->get();
+
+  $kt = \DB::table('m_uraian_pdrb')
+  ->where('id', $data[0]->uraian)
+  ->first();
+
+    return view('admin.ekonomi.ekonomi_adhb_Bcetak', [
+      'title' => 'Distribusi PDRB Atas Dasar Harga Berlaku (ADHB)',
+      'sumber' => $kt->kategori.'. '.$kt->uraian,
+      'menu_active' => 'menu-ekonomi',
+      'sub_menu_active' => 'menu-ekonomi-adhb',
+      'page_active' => 'ekonomi-adhb-b',
+      'data' => $data
+    ]);
+  }
+    
+
+
+  //----------------------------------------------------------------
 
   public function adhb_c()
   {
@@ -258,6 +314,37 @@ class EkonomiAdhbAdminController extends Controller
         $data->delete();
         return redirect(route('ekonomi-adhb_C'))->with('sukses', 'Data Sudah di Hapus');
     }
+
+    public function adhb_cCetak()
+  {
+    $data = \DB::table('m_19_pdrb_berlaku')
+    ->select(\DB::raw('
+    tahun,
+    jumlah,
+    status_data,
+    uraian
+  '))    
+  ->where('uraian',3)
+  ->orderBy('tahun', 'desc')
+  ->get();
+
+  $kt = \DB::table('m_uraian_pdrb')
+  ->where('id', $data[0]->uraian)
+  ->first();
+
+    return view('admin.ekonomi.ekonomi_adhb_Bcetak', [
+      'title' => 'Distribusi PDRB Atas Dasar Harga Berlaku (ADHB)',
+      'sumber' => $kt->kategori.'. '.$kt->uraian,
+      'menu_active' => 'menu-ekonomi',
+      'sub_menu_active' => 'menu-ekonomi-adhb',
+      'page_active' => 'ekonomi-adhb-c',
+      'data' => $data
+    ]);
+  }
+    
+
+
+  //----------------------------------------------------------------
 
 
 
@@ -342,6 +429,37 @@ class EkonomiAdhbAdminController extends Controller
       $data->delete();
         return redirect(route('ekonomi-adhb_D'))->with('sukses', 'Data Sudah di Hapus');
     }
+
+    public function adhb_dCetak()
+  {
+    $data = \DB::table('m_19_pdrb_berlaku')
+    ->select(\DB::raw('
+    tahun,
+    jumlah,
+    status_data,
+    uraian
+  '))    
+  ->where('uraian',4)
+  ->orderBy('tahun', 'desc')
+  ->get();
+
+  $kt = \DB::table('m_uraian_pdrb')
+  ->where('id', $data[0]->uraian)
+  ->first();
+
+    return view('admin.ekonomi.ekonomi_adhb_Dcetak', [
+      'title' => 'Distribusi PDRB Atas Dasar Harga Berlaku (ADHB)',
+      'sumber' => $kt->kategori.'. '.$kt->uraian,
+      'menu_active' => 'menu-ekonomi',
+      'sub_menu_active' => 'menu-ekonomi-adhb',
+      'page_active' => 'ekonomi-adhb-d',
+      'data' => $data
+    ]);
+  }
+    
+
+
+  //----------------------------------------------------------------
 
 
 
@@ -428,8 +546,37 @@ class EkonomiAdhbAdminController extends Controller
         return redirect(route('ekonomi-adhb_E'))->with('sukses', 'Data Sudah di Hapus');
     }
 
+    public function adhb_eCetak()
+  {
+    $data = \DB::table('m_19_pdrb_berlaku')
+    ->select(\DB::raw('
+    tahun,
+    jumlah,
+    status_data,
+    uraian
+  '))    
+  ->where('uraian',5)
+  ->orderBy('tahun', 'desc')
+  ->get();
 
-//----------------------------------------------------------------
+  $kt = \DB::table('m_uraian_pdrb')
+  ->where('id', $data[0]->uraian)
+  ->first();
+
+    return view('admin.ekonomi.ekonomi_adhb_Ecetak', [
+      'title' => 'Distribusi PDRB Atas Dasar Harga Berlaku (ADHB)',
+      'sumber' => $kt->kategori.'. '.$kt->uraian,
+      'menu_active' => 'menu-ekonomi',
+      'sub_menu_active' => 'menu-ekonomi-adhb',
+      'page_active' => 'ekonomi-adhb-e',
+      'data' => $data
+    ]);
+  }
+    
+
+
+  //----------------------------------------------------------------
+
 
   public function adhb_f()
   {
@@ -511,6 +658,37 @@ class EkonomiAdhbAdminController extends Controller
       $data->delete();
         return redirect(route('ekonomi-adhb_F'))->with('sukses', 'Data Sudah di Hapus');
     }
+
+    public function adhb_fCetak()
+  {
+    $data = \DB::table('m_19_pdrb_berlaku')
+    ->select(\DB::raw('
+    tahun,
+    jumlah,
+    status_data,
+    uraian
+  '))    
+  ->where('uraian',6)
+  ->orderBy('tahun', 'desc')
+  ->get();
+
+  $kt = \DB::table('m_uraian_pdrb')
+  ->where('id', $data[0]->uraian)
+  ->first();
+
+    return view('admin.ekonomi.ekonomi_adhb_Fcetak', [
+      'title' => 'Distribusi PDRB Atas Dasar Harga Berlaku (ADHB)',
+      'sumber' => $kt->kategori.'. '.$kt->uraian,
+      'menu_active' => 'menu-ekonomi',
+      'sub_menu_active' => 'menu-ekonomi-adhb',
+      'page_active' => 'ekonomi-adhb-f',
+      'data' => $data
+    ]);
+  }
+    
+
+
+  //----------------------------------------------------------------
 
 
 
@@ -595,6 +773,37 @@ class EkonomiAdhbAdminController extends Controller
         return redirect(route('ekonomi-adhb_G'))->with('sukses', 'Data Sudah di Hapus');
     }
 
+    public function adhb_gCetak()
+  {
+    $data = \DB::table('m_19_pdrb_berlaku')
+    ->select(\DB::raw('
+    tahun,
+    jumlah,
+    status_data,
+    uraian
+  '))    
+  ->where('uraian',7)
+  ->orderBy('tahun', 'desc')
+  ->get();
+
+  $kt = \DB::table('m_uraian_pdrb')
+  ->where('id', $data[0]->uraian)
+  ->first();
+
+    return view('admin.ekonomi.ekonomi_adhb_Gcetak', [
+      'title' => 'Distribusi PDRB Atas Dasar Harga Berlaku (ADHB)',
+      'sumber' => $kt->kategori.'. '.$kt->uraian,
+      'menu_active' => 'menu-ekonomi',
+      'sub_menu_active' => 'menu-ekonomi-adhb',
+      'page_active' => 'ekonomi-adhb-g',
+      'data' => $data
+    ]);
+  }
+    
+
+
+  //----------------------------------------------------------------
+
 
 
     public function adhb_h()
@@ -675,6 +884,37 @@ class EkonomiAdhbAdminController extends Controller
       $data->delete();
         return redirect(route('ekonomi-adhb_H'))->with('sukses', 'Data Sudah di Hapus');
     }
+
+    public function adhb_hCetak()
+  {
+    $data = \DB::table('m_19_pdrb_berlaku')
+    ->select(\DB::raw('
+    tahun,
+    jumlah,
+    status_data,
+    uraian
+  '))    
+  ->where('uraian',8)
+  ->orderBy('tahun', 'desc')
+  ->get();
+
+  $kt = \DB::table('m_uraian_pdrb')
+  ->where('id', $data[0]->uraian)
+  ->first();
+
+    return view('admin.ekonomi.ekonomi_adhb_Hcetak', [
+      'title' => 'Distribusi PDRB Atas Dasar Harga Berlaku (ADHB)',
+      'sumber' => $kt->kategori.'. '.$kt->uraian,
+      'menu_active' => 'menu-ekonomi',
+      'sub_menu_active' => 'menu-ekonomi-adhb',
+      'page_active' => 'ekonomi-adhb-h',
+      'data' => $data
+    ]);
+  }
+    
+
+
+  //----------------------------------------------------------------
 
 
 
@@ -757,6 +997,37 @@ class EkonomiAdhbAdminController extends Controller
         return redirect(route('ekonomi-adhb_I'))->with('sukses', 'Data Sudah di Hapus');
     }
 
+    public function adhb_iCetak()
+  {
+    $data = \DB::table('m_19_pdrb_berlaku')
+    ->select(\DB::raw('
+    tahun,
+    jumlah,
+    status_data,
+    uraian
+  '))    
+  ->where('uraian',9)
+  ->orderBy('tahun', 'desc')
+  ->get();
+
+  $kt = \DB::table('m_uraian_pdrb')
+  ->where('id', $data[0]->uraian)
+  ->first();
+
+    return view('admin.ekonomi.ekonomi_adhb_Icetak', [
+      'title' => 'Distribusi PDRB Atas Dasar Harga Berlaku (ADHB)',
+      'sumber' => $kt->kategori.'. '.$kt->uraian,
+      'menu_active' => 'menu-ekonomi',
+      'sub_menu_active' => 'menu-ekonomi-adhb',
+      'page_active' => 'ekonomi-adhb-i',
+      'data' => $data
+    ]);
+  }
+    
+
+
+  //----------------------------------------------------------------
+
 
 
   public function adhb_j()
@@ -837,6 +1108,37 @@ class EkonomiAdhbAdminController extends Controller
       $data->delete();
         return redirect(route('ekonomi-adhb_J'))->with('sukses', 'Data Sudah di Hapus');
     }
+
+    public function adhb_jCetak()
+  {
+    $data = \DB::table('m_19_pdrb_berlaku')
+    ->select(\DB::raw('
+    tahun,
+    jumlah,
+    status_data,
+    uraian
+  '))    
+  ->where('uraian',10)
+  ->orderBy('tahun', 'desc')
+  ->get();
+
+  $kt = \DB::table('m_uraian_pdrb')
+  ->where('id', $data[0]->uraian)
+  ->first();
+
+    return view('admin.ekonomi.ekonomi_adhb_Jcetak', [
+      'title' => 'Distribusi PDRB Atas Dasar Harga Berlaku (ADHB)',
+      'sumber' => $kt->kategori.'. '.$kt->uraian,
+      'menu_active' => 'menu-ekonomi',
+      'sub_menu_active' => 'menu-ekonomi-adhb',
+      'page_active' => 'ekonomi-adhb-j',
+      'data' => $data
+    ]);
+  }
+    
+
+
+  //----------------------------------------------------------------
 
 
 
@@ -919,6 +1221,37 @@ class EkonomiAdhbAdminController extends Controller
       $data->delete();
         return redirect(route('ekonomi-adhb_K'))->with('sukses', 'Data Sudah di Hapus');
     }
+
+    public function adhb_kCetak()
+  {
+    $data = \DB::table('m_19_pdrb_berlaku')
+    ->select(\DB::raw('
+    tahun,
+    jumlah,
+    status_data,
+    uraian
+  '))    
+  ->where('uraian',11)
+  ->orderBy('tahun', 'desc')
+  ->get();
+
+  $kt = \DB::table('m_uraian_pdrb')
+  ->where('id', $data[0]->uraian)
+  ->first();
+
+    return view('admin.ekonomi.ekonomi_adhb_Kcetak', [
+      'title' => 'Distribusi PDRB Atas Dasar Harga Berlaku (ADHB)',
+      'sumber' => $kt->kategori.'. '.$kt->uraian,
+      'menu_active' => 'menu-ekonomi',
+      'sub_menu_active' => 'menu-ekonomi-adhb',
+      'page_active' => 'ekonomi-adhb-k',
+      'data' => $data
+    ]);
+  }
+    
+
+
+  //----------------------------------------------------------------
 
 
 
@@ -1003,6 +1336,37 @@ class EkonomiAdhbAdminController extends Controller
     }
 
 
+    public function adhb_lCetak()
+  {
+    $data = \DB::table('m_19_pdrb_berlaku')
+    ->select(\DB::raw('
+    tahun,
+    jumlah,
+    status_data,
+    uraian
+  '))    
+  ->where('uraian',12)
+  ->orderBy('tahun', 'desc')
+  ->get();
+
+  $kt = \DB::table('m_uraian_pdrb')
+  ->where('id', $data[0]->uraian)
+  ->first();
+
+    return view('admin.ekonomi.ekonomi_adhb_Lcetak', [
+      'title' => 'Distribusi PDRB Atas Dasar Harga Berlaku (ADHB)',
+      'sumber' => $kt->kategori.'. '.$kt->uraian,
+      'menu_active' => 'menu-ekonomi',
+      'sub_menu_active' => 'menu-ekonomi-adhb',
+      'page_active' => 'ekonomi-adhb-l',
+      'data' => $data
+    ]);
+  }
+    
+
+
+  //----------------------------------------------------------------
+
 
 
 
@@ -1086,6 +1450,37 @@ class EkonomiAdhbAdminController extends Controller
     }
 
 
+    public function adhb_mnCetak()
+  {
+    $data = \DB::table('m_19_pdrb_berlaku')
+    ->select(\DB::raw('
+    tahun,
+    jumlah,
+    status_data,
+    uraian
+  '))    
+  ->where('uraian',13)
+  ->orderBy('tahun', 'desc')
+  ->get();
+
+  $kt = \DB::table('m_uraian_pdrb')
+  ->where('id', $data[0]->uraian)
+  ->first();
+
+    return view('admin.ekonomi.ekonomi_adhb_MNcetak', [
+      'title' => 'Distribusi PDRB Atas Dasar Harga Berlaku (ADHB)',
+      'sumber' => $kt->kategori.'. '.$kt->uraian,
+      'menu_active' => 'menu-ekonomi',
+      'sub_menu_active' => 'menu-ekonomi-adhb',
+      'page_active' => 'ekonomi-adhb-mn',
+      'data' => $data
+    ]);
+  }
+    
+
+
+  //----------------------------------------------------------------
+
 
 
   public function adhb_o()
@@ -1168,13 +1563,36 @@ class EkonomiAdhbAdminController extends Controller
         return redirect(route('ekonomi-adhb_T'))->with('sukses', 'Data Sudah di Hapus');
     }
 
+    public function adhb_oCetak()
+  {
+    $data = \DB::table('m_19_pdrb_berlaku')
+    ->select(\DB::raw('
+    tahun,
+    jumlah,
+    status_data,
+    uraian
+  '))    
+  ->where('uraian',14)
+  ->orderBy('tahun', 'desc')
+  ->get();
+
+  $kt = \DB::table('m_uraian_pdrb')
+  ->where('id', $data[0]->uraian)
+  ->first();
+
+    return view('admin.ekonomi.ekonomi_adhb_Ocetak', [
+      'title' => 'Distribusi PDRB Atas Dasar Harga Berlaku (ADHB)',
+      'sumber' => $kt->kategori.'. '.$kt->uraian,
+      'menu_active' => 'menu-ekonomi',
+      'sub_menu_active' => 'menu-ekonomi-adhb',
+      'page_active' => 'ekonomi-adhb-o',
+      'data' => $data
+    ]);
+  }
+    
 
 
-
-
-
-
-
+  //----------------------------------------------------------------
 
 
   public function adhb_p()
@@ -1257,9 +1675,36 @@ class EkonomiAdhbAdminController extends Controller
         return redirect(route('ekonomi-adhb_P'))->with('sukses', 'Data Sudah di Hapus');
     }
 
+    public function adhb_pCetak()
+  {
+    $data = \DB::table('m_19_pdrb_berlaku')
+    ->select(\DB::raw('
+    tahun,
+    jumlah,
+    status_data,
+    uraian
+  '))    
+  ->where('uraian',15)
+  ->orderBy('tahun', 'desc')
+  ->get();
+
+  $kt = \DB::table('m_uraian_pdrb')
+  ->where('id', $data[0]->uraian)
+  ->first();
+
+    return view('admin.ekonomi.ekonomi_adhb_Pcetak', [
+      'title' => 'Distribusi PDRB Atas Dasar Harga Berlaku (ADHB)',
+      'sumber' => $kt->kategori.'. '.$kt->uraian,
+      'menu_active' => 'menu-ekonomi',
+      'sub_menu_active' => 'menu-ekonomi-adhb',
+      'page_active' => 'ekonomi-adhb-p',
+      'data' => $data
+    ]);
+  }
+    
 
 
-
+  //----------------------------------------------------------------
 
   public function adhb_q()
   {
@@ -1340,6 +1785,37 @@ class EkonomiAdhbAdminController extends Controller
         return redirect(route('ekonomi-adhb_Q'))->with('sukses', 'Data Sudah di Hapus');
     }
 
+    public function adhb_qCetak()
+  {
+    $data = \DB::table('m_19_pdrb_berlaku')
+    ->select(\DB::raw('
+    tahun,
+    jumlah,
+    status_data,
+    uraian
+  '))    
+  ->where('uraian',16)
+  ->orderBy('tahun', 'desc')
+  ->get();
+
+  $kt = \DB::table('m_uraian_pdrb')
+  ->where('id', $data[0]->uraian)
+  ->first();
+
+    return view('admin.ekonomi.ekonomi_adhb_Qcetak', [
+      'title' => 'Distribusi PDRB Atas Dasar Harga Berlaku (ADHB)',
+      'sumber' => $kt->kategori.'. '.$kt->uraian,
+      'menu_active' => 'menu-ekonomi',
+      'sub_menu_active' => 'menu-ekonomi-adhb',
+      'page_active' => 'ekonomi-adhb-q',
+      'data' => $data
+    ]);
+  }
+    
+
+
+  //----------------------------------------------------------------
+
 
 
 
@@ -1382,7 +1858,7 @@ class EkonomiAdhbAdminController extends Controller
     \DB::table('m_19_pdrb_berlaku')->insert([
       'tahun' => $request->input('tahun'),
       'jumlah' => $request->input('jumlah'),  
-      'uraian' => 16,     
+      'uraian' => 17,     
       'status_data' => $request->input('status_data'),
     ]); 
      
@@ -1410,7 +1886,7 @@ class EkonomiAdhbAdminController extends Controller
       ->update([
         'tahun' => $request->input('tahun'),
         'jumlah' => $request->input('jumlah'),
-        'uraian' => 16,      
+        'uraian' => 17,      
         'status_data' => $request->input('status_data'),
       ]);
       return redirect(route('ekonomi-adhb_RSTU'))->with('success', 'data berhasil diubah');
@@ -1423,5 +1899,36 @@ class EkonomiAdhbAdminController extends Controller
         return redirect(route('ekonomi-adhb_RSTU'))->with('sukses', 'Data Sudah di Hapus');
     }
 
+
+    public function adhb_rstuCetak()
+  {
+    $data = \DB::table('m_19_pdrb_berlaku')
+    ->select(\DB::raw('
+    tahun,
+    jumlah,
+    status_data,
+    uraian
+  '))    
+  ->where('uraian',17)
+  ->orderBy('tahun', 'desc')
+  ->get();
+
+  $kt = \DB::table('m_uraian_pdrb')
+  ->where('id', $data[0]->uraian)
+  ->first();
+
+    return view('admin.ekonomi.ekonomi_adhb_RSTUcetak', [
+      'title' => 'Distribusi PDRB Atas Dasar Harga Berlaku (ADHB)',
+      'sumber' => $kt->kategori.'. '.$kt->uraian,
+      'menu_active' => 'menu-ekonomi',
+      'sub_menu_active' => 'menu-ekonomi-adhb',
+      'page_active' => 'ekonomi-adhb-rstu',
+      'data' => $data
+    ]);
+  }
+    
+
+
+  //----------------------------------------------------------------
 
 }

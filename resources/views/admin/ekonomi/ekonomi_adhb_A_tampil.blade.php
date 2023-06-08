@@ -24,7 +24,7 @@
                                         data-target="#modal-default">
                                         <b style="font-size:12px;"> Tambah Data</b>
                                     </button>
-                                    <a href="{{ route('adhbAcetak') }}" target="_blank">
+                                    <a href="{{ route('adhb_acetak') }}" target="_blank">
                                         <button style="float:right;margin-right:10px;" type="button"
                                             class="btn btn-success">
                                             <b><i class="fa fa-print"></i></b>
