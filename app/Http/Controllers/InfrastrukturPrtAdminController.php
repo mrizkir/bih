@@ -76,4 +76,24 @@ class InfrastrukturPrtAdminController extends Controller
         $data->delete();
         return redirect(route('infrastruktur-prt.index'))->with('sukses', 'Data Sudah di Hapus');
     }
+    public function prtCetak()
+  {
+    $data = \DB::table('m_29_air')
+    ->select(\DB::raw('
+    tahun, 
+    nilai, 
+    status_data
+  '))     
+  ->orderBy('tahun', 'desc')
+  ->get(); 
+
+    return view('admin.infrastruktur.2prtcetak', [
+      'title' => 'Persentase Rumah Tangga yang menggunakan air bersih (PRT)',
+      'sumber' => 'BPS',
+      'menu_active' => 'menu-infrastruktur',
+      'sub_menu_active' => 'none',
+      'page_active' => 'infrastruktur-prt',
+      'data' => $data
+    ]);
+  }
 }

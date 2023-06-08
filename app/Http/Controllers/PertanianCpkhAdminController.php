@@ -77,4 +77,24 @@ class PertanianCpkhAdminController extends Controller
         $data->delete();
         return redirect(route('pertanian-cpkh.index'))->with('sukses', 'Data Sudah di Hapus');
     }
+    public function cpkhCetak()
+  {
+    $data = \DB::table('m_24_holtikultura')
+    ->select(\DB::raw('
+      tahun,
+      jumlah,
+      status_data
+    '))    
+    ->orderBy('tahun', 'desc')
+    ->get();
+
+    return view('admin.pertanian.3cpkupcetak', [
+      'title' => 'Capaian Produksi Komoditi Hortikultura (CPKH)',
+      'sumber' => 'BPS',
+      'menu_active' => 'menu-pertanian',
+      'sub_menu_active' => 'none',
+      'page_active' => 'pertanian-cpkh',
+      'data' => $data
+    ]);
+  }
 }

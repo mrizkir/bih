@@ -76,4 +76,24 @@ class PertanianCpkupAdminController extends Controller
         $data->delete();
         return redirect(route('pertanian-cpkup.index'))->with('sukses', 'Data Sudah di Hapus');
     }
+    public function cpkupCetak()
+  {
+    $data = \DB::table('m_23_perkebunan')
+    ->select(\DB::raw('
+      tahun,
+      jumlah,
+      status_data
+    '))    
+    ->orderBy('tahun', 'desc')
+    ->get();
+
+    return view('admin.pertanian.3cpkupcetak', [
+      'title' => 'Capaian Produksi Komoditi Unggulan Perkebunan (CPKUP)',
+      'sumber' => 'BPS',
+      'menu_active' => 'menu-pertanian',
+      'sub_menu_active' => 'none',
+      'page_active' => 'pertanian-cpkup',
+      'data' => $data
+    ]);
+  }
 }

@@ -86,4 +86,27 @@ class KependudukanJpAdminController extends Controller
         $data->delete();
         return redirect(route('kependudukan-jp.index'))->with('sukses', 'Data Sudah di Hapus');
     }
+
+    public function jpCetak()
+  {
+    $data = \DB::table('m_36_jumlah_penduduk')
+    ->select(\DB::raw('
+      tahun,
+      laki,
+      perempuan,
+      total,
+      status_data
+    '))    
+    ->orderBy('tahun', 'desc')
+    ->get();
+
+    return view('admin.kependudukan.1jpcetak', [
+      'title' => 'Jumlah Penduduk (JP)',
+      'sumber' => 'BPS',
+      'menu_active' => 'menu-kependudukan',
+      'sub_menu_active' => 'none',
+      'page_active' => 'kependudukan-jp',
+      'data' => $data
+    ]);
+  }
 }

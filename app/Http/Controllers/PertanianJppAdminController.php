@@ -76,4 +76,24 @@ class PertanianJppAdminController extends Controller
         $data->delete();
         return redirect(route('pertanian-jpp.index'))->with('sukses', 'Data Sudah di Hapus');
     }
+    public function jppCetak()
+  {
+    $data = \DB::table('m_25_peternakan')
+    ->select(\DB::raw('
+      tahun,
+      jumlah,
+      status_data
+    '))    
+    ->orderBy('tahun', 'desc')
+    ->get();
+
+    return view('admin.pertanian.5jppcetak', [
+      'title' => 'Jumlah Produksi Peternakan (JPP)',
+      'sumber' => 'BPS',
+      'menu_active' => 'menu-pertanian',
+      'sub_menu_active' => 'none',
+      'page_active' => 'pertanian-jpp',
+      'data' => $data
+    ]);
+  }
 }

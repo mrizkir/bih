@@ -76,4 +76,25 @@ class PertanianPpbAdminController extends Controller
         $data->delete();
         return redirect(route('pertanian-ppb.index'))->with('sukses', 'Data Sudah di Hapus');
     }
+
+    public function ppbCetak()
+  {
+    $data = \DB::table('m_21_perikanan_budidaya')
+    ->select(\DB::raw('
+      tahun,
+      jumlah,
+      status_data
+    '))    
+    ->orderBy('tahun', 'desc')
+    ->get();
+
+    return view('admin.pertanian.1ppbcetak', [
+      'title' => 'Produksi Perikanan Budidaya (PPB)',
+      'sumber' => 'BPS',
+      'menu_active' => 'menu-pertanian',
+      'sub_menu_active' => 'none',
+      'page_active' => 'pertanian-ppb',        
+      'data' => $data
+    ]);
+  }
 }

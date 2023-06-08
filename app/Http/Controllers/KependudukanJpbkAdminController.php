@@ -89,4 +89,28 @@ class KependudukanJpbkAdminController extends Controller
         $data->delete();
         return redirect(route('kependudukan-jpbk.index'))->with('sukses', 'Data Sudah di Hapus');
     }
+
+    public function jpbkCetak()
+  {
+    $data = \DB::table('m_26_penduduk_kecamatan')
+    ->select(\DB::raw('
+    id,
+    kecamatan,
+      laki,
+      perempuan,
+      sex_ratio,
+      status_data
+    '))    
+    ->orderBy('id', 'desc')
+    ->get(); 
+
+    return view('admin.kependudukan.2jpbkcetak', [
+      'title' => 'Jumlah Penduduk Berdasarkan Kecamatan Tahun 2021 (JPBK)',
+      'sumber' => 'BPS',
+      'menu_active' => 'menu-kependudukan',
+      'sub_menu_active' => 'none',
+      'page_active' => 'kependudukan-jpbk',
+      'data' => $data
+    ]);
+  }
 }

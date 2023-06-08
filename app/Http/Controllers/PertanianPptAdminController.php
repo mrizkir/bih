@@ -76,4 +76,24 @@ class PertanianPptAdminController extends Controller
         $data->delete();
         return redirect(route('pertanian-ppt.index'))->with('sukses', 'Data Sudah di Hapus');
     }
+    public function pptCetak()
+  {
+    $data = \DB::table('m_22_perikanan_tangkap')
+    ->select(\DB::raw('
+      tahun,
+      jumlah,
+      status_data
+    '))    
+    ->orderBy('tahun', 'desc')
+    ->get();
+
+    return view('admin.pertanian.1ppbcetak', [
+      'title' => 'Produksi Perikanan Tangkap(PPT)',
+      'sumber' => 'BPS',
+      'menu_active' => 'menu-pertanian',
+      'sub_menu_active' => 'none',
+      'page_active' => 'pertanian-ppt',
+      'data' => $data
+    ]);
+  }
 }

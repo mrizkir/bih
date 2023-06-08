@@ -111,4 +111,32 @@ class EkonomiLiAdminController extends Controller
         $data->delete();
         return redirect(route('ekonomi-li.index'))->with('sukses', 'Data Sudah di Hapus');
     }
+
+    public function liCetak()
+  {
+    $data = \DB::table('m_18_inflasi')
+    ->select(\DB::raw('
+    tahun, 
+    umum,
+    bahan_makanan,
+    makanan_jadi,
+    perumahan,
+    sandang,
+    kesehatan,
+    pendidikan,
+    transportasi,
+    status_data
+  '))     
+  ->orderBy('tahun', 'desc')
+  ->get();
+
+    return view('admin.ekonomi.2licetak', [
+      'title' => 'Laju Inflasi (LI)',
+      'sumber' => 'BPS',
+      'menu_active' => 'menu-ekonomi',
+      'sub_menu_active' => 'none',
+      'page_active' => 'ekonomi-li',
+      'data' => $data
+    ]);
+  }
 }

@@ -76,4 +76,25 @@ class EkonomiPeAdminController extends Controller
         $data->delete();
         return redirect(route('ekonomi-pe.index'))->with('sukses', 'Data Sudah di Hapus');
     }
+
+    public function peCetak()
+  {
+    $data = \DB::table('m_17_ekonomi')
+    ->select(\DB::raw('
+      tahun,
+      pertumbuhan_ekonomi,
+      status_data
+    '))    
+    ->orderBy('tahun', 'desc')
+    ->get();
+
+    return view('admin.ekonomi.1pecetak', [
+      'title' => 'Petumbuhan Ekonomi (PE)',
+      'sumber' => 'BPS',
+      'menu_active' => 'menu-ekonomi',
+      'sub_menu_active' => 'none',
+      'page_active' => 'ekonomi-pe',
+      'data' => $data
+    ]);
+  }
 }
