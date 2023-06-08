@@ -51,7 +51,7 @@ class KependudukanJpbkuAdminController extends Controller
     $data = \DB::table('m_26_penduduk_umur')
     ->where('tahun', $id)
     ->first();
- 
+  
     if (is_null($data))
     {
       return redirect(route('A-jpbku_04'))->with('error', 'data gagal disimpan');
@@ -80,7 +80,31 @@ class KependudukanJpbkuAdminController extends Controller
         return redirect(route('A-jpbku_04'))->with('sukses', 'Data Sudah di Hapus');
     }
 
-//----------------KE 2
+    public function jpbku_04Cetak()
+  {
+    $data = \DB::table('m_26_penduduk_umur')
+    ->select(\DB::raw('
+    tahun, 
+    jumlah,  
+    status_data
+  '))    
+  ->where('kelompok_umur','1')
+  ->orderBy('tahun', 'desc')
+  ->get(); 
+
+    return view('admin.kependudukan.A_jpbku_04cetak', [
+      'title' => 'Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU)',
+      'sumber' => '0-4 Tahun',
+      'menu_active' => 'menu-kependudukan',
+      'sub_menu_active' => 'menu-kependudukan-jpbku',
+      'page_active' => 'kependudukan-jpbku-0-4',
+      'data' => $data
+    ]);
+  }
+
+//----------------------------------------------------------------
+
+
     public function jpbku_59Tahun()
     {
       $data = \DB::table('m_26_penduduk_umur')
@@ -154,6 +178,29 @@ class KependudukanJpbkuAdminController extends Controller
         return redirect(route('B-jpbku_59'))->with('sukses', 'Data Sudah di Hapus');
     }
 
+    public function jpbku_59Cetak()
+  {
+    $data = \DB::table('m_26_penduduk_umur')
+    ->select(\DB::raw('
+    tahun, 
+    jumlah,  
+    status_data
+  '))    
+  ->where('kelompok_umur','2')
+  ->orderBy('tahun', 'desc')
+  ->get(); 
+
+    return view('admin.kependudukan.B_jpbku_59cetak', [
+      'title' => 'Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU)',
+      'sumber' => '5-9 Tahun',
+      'menu_active' => 'menu-kependudukan',
+      'sub_menu_active' => 'menu-kependudukan-jpbku',
+      'page_active' => 'kependudukan-jpbku-5-9',
+      'data' => $data
+    ]);
+  }
+
+//----------------------------------------------------------------
 //----------------KE 3 10-14 Tahun --------------------------------
     public function jpbku_1014Tahun()
     {
@@ -228,6 +275,29 @@ class KependudukanJpbkuAdminController extends Controller
         return redirect(route('C-jpbku_1014'))->with('sukses', 'Data Sudah di Hapus');
     }
 
+    public function jpbku_1014Cetak()
+  {
+    $data = \DB::table('m_26_penduduk_umur')
+    ->select(\DB::raw('
+    tahun, 
+    jumlah,  
+    status_data
+  '))    
+  ->where('kelompok_umur','3')
+  ->orderBy('tahun', 'desc')
+  ->get(); 
+
+    return view('admin.kependudukan.C_jpbku1014cetak', [
+      'title' => 'Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU)',
+      'sumber' => '10-14 Tahun',
+      'menu_active' => 'menu-kependudukan',
+      'sub_menu_active' => 'menu-kependudukan-jpbku',
+      'page_active' => 'kependudukan-jpbku-10-14',
+      'data' => $data
+    ]);
+  }
+
+//----------------------------------------------------------------
 
 
 //----------------KE 4 15-19 Tahun --------------------------------
@@ -305,6 +375,29 @@ class KependudukanJpbkuAdminController extends Controller
         return redirect(route('D_jpbku_1519'))->with('sukses', 'Data Sudah di Hapus');
     }
 
+    public function jpbku_1519Cetak()
+  {
+    $data = \DB::table('m_26_penduduk_umur')
+    ->select(\DB::raw('
+    tahun, 
+    jumlah,  
+    status_data
+  '))    
+  ->where('kelompok_umur','4')
+  ->orderBy('tahun', 'desc')
+  ->get(); 
+
+    return view('admin.kependudukan.D_jpbku_1519cetak', [
+      'title' => 'Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU)',
+      'sumber' => '15-19 Tahun',
+      'menu_active' => 'menu-kependudukan',
+      'sub_menu_active' => 'menu-kependudukan-jpbku',
+      'page_active' => 'kependudukan-jpbku-15-19',
+      'data' => $data
+    ]);
+  }
+
+//----------------------------------------------------------------
 
 
 //----------------KE 5 20-24 Tahun --------------------------------
@@ -382,7 +475,28 @@ class KependudukanJpbkuAdminController extends Controller
         return redirect(route('E-jpbku_2024'))->with('sukses', 'Data Sudah di Hapus');
     }
 
+    public function jpbku_2024Cetak()
+  {
+    $data = \DB::table('m_26_penduduk_umur')
+    ->select(\DB::raw('
+    tahun, 
+    jumlah,  
+    status_data
+  '))    
+  ->where('kelompok_umur','5')
+  ->orderBy('tahun', 'desc')
+  ->get(); 
 
+    return view('admin.kependudukan.E_jpbku_2024cetak', [
+      'title' => 'Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU)',
+      'sumber' => '20-24 Tahun',
+      'menu_active' => 'menu-kependudukan',
+      'sub_menu_active' => 'menu-kependudukan-jpbku',
+      'page_active' => 'kependudukan-jpbku-20-24',
+      'data' => $data
+    ]);
+  }
+//----------------------------------------------------------------
 
     //----------------KE 6 25-29 Tahun --------------------------------
     public function jpbku_2529()
@@ -459,6 +573,28 @@ class KependudukanJpbkuAdminController extends Controller
         return redirect(route('F-jpbku_2529'))->with('sukses', 'Data Sudah di Hapus');
     }
 
+    public function jpbku_2529Cetak()
+  {
+    $data = \DB::table('m_26_penduduk_umur')
+    ->select(\DB::raw('
+    tahun, 
+    jumlah,  
+    status_data
+  '))    
+  ->where('kelompok_umur','6')
+  ->orderBy('tahun', 'desc')
+  ->get(); 
+
+    return view('admin.kependudukan.F_jpbku_2529cetak', [
+      'title' => 'Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU)',
+      'sumber' => '25-29 Tahun',
+      'menu_active' => 'menu-kependudukan',
+      'sub_menu_active' => 'menu-kependudukan-jpbku',
+      'page_active' => 'kependudukan-jpbku-25-29',
+      'data' => $data
+    ]);
+  }
+//----------------------------------------------------------------
 
 
 
@@ -537,6 +673,29 @@ class KependudukanJpbkuAdminController extends Controller
         return redirect(route('G-jpbku_3034'))->with('sukses', 'Data Sudah di Hapus');
     }
 
+    public function jpbku_3034Cetak()
+  {
+    $data = \DB::table('m_26_penduduk_umur')
+    ->select(\DB::raw('
+    tahun, 
+    jumlah,  
+    status_data
+  '))    
+  ->where('kelompok_umur','7')
+  ->orderBy('tahun', 'desc')
+  ->get(); 
+
+    return view('admin.kependudukan.G_jpbku_3034cetak', [
+      'title' => 'Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU)',
+      'sumber' => '30-34 Tahun',
+      'menu_active' => 'menu-kependudukan',
+      'sub_menu_active' => 'menu-kependudukan-jpbku',
+      'page_active' => 'kependudukan-jpbku-30-34',
+      'data' => $data
+    ]);
+  }
+//----------------------------------------------------------------
+
     //----------------KE 8 35-39 Tahun --------------------------------  
     public function jpbku_3539()
     {
@@ -612,6 +771,28 @@ class KependudukanJpbkuAdminController extends Controller
         return redirect(route('H-jpbku_3539'))->with('sukses', 'Data Sudah di Hapus');
     }
 
+    public function jpbku_3539Cetak()
+  {
+    $data = \DB::table('m_26_penduduk_umur')
+    ->select(\DB::raw('
+    tahun, 
+    jumlah,  
+    status_data
+  '))    
+  ->where('kelompok_umur','8')
+  ->orderBy('tahun', 'desc')
+  ->get(); 
+
+    return view('admin.kependudukan.H_jpbku_3539cetak', [
+      'title' => 'Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU)',
+      'sumber' => '35-39 Tahun',
+      'menu_active' => 'menu-kependudukan',
+      'sub_menu_active' => 'menu-kependudukan-jpbku',
+      'page_active' => 'kependudukan-jpbku-35-39',
+      'data' => $data
+    ]);
+  }
+//----------------------------------------------------------------
     //----------------KE 9 35-39 Tahun --------------------------------  
     public function jpbku_4044()
     {
@@ -687,6 +868,28 @@ class KependudukanJpbkuAdminController extends Controller
         return redirect(route('I-jpbku_4044'))->with('sukses', 'Data Sudah di Hapus');
     }
 
+    public function jpbku_4044Cetak()
+  {
+    $data = \DB::table('m_26_penduduk_umur')
+    ->select(\DB::raw('
+    tahun, 
+    jumlah,  
+    status_data
+  '))    
+  ->where('kelompok_umur','9')
+  ->orderBy('tahun', 'desc')
+  ->get(); 
+
+    return view('admin.kependudukan.I_jpbku_4044cetak', [
+      'title' => 'Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU)',
+      'sumber' => '40-44 Tahun',
+      'menu_active' => 'menu-kependudukan',
+      'sub_menu_active' => 'menu-kependudukan-jpbku',
+      'page_active' => 'kependudukan-jpbku-40-44',
+      'data' => $data
+    ]);
+  }
+//----------------------------------------------------------------
     //----------------KE 10 45-49 Tahun --------------------------------  
     public function jpbku_4549()
     {
@@ -762,6 +965,28 @@ class KependudukanJpbkuAdminController extends Controller
         return redirect(route('J-jpbku_4549'))->with('sukses', 'Data Sudah di Hapus');
     }
 
+    public function jpbku_4549Cetak()
+  {
+    $data = \DB::table('m_26_penduduk_umur')
+    ->select(\DB::raw('
+    tahun, 
+    jumlah,  
+    status_data
+  '))    
+  ->where('kelompok_umur','10')
+  ->orderBy('tahun', 'desc')
+  ->get(); 
+
+    return view('admin.kependudukan.J_jpbku_4549cetak', [
+      'title' => 'Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU)',
+      'sumber' => '45-49 Tahun',
+      'menu_active' => 'menu-kependudukan',
+      'sub_menu_active' => 'menu-kependudukan-jpbku',
+      'page_active' => 'kependudukan-jpbku-45-49',
+      'data' => $data
+    ]);
+  }
+//----------------------------------------------------------------
 
     //----------------KE 11 50-54 Tahun --------------------------------  
     public function jpbku_5054()
@@ -838,6 +1063,28 @@ class KependudukanJpbkuAdminController extends Controller
         return redirect(route('K-jpbku_5054'))->with('sukses', 'Data Sudah di Hapus');
     }
 
+    public function jpbku_505Cetak()
+  {
+    $data = \DB::table('m_26_penduduk_umur')
+    ->select(\DB::raw('
+    tahun, 
+    jumlah,  
+    status_data
+  '))    
+  ->where('kelompok_umur','11')
+  ->orderBy('tahun', 'desc')
+  ->get(); 
+
+    return view('admin.kependudukan.K_jpbku_5054cetak', [
+      'title' => 'Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU)',
+      'sumber' => '50-54 Tahun',
+      'menu_active' => 'menu-kependudukan',
+      'sub_menu_active' => 'menu-kependudukan-jpbku',
+      'page_active' => 'kependudukan-jpbku-50-54',
+      'data' => $data
+    ]);
+  }
+//----------------------------------------------------------------
 
     //----------------KE 12 54-59 Tahun --------------------------------  
     public function jpbku_5459()
@@ -914,6 +1161,28 @@ class KependudukanJpbkuAdminController extends Controller
         return redirect(route('L-jpbku_5459'))->with('sukses', 'Data Sudah di Hapus');
     }
 
+    public function jpbku_5459Cetak()
+  {
+    $data = \DB::table('m_26_penduduk_umur')
+    ->select(\DB::raw('
+    tahun, 
+    jumlah,  
+    status_data
+  '))    
+  ->where('kelompok_umur','12')
+  ->orderBy('tahun', 'desc')
+  ->get(); 
+
+    return view('admin.kependudukan.L_jpbku_5459cetak', [
+      'title' => 'Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU)',
+      'sumber' => '54-59 Tahun',
+      'menu_active' => 'menu-kependudukan',
+      'sub_menu_active' => 'menu-kependudukan-jpbku',
+      'page_active' => 'kependudukan-jpbku-54-59',
+      'data' => $data
+    ]);
+  }
+//----------------------------------------------------------------
 
     //----------------KE 13 60 64 Tahun --------------------------------  
     public function jpbku_6064()
@@ -989,6 +1258,29 @@ class KependudukanJpbkuAdminController extends Controller
         $data->delete();
         return redirect(route('M-jpbku_6064'))->with('sukses', 'Data Sudah di Hapus');
     }
+
+    public function jpbku_6064Cetak()
+  {
+    $data = \DB::table('m_26_penduduk_umur')
+    ->select(\DB::raw('
+    tahun, 
+    jumlah,  
+    status_data
+  '))    
+  ->where('kelompok_umur','13')
+  ->orderBy('tahun', 'desc')
+  ->get(); 
+
+    return view('admin.kependudukan.M_jpbku_6064cetak', [
+      'title' => 'Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU)',
+      'sumber' => '60-64 Tahun',
+      'menu_active' => 'menu-kependudukan',
+      'sub_menu_active' => 'menu-kependudukan-jpbku',
+      'page_active' => 'kependudukan-jpbku-60-64',
+      'data' => $data
+    ]);
+  }
+//----------------------------------------------------------------
 
 
 
@@ -1068,7 +1360,30 @@ class KependudukanJpbkuAdminController extends Controller
         $data->delete();
         return redirect(route('N-jpbku_6569'))->with('sukses', 'Data Sudah di Hapus');
     }
+ 
 
+    public function jpbku_6569Cetak()
+  {
+    $data = \DB::table('m_26_penduduk_umur')
+    ->select(\DB::raw('
+    tahun, 
+    jumlah,  
+    status_data
+  '))    
+  ->where('kelompok_umur','14')
+  ->orderBy('tahun', 'desc')
+  ->get(); 
+
+    return view('admin.kependudukan.N_jpbku_6569cetak', [
+      'title' => 'Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU)',
+      'sumber' => '65-69 Tahun',
+      'menu_active' => 'menu-kependudukan',
+      'sub_menu_active' => 'menu-kependudukan-jpbku',
+      'page_active' => 'kependudukan-jpbku-65-69',
+      'data' => $data
+    ]);
+  }
+//----------------------------------------------------------------
 
 
 
@@ -1147,6 +1462,28 @@ class KependudukanJpbkuAdminController extends Controller
         return redirect(route('O-jpbku_7074'))->with('sukses', 'Data Sudah di Hapus');
     }
 
+    public function jpbku_7074Cetak()
+  {
+    $data = \DB::table('m_26_penduduk_umur')
+    ->select(\DB::raw('
+    tahun, 
+    jumlah,  
+    status_data
+  '))    
+  ->where('kelompok_umur','15')
+  ->orderBy('tahun', 'desc')
+  ->get(); 
+
+    return view('admin.kependudukan.O_jpbku_7074cetak', [
+      'title' => 'Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU)',
+      'sumber' => '70-74 Tahun',
+      'menu_active' => 'menu-kependudukan',
+      'sub_menu_active' => 'menu-kependudukan-jpbku',
+      'page_active' => 'kependudukan-jpbku-70-74',
+      'data' => $data
+    ]);
+  }
+//----------------------------------------------------------------
 
     //----------------KE 16 65 69 Tahun -------------------------------- 
     public function jpbku_75()
@@ -1223,4 +1560,26 @@ class KependudukanJpbkuAdminController extends Controller
         return redirect(route('P-jpbku_75'))->with('sukses', 'Data Sudah di Hapus');
     }
 
+    public function jpbku_75Cetak()
+  {
+    $data = \DB::table('m_26_penduduk_umur')
+    ->select(\DB::raw('
+    tahun, 
+    jumlah,  
+    status_data
+  '))    
+  ->where('kelompok_umur','16')
+  ->orderBy('tahun', 'desc')
+  ->get(); 
+
+    return view('admin.kependudukan.P_jpbku_75cetak', [
+      'title' => 'Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU)',
+      'sumber' => '75+ Tahun',
+      'menu_active' => 'menu-kependudukan',
+      'sub_menu_active' => 'menu-kependudukan-jpbku',
+      'page_active' => 'kependudukan-jpbku-75-n',
+      'data' => $data
+    ]);
+  }
+//----------------------------------------------------------------
 }
