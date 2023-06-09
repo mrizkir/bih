@@ -103,4 +103,29 @@ class SosialPkkAdminController extends Controller
         $data->delete();
         return redirect(route('sosial-pkk.index'))->with('sukses', 'Data Sudah di Hapus');
     }
+    public function pkkCetak()
+  {
+    $data = \DB::table('m_8_tenaga_kerja')
+    ->select(\DB::raw('
+    tahun,
+    penduduk_usia_kerja, 
+    angkatan_kerja,
+    bekerja,
+    mencari_pekerjaan,
+    tingkat_partisipasi,
+    tingkat_pengangguran,
+    status_data
+    '))    
+    ->orderBy('tahun', 'desc')
+    ->get();
+
+    return view('admin.sosial.8pkkcetak', [
+      'title' => 'Perkembangan Kondisi Ketenagakerjaan di Kabupaten Bintan (PKK)',
+      'sumber' => 'BPS',
+      'menu_active' => 'menu-sosial',
+      'sub_menu_active' => 'none',
+      'page_active' => 'sosial-pkk',
+      'data' => $data
+    ]);
+  }
 }

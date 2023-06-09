@@ -94,6 +94,33 @@ class SosialApmAdminController extends Controller
       $data->delete();
       return redirect(route('sosial-apm_SD'))->with('sukses', 'Data Sudah di Hapus');
   }
+  public function apm_SDCetak()
+{
+  $data = \DB::table('m_11_apm')
+  ->select(\DB::raw('
+  tahun,
+  tingkat,
+  APM,
+  no,
+  status_data
+'))    
+->where('no','1')
+->orderBy('tahun', 'desc')
+->get();
+
+  return view('admin.sosial.sosial_apm_SDcetak', [
+    'title' => 'Angka partisipasi Murni (APM)',
+    'sumber' => 'SD 7-12 Tahun',
+    'menu_active' => 'menu-sosial',
+    'sub_menu_active' => 'menu-sosial-apm',
+    'page_active' => 'sosial-apm-sd',
+    'data' => $data
+  ]);
+}
+
+
+//----------------------------------------------------------------
+
   public function apm_SMP()
   {
     $data = \DB::table('m_11_apm')
@@ -172,6 +199,32 @@ class SosialApmAdminController extends Controller
   }
  
 
+  public function apm_SMPCetak()
+{
+  $data = \DB::table('m_11_apm')
+  ->select(\DB::raw('
+  tahun,
+  tingkat,
+  APM,
+  no,
+  status_data
+'))    
+->where('no','2')
+->orderBy('tahun', 'desc')
+->get();
+
+  return view('admin.sosial.sosial_apm_SMPcetak', [
+    'title' => 'Angka partisipasi Murni (APM)',
+    'sumber' => 'SMP 13-15 Tahun',
+    'menu_active' => 'menu-sosial',
+    'sub_menu_active' => 'menu-sosial-apm',
+    'page_active' => 'sosial-apm-smp',
+    'data' => $data
+  ]);
+}
+
+
+//----------------------------------------------------------------
   public function apm_SMA()
   {
     $data = \DB::table('m_11_apm')
@@ -247,4 +300,28 @@ class SosialApmAdminController extends Controller
         $data->delete();
         return redirect(route('sosial-apm_SMA'))->with('sukses', 'Data Sudah di Hapus');
     }
+
+  public function apm_SMACetak()
+  {
+    $data = \DB::table('m_11_apm')
+    ->select(\DB::raw('
+    tahun,
+    tingkat,
+    APM,
+    no,
+    status_data
+  '))    
+  ->where('no','3')
+  ->orderBy('tahun', 'desc')
+  ->get();
+  
+    return view('admin.sosial.sosial_apm_SMAcetak', [
+      'title' => 'Angka partisipasi Murni (APM)',
+      'sumber' => 'SMA 16-18 Tahun',
+      'menu_active' => 'menu-sosial',
+      'sub_menu_active' => 'menu-sosial-apm',
+      'page_active' => 'sosial-apm-sma',
+      'data' => $data
+    ]);
+  }
 }

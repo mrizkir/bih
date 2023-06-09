@@ -86,4 +86,27 @@ class EkonomiKwAdminController extends Controller
         $data->delete();
         return redirect(route('ekonomi-kw.index'))->with('sukses', 'Data Sudah di Hapus');
     }
+
+    public function kwCetak()
+  {
+    $data = \DB::table('m_20_kunjungan')
+    ->select(\DB::raw('
+    tahun, 
+    mancanegara,
+    nusantara,
+    jumlah,
+    status_data
+  '))     
+  ->orderBy('tahun', 'desc')
+  ->get(); 
+
+    return view('admin.ekonomi.5kwcetak', [
+      'title' => 'Kunjungan Wisata (KW)',
+      'sumber' => 'BPS',
+      'menu_active' => 'menu-ekonomi',
+      'sub_menu_active' => 'none',
+      'page_active' => 'ekonomi-kw',
+      'data' => $data
+    ]);
+  }
 }

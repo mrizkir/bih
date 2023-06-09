@@ -76,4 +76,26 @@ class InfrastrukturPtkjAdminController extends Controller
         $data->delete();
         return redirect(route('infrastruktur-ptkj.index'))->with('sukses', 'Data Sudah di Hapus');
     }
+
+
+    public function ptkjCetak()
+  {
+    $data = \DB::table('m_37_kemantapan_jalan')
+    ->select(\DB::raw('
+    tahun, 
+    kemantapan_jalan, 
+    status_data
+  '))     
+  ->orderBy('tahun', 'desc')
+  ->get(); 
+
+    return view('admin.infrastruktur.3ptkjcetak', [
+      'title' => 'Persentase Tingkat Kemantapan Jalan (PTKJ)',
+      'sumber' => 'BPS',
+      'menu_active' => 'menu-infrastruktur',
+      'sub_menu_active' => 'none',
+      'page_active' => 'infrastruktur-ptkj',
+      'data' => $data
+    ]);
+  }
 }

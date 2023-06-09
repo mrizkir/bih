@@ -24,7 +24,7 @@
                                         data-target="#modal-default">
                                         <b style="font-size:12px;"> Tambah Data</b>
                                     </button>
-                                    <a href="{{ '' }}" target="_blank">
+                                    <a href="{{ route('rlscetak') }}" target="_blank">
                                         <button style="float:right;margin-right:10px;" type="button"
                                             class="btn btn-success">
                                             <b><i class="fa fa-print"></i></b>
@@ -47,7 +47,7 @@
                                                 <td class="text-center">{{ $k + 1 }}</th>
                                                 <td><strong>Tahun</strong> : {{ $item->tahun }} | <strong>Series</strong> :
                                                     {{ Helper::getJenisDataSeries($item->status_data) }} |
-                                                    <strong>Presentase </strong> : {{ $item->rls }}%
+                                                    <strong>Presentase </strong> : {{ $item->rls }}
                                                 </td>
                                                 <td class="project-actions text-center" style="padding: 10px;">
                                                     <a href="" class="btn btn-info btn-sm" data-toggle="modal"
@@ -202,15 +202,15 @@
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-4">
-                                            <label>Kelompok Umur</label>
-                                            <input type="text" name="kel_umur"
-                                                class="form-control @error('kel_umur') is-invalid @enderror"
-                                                placeholder="Ketik Kelompok Umur" required>
-                                            @if ($errors->has('kel_umur'))
+                                            <label>Tahun</label>
+                                            <input type="text" name="tahun"
+                                                class="form-control @error('tahun') is-invalid @enderror"
+                                                placeholder="Ketik Tahun" required>
+                                            @if ($errors->has('tahun'))
                                                 <div class="alert alert-danger mt-1 alert-validation-msg" role="alert">
                                                     <div class="alert-body d-flex align-items-center">
                                                         <i data-feather="info" class="me-50"></i>
-                                                        {{ $errors->first('kel_umur') }}
+                                                        {{ $errors->first('tahun') }}
                                                     </div>
                                                 </div>
                                             @endif

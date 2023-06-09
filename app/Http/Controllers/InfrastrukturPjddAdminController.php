@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\DataSosialModel;
 
 class InfrastrukturPjddAdminController extends Controller
-{
+{ 
     public function pjddIndex()
     {
       $data = \DB::table('m_28_jalan')
@@ -76,4 +76,25 @@ class InfrastrukturPjddAdminController extends Controller
         $data->delete();
         return redirect(route('infrastruktur-pjdd.index'))->with('sukses', 'Data Sudah di Hapus');
     }
+
+    public function pjddCetak()
+  {
+    $data = \DB::table('m_28_jalan')
+    ->select(\DB::raw('
+    tahun, 
+    panjang, 
+    status_data
+  '))     
+  ->orderBy('tahun', 'desc')
+  ->get(); 
+
+    return view('admin.infrastruktur.1pjddcetak', [
+      'title' => 'Panjang Jalan Yang Dibangun dan Ditingkatkan (PJDD)',
+      'menu_active' => 'menu-infrastruktur',
+      'sub_menu_active' => 'none',
+      'page_active' => 'infrastruktur-pjdd',
+      'sumber' => 'BPS',
+      'data' => $data
+    ]);
+  }
 }

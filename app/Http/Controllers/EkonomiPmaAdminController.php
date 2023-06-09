@@ -76,4 +76,25 @@ class EkonomiPmaAdminController extends Controller
         $data->delete();
         return redirect(route('ekonomi-pma.index'))->with('sukses', 'Data Sudah di Hapus');
     }
+
+    public function pmaCetak()
+  {
+    $data = \DB::table('m_35_pma')
+    ->select(\DB::raw('
+    tahun,  
+    jumlah,
+    status_data
+  '))     
+  ->orderBy('tahun', 'desc')
+  ->get(); 
+
+    return view('admin.ekonomi.6pmacetak', [
+      'title' => 'Realisasi Investasi (PMA/ PMDN)',
+      'sumber' => 'BPS',
+      'menu_active' => 'menu-ekonomi',
+      'sub_menu_active' => 'none',
+      'page_active' => 'ekonomi-pma',
+      'data' => $data
+    ]);
+  }
 }

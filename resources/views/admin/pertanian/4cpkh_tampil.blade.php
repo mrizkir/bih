@@ -24,7 +24,7 @@
                                         data-target="#modal-default">
                                         <b style="font-size:12px;"> Tambah Data</b>
                                     </button>
-                                    <a href="{{ '' }}" target="_blank">
+                                    <a href="{{ route('cpkhcetak') }}" target="_blank">
                                         <button style="float:right;margin-right:10px;" type="button"
                                             class="btn btn-success">
                                             <b><i class="fa fa-print"></i></b>
@@ -56,11 +56,11 @@
                                                         data-target="#modaledit{{ $item->tahun }}">
                                                         <i class="fas fa-pencil-alt"></i> Edit
                                                     </a>
-                                                    <a href="{{ 'cpkhdel/'.$item->tahun }}" class="btn btn-info btn-sm"  
+                                                    {{-- <a href="{{ 'cpkhdel/'.$item->tahun }}" class="btn btn-info btn-sm"  
                                                        style="font-size: 10px;" class="btn btn-danger btn-sm"  
                                                        onclick="return confirm('Anda Yakin Mau Menghapus ?') ">
                                                        <i class="fas fa-pencil-alt"></i> Del
-                                                   </a> 
+                                                   </a>  --}}
  
                                                     {{-- VIEW MODAL EDIT --}}
                                                     <div class="modal fade" id="modaledit{{ $item->tahun }}"

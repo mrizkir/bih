@@ -76,4 +76,26 @@ class KependudukanPpAdminController extends Controller
         $data->delete();
         return redirect(route('kependudukan-pp.index'))->with('sukses', 'Data Sudah di Hapus');
     }
+
+    public function ppCetak()
+  {
+    $data = \DB::table('m_27_laju_pertumbuhan')
+    ->select(\DB::raw('
+    tahun,
+    laju,
+    status_data
+  '))    
+  ->orderBy('tahun', 'desc')
+  ->get();
+
+
+    return view('admin.kependudukan.4ppcetak', [
+      'title' => 'Pertumbuhan Penduduk (PP)',
+      'sumber' => 'BPS',
+      'menu_active' => 'menu-kependudukan',
+      'sub_menu_active' => 'none',
+      'page_active' => 'kependudukan-pp',
+      'data' => $data
+    ]);
+  }
 }

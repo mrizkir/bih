@@ -76,4 +76,25 @@ class SosialAkimAdminController extends Controller
         $data->delete();
         return redirect(route('sosial-akim.index'))->with('sukses', 'Data Sudah di Hapus');
     }
+
+    public function akimCetak()
+  {
+    $data = \DB::table('m_7_kematian_ibu')
+    ->select(\DB::raw('
+    tahun,
+    kematian_ibu,
+      status_data
+    '))    
+    ->orderBy('tahun', 'desc')
+    ->get();
+
+    return view('admin.sosial.7akimcetak', [
+      'title' => 'Angka Kematian Ibu Melahirkan Per 100.000 Kelahiran Hidup',
+      'sumber' => 'BPS',
+      'menu_active' => 'menu-sosial',
+      'sub_menu_active' => 'none',
+      'page_active' => 'sosial-akim',
+      'data' => $data
+    ]);
+  }
 }

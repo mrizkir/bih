@@ -75,4 +75,25 @@ class SosialIpmAdminController extends Controller
         $data->delete();
         return redirect(route('sosial-ipm.index'))->with('sukses', 'Data Sudah di Hapus');
     }
+
+    public function ipmCetak()
+  {
+    $data = \DB::table('m_2_ipm')
+    ->select(\DB::raw('
+      tahun,
+      ipm,
+      status_data
+    '))    
+    ->orderBy('tahun', 'desc')
+    ->get();
+
+    return view('admin.sosial.2ipm_cetak', [
+      'title' => 'Indeks Pembangunan Manusia (IPM)',
+      'sumber' => 'BPS',
+      'menu_active' => 'menu-sosial',
+      'sub_menu_active' => 'none',
+      'page_active' => 'sosial-ipm',
+      'data' => $data
+    ]);
+  }
 }

@@ -74,4 +74,25 @@ class SosialAdminController extends Controller
         $data->delete();
         return redirect(route('sosial-ppm.index'))->with('sukses', 'Data Sudah di Hapus');
     }
+
+    public function ppmCetak()
+  {
+    $data = \DB::table('m_1_pres_pend_miskin')
+    ->select(\DB::raw('
+      tahun,
+      presentase,
+      status_data
+    '))    
+    ->orderBy('tahun', 'desc')
+    ->get();
+
+    return view('admin.sosial.2ppm_cetak', [
+      'title' => 'Persentase Penduduk Miskin (PPM)',
+      'sumber' => 'BPS',
+      'menu_active' => 'menu-sosial',
+      'sub_menu_active' => 'none',
+      'page_active' => 'sosial-ppm',
+      'data' => $data
+    ]);
+  }
 }
