@@ -51,10 +51,9 @@
                                         @foreach ($data as $k => $item)
                                             <tr style="font-size: 11px;">
                                                 <td class="text-center">{{ $k + 1 }}</th>
-                                                <td><img src="{{ asset('img_user/' . $item->foto) }}"
+                                                <td><img src="{{ asset('storage/img_user/' . $item->foto) }}"
                                                         style="width: 5%;padding:10px;float:left;">
-                                                    <strong>Username</strong> : {{ $item->username }} <BR>
-                                                    <strong>Password</strong> : {{ $item->password }} <BR>
+                                                    <strong>Username</strong> : {{ $item->username }} <BR> 
                                                     <strong>No Hp</strong> : {{ $item->nomor_hp }} |
                                                     <strong>No Hp</strong> : {{ $item->email }}
                                                 </td>
@@ -64,6 +63,8 @@
                                                         data-target="#modaledit{{ $item->id }}">
                                                         <i class="fas fa-pencil-alt"></i> Edit
                                                     </a>
+
+
                                                     {{-- VIEW MODAL EDIT --}}
                                                     <div class="modal fade" id="modaledit{{ $item->id }}"
                                                         role="dialog">
@@ -103,12 +104,12 @@
                                                                                     class="form-control @error('username') is-invalid @enderror"
                                                                                     value="{{ $item->username }}" required>
                                                                             </div>
-                                                                            <div class="col-4">
+                                                                            {{-- <div class="col-4">
                                                                                 <label>Password</label>
                                                                                 <input type="password" name="password"
                                                                                     class="form-control"
                                                                                     value="{{ $item->password }}" disabled required>
-                                                                            </div>
+                                                                            </div> --}}
                                                                         </div>
 
                                                                         <div class="row" style="margin-top: 22px;">
@@ -163,7 +164,7 @@
                                                                         </div>
                                                                         <div class="row" style="margin-top: 22px;">
                                                                             <div class="col-2">
-                                                                                <img src="{{ asset('img_user/' . $item->foto) }}"
+                                                                                <img src="{{ asset('storage/img_user/' . $item->foto) }}"
                                                                                     style="width: 100%;">
                                                                             </div>
                                                                         </div>
