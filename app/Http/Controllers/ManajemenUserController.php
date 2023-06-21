@@ -33,18 +33,19 @@ class ManajemenUserController extends Controller
     }
     public function iuStore(Request $request)
     { 
-      return $request->defult_role;
+      
       $data = $request->validate(
-        [
+        [ 
             'name' => 'required|max:300',
             'username' => 'required|max:300',
-            'password' => 'required', 
-            'email' => 'required', 
+            'password' => 'required|max:300',
+            'email' => 'required|max:300', 
             'foto' => 'required | image|mimes:jpeg,png,jpg,gif,svg|max:1024'
         ]);
 
-        if ($request->file('foto')) {
-            $data['foto'] = $request->file('foto')->store('img_user');
+        if ($request->file('foto')) { 
+          $request->file('foto')->move(storage_path('app/public/img_user/'), $request->file('foto')->getClientOriginalName());
+          $data['foto'] = $request->file('foto')->getClientOriginalName(); 
         } 
    
         $data['name'] = $request->name;
@@ -57,10 +58,39 @@ class ManajemenUserController extends Controller
         $data['active'] = 1; 
         $data['default_role'] = $request->default_role; 
        
+        // return  dd($data);
         $user = User::create($data);
         $user->assignRole($request->default_role);
 
         return redirect(route('user-iu.index'))->with('success', 'data berhasil disimpan');
     }
+ 
+    public function iuUpdate(Request $request, $id)
+    {
+      // dd($request);
+      $data = User::where('id', $id)->first();
+
+      if ($request->file('foto')) {
+          if (file_exists(storage_path() . '/app/public/img_user/' . $data['foto'])) {
+              unlink(storage_path() . '/app/public/img_user/' . $data['foto']);
+          }
+          $request->file('foto')->move(storage_path('app/public/img_user/'), $request->file('foto')->getClientOriginalName());
+          $data['foto'] = $request->file('foto')->getClientOriginalName(); 
+      }
+        $data['name'] = $request->name;
+        $data['username'] = $request->username;  
+        // $data['password'] = Hash::make($data['password']); 
+        $data['nomor_hp'] = $request->nomor_hp;
+        $data['email'] = $request->email;
+        $data['default_role'] = $request->default_role; 
+
+        $data->update([$data]);
+
+          return redirect(route('user-iu.index'))->with('success', 'data berhasil diubah');
+        }    
+ 
+ 
+
+
 
 }
