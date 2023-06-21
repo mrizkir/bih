@@ -159,7 +159,7 @@ class APIEkonomiController extends Controller {
       kategori,
       C.jenis_data AS status_data
     '))    
-    ->join('m_uraian_pdrb AS B', 'a.uraian', 'B.id')
+    ->join('m_uraian_pdrb AS B', 'A.uraian', 'B.id')
     ->join('m_jenis_data AS C', 'A.status_data', 'C.id')
     ->where('B.id', $request->input('uraian_id'))
     ->orderBy('tahun', 'desc')
