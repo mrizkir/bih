@@ -110,6 +110,7 @@ class APIEkonomiController extends Controller {
     ->select(\DB::raw('
       B.id,
       B.uraian,      
+      A.tahun,
       jumlah,
       kategori,
       C.jenis_data AS status_data
@@ -123,6 +124,7 @@ class APIEkonomiController extends Controller {
     ->select(\DB::raw('      
       B.id,
       B.uraian,      
+      A.tahun,
       jumlah,
       kategori,
       C.jenis_data AS status_data
@@ -152,6 +154,7 @@ class APIEkonomiController extends Controller {
     ->select(\DB::raw('
       B.id,
       B.uraian,      
+      A.tahun,
       jumlah,
       kategori,
       C.jenis_data AS status_data
@@ -166,6 +169,7 @@ class APIEkonomiController extends Controller {
     ->select(\DB::raw('      
       B.id,
       B.uraian,      
+      A.tahun,
       jumlah,
       kategori,
       C.jenis_data AS status_data
