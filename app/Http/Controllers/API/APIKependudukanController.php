@@ -109,7 +109,7 @@ class APIKependudukanController extends Controller {
     return response()->json([
       'status'=>'100',
       'message'=>'KEPENDUDUKAN  Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU) - [m_26_penduduk_umur]',
-      'last_data'=>$last_data,
+      'last_data'=>[],
       'result'=>$data
     ], 200);
   }
