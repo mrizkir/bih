@@ -131,7 +131,7 @@ class APIEkonomiController extends Controller {
     '))       
     ->join('m_uraian_pdrb AS B', 'A.uraian', 'B.id')
     ->join('m_jenis_data AS C', 'A.status_data', 'C.id')
-    ->where('B.id', $request->input('uraian_id'))
+    // ->where('B.id', $request->input('uraian_id'))
     ->orderBy('tahun', 'desc')
     ->limit(1)
     ->get();
@@ -161,7 +161,7 @@ class APIEkonomiController extends Controller {
     '))    
     ->join('m_uraian_pdrb AS B', 'A.uraian', 'B.id')
     ->join('m_jenis_data AS C', 'A.status_data', 'C.id')
-    ->where('B.id', $request->input('uraian_id'))
+    // ->where('B.id', $request->input('uraian_id'))
     ->orderBy('tahun', 'desc')
     ->get();
 
@@ -176,7 +176,7 @@ class APIEkonomiController extends Controller {
     '))       
     ->join('m_uraian_pdrb AS B', 'A.uraian', 'B.id')
     ->join('m_jenis_data AS C', 'A.status_data', 'C.id')
-    ->where('B.id', $request->input('uraian_id'))
+    // ->where('B.id', $request->input('uraian_id'))
     ->orderBy('tahun', 'desc')
     ->limit(1)
     ->get();
