@@ -85,4 +85,7 @@ Route::group(['prefix'=>'v1', 'middleware'=>'api'], function () use ($router)
   Route::get('/infrastruktur/prt', [App\Http\Controllers\API\APIInfrastrukturController::class, 'prtIndex'])->name('infrastruktur-prt.index'); 
   //INFRASTRUKTUR  Persentase Tingkat Kemantapan Jalan (PTKJ) - [m_37_kemantapan_jalan]
   Route::get('/infrastruktur/ptkj', [App\Http\Controllers\API\APIInfrastrukturController::class, 'ptkjIndex'])->name('infrastruktur-ptkj.index'); 
+
+  //video profil bintan - [m_video]
+  Route::get('/video', [App\Http\Controllers\API\APIVideoController::class, 'videoIndex'])->name('api-video.index'); 
 });

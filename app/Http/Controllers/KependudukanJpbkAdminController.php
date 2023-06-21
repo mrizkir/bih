@@ -11,8 +11,8 @@ class KependudukanJpbkAdminController extends Controller
     {
       $data = \DB::table('m_26_penduduk_kecamatan')
       ->select(\DB::raw('
-      id,
-      kecamatan,
+        id,
+        kecamatan,
         laki,
         perempuan,
         sex_ratio,
