@@ -35,7 +35,7 @@ class APIInfrastrukturController extends Controller {
       'message'=>'INFRASTRUKTUR Panjang Jalan Yang Dibangun dan Ditingkatkan (PJDD) - [m_28_jalan]',
       'last_data'=>$last_data,
       'result'=>$data
-    ], 200);
+    ], 200)->setEncodingOptions(JSON_NUMERIC_CHECK);
   }
   //INFRASTRUKTUR Persentase Rumah Tangga yang menggunakan air bersih (PRT) - [m_29_air]
 	public function prtIndex(Request $request)
@@ -66,7 +66,7 @@ class APIInfrastrukturController extends Controller {
       'message'=>'INFRASTRUKTUR Persentase Rumah Tangga yang menggunakan air bersih (PRT) - [m_29_air]',
       'last_data'=>$last_data,
       'result'=>$data
-    ], 200);
+    ], 200)->setEncodingOptions(JSON_NUMERIC_CHECK);
   }
   //INFRASTRUKTUR  Persentase Tingkat Kemantapan Jalan (PTKJ) - [m_37_kemantapan_jalan]
 	public function ptkjIndex(Request $request)
@@ -97,6 +97,6 @@ class APIInfrastrukturController extends Controller {
       'message'=>'INFRASTRUKTUR  Persentase Tingkat Kemantapan Jalan (PTKJ) - [m_37_kemantapan_jalan]',
       'last_data'=>$last_data,
       'result'=>$data
-    ], 200);
+    ], 200)->setEncodingOptions(JSON_NUMERIC_CHECK);
   }
 }

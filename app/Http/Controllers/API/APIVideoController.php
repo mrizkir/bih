@@ -22,6 +22,6 @@ class APIVideoController extends Controller {
       'status'=>'100',
       'message'=>'video profil bintan - [m_video]',   
       'result'=>$data
-    ], 200);
+    ], 200)->setEncodingOptions(JSON_NUMERIC_CHECK);
   }    
 }

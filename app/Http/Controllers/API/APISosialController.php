@@ -35,7 +35,7 @@ class APISosialController extends Controller {
       'message'=>'SOSIAL presentasi penduduk miskin (ppm) - [m_1_pres_pend_miskin] berhasil diperoleh',
       'last_data'=>$last_data,
       'result'=>$data,
-    ], 200);
+    ], 200)->setEncodingOptions(JSON_NUMERIC_CHECK);
   }
   //SOSIAL Indeks Pembangunan Manusia (IPM)  - [m_2_ipm]
   public function ipmIndex(Request $request)
@@ -66,7 +66,7 @@ class APISosialController extends Controller {
       'message'=>'SOSIAL Indeks Pembangunan Manusia (IPM)  - [m_2_ipm] berhasil diperoleh',
       'last_data'=>$last_data,
       'result'=>$data,
-    ], 200);
+    ], 200)->setEncodingOptions(JSON_NUMERIC_CHECK);
   }
   //SOSIAL Angka Rata-Rata Lama Sekolah (RLS) - [m_3_rls]
   public function rlsIndex(Request $request)
@@ -97,7 +97,7 @@ class APISosialController extends Controller {
       'message'=>'SOSIAL Angka Rata-Rata Lama Sekolah (RLS) - [m_3_rls] berhasil diperoleh',
       'last_data'=>$last_data,
       'result'=>$data,
-    ], 200);
+    ], 200)->setEncodingOptions(JSON_NUMERIC_CHECK);
   }
   //SOSIAL Angka Melek Huruf (AMH) - [m_4_amh]
   public function amhIndex(Request $request)
@@ -130,7 +130,7 @@ class APISosialController extends Controller {
       'message'=>'SOSIAL Angka Melek Huruf (AMH) - [m_4_amh] berhasil diperoleh',
       'last_data'=>$last_data,
       'result'=>$data,
-    ], 200);
+    ], 200)->setEncodingOptions(JSON_NUMERIC_CHECK);
   }
   //SOSIAL Angka Harapan Hidup (AHH) - [m_5_ahh]
   public function ahhIndex(Request $request)
@@ -161,7 +161,7 @@ class APISosialController extends Controller {
       'message'=>'SOSIAL Angka Harapan Hidup (AHH) - [m_5_ahh] berhasil diperoleh',
       'last_data'=>$last_data,
       'result'=>$data,
-    ], 200);
+    ], 200)->setEncodingOptions(JSON_NUMERIC_CHECK);
   }
   //SOSIAL Angka Kelangsungan Hidup Bayi (AKHB) - [m_6_akhb]
   public function akhbIndex(Request $request)
@@ -192,7 +192,7 @@ class APISosialController extends Controller {
       'message'=>'SOSIAL Angka Kelangsungan Hidup Bayi (AKHB) - [m_6_akhb] berhasil diperoleh',
       'last_data'=>$last_data,
       'result'=>$data,
-    ], 200);
+    ], 200)->setEncodingOptions(JSON_NUMERIC_CHECK);
   }
   //SOSIAL Angka kematian ibu melahirkan (AKIM) - [m_7_kematian_ibu]
   public function akimIndex(Request $request)
@@ -223,7 +223,7 @@ class APISosialController extends Controller {
       'message'=>'SOSIAL Angka kematian ibu melahirkan (AKIM) - [m_7_kematian_ibu] berhasil diperoleh',
       'last_data'=>$last_data,
       'result'=>$data,
-    ], 200);
+    ], 200)->setEncodingOptions(JSON_NUMERIC_CHECK);
   }
   //SOSIAL Perkembangan Kondisi Ketenagakerjaan di Kabupaten Bintan (PKK) - [m_8_tenaga_kerja]
   public function pkkIndex(Request $request)
@@ -264,7 +264,7 @@ class APISosialController extends Controller {
       'message'=>'SOSIAL Perkembangan Kondisi Ketenagakerjaan di Kabupaten Bintan (PKK) - [m_8_tenaga_kerja] berhasil diperoleh',
       'last_data'=>$last_data,
       'result'=>$data,
-    ], 200);
+    ], 200)->setEncodingOptions(JSON_NUMERIC_CHECK);
   }
   //SOSIAL Indeks Pembangunan Gender (IPG) - [m_9_ipg]
   public function ipgIndex(Request $request)
@@ -299,7 +299,7 @@ class APISosialController extends Controller {
       'message'=>'SOSIAL Indeks Pembangunan Gender (IPG) - [m_9_ipg] berhasil diperoleh',
       'last_data'=>$last_data,
       'result'=>$data,
-    ], 200);
+    ], 200)->setEncodingOptions(JSON_NUMERIC_CHECK);
   }
   //SOSIAL Angka Partisipasi Kasar (APK) - [m_10_apk]
   public function apkIndex(Request $request)
@@ -334,7 +334,7 @@ class APISosialController extends Controller {
       'message'=>'SOSIAL Angka Partisipasi Kasar (APK) - [m_10_apk] berhasil diperoleh',
       'last_data'=>$last_data,
       'result'=>$data,
-    ], 200);
+    ], 200)->setEncodingOptions(JSON_NUMERIC_CHECK);
   }
   //SOSIAL Angka partisipasi Murni (APM) - [m_11_apm]
   public function apmIndex(Request $request)
@@ -365,7 +365,7 @@ class APISosialController extends Controller {
       'message'=>'SOSIAL Angka partisipasi Murni (APM) - [m_11_apm] berhasil diperoleh',
       'last_data'=>$last_data,
       'result'=>$data,
-    ], 200);
+    ], 200)->setEncodingOptions(JSON_NUMERIC_CHECK);
   }
   //SOSIAL Angka Harapan Lama Sekolah (HLS) - [m_12_hls]
   public function hlsIndex(Request $request)
@@ -396,7 +396,7 @@ class APISosialController extends Controller {
       'message'=>'SOSIAL Angka Kelangsungan Hidup Bayi (AKHB) - [m_6_akhb] berhasil diperoleh',
       'last_data'=>$last_data,
       'result'=>$data,
-    ], 200);
+    ], 200)->setEncodingOptions(JSON_NUMERIC_CHECK);
   }
   //SOSIAL Jumlah Rumah Tidak Layak Huni Yang Direhab (JRTLH) - [m_13_rtlh]
   public function jrtlhIndex(Request $request)
@@ -427,7 +427,7 @@ class APISosialController extends Controller {
       'message'=>'SOSIAL Jumlah Rumah Tidak Layak Huni Yang Direhab (JRTLH) - [m_13_rtlh] berhasil diperoleh',
       'last_data'=>$last_data,
       'result'=>$data,
-    ], 200);
+    ], 200)->setEncodingOptions(JSON_NUMERIC_CHECK);
   }
   //SOSIAL Indeks Gini (IG) - [m_14_gini]
   public function igIndex(Request $request)
@@ -458,7 +458,7 @@ class APISosialController extends Controller {
       'message'=>'//SOSIAL Indeks Gini (IG) - [m_14_gini] berhasil diperoleh',
       'last_data'=>$last_data,
       'result'=>$data,
-    ], 200);
+    ], 200)->setEncodingOptions(JSON_NUMERIC_CHECK);
   }
   //SOSIAL Indeks Daya Beli - Purchasing Power Parity (IDB) - [m_15_idb]
   public function idbIndex(Request $request)
@@ -489,7 +489,7 @@ class APISosialController extends Controller {
       'message'=>'SOSIAL Indeks Daya Beli - Purchasing Power Parity (IDB) - [m_15_idb] berhasil diperoleh',
       'last_data'=>$last_data,
       'result'=>$data,
-    ], 200);
+    ], 200)->setEncodingOptions(JSON_NUMERIC_CHECK);
   }
   //SOSIAL Persentase Penduduk Usia 15 Tahun ke atas menurut Pendidikan yang Ditamatkan (PPU) - [m_16_lulusan_pendidikan]
   public function ppuIndex(Request $request)
@@ -526,7 +526,7 @@ class APISosialController extends Controller {
       'message'=>'SOSIAL Angka Kelangsungan Hidup Bayi (AKHB) - [m_6_akhb] berhasil diperoleh',
       'last_data'=>$last_data,
       'result'=>$data,
-    ], 200);
+    ], 200)->setEncodingOptions(JSON_NUMERIC_CHECK);
   }
   // SOSIAL  Indeks Pemberdayaan Gender (IPG) - [m_38_idg]
   public function ipggIndex(Request $request)
@@ -557,6 +557,6 @@ class APISosialController extends Controller {
       'message'=>'// SOSIAL  Indeks Pemberdayaan Gender (IPG) - [m_38_idg] berhasil diperoleh',
       'last_data'=>$last_data,
       'result'=>$data,
-    ], 200);
+    ], 200)->setEncodingOptions(JSON_NUMERIC_CHECK);
   }
 }

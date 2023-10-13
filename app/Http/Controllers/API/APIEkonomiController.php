@@ -52,7 +52,7 @@ class APIEkonomiController extends Controller {
       'message'=>'EKONOMI  Petumbuhan Ekonomi (PE) - [m_17_ekonomi] berhasil diperoleh',
       'last_data'=>$last_data,
       'result'=>$data,
-    ], 200);
+    ], 200)->setEncodingOptions(JSON_NUMERIC_CHECK);
   }
   //EKONOMI  Laju Inflasi (LI) - [m_18_inflasi]
 	public function liIndex(Request $request)
@@ -97,7 +97,7 @@ class APIEkonomiController extends Controller {
       'message'=>'EKONOMI  Laju Inflasi (LI) - [m_18_inflasi] berhasil diperoleh',
       'last_data'=>$last_data,
       'result'=>$data
-    ], 200);
+    ], 200)->setEncodingOptions(JSON_NUMERIC_CHECK);
   }
   //EKONOMI Distribusi PDRB Atas Dasar Harga Berlaku (ADHB) - [m_19_pdrb_berlaku]
 	public function adhbIndex(Request $request)
@@ -141,7 +141,7 @@ class APIEkonomiController extends Controller {
       'message'=>'EKONOMI Distribusi PDRB Atas Dasar Harga Berlaku (ADHB) - [m_19_pdrb_berlaku] berhasil diperoleh',
       'last_data'=>$last_data,
       'result'=>$data
-    ], 200);
+    ], 200)->setEncodingOptions(JSON_NUMERIC_CHECK);
   }
   //EKONOMI  Distribusi PDRB Atas Dasar Harga Konstan (ADHK) - [m_19_pdrb_konstan]
 	public function adhkIndex(Request $request)
@@ -186,7 +186,7 @@ class APIEkonomiController extends Controller {
       'message'=>'EKONOMI  Distribusi PDRB Atas Dasar Harga Konstan (ADHK) - [m_19_pdrb_konstan] berhasil diperoleh',
       'last_data'=>$last_data,
       'result'=>$data
-    ], 200);
+    ], 200)->setEncodingOptions(JSON_NUMERIC_CHECK);
   }
   //EKONOMI Kunjungan Wisata (KW) - [m_20_kunjungan]
 	public function kwIndex(Request $request)
@@ -221,7 +221,7 @@ class APIEkonomiController extends Controller {
       'message'=>'EKONOMI Kunjungan Wisata (KW) - [m_20_kunjungan] berhasil diperoleh',
       'last_data'=>$last_data,
       'result'=>$data
-    ], 200);
+    ], 200)->setEncodingOptions(JSON_NUMERIC_CHECK);
   }
   //EKONOMI Realisasi Investasi (PMA/ PMDN) - [m_35_pma]
 	public function pmaIndex(Request $request)
@@ -252,7 +252,7 @@ class APIEkonomiController extends Controller {
       'message'=>'EKONOMI Realisasi Investasi (PMA/ PMDN) - [m_35_pma] berhasil diperoleh',
       'last_data'=>$last_data,
       'result'=>$data
-    ], 200);
+    ], 200)->setEncodingOptions(JSON_NUMERIC_CHECK);
   }
   
 }

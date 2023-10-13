@@ -35,7 +35,7 @@ class APIPertanianController extends Controller {
       'message'=>'PERTANIAN Produksi Perikanan Budidaya (PPB) - [m_21_perikanan_budidaya]',
       'last_data'=>$last_data,
       'result'=>$data
-    ], 200);
+    ], 200)->setEncodingOptions(JSON_NUMERIC_CHECK);
   }
   //PERTANIAN  Produksi Perikanan Tangkap(PPT) - [m_22_perikanan_tangkap]
 	public function pptIndex(Request $request)
@@ -66,7 +66,7 @@ class APIPertanianController extends Controller {
       'message'=>'PERTANIAN  Produksi Perikanan Tangkap(PPT) - [m_22_perikanan_tangkap]',
       'last_data'=>$last_data,
       'result'=>$data
-    ], 200);
+    ], 200)->setEncodingOptions(JSON_NUMERIC_CHECK);
   }
   //PERTANIAN Capaian Produksi Komoditi Unggulan Perkebunan (CPKUP) - [m_23_perkebunan]
 	public function cpkupIndex(Request $request)
@@ -97,7 +97,7 @@ class APIPertanianController extends Controller {
       'message'=>'PERTANIAN Capaian Produksi Komoditi Unggulan Perkebunan (CPKUP) - [m_23_perkebunan]',
       'last_data'=>$last_data,
       'result'=>$data
-    ], 200);
+    ], 200)->setEncodingOptions(JSON_NUMERIC_CHECK);
   }
   //PERTANIAN Capaian Produksi Komoditi Hortikultura (CPKH) - [m_24_holtikultura]
 	public function cpkhIndex(Request $request)
@@ -128,7 +128,7 @@ class APIPertanianController extends Controller {
       'message'=>'PERTANIAN Capaian Produksi Komoditi Hortikultura (CPKH) - [m_24_holtikultura]',
       'last_data'=>$last_data,
       'result'=>$data
-    ], 200);
+    ], 200)->setEncodingOptions(JSON_NUMERIC_CHECK);
   }
   //PERTANIAN Jumlah Produksi Peternakan (JPP) - [m_25_peternakan]
 	public function jppIndex(Request $request)
@@ -159,6 +159,6 @@ class APIPertanianController extends Controller {
       'message'=>'PERTANIAN Jumlah Produksi Peternakan (JPP) - [m_25_peternakan]',
       'last_data'=>$last_data,
       'result'=>$data
-    ], 200);
+    ], 200)->setEncodingOptions(JSON_NUMERIC_CHECK);
   }
 }

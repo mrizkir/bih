@@ -39,7 +39,7 @@ class APIKependudukanController extends Controller {
       'message'=>'KEPENDUDUKAN Jumlah Penduduk (JP) - [m_36_jumlah_penduduk]',
       'last_data'=>$last_data,
       'result'=>$data
-    ], 200);
+    ], 200)->setEncodingOptions(JSON_NUMERIC_CHECK);
   }
   //KEPENDUDUKAN Jumlah Penduduk Berdasarkan Kecamatan Tahun 2021 (JPBK) - [m_26_penduduk_kecamatan]
 	public function jpbkIndex(Request $request)
@@ -76,7 +76,7 @@ class APIKependudukanController extends Controller {
       'message'=>'KEPENDUDUKAN Jumlah Penduduk Berdasarkan Kecamatan Tahun 2021 (JPBK) - [m_26_penduduk_kecamatan]',
       'last_data'=>[],
       'result'=>$data
-    ], 200);
+    ], 200)->setEncodingOptions(JSON_NUMERIC_CHECK);
   }
   //KEPENDUDUKAN  Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU) - [m_26_penduduk_umur]
 	public function jpbkuIndex(Request $request)
@@ -111,7 +111,7 @@ class APIKependudukanController extends Controller {
       'message'=>'KEPENDUDUKAN  Jumlah Penduduk Berdasarkan Kelompok Umur (JPBKU) - [m_26_penduduk_umur]',
       'last_data'=>[],
       'result'=>$data
-    ], 200);
+    ], 200)->setEncodingOptions(JSON_NUMERIC_CHECK);
   }
   //KEPENDUDUKAN  Pertumbuhan Penduduk (PP) - [m_27_laju_pertumbuhan]
 	public function ppIndex(Request $request)
@@ -142,6 +142,6 @@ class APIKependudukanController extends Controller {
       'message'=>'KEPENDUDUKAN  Pertumbuhan Penduduk (PP) - [m_27_laju_pertumbuhan]',
       'last_data'=>$last_data,
       'result'=>$data
-    ], 200);
+    ], 200)->setEncodingOptions(JSON_NUMERIC_CHECK);
   }  
 }
