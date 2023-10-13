@@ -21,7 +21,7 @@ class APIEkonomiController extends Controller {
       'status'=>'100',
       'message'=>'EKONOMI list uraian - [m_uraian_pdrb] berhasil diperoleh',      
       'result'=>$data
-    ], 200);
+    ], 200)->setEncodingOptions(JSON_NUMERIC_CHECK);
   }
   //EKONOMI  Petumbuhan Ekonomi (PE) - [m_17_ekonomi]
 	public function peIndex(Request $request)
