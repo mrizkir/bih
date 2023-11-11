@@ -63,6 +63,8 @@ Auth::routes(['register' => 'false', 'logout' => false]);
 
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/privacy', [HomeController::class, 'privacy'])->name('privacy');
+Route::get('/term', [HomeController::class, 'term'])->name('term');
 Route::get('/login', [LoginAdminController::class, 'index'])->name('login');
 Route::get('/logout', ['uses' => 'App\Http\Controllers\Auth\LoginController@logout', 'as' => 'logout']);
 

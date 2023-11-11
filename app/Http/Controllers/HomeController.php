@@ -15,4 +15,16 @@ class HomeController extends Controller
       'page_active' => 'home',
     ]);
   }
+  public function privacy()
+  {
+    return view('privacy', [
+      
+    ]);
+  }
+  public function term()
+  {
+    return view('term', [
+      
+    ]);
+  }
 }
