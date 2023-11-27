@@ -39,8 +39,8 @@ class EkonomiAdhbAdminController extends Controller
   public function adhb_aStore(Request $request)
   {
     $this->validate($request, [
-      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
-      'jumlah' => 'required|numeric|min:0|max:100',
+      'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'),
+      'jumlah' => 'required|numeric|min:0',
       'status_data' => 'required|in:1,2,3',
     ]);
  
@@ -68,8 +68,8 @@ class EkonomiAdhbAdminController extends Controller
     else
     {
       $this->validate($request, [        
-        'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
-        'jumlah' => 'required|numeric|min:0|max:100',
+        'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'),
+        'jumlah' => 'required|numeric|min:0',
         'status_data' => 'required|in:1,2,3',
       ]);
       \DB::table('m_19_pdrb_berlaku')
@@ -150,8 +150,8 @@ class EkonomiAdhbAdminController extends Controller
   public function adhb_bStore(Request $request)
   {
     $this->validate($request, [
-      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
-      'jumlah' => 'required|numeric|min:0|max:100',
+      'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'),
+      'jumlah' => 'required|numeric|min:0',
       'status_data' => 'required|in:1,2,3',
     ]);
  
@@ -179,8 +179,8 @@ class EkonomiAdhbAdminController extends Controller
     else
     {
       $this->validate($request, [        
-        'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
-        'jumlah' => 'required|numeric|min:0|max:100',
+        'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'),
+        'jumlah' => 'required|numeric|min:0',
         'status_data' => 'required|in:1,2,3',
       ]);
       \DB::table('m_19_pdrb_berlaku')
@@ -263,8 +263,8 @@ class EkonomiAdhbAdminController extends Controller
   public function adhb_cStore(Request $request)
   {
     $this->validate($request, [
-      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
-      'jumlah' => 'required|numeric|min:0|max:100',
+      'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'),
+      'jumlah' => 'required|numeric|min:0',
       'status_data' => 'required|in:1,2,3',
     ]);
  
@@ -292,8 +292,8 @@ class EkonomiAdhbAdminController extends Controller
     else
     {
       $this->validate($request, [        
-        'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
-        'jumlah' => 'required|numeric|min:0|max:100',
+        'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'),
+        'jumlah' => 'required|numeric|min:0',
         'status_data' => 'required|in:1,2,3',
       ]);
       \DB::table('m_19_pdrb_berlaku')
@@ -379,8 +379,8 @@ class EkonomiAdhbAdminController extends Controller
   public function adhb_dStore(Request $request)
   {
     $this->validate($request, [
-      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
-      'jumlah' => 'required|numeric|min:0|max:100',
+      'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'),
+      'jumlah' => 'required|numeric|min:0',
       'status_data' => 'required|in:1,2,3',
     ]);
  
@@ -408,8 +408,8 @@ class EkonomiAdhbAdminController extends Controller
     else
     {
       $this->validate($request, [        
-        'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
-        'jumlah' => 'required|numeric|min:0|max:100',
+        'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'),
+        'jumlah' => 'required|numeric|min:0',
         'status_data' => 'required|in:1,2,3',
       ]);
       \DB::table('m_19_pdrb_berlaku')
@@ -495,8 +495,8 @@ class EkonomiAdhbAdminController extends Controller
   public function adhb_eStore(Request $request)
   {
     $this->validate($request, [
-      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
-      'jumlah' => 'required|numeric|min:0|max:100',
+      'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'),
+      'jumlah' => 'required|numeric|min:0',
       'status_data' => 'required|in:1,2,3',
     ]);
  
@@ -524,8 +524,8 @@ class EkonomiAdhbAdminController extends Controller
     else
     {
       $this->validate($request, [        
-        'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
-        'jumlah' => 'required|numeric|min:0|max:100',
+        'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'),
+        'jumlah' => 'required|numeric|min:0',
         'status_data' => 'required|in:1,2,3',
       ]);
       \DB::table('m_19_pdrb_berlaku')
@@ -608,8 +608,8 @@ class EkonomiAdhbAdminController extends Controller
   public function adhb_fStore(Request $request)
   {
     $this->validate($request, [
-      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
-      'jumlah' => 'required|numeric|min:0|max:100',
+      'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'),
+      'jumlah' => 'required|numeric|min:0',
       'status_data' => 'required|in:1,2,3',
     ]);
  
@@ -637,8 +637,8 @@ class EkonomiAdhbAdminController extends Controller
     else
     {
       $this->validate($request, [        
-        'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
-        'jumlah' => 'required|numeric|min:0|max:100',
+        'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'),
+        'jumlah' => 'required|numeric|min:0',
         'status_data' => 'required|in:1,2,3',
       ]);
       \DB::table('m_19_pdrb_berlaku')
@@ -724,8 +724,8 @@ class EkonomiAdhbAdminController extends Controller
   public function adhb_gStore(Request $request)
   {
     $this->validate($request, [
-      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
-      'jumlah' => 'required|numeric|min:0|max:100',
+      'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'),
+      'jumlah' => 'required|numeric|min:0',
       'status_data' => 'required|in:1,2,3',
     ]);
  
@@ -751,8 +751,8 @@ class EkonomiAdhbAdminController extends Controller
     else
     {
       $this->validate($request, [        
-        'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
-        'jumlah' => 'required|numeric|min:0|max:100',
+        'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'),
+        'jumlah' => 'required|numeric|min:0',
         'status_data' => 'required|in:1,2,3',
       ]);
       \DB::table('m_19_pdrb_berlaku')
@@ -836,8 +836,8 @@ class EkonomiAdhbAdminController extends Controller
   public function adhb_hStore(Request $request)
   {
     $this->validate($request, [
-      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
-      'jumlah' => 'required|numeric|min:0|max:100',
+      'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'),
+      'jumlah' => 'required|numeric|min:0',
       'status_data' => 'required|in:1,2,3',
     ]);
  
@@ -863,8 +863,8 @@ class EkonomiAdhbAdminController extends Controller
     else
     {
       $this->validate($request, [        
-        'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
-        'jumlah' => 'required|numeric|min:0|max:100',
+        'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'),
+        'jumlah' => 'required|numeric|min:0',
         'status_data' => 'required|in:1,2,3',
       ]);
       \DB::table('m_19_pdrb_berlaku')
@@ -948,8 +948,8 @@ class EkonomiAdhbAdminController extends Controller
   public function adhb_iStore(Request $request)
   {
     $this->validate($request, [
-      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
-      'jumlah' => 'required|numeric|min:0|max:100',
+      'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'),
+      'jumlah' => 'required|numeric|min:0',
       'status_data' => 'required|in:1,2,3',
     ]);
  
@@ -975,8 +975,8 @@ class EkonomiAdhbAdminController extends Controller
     else
     {
       $this->validate($request, [        
-        'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
-        'jumlah' => 'required|numeric|min:0|max:100',
+        'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'),
+        'jumlah' => 'required|numeric|min:0',
         'status_data' => 'required|in:1,2,3',
       ]);
       \DB::table('m_19_pdrb_berlaku')
@@ -1060,8 +1060,8 @@ class EkonomiAdhbAdminController extends Controller
   public function adhb_jStore(Request $request)
   {
     $this->validate($request, [
-      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
-      'jumlah' => 'required|numeric|min:0|max:100',
+      'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'),
+      'jumlah' => 'required|numeric|min:0',
       'status_data' => 'required|in:1,2,3',
     ]);
  
@@ -1087,8 +1087,8 @@ class EkonomiAdhbAdminController extends Controller
     else
     {
       $this->validate($request, [        
-        'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
-        'jumlah' => 'required|numeric|min:0|max:100',
+        'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'),
+        'jumlah' => 'required|numeric|min:0',
         'status_data' => 'required|in:1,2,3',
       ]);
       \DB::table('m_19_pdrb_berlaku')
@@ -1173,8 +1173,8 @@ class EkonomiAdhbAdminController extends Controller
   public function adhb_kStore(Request $request)
   {
     $this->validate($request, [
-      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
-      'jumlah' => 'required|numeric|min:0|max:100',
+      'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'),
+      'jumlah' => 'required|numeric|min:0',
       'status_data' => 'required|in:1,2,3',
     ]);
  
@@ -1200,8 +1200,8 @@ class EkonomiAdhbAdminController extends Controller
     else
     {
       $this->validate($request, [        
-        'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
-        'jumlah' => 'required|numeric|min:0|max:100',
+        'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'),
+        'jumlah' => 'required|numeric|min:0',
         'status_data' => 'required|in:1,2,3',
       ]);
       \DB::table('m_19_pdrb_berlaku')
@@ -1286,8 +1286,8 @@ class EkonomiAdhbAdminController extends Controller
   public function adhb_lStore(Request $request)
   {
     $this->validate($request, [
-      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
-      'jumlah' => 'required|numeric|min:0|max:100',
+      'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'),
+      'jumlah' => 'required|numeric|min:0',
       'status_data' => 'required|in:1,2,3',
     ]);
  
@@ -1313,8 +1313,8 @@ class EkonomiAdhbAdminController extends Controller
     else
     {
       $this->validate($request, [        
-        'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
-        'jumlah' => 'required|numeric|min:0|max:100',
+        'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'),
+        'jumlah' => 'required|numeric|min:0',
         'status_data' => 'required|in:1,2,3',
       ]);
       \DB::table('m_19_pdrb_berlaku')
@@ -1400,8 +1400,8 @@ class EkonomiAdhbAdminController extends Controller
   public function adhb_mnStore(Request $request)
   {
     $this->validate($request, [
-      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
-      'jumlah' => 'required|numeric|min:0|max:100',
+      'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'),
+      'jumlah' => 'required|numeric|min:0',
       'status_data' => 'required|in:1,2,3',
     ]);
  
@@ -1427,8 +1427,8 @@ class EkonomiAdhbAdminController extends Controller
     else
     {
       $this->validate($request, [        
-        'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
-        'jumlah' => 'required|numeric|min:0|max:100',
+        'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'),
+        'jumlah' => 'required|numeric|min:0',
         'status_data' => 'required|in:1,2,3',
       ]);
       \DB::table('m_19_pdrb_berlaku')
@@ -1514,8 +1514,8 @@ class EkonomiAdhbAdminController extends Controller
   public function adhb_oStore(Request $request)
   {
     $this->validate($request, [
-      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
-      'jumlah' => 'required|numeric|min:0|max:100',
+      'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'),
+      'jumlah' => 'required|numeric|min:0',
       'status_data' => 'required|in:1,2,3',
     ]);
  
@@ -1541,8 +1541,8 @@ class EkonomiAdhbAdminController extends Controller
     else
     {
       $this->validate($request, [        
-        'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
-        'jumlah' => 'required|numeric|min:0|max:100',
+        'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'),
+        'jumlah' => 'required|numeric|min:0',
         'status_data' => 'required|in:1,2,3',
       ]);
       \DB::table('m_19_pdrb_berlaku')
@@ -1626,8 +1626,8 @@ class EkonomiAdhbAdminController extends Controller
   public function adhb_pStore(Request $request)
   {
     $this->validate($request, [
-      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
-      'jumlah' => 'required|numeric|min:0|max:100',
+      'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'),
+      'jumlah' => 'required|numeric|min:0',
       'status_data' => 'required|in:1,2,3',
     ]);
  
@@ -1653,8 +1653,8 @@ class EkonomiAdhbAdminController extends Controller
     else
     {
       $this->validate($request, [        
-        'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
-        'jumlah' => 'required|numeric|min:0|max:100',
+        'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'),
+        'jumlah' => 'required|numeric|min:0',
         'status_data' => 'required|in:1,2,3',
       ]);
       \DB::table('m_19_pdrb_berlaku')
@@ -1736,8 +1736,8 @@ class EkonomiAdhbAdminController extends Controller
   public function adhb_qStore(Request $request)
   {
     $this->validate($request, [
-      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
-      'jumlah' => 'required|numeric|min:0|max:100',
+      'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'),
+      'jumlah' => 'required|numeric|min:0',
       'status_data' => 'required|in:1,2,3',
     ]);
  
@@ -1763,8 +1763,8 @@ class EkonomiAdhbAdminController extends Controller
     else
     {
       $this->validate($request, [        
-        'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
-        'jumlah' => 'required|numeric|min:0|max:100',
+        'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'),
+        'jumlah' => 'required|numeric|min:0',
         'status_data' => 'required|in:1,2,3',
       ]);
       \DB::table('m_19_pdrb_berlaku')
@@ -1850,8 +1850,8 @@ class EkonomiAdhbAdminController extends Controller
   public function adhb_rstuStore(Request $request)
   {
     $this->validate($request, [
-      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
-      'jumlah' => 'required|numeric|min:0|max:100',
+      'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'),
+      'jumlah' => 'required|numeric|min:0',
       'status_data' => 'required|in:1,2,3',
     ]);
  
@@ -1877,8 +1877,8 @@ class EkonomiAdhbAdminController extends Controller
     else
     {
       $this->validate($request, [        
-        'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
-        'jumlah' => 'required|numeric|min:0|max:100',
+        'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'),
+        'jumlah' => 'required|numeric|min:0',
         'status_data' => 'required|in:1,2,3',
       ]);
       \DB::table('m_19_pdrb_berlaku')

@@ -31,8 +31,8 @@ class SosialAkimAdminController extends Controller
     public function akimStore(Request $request)
   {
     $this->validate($request, [
-      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
-      'kematian_ibu' => 'required|numeric|min:0|max:100',
+      'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'),
+      'kematian_ibu' => 'required|numeric|min:0',
       'status_data' => 'required|in:1,2,3',
     ]);
  
@@ -57,7 +57,7 @@ class SosialAkimAdminController extends Controller
     else
     {
       $this->validate($request, [        
-        'kematian_ibu' => 'required|numeric|min:0|max:100',
+        'kematian_ibu' => 'required|numeric|min:0',
         'status_data' => 'required|in:1,2,3',
       ]);
       \DB::table('m_7_kematian_ibu')

@@ -32,8 +32,8 @@ class KependudukanJpbkuAdminController extends Controller
     public function jpbku_04TahunStore(Request $request)
   {
     $this->validate($request, [
-      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'), 
-      'jumlah' => 'required|numeric|min:0|max:100',
+      'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'), 
+      'jumlah' => 'required|numeric|min:0',
       'status_data' => 'required|in:1,2,3',
     ]);
  
@@ -59,7 +59,7 @@ class KependudukanJpbkuAdminController extends Controller
     else
     { 
       $this->validate($request, [        
-        'jumlah' => 'required|numeric|min:0|max:100',
+        'jumlah' => 'required|numeric|min:0',
         'status_data' => 'required|in:1,2,3',
       ]);
       \DB::table('m_26_penduduk_umur')
@@ -130,8 +130,8 @@ class KependudukanJpbkuAdminController extends Controller
     public function jpbku_59TahunStore(Request $request)
   {
     $this->validate($request, [
-      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'), 
-      'jumlah' => 'required|numeric|min:0|max:100',
+      'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'), 
+      'jumlah' => 'required|numeric|min:0',
       'status_data' => 'required|in:1,2,3',
     ]);
  
@@ -157,7 +157,7 @@ class KependudukanJpbkuAdminController extends Controller
     else
     { 
       $this->validate($request, [        
-        'jumlah' => 'required|numeric|min:0|max:100',
+        'jumlah' => 'required|numeric|min:0',
         'status_data' => 'required|in:1,2,3',
       ]);
       \DB::table('m_26_penduduk_umur')
@@ -227,8 +227,8 @@ class KependudukanJpbkuAdminController extends Controller
     public function jpbku_1014TahunStore(Request $request)
   {
     $this->validate($request, [
-      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'), 
-      'jumlah' => 'required|numeric|min:0|max:100',
+      'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'), 
+      'jumlah' => 'required|numeric|min:0',
       'status_data' => 'required|in:1,2,3',
     ]);
  
@@ -254,7 +254,7 @@ class KependudukanJpbkuAdminController extends Controller
     else
     { 
       $this->validate($request, [        
-        'jumlah' => 'required|numeric|min:0|max:100',
+        'jumlah' => 'required|numeric|min:0',
         'status_data' => 'required|in:1,2,3',
       ]);
       \DB::table('m_26_penduduk_umur')
@@ -326,8 +326,8 @@ class KependudukanJpbkuAdminController extends Controller
     public function jpbku_1519Store(Request $request)
   {
     $this->validate($request, [
-      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'), 
-      'jumlah' => 'required|numeric|min:0|max:100',
+      'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'), 
+      'jumlah' => 'required|numeric|min:0',
       'status_data' => 'required|in:1,2,3',
     ]);
  
@@ -353,7 +353,7 @@ class KependudukanJpbkuAdminController extends Controller
     else
     { 
       $this->validate($request, [        
-        'jumlah' => 'required|numeric|min:0|max:100',
+        'jumlah' => 'required|numeric|min:0',
         'status_data' => 'required|in:1,2,3',
       ]);
       \DB::table('m_26_penduduk_umur')
@@ -426,8 +426,8 @@ class KependudukanJpbkuAdminController extends Controller
     public function jpbku_2024Store(Request $request)
   {
     $this->validate($request, [
-      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'), 
-      'jumlah' => 'required|numeric|min:0|max:100',
+      'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'), 
+      'jumlah' => 'required|numeric|min:0',
       'status_data' => 'required|in:1,2,3',
     ]);
  
@@ -453,7 +453,7 @@ class KependudukanJpbkuAdminController extends Controller
     else
     { 
       $this->validate($request, [        
-        'jumlah' => 'required|numeric|min:0|max:100',
+        'jumlah' => 'required|numeric|min:0',
         'status_data' => 'required|in:1,2,3',
       ]);
       \DB::table('m_26_penduduk_umur')
@@ -524,8 +524,8 @@ class KependudukanJpbkuAdminController extends Controller
     public function jpbku_2529Store(Request $request)
   {
     $this->validate($request, [
-      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'), 
-      'jumlah' => 'required|numeric|min:0|max:100',
+      'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'), 
+      'jumlah' => 'required|numeric|min:0',
       'status_data' => 'required|in:1,2,3',
     ]);
  
@@ -551,7 +551,7 @@ class KependudukanJpbkuAdminController extends Controller
     else
     { 
       $this->validate($request, [        
-        'jumlah' => 'required|numeric|min:0|max:100',
+        'jumlah' => 'required|numeric|min:0',
         'status_data' => 'required|in:1,2,3',
       ]);
       \DB::table('m_26_penduduk_umur')
@@ -624,8 +624,8 @@ class KependudukanJpbkuAdminController extends Controller
     public function jpbku_3034Store(Request $request)
   {
     $this->validate($request, [
-      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'), 
-      'jumlah' => 'required|numeric|min:0|max:100',
+      'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'), 
+      'jumlah' => 'required|numeric|min:0',
       'status_data' => 'required|in:1,2,3',
     ]);
  
@@ -651,7 +651,7 @@ class KependudukanJpbkuAdminController extends Controller
     else
     { 
       $this->validate($request, [        
-        'jumlah' => 'required|numeric|min:0|max:100',
+        'jumlah' => 'required|numeric|min:0',
         'status_data' => 'required|in:1,2,3',
       ]);
       \DB::table('m_26_penduduk_umur')
@@ -722,8 +722,8 @@ class KependudukanJpbkuAdminController extends Controller
     public function jpbku_3539Store(Request $request)
   {
     $this->validate($request, [
-      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'), 
-      'jumlah' => 'required|numeric|min:0|max:100',
+      'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'), 
+      'jumlah' => 'required|numeric|min:0',
       'status_data' => 'required|in:1,2,3',
     ]);
  
@@ -749,7 +749,7 @@ class KependudukanJpbkuAdminController extends Controller
     else
     { 
       $this->validate($request, [        
-        'jumlah' => 'required|numeric|min:0|max:100',
+        'jumlah' => 'required|numeric|min:0',
         'status_data' => 'required|in:1,2,3',
       ]);
       \DB::table('m_26_penduduk_umur')
@@ -819,8 +819,8 @@ class KependudukanJpbkuAdminController extends Controller
     public function jpbku_4044Store(Request $request)
   {
     $this->validate($request, [
-      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'), 
-      'jumlah' => 'required|numeric|min:0|max:100',
+      'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'), 
+      'jumlah' => 'required|numeric|min:0',
       'status_data' => 'required|in:1,2,3',
     ]);
  
@@ -846,7 +846,7 @@ class KependudukanJpbkuAdminController extends Controller
     else
     { 
       $this->validate($request, [        
-        'jumlah' => 'required|numeric|min:0|max:100',
+        'jumlah' => 'required|numeric|min:0',
         'status_data' => 'required|in:1,2,3',
       ]);
       \DB::table('m_26_penduduk_umur')
@@ -916,8 +916,8 @@ class KependudukanJpbkuAdminController extends Controller
     public function jpbku_4549Store(Request $request)
   {
     $this->validate($request, [
-      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'), 
-      'jumlah' => 'required|numeric|min:0|max:100',
+      'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'), 
+      'jumlah' => 'required|numeric|min:0',
       'status_data' => 'required|in:1,2,3',
     ]);
  
@@ -943,7 +943,7 @@ class KependudukanJpbkuAdminController extends Controller
     else
     { 
       $this->validate($request, [        
-        'jumlah' => 'required|numeric|min:0|max:100',
+        'jumlah' => 'required|numeric|min:0',
         'status_data' => 'required|in:1,2,3',
       ]);
       \DB::table('m_26_penduduk_umur')
@@ -1014,8 +1014,8 @@ class KependudukanJpbkuAdminController extends Controller
     public function jpbku_5054Store(Request $request)
   {
     $this->validate($request, [
-      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'), 
-      'jumlah' => 'required|numeric|min:0|max:100',
+      'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'), 
+      'jumlah' => 'required|numeric|min:0',
       'status_data' => 'required|in:1,2,3',
     ]);
  
@@ -1041,7 +1041,7 @@ class KependudukanJpbkuAdminController extends Controller
     else
     { 
       $this->validate($request, [        
-        'jumlah' => 'required|numeric|min:0|max:100',
+        'jumlah' => 'required|numeric|min:0',
         'status_data' => 'required|in:1,2,3',
       ]);
       \DB::table('m_26_penduduk_umur')
@@ -1112,8 +1112,8 @@ class KependudukanJpbkuAdminController extends Controller
     public function jpbku_5459Store(Request $request)
   {
     $this->validate($request, [
-      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'), 
-      'jumlah' => 'required|numeric|min:0|max:100',
+      'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'), 
+      'jumlah' => 'required|numeric|min:0',
       'status_data' => 'required|in:1,2,3',
     ]);
  
@@ -1139,7 +1139,7 @@ class KependudukanJpbkuAdminController extends Controller
     else
     { 
       $this->validate($request, [        
-        'jumlah' => 'required|numeric|min:0|max:100',
+        'jumlah' => 'required|numeric|min:0',
         'status_data' => 'required|in:1,2,3',
       ]);
       \DB::table('m_26_penduduk_umur')
@@ -1210,8 +1210,8 @@ class KependudukanJpbkuAdminController extends Controller
     public function jpbku_6064Store(Request $request)
   {
     $this->validate($request, [
-      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'), 
-      'jumlah' => 'required|numeric|min:0|max:100',
+      'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'), 
+      'jumlah' => 'required|numeric|min:0',
       'status_data' => 'required|in:1,2,3',
     ]);
  
@@ -1237,7 +1237,7 @@ class KependudukanJpbkuAdminController extends Controller
     else
     { 
       $this->validate($request, [        
-        'jumlah' => 'required|numeric|min:0|max:100',
+        'jumlah' => 'required|numeric|min:0',
         'status_data' => 'required|in:1,2,3',
       ]);
       \DB::table('m_26_penduduk_umur')
@@ -1312,8 +1312,8 @@ class KependudukanJpbkuAdminController extends Controller
     public function jpbku_6569Store(Request $request)
   {
     $this->validate($request, [
-      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'), 
-      'jumlah' => 'required|numeric|min:0|max:100',
+      'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'), 
+      'jumlah' => 'required|numeric|min:0',
       'status_data' => 'required|in:1,2,3',
     ]);
  
@@ -1339,7 +1339,7 @@ class KependudukanJpbkuAdminController extends Controller
     else
     { 
       $this->validate($request, [        
-        'jumlah' => 'required|numeric|min:0|max:100',
+        'jumlah' => 'required|numeric|min:0',
         'status_data' => 'required|in:1,2,3',
       ]);
       \DB::table('m_26_penduduk_umur')
@@ -1413,8 +1413,8 @@ class KependudukanJpbkuAdminController extends Controller
     public function jpbku_7074Store(Request $request)
   {
     $this->validate($request, [
-      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'), 
-      'jumlah' => 'required|numeric|min:0|max:100',
+      'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'), 
+      'jumlah' => 'required|numeric|min:0',
       'status_data' => 'required|in:1,2,3',
     ]);
  
@@ -1440,7 +1440,7 @@ class KependudukanJpbkuAdminController extends Controller
     else
     { 
       $this->validate($request, [        
-        'jumlah' => 'required|numeric|min:0|max:100',
+        'jumlah' => 'required|numeric|min:0',
         'status_data' => 'required|in:1,2,3',
       ]);
       \DB::table('m_26_penduduk_umur')
@@ -1511,8 +1511,8 @@ class KependudukanJpbkuAdminController extends Controller
     public function jpbku_75Store(Request $request)
   {
     $this->validate($request, [
-      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'), 
-      'jumlah' => 'required|numeric|min:0|max:100',
+      'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'), 
+      'jumlah' => 'required|numeric|min:0',
       'status_data' => 'required|in:1,2,3',
     ]); 
  
@@ -1538,7 +1538,7 @@ class KependudukanJpbkuAdminController extends Controller
     else
     { 
       $this->validate($request, [        
-        'jumlah' => 'required|numeric|min:0|max:100',
+        'jumlah' => 'required|numeric|min:0',
         'status_data' => 'required|in:1,2,3',
       ]);
       \DB::table('m_26_penduduk_umur')

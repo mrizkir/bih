@@ -31,8 +31,8 @@ class InfrastrukturPjddAdminController extends Controller
     public function pjddStore(Request $request)
   {
     $this->validate($request, [
-      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
-      'panjang' => 'required|numeric|min:0|max:100',
+      'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'),
+      'panjang' => 'required|numeric|min:0',
       'status_data' => 'required|in:1,2,3',
     ]);
  
@@ -57,7 +57,7 @@ class InfrastrukturPjddAdminController extends Controller
     else
     {
       $this->validate($request, [        
-        'panjang' => 'required|numeric|min:0|max:100',
+        'panjang' => 'required|numeric|min:0',
         'status_data' => 'required|in:1,2,3',
       ]);
       \DB::table('m_28_jalan')

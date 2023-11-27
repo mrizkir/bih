@@ -31,8 +31,8 @@ class SosialJrtlhAdminController extends Controller
     public function jrtlhStore(Request $request)
   {
     $this->validate($request, [
-      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
-      'jumlah_unit' => 'required|numeric|min:0|max:100',
+      'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'),
+      'jumlah_unit' => 'required|numeric|min:0',
       'status_data' => 'required|in:1,2,3',
     ]);
  
@@ -57,7 +57,7 @@ class SosialJrtlhAdminController extends Controller
     else
     {
       $this->validate($request, [        
-        'jumlah_unit' => 'required|numeric|min:0|max:100',
+        'jumlah_unit' => 'required|numeric|min:0',
         'status_data' => 'required|in:1,2,3',
       ]);
       \DB::table('m_13_rtlh')

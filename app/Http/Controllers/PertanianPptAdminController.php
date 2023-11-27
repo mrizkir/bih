@@ -31,8 +31,8 @@ class PertanianPptAdminController extends Controller
     public function pptStore(Request $request)
   {
     $this->validate($request, [
-      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
-      'jumlah' => 'required|numeric|min:0|max:100',
+      'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'),
+      'jumlah' => 'required|numeric|min:0',
       'status_data' => 'required|in:1,2,3',
     ]);
  
@@ -57,7 +57,7 @@ class PertanianPptAdminController extends Controller
     else
     {
       $this->validate($request, [        
-        'jumlah' => 'required|numeric|min:0|max:100',
+        'jumlah' => 'required|numeric|min:0',
         'status_data' => 'required|in:1,2,3',
       ]);
       \DB::table('m_22_perikanan_tangkap')

@@ -38,15 +38,15 @@ class EkonomiLiAdminController extends Controller
     public function liStore(Request $request)
   {
     $this->validate($request, [
-      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
-      'umum' => 'required|numeric|min:0|max:100',
-      'bahan_makanan' => 'required|numeric|min:0|max:100',
-      'makanan_jadi' => 'required|numeric|min:0|max:100',
-      'perumahan' => 'required|numeric|min:0|max:100',
-      'sandang' => 'required|numeric|min:0|max:100',
-      'kesehatan' => 'required|numeric|min:0|max:100',
-      'pendidikan' => 'required|numeric|min:0|max:100',
-      'transportasi' => 'required|numeric|min:0|max:100',
+      'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'),
+      'umum' => 'required|numeric|min:0',
+      'bahan_makanan' => 'required|numeric|min:0',
+      'makanan_jadi' => 'required|numeric|min:0',
+      'perumahan' => 'required|numeric|min:0',
+      'sandang' => 'required|numeric|min:0',
+      'kesehatan' => 'required|numeric|min:0',
+      'pendidikan' => 'required|numeric|min:0',
+      'transportasi' => 'required|numeric|min:0',
       'status_data' => 'required|in:1,2,3',
     ]); 
   
@@ -78,14 +78,14 @@ class EkonomiLiAdminController extends Controller
     else
     {
       $this->validate($request, [         
-      'umum' => 'required|numeric|min:0|max:100',
-      'bahan_makanan' => 'required|numeric|min:0|max:100',
-      'makanan_jadi' => 'required|numeric|min:0|max:100',
-      'perumahan' => 'required|numeric|min:0|max:100',
-      'sandang' => 'required|numeric|min:0|max:100',
-      'kesehatan' => 'required|numeric|min:0|max:100',
-      'pendidikan' => 'required|numeric|min:0|max:100',
-      'transportasi' => 'required|numeric|min:0|max:100',
+      'umum' => 'required|numeric|min:0',
+      'bahan_makanan' => 'required|numeric|min:0',
+      'makanan_jadi' => 'required|numeric|min:0',
+      'perumahan' => 'required|numeric|min:0',
+      'sandang' => 'required|numeric|min:0',
+      'kesehatan' => 'required|numeric|min:0',
+      'pendidikan' => 'required|numeric|min:0',
+      'transportasi' => 'required|numeric|min:0',
       'status_data' => 'required|in:1,2,3',
       ]);
       \DB::table('m_18_inflasi')

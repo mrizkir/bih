@@ -31,8 +31,8 @@ class PertanianCpkupAdminController extends Controller
     public function cpkupStore(Request $request)
   {
     $this->validate($request, [
-      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
-      'jumlah' => 'required|numeric|min:0|max:100',
+      'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'),
+      'jumlah' => 'required|numeric|min:0',
       'status_data' => 'required|in:1,2,3',
     ]);
  
@@ -57,7 +57,7 @@ class PertanianCpkupAdminController extends Controller
     else
     {
       $this->validate($request, [        
-        'jumlah' => 'required|numeric|min:0|max:100',
+        'jumlah' => 'required|numeric|min:0',
         'status_data' => 'required|in:1,2,3',
       ]);
       \DB::table('m_23_perkebunan')

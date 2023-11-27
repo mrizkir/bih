@@ -36,13 +36,13 @@ class SosialPkkAdminController extends Controller
     public function pkkStore(Request $request)
   {
     $this->validate($request, [
-      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
-      'penduduk_usia_kerja' => 'required|numeric|min:0|max:100',
-      'angkatan_kerja' => 'required|numeric|min:0|max:100',
-      'bekerja' => 'required|numeric|min:0|max:100',
-      'mencari_pekerjaan' => 'required|numeric|min:0|max:100',
-      'tingkat_partisipasi' => 'required|numeric|min:0|max:100',
-      'tingkat_pengangguran' => 'required|numeric|min:0|max:100', 
+      'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'),
+      'penduduk_usia_kerja' => 'required|numeric|min:0',
+      'angkatan_kerja' => 'required|numeric|min:0',
+      'bekerja' => 'required|numeric|min:0',
+      'mencari_pekerjaan' => 'required|numeric|min:0',
+      'tingkat_partisipasi' => 'required|numeric|min:0',
+      'tingkat_pengangguran' => 'required|numeric|min:0', 
       'status_data' => 'required|in:1,2,3',
     ]);
  
@@ -72,13 +72,13 @@ class SosialPkkAdminController extends Controller
     else
     {
       $this->validate($request, [        
-        'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
-      'penduduk_usia_kerja' => 'required|numeric|min:0|max:100',
-      'angkatan_kerja' => 'required|numeric|min:0|max:100',
-      'bekerja' => 'required|numeric|min:0|max:100',
-      'mencari_pekerjaan' => 'required|numeric|min:0|max:100',
-      'tingkat_partisipasi' => 'required|numeric|min:0|max:100',
-      'tingkat_pengangguran' => 'required|numeric|min:0|max:100', 
+        'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'),
+      'penduduk_usia_kerja' => 'required|numeric|min:0',
+      'angkatan_kerja' => 'required|numeric|min:0',
+      'bekerja' => 'required|numeric|min:0',
+      'mencari_pekerjaan' => 'required|numeric|min:0',
+      'tingkat_partisipasi' => 'required|numeric|min:0',
+      'tingkat_pengangguran' => 'required|numeric|min:0', 
       'status_data' => 'required|in:1,2,3',
       ]);
       \DB::table('m_8_tenaga_kerja')

@@ -31,8 +31,8 @@ class SosialAhhAdminController extends Controller
     public function ahhStore(Request $request)
   {
     $this->validate($request, [
-      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
-      'ahh' => 'required|numeric|min:0|max:100',
+      'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'),
+      'ahh' => 'required|numeric|min:0',
       'status_data' => 'required|in:1,2,3',
     ]);
  
@@ -57,7 +57,7 @@ class SosialAhhAdminController extends Controller
     else
     { 
       $this->validate($request, [        
-        'ahh' => 'required|numeric|min:0|max:100',
+        'ahh' => 'required|numeric|min:0',
         'status_data' => 'required|in:1,2,3',
       ]);
       \DB::table('m_5_ahh')

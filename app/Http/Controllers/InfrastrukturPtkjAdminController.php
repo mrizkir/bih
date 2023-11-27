@@ -31,8 +31,8 @@ class InfrastrukturPtkjAdminController extends Controller
     public function ptkjStore(Request $request)
   {
     $this->validate($request, [
-      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
-      'kemantapan_jalan' => 'required|numeric|min:0|max:100',
+      'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'),
+      'kemantapan_jalan' => 'required|numeric|min:0',
       'status_data' => 'required|in:1,2,3',
     ]); 
   
@@ -57,7 +57,7 @@ class InfrastrukturPtkjAdminController extends Controller
     else
     {
       $this->validate($request, [        
-        'kemantapan_jalan' => 'required|numeric|min:0|max:100',
+        'kemantapan_jalan' => 'required|numeric|min:0',
         'status_data' => 'required|in:1,2,3',
       ]);
       \DB::table('m_37_kemantapan_jalan')

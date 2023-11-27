@@ -30,8 +30,8 @@ class SosialIpmAdminController extends Controller
     public function ipmStore(Request $request)
   {
     $this->validate($request, [
-      'tahun' => 'required|numeric|digits:4|min:2020|max:'.date('Y'),
-      'ipm' => 'required|numeric|min:0|max:100',
+      'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'),
+      'ipm' => 'required|numeric|min:0',
       'status_data' => 'required|in:1,2,3',
     ]);
  
@@ -56,7 +56,7 @@ class SosialIpmAdminController extends Controller
     else
     {
       $this->validate($request, [        
-        'ipm' => 'required|numeric|min:0|max:100',
+        'ipm' => 'required|numeric|min:0',
         'status_data' => 'required|in:1,2,3',
       ]);
       \DB::table('m_2_ipm')
