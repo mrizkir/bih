@@ -413,19 +413,19 @@ Route::group(
     Route::post('/adhk_c/store', [EkonomiAdhkAdminController::class, 'adhk_cStore'])->name('ekonomi-adhk_C.store');   
     Route::put('/adhk_c/{id}', [EkonomiAdhkAdminController::class, 'adhk_cUpdate'])->name('ekonomi-adhk_C.update');  
     Route::get('/adhk_cdel/{id}', [EkonomiAdhkAdminController::class, 'adhk_cDel'])->name('ekonomi-adhk_C.del');  
-    Route::get('/adhk_ccetak', [EkonomiAdhkAdminController::class, 'adhk_cCetak'])->name('ekonomi-adhk_C');  
+    Route::get('/adhk_ccetak', [EkonomiAdhkAdminController::class, 'adhk_cCetak'])->name('ekonomi-adhk_ccetak');  
 
     Route::get('/adhk_d', [EkonomiAdhkAdminController::class, 'adhk_d'])->name('ekonomi-adhk_D');  
     Route::post('/adhk_d/store', [EkonomiAdhkAdminController::class, 'adhk_dStore'])->name('ekonomi-adhk_D.store'); 
     Route::put('/adhk_d/{id}', [EkonomiAdhkAdminController::class, 'adhk_dUpdate'])->name('ekonomi-adhk_D.update');
     Route::get('/adhk_ddel/{id}', [EkonomiAdhkAdminController::class, 'adhk_dDel'])->name('ekonomi-adhk_D.del');
-    Route::get('/adhk_dcetak', [EkonomiAdhkAdminController::class, 'adhk_dCetak'])->name('ekonomi-adhk_D');
+    Route::get('/adhk_dcetak', [EkonomiAdhkAdminController::class, 'adhk_dCetak'])->name('ekonomi-adhk_dcetak');
 
     Route::get('/adhk_e', [EkonomiAdhkAdminController::class, 'adhk_e'])->name('ekonomi-adhk_E'); 
     Route::post('/adhk_e/store', [EkonomiAdhkAdminController::class, 'adhk_eStore'])->name('ekonomi-adhk_E.store');
     Route::put('/adhk_e/{id}', [EkonomiAdhkAdminController::class, 'adhk_eUpdate'])->name('ekonomi-adhk_E.update');
     Route::get('/adhk_edel/{id}', [EkonomiAdhkAdminController::class, 'adhk_eDel'])->name('ekonomi-adhk_E.del');
-    Route::get('/adhk_ecetak', [EkonomiAdhkAdminController::class, 'adhk_eCetak'])->name('eadhk_ecetak'); 
+    Route::get('/adhk_ecetak', [EkonomiAdhkAdminController::class, 'adhk_eCetak'])->name('adhk_ecetak'); 
 
     Route::get('/adhk_f', [EkonomiAdhkAdminController::class, 'adhk_f'])->name('ekonomi-adhk_F'); 
     Route::post('/adhk_f/store', [EkonomiAdhkAdminController::class, 'adhk_fStore'])->name('ekonomi-adhk_F.store');
