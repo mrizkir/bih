@@ -74,6 +74,7 @@ class EkonomiAdhkAdminController extends Controller
       ]);
       \DB::table('m_19_pdrb_konstan')
       ->where('tahun', $id)
+      ->where('uraian', 1)
       ->update([
         'tahun' => $request->input('tahun'),
         'jumlah' => $request->input('jumlah'),      
@@ -187,6 +188,7 @@ class EkonomiAdhkAdminController extends Controller
       ]);
       \DB::table('m_19_pdrb_konstan')
       ->where('tahun', $id)
+      ->where('uraian', 2)
       ->update([
         'tahun' => $request->input('tahun'),
         'jumlah' => $request->input('jumlah'),      
@@ -298,6 +300,7 @@ class EkonomiAdhkAdminController extends Controller
       ]);
       \DB::table('m_19_pdrb_konstan')
       ->where('tahun', $id)
+      ->where('uraian', 3)
       ->update([
         'tahun' => $request->input('tahun'),
         'jumlah' => $request->input('jumlah'),      
@@ -411,6 +414,7 @@ class EkonomiAdhkAdminController extends Controller
       ]);
       \DB::table('m_19_pdrb_konstan')
       ->where('tahun', $id)
+      ->where('uraian', 4)
       ->update([
         'tahun' => $request->input('tahun'),
         'jumlah' => $request->input('jumlah'),      
@@ -524,6 +528,7 @@ class EkonomiAdhkAdminController extends Controller
       ]);
       \DB::table('m_19_pdrb_konstan')
       ->where('tahun', $id)
+      ->where('uraian', 5)
       ->update([
         'tahun' => $request->input('tahun'),
         'jumlah' => $request->input('jumlah'),
@@ -635,6 +640,7 @@ class EkonomiAdhkAdminController extends Controller
       ]);
       \DB::table('m_19_pdrb_konstan')
       ->where('tahun', $id)
+      ->where('uraian', 6)
       ->update([
         'tahun' => $request->input('tahun'),
         'jumlah' => $request->input('jumlah'),
@@ -746,6 +752,7 @@ class EkonomiAdhkAdminController extends Controller
       ]);
       \DB::table('m_19_pdrb_konstan')
       ->where('tahun', $id)
+      ->where('uraian', 7)
       ->update([
         'tahun' => $request->input('tahun'),
         'jumlah' => $request->input('jumlah'),
@@ -854,6 +861,7 @@ class EkonomiAdhkAdminController extends Controller
       ]);
       \DB::table('m_19_pdrb_konstan')
       ->where('tahun', $id)
+      ->where('uraian', 8)
       ->update([
         'tahun' => $request->input('tahun'),
         'jumlah' => $request->input('jumlah'),
@@ -963,6 +971,7 @@ class EkonomiAdhkAdminController extends Controller
       ]);
       \DB::table('m_19_pdrb_konstan')
       ->where('tahun', $id)
+      ->where('uraian', 9)
       ->update([
         'tahun' => $request->input('tahun'),
         'jumlah' => $request->input('jumlah'),
@@ -1072,6 +1081,7 @@ class EkonomiAdhkAdminController extends Controller
       ]);
       \DB::table('m_19_pdrb_konstan')
       ->where('tahun', $id)
+      ->where('uraian', 10)
       ->update([
         'tahun' => $request->input('tahun'),
         'jumlah' => $request->input('jumlah'),
@@ -1182,6 +1192,7 @@ class EkonomiAdhkAdminController extends Controller
       ]);
       \DB::table('m_19_pdrb_konstan')
       ->where('tahun', $id)
+      ->where('uraian', 11)
       ->update([
         'tahun' => $request->input('tahun'),
         'jumlah' => $request->input('jumlah'),
@@ -1293,6 +1304,7 @@ class EkonomiAdhkAdminController extends Controller
       ]);
       \DB::table('m_19_pdrb_konstan')
       ->where('tahun', $id)
+      ->where('uraian', 12)
       ->update([
         'tahun' => $request->input('tahun'),
         'jumlah' => $request->input('jumlah'),
@@ -1404,6 +1416,7 @@ class EkonomiAdhkAdminController extends Controller
       ]);
       \DB::table('m_19_pdrb_konstan')
       ->where('tahun', $id)
+      ->where('uraian', 13)
       ->update([
         'tahun' => $request->input('tahun'),
         'jumlah' => $request->input('jumlah'),
@@ -1515,6 +1528,7 @@ class EkonomiAdhkAdminController extends Controller
       ]);
       \DB::table('m_19_pdrb_konstan')
       ->where('tahun', $id)
+      ->where('uraian', 14)
       ->update([
         'tahun' => $request->input('tahun'),
         'jumlah' => $request->input('jumlah'),
@@ -1626,6 +1640,7 @@ class EkonomiAdhkAdminController extends Controller
       ]);
       \DB::table('m_19_pdrb_konstan')
       ->where('tahun', $id)
+      ->where('uraian', 15)
       ->update([
         'tahun' => $request->input('tahun'),
         'jumlah' => $request->input('jumlah'),
@@ -1737,6 +1752,7 @@ class EkonomiAdhkAdminController extends Controller
       ]);
       \DB::table('m_19_pdrb_konstan')
       ->where('tahun', $id)
+      ->where('uraian', 16)
       ->update([
         'tahun' => $request->input('tahun'),
         'jumlah' => $request->input('jumlah'),
@@ -1848,6 +1864,7 @@ class EkonomiAdhkAdminController extends Controller
       ]);
       \DB::table('m_19_pdrb_konstan')
       ->where('tahun', $id)
+      ->where('uraian', 17)
       ->update([
         'tahun' => $request->input('tahun'),
         'jumlah' => $request->input('jumlah'),

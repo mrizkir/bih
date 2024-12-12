@@ -74,6 +74,7 @@ class EkonomiAdhbAdminController extends Controller
       ]);
       \DB::table('m_19_pdrb_berlaku')
       ->where('tahun', $id)
+      ->where('uraian', 1)
       ->update([
         'tahun' => $request->input('tahun'),
         'jumlah' => $request->input('jumlah'),      
@@ -185,6 +186,7 @@ class EkonomiAdhbAdminController extends Controller
       ]);
       \DB::table('m_19_pdrb_berlaku')
       ->where('tahun', $id)
+      ->where('uraian', 2)
       ->update([
         'tahun' => $request->input('tahun'),
         'jumlah' => $request->input('jumlah'),      
@@ -298,6 +300,7 @@ class EkonomiAdhbAdminController extends Controller
       ]);
       \DB::table('m_19_pdrb_berlaku')
       ->where('tahun', $id)
+      ->where('uraian', 3)
       ->update([
         'tahun' => $request->input('tahun'),
         'jumlah' => $request->input('jumlah'),      
@@ -414,6 +417,7 @@ class EkonomiAdhbAdminController extends Controller
       ]);
       \DB::table('m_19_pdrb_berlaku')
       ->where('tahun', $id)
+      ->where('uraian', 4)
       ->update([
         'tahun' => $request->input('tahun'),
         'jumlah' => $request->input('jumlah'),      
@@ -530,6 +534,7 @@ class EkonomiAdhbAdminController extends Controller
       ]);
       \DB::table('m_19_pdrb_berlaku')
       ->where('tahun', $id)
+      ->where('uraian', 5)
       ->update([
         'tahun' => $request->input('tahun'),
         'jumlah' => $request->input('jumlah'),
@@ -643,6 +648,7 @@ class EkonomiAdhbAdminController extends Controller
       ]);
       \DB::table('m_19_pdrb_berlaku')
       ->where('tahun', $id)
+      ->where('uraian', 6)
       ->update([
         'tahun' => $request->input('tahun'),
         'jumlah' => $request->input('jumlah'),
@@ -757,6 +763,7 @@ class EkonomiAdhbAdminController extends Controller
       ]);
       \DB::table('m_19_pdrb_berlaku')
       ->where('tahun', $id)
+      ->where('uraian', 7)
       ->update([
         'tahun' => $request->input('tahun'),
         'jumlah' => $request->input('jumlah'),
@@ -869,6 +876,7 @@ class EkonomiAdhbAdminController extends Controller
       ]);
       \DB::table('m_19_pdrb_berlaku')
       ->where('tahun', $id)
+      ->where('uraian', 8)
       ->update([
         'tahun' => $request->input('tahun'),
         'jumlah' => $request->input('jumlah'),
@@ -981,6 +989,7 @@ class EkonomiAdhbAdminController extends Controller
       ]);
       \DB::table('m_19_pdrb_berlaku')
       ->where('tahun', $id)
+      ->where('uraian', 9)
       ->update([
         'tahun' => $request->input('tahun'),
         'jumlah' => $request->input('jumlah'),
@@ -1093,6 +1102,7 @@ class EkonomiAdhbAdminController extends Controller
       ]);
       \DB::table('m_19_pdrb_berlaku')
       ->where('tahun', $id)
+      ->where('uraian', 10)
       ->update([
         'tahun' => $request->input('tahun'),
         'jumlah' => $request->input('jumlah'),
@@ -1206,6 +1216,7 @@ class EkonomiAdhbAdminController extends Controller
       ]);
       \DB::table('m_19_pdrb_berlaku')
       ->where('tahun', $id)
+      ->where('uraian', 11)
       ->update([
         'tahun' => $request->input('tahun'),
         'jumlah' => $request->input('jumlah'),
