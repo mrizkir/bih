@@ -507,7 +507,7 @@
               </ul>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('ekonomi-adhk_D') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'ekonomi-adhk-c',' active')!!}">
+                  <a href="{{ route('ekonomi-adhk_C') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'ekonomi-adhk-c',' active')!!}">
                     <div style="width:30px;height:35px;float:left;"></div>
                     <p style="font-size: 12px;">C. Industri Pengolahan</p>
                   </a>

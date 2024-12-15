@@ -1330,6 +1330,7 @@ class EkonomiAdhbAdminController extends Controller
       ]);
       \DB::table('m_19_pdrb_berlaku')
       ->where('tahun', $id)
+      ->where('uraian', 12)
       ->update([
         'tahun' => $request->input('tahun'),
         'jumlah' => $request->input('jumlah'),
@@ -1444,6 +1445,7 @@ class EkonomiAdhbAdminController extends Controller
       ]);
       \DB::table('m_19_pdrb_berlaku')
       ->where('tahun', $id)
+      ->where('uraian', 13)
       ->update([
         'tahun' => $request->input('tahun'),
         'jumlah' => $request->input('jumlah'),
@@ -1537,7 +1539,7 @@ class EkonomiAdhbAdminController extends Controller
       'status_data' => $request->input('status_data'),
     ]); 
      
-    return redirect(route('ekonomi-adhb_T'))->with('success', 'data berhasil disimpan');
+    return redirect(route('ekonomi-adhb_O'))->with('success', 'data berhasil disimpan');
   }
   public function adhb_oUpdate(Request $request, $id)
   {
@@ -1547,7 +1549,7 @@ class EkonomiAdhbAdminController extends Controller
 
     if (is_null($data)) 
     {
-      return redirect(route('ekonomi-adhb_T'))->with('error', 'data gagal disimpan');
+      return redirect(route('ekonomi-adhb_O'))->with('error', 'data gagal disimpan');
     }
     else
     {
@@ -1558,20 +1560,21 @@ class EkonomiAdhbAdminController extends Controller
       ]);
       \DB::table('m_19_pdrb_berlaku')
       ->where('tahun', $id)
+      ->where('uraian', 14)
       ->update([
         'tahun' => $request->input('tahun'),
         'jumlah' => $request->input('jumlah'),
         'uraian' => 14,      
         'status_data' => $request->input('status_data'),
       ]);
-      return redirect(route('ekonomi-adhb_T'))->with('success', 'data berhasil diubah');
+      return redirect(route('ekonomi-adhb_O'))->with('success', 'data berhasil diubah');
     }    
   }
   public function adhb_oDel($id)
     {
       $data = \DB::table('m_19_pdrb_berlaku')->where('tahun', $id);
       $data->delete();
-        return redirect(route('ekonomi-adhb_T'))->with('sukses', 'Data Sudah di Hapus');
+        return redirect(route('ekonomi-adhb_O'))->with('sukses', 'Data Sudah di Hapus');
     }
 
     public function adhb_oCetak()
@@ -1670,6 +1673,7 @@ class EkonomiAdhbAdminController extends Controller
       ]);
       \DB::table('m_19_pdrb_berlaku')
       ->where('tahun', $id)
+      ->where('uraian', 15)
       ->update([
         'tahun' => $request->input('tahun'),
         'jumlah' => $request->input('jumlah'),
@@ -1780,6 +1784,7 @@ class EkonomiAdhbAdminController extends Controller
       ]);
       \DB::table('m_19_pdrb_berlaku')
       ->where('tahun', $id)
+      ->where('uraian', 16)
       ->update([
         'tahun' => $request->input('tahun'),
         'jumlah' => $request->input('jumlah'),
@@ -1894,6 +1899,7 @@ class EkonomiAdhbAdminController extends Controller
       ]);
       \DB::table('m_19_pdrb_berlaku')
       ->where('tahun', $id)
+      ->where('uraian', 17)
       ->update([
         'tahun' => $request->input('tahun'),
         'jumlah' => $request->input('jumlah'),

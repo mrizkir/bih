@@ -5,9 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\DataSosialModel;
 
-class InfrastrukturPjddAdminController extends Controller
+class InfrastrukturRasioKonektifitasAdminController extends Controller
 { 
-  public function pjddIndex()
+  public function rasioIndex()
   {
     $data = \DB::table('m_28_jalan')
     ->select(\DB::raw('
@@ -18,17 +18,17 @@ class InfrastrukturPjddAdminController extends Controller
     ->orderBy('tahun', 'desc')
     ->get();
   
-    return view('admin.infrastruktur.pjdd_tampil', [
-      'title' => 'Panjang Jalan Yang Dibangun dan Ditingkatkan (PJDD)',
+    return view('admin.infrastruktur.rasio_tampil', [
+      'title' => 'Rasio Konektifitas',
       'menu_active' => 'menu-infrastruktur',
       'sub_menu_active' => 'none',
-      'page_active' => 'infrastruktur-pjdd',
+      'page_active' => 'infrastruktur-rasio',
       'sumber' => 'BPS',
       'data' => $data
     ]);
   }
 
-  public function pjddStore(Request $request)
+  public function rasioStore(Request $request)
   {
     $this->validate($request, [
       'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'),
@@ -42,9 +42,9 @@ class InfrastrukturPjddAdminController extends Controller
       'status_data' => $request->input('status_data'),
     ]); 
       
-    return redirect(route('infrastruktur-pjdd.index'))->with('success', 'data berhasil disimpan');
+    return redirect(route('infrastruktur-rasio.index'))->with('success', 'data berhasil disimpan');
   }
-  public function pjddUpdate(Request $request, $id)
+  public function rasioUpdate(Request $request, $id)
   {
     $data = \DB::table('m_28_jalan')
     ->where('tahun', $id)
@@ -52,7 +52,7 @@ class InfrastrukturPjddAdminController extends Controller
 
     if (is_null($data)) 
     {
-      return redirect(route('infrastruktur-pjdd.index'))->with('error', 'data gagal disimpan');
+      return redirect(route('infrastruktur-rasio.index'))->with('error', 'data gagal disimpan');
     }
     else
     {
@@ -66,18 +66,18 @@ class InfrastrukturPjddAdminController extends Controller
         'panjang' => $request->input('panjang'),      
         'status_data' => $request->input('status_data'),
       ]);
-      return redirect(route('infrastruktur-pjdd.index'))->with('success', 'data berhasil diubah');
+      return redirect(route('infrastruktur-rasio.index'))->with('success', 'data berhasil diubah');
     }    
   }
-  public function pjddDel($id)
+  public function rasioDel($id)
   {
     $data = \DB::table('m_28_jalan')->where('tahun', $id);
 
       $data->delete();
-      return redirect(route('infrastruktur-pjdd.index'))->with('sukses', 'Data Sudah di Hapus');
+      return redirect(route('infrastruktur-rasio.index'))->with('sukses', 'Data Sudah di Hapus');
   }
 
-  public function pjddCetak()
+  public function rasioCetak()
   {
     $data = \DB::table('m_28_jalan')
     ->select(\DB::raw('
@@ -88,11 +88,11 @@ class InfrastrukturPjddAdminController extends Controller
   ->orderBy('tahun', 'desc')
   ->get(); 
 
-    return view('admin.infrastruktur.1pjddcetak', [
-      'title' => 'Panjang Jalan Yang Dibangun dan Ditingkatkan (PJDD)',
+    return view('admin.infrastruktur.1rasiocetak', [
+      'title' => 'Rasio Konektifitas',
       'menu_active' => 'menu-infrastruktur',
       'sub_menu_active' => 'none',
-      'page_active' => 'infrastruktur-pjdd',
+      'page_active' => 'infrastruktur-rasio',
       'sumber' => 'BPS',
       'data' => $data
     ]);
