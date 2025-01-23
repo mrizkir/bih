@@ -16,7 +16,7 @@ class APIPertanianController extends Controller {
       B.jenis_data AS status_data
     '))    
     ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
-    ->orderBy('tahun', 'desc')
+    ->orderBy('tahun', 'asc')
     ->get();
 
     $last_data = \DB::table('m_21_perikanan_budidaya AS A')
@@ -47,7 +47,7 @@ class APIPertanianController extends Controller {
       B.jenis_data AS status_data
     '))    
     ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
-    ->orderBy('tahun', 'desc')
+    ->orderBy('tahun', 'asc')
     ->get();
 
     $last_data = \DB::table('m_22_perikanan_tangkap AS A')
@@ -78,7 +78,7 @@ class APIPertanianController extends Controller {
       B.jenis_data AS status_data
     '))    
     ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
-    ->orderBy('tahun', 'desc')
+    ->orderBy('tahun', 'asc')
     ->get();
 
     $last_data = \DB::table('m_23_perkebunan AS A')
@@ -109,7 +109,7 @@ class APIPertanianController extends Controller {
       B.jenis_data AS status_data
     '))    
     ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
-    ->orderBy('tahun', 'desc')
+    ->orderBy('tahun', 'asc')
     ->get();
 
     $last_data = \DB::table('m_24_holtikultura AS A')
@@ -140,7 +140,7 @@ class APIPertanianController extends Controller {
       B.jenis_data AS status_data
     '))    
     ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
-    ->orderBy('tahun', 'desc')
+    ->orderBy('tahun', 'asc')
     ->get();
 
     $last_data = \DB::table('m_25_peternakan AS A')

@@ -71,7 +71,7 @@ class APIEkonomiController extends Controller {
       B.jenis_data AS status_data
     '))    
     ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
-    ->orderBy('tahun', 'desc')
+    ->orderBy('tahun', 'asc')
     ->get();
 
     $last_data = \DB::table('m_18_inflasi AS A')
@@ -117,7 +117,7 @@ class APIEkonomiController extends Controller {
     '))    
     ->join('m_uraian_pdrb AS B', 'A.uraian', 'B.id')
     ->join('m_jenis_data AS C', 'A.status_data', 'C.id')
-    ->orderBy('tahun', 'desc')
+    ->orderBy('tahun', 'asc')
     ->get();
 
     $last_data = \DB::table('m_19_pdrb_berlaku AS A')
@@ -131,7 +131,7 @@ class APIEkonomiController extends Controller {
     '))       
     ->join('m_uraian_pdrb AS B', 'A.uraian', 'B.id')
     ->join('m_jenis_data AS C', 'A.status_data', 'C.id')
-    // ->where('B.id', $request->input('uraian_id'))
+    ->where('B.id', $request->input('uraian_id'))
     ->orderBy('tahun', 'desc')
     ->limit(1)
     ->get();
@@ -161,8 +161,8 @@ class APIEkonomiController extends Controller {
     '))    
     ->join('m_uraian_pdrb AS B', 'A.uraian', 'B.id')
     ->join('m_jenis_data AS C', 'A.status_data', 'C.id')
-    // ->where('B.id', $request->input('uraian_id'))
-    ->orderBy('tahun', 'desc')
+    ->where('B.id', $request->input('uraian_id'))
+    ->orderBy('tahun', 'asc')
     ->get();
 
     $last_data = \DB::table('m_19_pdrb_konstan AS A')
@@ -176,7 +176,7 @@ class APIEkonomiController extends Controller {
     '))       
     ->join('m_uraian_pdrb AS B', 'A.uraian', 'B.id')
     ->join('m_jenis_data AS C', 'A.status_data', 'C.id')
-    // ->where('B.id', $request->input('uraian_id'))
+    ->where('B.id', $request->input('uraian_id'))
     ->orderBy('tahun', 'desc')
     ->limit(1)
     ->get();
@@ -200,7 +200,7 @@ class APIEkonomiController extends Controller {
       B.jenis_data AS status_data
     '))    
     ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
-    ->orderBy('tahun', 'desc')
+    ->orderBy('tahun', 'asc')
     ->get();
 
     $last_data = \DB::table('m_20_kunjungan AS A')
@@ -233,7 +233,7 @@ class APIEkonomiController extends Controller {
       B.jenis_data AS status_data
     '))    
     ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
-    ->orderBy('tahun', 'desc')
+    ->orderBy('tahun', 'asc')
     ->get();
 
     $last_data = \DB::table('m_35_pma AS A')

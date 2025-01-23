@@ -26,7 +26,7 @@ class APISosialController extends Controller {
       B.jenis_data AS status_data
     '))       
     ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
-    ->orderBy('tahun', 'desc')
+    ->orderBy('tahun', 'asc')
     ->limit(1)
     ->get();
 
@@ -255,7 +255,7 @@ class APISosialController extends Controller {
       B.jenis_data AS status_data
     '))       
     ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
-    ->orderBy('tahun', 'desc')
+    ->orderBy('tahun', 'asc')
     ->limit(1)
     ->get();
 

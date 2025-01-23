@@ -18,7 +18,7 @@ class APIKependudukanController extends Controller {
       B.jenis_data AS status_data
     '))   
     ->join('m_jenis_data AS B', 'A.status_data', 'B.id') 
-    ->orderBy('tahun', 'desc')
+    ->orderBy('tahun', 'asc')
     ->get();
 
     $last_data = \DB::table('m_36_jumlah_penduduk AS A')    
@@ -30,7 +30,7 @@ class APIKependudukanController extends Controller {
       B.jenis_data AS status_data
     '))   
     ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
-    ->orderBy('id', 'desc')
+    ->orderBy('tahun', 'desc')
     ->limit(1)
     ->get();
 
@@ -89,7 +89,7 @@ class APIKependudukanController extends Controller {
       B.jenis_data AS status_data
     '))    
     ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
-    ->orderBy('tahun', 'desc')
+    ->orderBy('tahun', 'asc')
     ->orderBy('kelompok_umur', 'asc')
     ->get();
 
@@ -123,7 +123,7 @@ class APIKependudukanController extends Controller {
       B.jenis_data AS status_data
     '))    
     ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
-    ->orderBy('tahun', 'desc')
+    ->orderBy('tahun', 'asc')
     ->get();
 
     $last_data = \DB::table('m_27_laju_pertumbuhan AS A')    

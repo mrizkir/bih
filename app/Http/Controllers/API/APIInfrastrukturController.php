@@ -16,7 +16,7 @@ class APIInfrastrukturController extends Controller {
       B.jenis_data AS status_data
     '))    
     ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
-    ->orderBy('tahun', 'desc')
+    ->orderBy('tahun', 'asc')
     ->get();
 
     $last_data = \DB::table('m_28_jalan AS A')        
@@ -47,7 +47,7 @@ class APIInfrastrukturController extends Controller {
       B.jenis_data AS status_data
     '))    
     ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
-    ->orderBy('tahun', 'desc')
+    ->orderBy('tahun', 'asc')
     ->get();
 
     $last_data = \DB::table('m_29_air AS A')    
@@ -78,7 +78,7 @@ class APIInfrastrukturController extends Controller {
       B.jenis_data AS status_data
     '))    
     ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
-    ->orderBy('tahun', 'desc')
+    ->orderBy('tahun', 'asc')
     ->get();
 
     $last_data = \DB::table('m_37_kemantapan_jalan AS A')
