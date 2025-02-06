@@ -341,8 +341,10 @@ class APISosialController extends Controller {
 	{
     $data = \DB::table('m_11_apm AS A')
     ->select(\DB::raw('      
+      tingkat,
       tahun,
-      apm,      
+      apm,  
+      no,    
       B.jenis_data AS status_data
     '))  
     ->join('m_jenis_data AS B', 'A.status_data', 'B.id')  
@@ -351,8 +353,10 @@ class APISosialController extends Controller {
 
     $last_data = \DB::table('m_11_apm AS A')
     ->select(\DB::raw('      
+      tingkat,
       tahun,
-      apm,      
+      apm,  
+      no,    
       B.jenis_data AS status_data
     '))  
     ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
