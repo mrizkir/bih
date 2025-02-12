@@ -744,7 +744,7 @@
                   <i class="far fa-circle nav-icon"
                     style="color:rgb(255, 255, 255);font-size:10px;"></i>
                 </div>
-                <p style="font-size: 12px;">Jumlah Penduduk Berdasarkan Kecamatan Tahun 2021 (JPBKT)</p>
+                <p style="font-size: 12px;">Jumlah Penduduk Berdasarkan Kecamatan(JPBKT)</p>
               </a>
             </li>
           </ul>  

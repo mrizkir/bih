@@ -50,11 +50,11 @@ class APIKependudukanController extends Controller {
       A.kecamatan,
       A.laki,
       A.perempuan,
-      A.sex_ratio,
+      A.tahun,
       B.jenis_data AS status_data
     '))    
     ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
-    ->orderBy('kecamatan', 'desc')
+    ->orderBy('tahun', 'asc')
     ->get();
 
     // $last_data = \DB::table('m_26_penduduk_kecamatan AS A')    
@@ -73,7 +73,7 @@ class APIKependudukanController extends Controller {
 
     return response()->json([
       'status'=>'100',
-      'message'=>'KEPENDUDUKAN Jumlah Penduduk Berdasarkan Kecamatan Tahun 2021 (JPBK) - [m_26_penduduk_kecamatan]',
+      'message'=>'KEPENDUDUKAN Jumlah Penduduk Berdasarkan Kecamatan(JPBK) - [m_26_penduduk_kecamatan]',
       'last_data'=>[],
       'result'=>$data
     ], 200)->setEncodingOptions(JSON_NUMERIC_CHECK);

@@ -15,14 +15,14 @@ class KependudukanJpbkAdminController extends Controller
         kecamatan,
         laki,
         perempuan,
-        sex_ratio,
+        tahun,
         status_data
       '))    
       ->orderBy('id', 'desc')
       ->get();
   
       return view('admin.kependudukan.2jpbk_tampil', [
-        'title' => 'Jumlah Penduduk Berdasarkan Kecamatan Tahun 2021 (JPBK)',
+        'title' => 'Jumlah Penduduk Berdasarkan Kecamatan (JPBK)',
         'sumber' => 'BPS',
         'menu_active' => 'menu-kependudukan',
         'sub_menu_active' => 'none',
@@ -31,13 +31,13 @@ class KependudukanJpbkAdminController extends Controller
       ]);
     }
 
-    public function jpbkStore(Request $request) 
+  public function jpbkStore(Request $request) 
   {
     $this->validate($request, [ 
       'kecamatan' => 'required',
       'laki' => 'required',
       'perempuan' => 'required',
-      'sex_ratio' => 'required',
+      'tahun' => 'required',
       'status_data' => 'required|in:1,2,3',
     ]);
  
@@ -45,7 +45,7 @@ class KependudukanJpbkAdminController extends Controller
       'kecamatan' => $request->input('kecamatan'),
       'laki' => $request->input('laki'),      
       'perempuan' => $request->input('perempuan'),   
-      'sex_ratio' => $request->input('sex_ratio'),         
+      'tahun' => $request->input('tahun'),         
       'status_data' => $request->input('status_data'),
     ]); 
      
@@ -67,7 +67,7 @@ class KependudukanJpbkAdminController extends Controller
         'kecamatan' => 'required',  
         'laki' => 'required',
         'perempuan' => 'required',
-        'sex_ratio' => 'required',
+        'tahun' => 'required',
         'status_data' => 'required|in:1,2,3',
       ]);
       \DB::table('m_26_penduduk_kecamatan')
@@ -76,7 +76,7 @@ class KependudukanJpbkAdminController extends Controller
         'kecamatan' => $request->input('kecamatan'),
         'laki' => $request->input('laki'),      
         'perempuan' => $request->input('perempuan'), 
-        'sex_ratio' => $request->input('sex_ratio'),         
+        'tahun' => $request->input('tahun'),         
         'status_data' => $request->input('status_data'),
       ]);
       return redirect(route('kependudukan-jpbk.index'))->with('success', 'data berhasil diubah');
@@ -98,7 +98,7 @@ class KependudukanJpbkAdminController extends Controller
     kecamatan,
       laki,
       perempuan,
-      sex_ratio,
+      tahun,
       status_data
     '))    
     ->orderBy('id', 'desc')
