@@ -11,6 +11,7 @@ class SosialPpuAdminController extends Controller
     {
       $data = \DB::table('m_16_lulusan_pendidikan')
       ->select(\DB::raw('
+        tahun,
         no,
         pendidikan,
         laki,
