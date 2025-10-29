@@ -79,7 +79,12 @@ class ManajemenUserController extends Controller
       }
         $data['name'] = $request->name;
         $data['username'] = $request->username;  
-        // $data['password'] = Hash::make($data['password']); 
+        
+        // Update password hanya jika field password diisi
+        if ($request->filled('password')) {
+            $data['password'] = Hash::make($request->password);
+        }
+        
         $data['nomor_hp'] = $request->nomor_hp;
         $data['email'] = $request->email;
         $data['default_role'] = $request->default_role; 

@@ -64,10 +64,10 @@ class KependudukanJpbkuAdminController extends Controller
       ]);
       \DB::table('m_26_penduduk_umur')
       ->where('tahun', $request->input('tahun'))
+      ->where('kelompok_umur', 1)
       ->update([ 
-      'kelompok_umur' => 1,  
-      'jumlah' => $request->input('jumlah'),    
-      'status_data' => $request->input('status_data'),
+        'jumlah' => $request->input('jumlah'),    
+        'status_data' => $request->input('status_data'),
       ]);
       return redirect(route('A-jpbku_04'))->with('success', 'data berhasil diubah');
     }    
@@ -162,10 +162,10 @@ class KependudukanJpbkuAdminController extends Controller
       ]);
       \DB::table('m_26_penduduk_umur')
       ->where('tahun', $request->input('tahun'))
+      ->where('kelompok_umur', 2)
       ->update([ 
-      'kelompok_umur' => 2,  
-      'jumlah' => $request->input('jumlah'),    
-      'status_data' => $request->input('status_data'),
+        'jumlah' => $request->input('jumlah'),    
+        'status_data' => $request->input('status_data'),
       ]);
       return redirect(route('B-jpbku_59'))->with('success', 'data berhasil diubah');
     }    
@@ -259,10 +259,10 @@ class KependudukanJpbkuAdminController extends Controller
       ]);
       \DB::table('m_26_penduduk_umur')
       ->where('tahun', $request->input('tahun'))
-      ->update([ 
-      'kelompok_umur' => 3,  
-      'jumlah' => $request->input('jumlah'),    
-      'status_data' => $request->input('status_data'),
+      ->where('kelompok_umur', 3)
+      ->update([       
+        'jumlah' => $request->input('jumlah'),    
+        'status_data' => $request->input('status_data'),
       ]);
       return redirect(route('C-jpbku_1014'))->with('success', 'data berhasil diubah');
     }    
@@ -358,10 +358,10 @@ class KependudukanJpbkuAdminController extends Controller
       ]);
       \DB::table('m_26_penduduk_umur')
       ->where('tahun', $request->input('tahun'))
+      ->where('kelompok_umur', 4)
       ->update([ 
-      'kelompok_umur' => 4,  
-      'jumlah' => $request->input('jumlah'),    
-      'status_data' => $request->input('status_data'),
+        'jumlah' => $request->input('jumlah'),    
+        'status_data' => $request->input('status_data'),
       ]);
       return redirect(route('D_jpbku_1519'))->with('success', 'data berhasil diubah');
     }    
@@ -458,10 +458,10 @@ class KependudukanJpbkuAdminController extends Controller
       ]);
       \DB::table('m_26_penduduk_umur')
       ->where('tahun', $request->input('tahun'))
+      ->where('kelompok_umur', 5)
       ->update([ 
-      'kelompok_umur' => 5,  
-      'jumlah' => $request->input('jumlah'),    
-      'status_data' => $request->input('status_data'),
+        'jumlah' => $request->input('jumlah'),    
+        'status_data' => $request->input('status_data'),
       ]);
       return redirect(route('E-jpbku_2024'))->with('success', 'data berhasil diubah');
     }    
@@ -556,10 +556,10 @@ class KependudukanJpbkuAdminController extends Controller
       ]);
       \DB::table('m_26_penduduk_umur')
       ->where('tahun', $request->input('tahun'))
+      ->where('kelompok_umur', 6)
       ->update([ 
-      'kelompok_umur' => 6,  
-      'jumlah' => $request->input('jumlah'),    
-      'status_data' => $request->input('status_data'),
+        'jumlah' => $request->input('jumlah'),    
+        'status_data' => $request->input('status_data'),
       ]);
       return redirect(route('F-jpbku_2529'))->with('success', 'data berhasil diubah');
     }    
@@ -656,10 +656,10 @@ class KependudukanJpbkuAdminController extends Controller
       ]);
       \DB::table('m_26_penduduk_umur')
       ->where('tahun', $request->input('tahun'))
+      ->where('kelompok_umur', 7)
       ->update([ 
-      'kelompok_umur' => 7,  
-      'jumlah' => $request->input('jumlah'),    
-      'status_data' => $request->input('status_data'),
+        'jumlah' => $request->input('jumlah'),    
+        'status_data' => $request->input('status_data'),
       ]);
       return redirect(route('G-jpbku_3034'))->with('success', 'data berhasil diubah');
     }    
@@ -754,10 +754,10 @@ class KependudukanJpbkuAdminController extends Controller
       ]);
       \DB::table('m_26_penduduk_umur')
       ->where('tahun', $request->input('tahun'))
+      ->where('kelompok_umur', 8)
       ->update([ 
-      'kelompok_umur' => 8,  
-      'jumlah' => $request->input('jumlah'),    
-      'status_data' => $request->input('status_data'),
+        'jumlah' => $request->input('jumlah'),    
+        'status_data' => $request->input('status_data'),
       ]);
       return redirect(route('H-jpbku_3539'))->with('success', 'data berhasil diubah');
     }    
@@ -851,10 +851,10 @@ class KependudukanJpbkuAdminController extends Controller
       ]);
       \DB::table('m_26_penduduk_umur')
       ->where('tahun', $request->input('tahun'))
+      ->where('kelompok_umur', 9)
       ->update([ 
-      'kelompok_umur' => 9,  
-      'jumlah' => $request->input('jumlah'),    
-      'status_data' => $request->input('status_data'),
+        'jumlah' => $request->input('jumlah'),    
+        'status_data' => $request->input('status_data'),
       ]);
       return redirect(route('I-jpbku_4044'))->with('success', 'data berhasil diubah');
     }    
@@ -948,10 +948,10 @@ class KependudukanJpbkuAdminController extends Controller
       ]);
       \DB::table('m_26_penduduk_umur')
       ->where('tahun', $request->input('tahun'))
+      ->where('kelompok_umur', 10)
       ->update([ 
-      'kelompok_umur' => 10,  
-      'jumlah' => $request->input('jumlah'),    
-      'status_data' => $request->input('status_data'),
+        'jumlah' => $request->input('jumlah'),    
+        'status_data' => $request->input('status_data'),
       ]);
       return redirect(route('J-jpbku_4549'))->with('success', 'data berhasil diubah');
     }    
@@ -1046,10 +1046,10 @@ class KependudukanJpbkuAdminController extends Controller
       ]);
       \DB::table('m_26_penduduk_umur')
       ->where('tahun', $request->input('tahun'))
+      ->where('kelompok_umur', 11)
       ->update([ 
-      'kelompok_umur' => 11,  
-      'jumlah' => $request->input('jumlah'),    
-      'status_data' => $request->input('status_data'),
+        'jumlah' => $request->input('jumlah'),    
+        'status_data' => $request->input('status_data'),
       ]);
       return redirect(route('K-jpbku_5054'))->with('success', 'data berhasil diubah');
     }    
@@ -1144,10 +1144,10 @@ class KependudukanJpbkuAdminController extends Controller
       ]);
       \DB::table('m_26_penduduk_umur')
       ->where('tahun', $request->input('tahun'))
+      ->where('kelompok_umur', 12)
       ->update([ 
-      'kelompok_umur' => 12,  
-      'jumlah' => $request->input('jumlah'),    
-      'status_data' => $request->input('status_data'),
+        'jumlah' => $request->input('jumlah'),    
+        'status_data' => $request->input('status_data'),
       ]);
       return redirect(route('L-jpbku_5459'))->with('success', 'data berhasil diubah');
     }    
@@ -1242,10 +1242,10 @@ class KependudukanJpbkuAdminController extends Controller
       ]);
       \DB::table('m_26_penduduk_umur')
       ->where('tahun', $request->input('tahun'))
+      ->where('kelompok_umur', 13)
       ->update([ 
-      'kelompok_umur' => 13,  
-      'jumlah' => $request->input('jumlah'),    
-      'status_data' => $request->input('status_data'),
+        'jumlah' => $request->input('jumlah'),    
+        'status_data' => $request->input('status_data'),
       ]);
       return redirect(route('M-jpbku_6064'))->with('success', 'data berhasil diubah');
     }    
@@ -1344,10 +1344,10 @@ class KependudukanJpbkuAdminController extends Controller
       ]);
       \DB::table('m_26_penduduk_umur')
       ->where('tahun', $request->input('tahun'))
+      ->where('kelompok_umur', 14)
       ->update([ 
-      'kelompok_umur' => 14,  
-      'jumlah' => $request->input('jumlah'),    
-      'status_data' => $request->input('status_data'),
+        'jumlah' => $request->input('jumlah'),    
+        'status_data' => $request->input('status_data'),
       ]);
       return redirect(route('N-jpbku_6569'))->with('success', 'data berhasil diubah');
     }    
@@ -1445,10 +1445,10 @@ class KependudukanJpbkuAdminController extends Controller
       ]);
       \DB::table('m_26_penduduk_umur')
       ->where('tahun', $request->input('tahun'))
+      ->where('kelompok_umur', 15)
       ->update([ 
-      'kelompok_umur' => 15,  
-      'jumlah' => $request->input('jumlah'),    
-      'status_data' => $request->input('status_data'),
+        'jumlah' => $request->input('jumlah'),    
+        'status_data' => $request->input('status_data'),
       ]);
       return redirect(route('O-jpbku_7074'))->with('success', 'data berhasil diubah');
     }    
@@ -1543,10 +1543,10 @@ class KependudukanJpbkuAdminController extends Controller
       ]);
       \DB::table('m_26_penduduk_umur')
       ->where('tahun', $request->input('tahun'))
+      ->where('kelompok_umur', 16)
       ->update([ 
-      'kelompok_umur' => 16,  
-      'jumlah' => $request->input('jumlah'),    
-      'status_data' => $request->input('status_data'),
+        'jumlah' => $request->input('jumlah'),    
+        'status_data' => $request->input('status_data'),
       ]);
       return redirect(route('P-jpbku_75'))->with('success', 'data berhasil diubah');
     }    
