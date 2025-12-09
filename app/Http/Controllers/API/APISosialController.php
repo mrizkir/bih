@@ -5,7 +5,10 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class APISosialController extends Controller {  
+use App\Models\Sosial\AMHModel;
+
+class APISosialController extends Controller 
+{  
   //SOSIAL presentasi penduduk miskin (ppm) - [m_1_pres_pend_miskin]
 	public function ppmIndex(Request $request)
 	{
@@ -105,16 +108,6 @@ class APISosialController extends Controller {
     $data = AMHModel::select('tahun', 'jumlah', 'status_data')
       ->orderBy('tahun', 'desc')
       ->get();
-
-    $data = \DB::table('m_4_amh AS A')
-    ->select(\DB::raw(' 
-      tahun,     
-      jumlah,
-      B.jenis_data AS status_data
-    '))    
-    ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
-    ->orderBy('tahun', 'desc')
-    ->get();
 
     $last_data = \DB::table('m_4_amh AS A')
     ->select(\DB::raw('      

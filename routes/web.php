@@ -733,5 +733,6 @@ Route::group(
     Route::get('/iu', [ManajemenUserController::class, 'iuIndex'])->middleware(['role:superadmin'])->name('user-iu.index'); 
     Route::post('/iu/store', [ManajemenUserController::class, 'iuStore'])->middleware(['role:superadmin'])->name('user-iu.store');
     Route::post('/iu/{id}', [ManajemenUserController::class, 'iuUpdate'])->middleware(['role:superadmin'])->name('user-iu.update');
+    Route::get('/iudel/{id}', [ManajemenUserController::class, 'iuDel'])->middleware(['role:superadmin'])->name('user-iu.del');
   }
 );

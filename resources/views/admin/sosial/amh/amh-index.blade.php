@@ -37,7 +37,7 @@
                     <tr style="background:rgb(4, 89, 123);color:white;font-size: 12px;">
                       <th style="width: 5%;" class="text-center">No</th>
                       <th style="width: 15%;" class="text-center">Tahun</th>
-                      <th style="width: 20%;" class="text-center">Jumlah</th>
+                      <th style="width: 20%;" class="text-center">Persentase</th>
                       <th style="width: 20%;" class="text-center">Series</th>
                       <th style="width: 20%;" class="text-center">AKSI</th>
                     </tr>
@@ -47,7 +47,7 @@
                       <tr style="font-size: 11px;">
                         <td class="text-center">{{ $k + 1 }}</td>
                         <td class="text-center">{{ $item->tahun }}</td>
-                        <td class="text-center">{{ number_format($item->jumlah, 0, ',', '.') }}</td>
+                        <td class="text-center">{{ number_format($item->jumlah, 2, ',', '.') }}</td>
                         <td class="text-center">{{ Helper::getJenisDataSeries($item->status_data) }}</td>
                         <td class="project-actions text-center" style="padding: 10px;">
                           <a href="" class="btn btn-info btn-sm" data-toggle="modal"
@@ -110,14 +110,19 @@
                                                 @endif
                                               </div>
                                               <div class="col-4">
-                                                <label>Jumlah</label>
-                                                <input type="number"
-                                                  name="jumlah"
-                                                  step="0.01"
-                                                  class="form-control @error('jumlah') is-invalid @enderror"
-                                                  value="{{ $item->jumlah }}"
-                                                  placeholder="Ketik Jumlah"
-                                                  required>
+                                                <label>Persentase</label>
+                                                <div class="input-group">
+                                                  <input type="number"
+                                                    name="jumlah"
+                                                    step="0.01"
+                                                    class="form-control @error('jumlah') is-invalid @enderror"
+                                                    value="{{ $item->jumlah }}"
+                                                    placeholder="Ketik Jumlah"
+                                                    required>
+                                                  <div class="input-group-append">
+                                                    <span class="input-group-text">%</span>
+                                                  </div>
+                                                </div>
                                                 @if ($errors->has('jumlah'))
                                                   <div class="alert alert-danger mt-1 alert-validation-msg"
                                                     role="alert">
@@ -212,12 +217,17 @@
                       @endif
                     </div>
                     <div class="col-4">
-                      <label>Jumlah</label>
-                      <input type="number" name="jumlah"
-                        step="0.01"
-                        class="form-control @error('jumlah') is-invalid @enderror"
-                        value="{{ old('jumlah') }}"
-                        placeholder="Ketik Jumlah" required>
+                      <label>Persentase</label>
+                      <div class="input-group">
+                        <input type="number" name="jumlah"
+                          step="0.01"
+                          class="form-control @error('jumlah') is-invalid @enderror"
+                          value="{{ old('jumlah') }}"
+                          placeholder="Ketik Jumlah" required>
+                        <div class="input-group-append">
+                          <span class="input-group-text">%</span>
+                        </div>
+                      </div>
                       @if ($errors->has('jumlah'))
                         <div class="alert alert-danger mt-1 alert-validation-msg" role="alert">
                           <div class="alert-body d-flex align-items-center">
