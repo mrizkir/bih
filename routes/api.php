@@ -16,7 +16,7 @@ Route::group(['prefix'=>'v1', 'middleware'=>'api'], function () use ($router)
   //SOSIAL Angka Rata-Rata Lama Sekolah (RLS) - [m_3_rls]
   $router->get('/sosial/rls', [App\Http\Controllers\API\APISosialController::class, 'rlsIndex'])->name('sosial-rls.index');	
   //SOSIAL Angka Melek Huruf (AMH) - [m_4_amh]
-  $router->get('/sosial/amh', [App\Http\Controllers\API\APISosialController::class, 'amhIndex'])->name('sosial-amh.index');	
+  $router->post('/sosial/amh', [App\Http\Controllers\API\APISosialController::class, 'amhIndex'])->name('sosial-amh.index');	
   //SOSIAL Angka Harapan Hidup (AHH) - [m_5_ahh]
   $router->get('/sosial/ahh', [App\Http\Controllers\API\APISosialController::class, 'ahhIndex'])->name('sosial-ahh.index');	
   //SOSIAL Angka Kelangsungan Hidup Bayi (AKHB) - [m_6_akhb]

@@ -11,7 +11,7 @@ use App\Http\Controllers\KontenAdminController;
 use App\Http\Controllers\SosialAdminController;
 use App\Http\Controllers\SosialIpmAdminController;
 use App\Http\Controllers\SosialRlsAdminController;
-use App\Http\Controllers\SosialAhmAdminController;
+use App\Http\Controllers\SosialAMHAdminController;
 use App\Http\Controllers\SosialAhhAdminController;
 use App\Http\Controllers\SosialAkhbAdminController;
 use App\Http\Controllers\SosialAkimAdminController;
@@ -99,12 +99,12 @@ Route::group(
     Route::get('/rlscetak', [SosialRlsAdminController::class, 'rlsCetak'])->name('rlscetak');
 
     //SOSIAL Angka Melek Huruf (AMH) - [m_4_amh]
-    Route::get('/ahm', [SosialAhmAdminController::class, 'ahmIndex'])->name('sosial-ahm.index');
-    Route::post('/ahm/store', [SosialAhmAdminController::class, 'ahmStore'])->name('sosial-ahm.store');
-    Route::get('/ahm/{id}/edit', [SosialAhmAdminController::class, 'ahmEdit'])->name('sosial-ahm.edit');
-    Route::put('/ahm/{id}', [SosialAhmAdminController::class, 'ahmUpdate'])->name('sosial-ahm.update');
-    Route::get('/ahmdel/{id}', [SosialAhmAdminController::class, 'ahmDel'])->name('sosial-ahm.del');
-    Route::get('/ahmcetak', [SosialAhmAdminController::class, 'ahmCetak'])->name('ahmcetak');
+    Route::get('/ahm', [SosialAMHAdminController::class, 'ahmIndex'])->name('sosial-ahm.index');
+    Route::post('/ahm/store', [SosialAMHAdminController::class, 'ahmStore'])->name('sosial-ahm.store');
+    Route::get('/ahm/{id}/edit', [SosialAMHAdminController::class, 'ahmEdit'])->name('sosial-ahm.edit');
+    Route::put('/ahm/{id}', [SosialAMHAdminController::class, 'ahmUpdate'])->name('sosial-ahm.update');
+    Route::get('/ahmdel/{id}', [SosialAMHAdminController::class, 'ahmDel'])->name('sosial-ahm.del');
+    Route::get('/ahmcetak', [SosialAMHAdminController::class, 'ahmCetak'])->name('ahmcetak');
 
     //SOSIAL Angka Harapan Hidup (AHH) - [m_5_ahh]
     Route::get('/ahh', [SosialAhhAdminController::class, 'ahhIndex'])->name('sosial-ahh.index');

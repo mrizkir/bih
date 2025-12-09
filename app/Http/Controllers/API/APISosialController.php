@@ -102,26 +102,28 @@ class APISosialController extends Controller {
   //SOSIAL Angka Melek Huruf (AMH) - [m_4_amh]
   public function amhIndex(Request $request)
 	{
+    $data = AMHModel::select('tahun', 'jumlah', 'status_data')
+      ->orderBy('tahun', 'desc')
+      ->get();
+
     $data = \DB::table('m_4_amh AS A')
-    ->select(\DB::raw('      
-      kel_umur,
-      laki,
-      perempuan,
+    ->select(\DB::raw(' 
+      tahun,     
+      jumlah,
       B.jenis_data AS status_data
     '))    
     ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
-    ->orderBy('kel_umur', 'asc')
+    ->orderBy('tahun', 'desc')
     ->get();
 
     $last_data = \DB::table('m_4_amh AS A')
     ->select(\DB::raw('      
-      kel_umur,
-      laki,
-      perempuan,
+      tahun,
+      jumlah,
       B.jenis_data AS status_data
     '))       
     ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
-    ->orderBy('kel_umur', 'asc')
+    ->orderBy('tahun', 'desc')
     ->limit(1)
     ->get();
 
