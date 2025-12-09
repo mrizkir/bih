@@ -3,6 +3,8 @@
 ## 📋 Ringkasan
 File-file berikut di folder `public/administrator/` dapat dihapus karena tidak digunakan dalam project.
 
+**Status:** File development, dokumentasi, dan contoh sudah dihapus manual. Plugin tetap disimpan untuk kebutuhan masa depan.
+
 ---
 
 ## ✅ Plugin yang DIGUNAKAN (JANGAN DIHAPUS)
@@ -81,7 +83,9 @@ public/administrator/LICENSE
 public/administrator/CODE_OF_CONDUCT.md
 ```
 
-### 5. Plugin yang Tidak Digunakan
+### 5. Plugin yang Tidak Digunakan (DISIMPAN untuk kebutuhan masa depan)
+
+> **Catatan:** Plugin-plugin berikut tidak digunakan saat ini, tetapi **DISIMPAN** untuk kebutuhan masa depan.
 
 #### Plugin Chart/Visualization (tidak digunakan, sudah pakai chart.js)
 ```
