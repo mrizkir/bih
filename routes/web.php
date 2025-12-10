@@ -689,8 +689,6 @@ Route::group(
     Route::get('/ppcetak', [KependudukanPpAdminController::class, 'ppCetak'])->name('ppcetak');   
 
 
-
-
       //===============================INFRASTRUKTUR=============================================
     //INFRASTRUKTUR Panjang Jalan Yang Dibangun dan Ditingkatkan (PJDD) - [m_28_jalan]
     Route::get('/pjdd', [InfrastrukturPjddAdminController::class, 'pjddIndex'])->name('infrastruktur-pjdd.index'); 

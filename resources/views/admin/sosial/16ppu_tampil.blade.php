@@ -23,8 +23,7 @@
                   <button type="button" class="btn btn-success" data-toggle="modal"
                     data-target="#modal-default">
                     <b style="font-size:12px;"> Tambah Data</b>
-                  </button>
-                   
+                  </button>                  
                   <a href="{{ route('ppucetak') }}" target="_blank">
                     <button style="float:right;margin-right:10px;" type="button"
                       class="btn btn-success">
@@ -37,15 +36,17 @@
                   <thead>
                     <tr style="background:rgb(4, 89, 123);color:white;font-size: 12px;">
                       <th style="width: 2%;" class="text-center">No</th>
-                      <th style="width: 80%;" class="text-center">Data {{ $title }}
+                      <th style="width: 8%;" class="text-center">Tahun</th>
+                      <th style="width: 60%;" class="text-center">Data {{ $title }}
                       </th>
-                      <th style="width: 10%;" class="text-center">AKSI</th>
+                      <th style="width: 20%;" class="text-center">AKSI</th>
                     </tr>
                   </thead>
                   <tbody>
                     @foreach ($data as $k => $item)
                       <tr style="font-size: 11px;">
                         <td class="text-center">{{ $k + 1 }}</th>
+                        <td class="text-center">{{ $item->tahun ?? '-' }}</td>
                         <td><strong>Pendidikan</strong> : {{ $item->pendidikan }} |
                           <strong>Laki-Laki</strong> : {{ $item->laki }} |
                           <strong>Perempuan</strong> : {{ $item->perempuan }} |
@@ -59,11 +60,12 @@
                             data-target="#modaledit{{ $item->tahun.$item->no }}">
                             <i class="fas fa-pencil-alt"></i> Edit
                           </a>
-                          {{-- <a href="{{ 'ppudel/' . $item->no }}" class="btn btn-info btn-sm"
-                            style="font-size: 10px;" class="btn btn-danger btn-sm"
-                            onclick="return confirm('Anda Yakin Mau Menghapus ?') ">
-                            <i class="fas fa-pencil-alt"></i> Del
-                          </a> --}}
+                          <a href="{{ route('sosial-ppu.del', ['id' => $item->tahun . '-' . $item->no]) }}" 
+                            class="btn btn-danger btn-sm"
+                            style="font-size: 10px;"
+                            onclick="return confirm('Anda Yakin Mau Menghapus Data Ini?')">
+                            <i class="fas fa-trash"></i> Hapus
+                          </a>
 
                           {{-- VIEW MODAL EDIT --}}
                           <div class="modal fade" id="modaledit{{ $item->tahun.$item->no }}"
@@ -83,11 +85,13 @@
                                     <div class="row">
                                       <div class="col-12"> 
                                         {!! Form::open([
-                                          'url' => route('sosial-ppu.update', ['id' => $item->pendidikan]),
+                                          'url' => route('sosial-ppu.update', ['id' => $item->tahun . '-' . $item->no]),
                                           'method' => 'put',
-                                          'id' => 'frmedit_' . $item->pendidikan,
-                                          'name' => 'frmedit_' . $item->pendidikan,
+                                          'id' => 'frmedit_' . $item->tahun . '_' . $item->no,
+                                          'name' => 'frmedit_' . $item->tahun . '_' . $item->no,
                                         ]) !!}
+                                        <input type="hidden" name="tahun" value="{{ $item->tahun }}">
+                                        <input type="hidden" name="no" value="{{ $item->no }}">
                                         <div class="card-body">
                                           <div class="form-group">
                                             <div class="row">
@@ -218,19 +222,6 @@
           </div>
         </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
         {{-- TAMBAH MODAL --}}
         <div class="modal fade" id="modal-default">
           <div class="modal-dialog modal-xl">
@@ -247,15 +238,7 @@
                   <div class="row">
                     <div class="col-4">
                       <label>Pendidikan</label>
-                      {!! Form::select('pendidikan', [
-                        '1' => 'Tidak/belum tamat SD',
-                        '2' => 'SD/MI',
-                        '3' => 'SMP/MTs',
-                        '4' => 'SMA/MA/SMK',
-                        '5' => 'D1/D2/D3',
-                        '6' => 'D4/S1',
-                        '7' => 'S2/S3'
-                      ], old('pendidikan'), [
+                      {!! Form::select('pendidikan', Helper::getPendidikan(), old('pendidikan'), [
                         'id' => 'frmadd_pendidikan',
                         'class' => 'form-control',
                         'placeholder' => 'Pilih Pendidikan',
@@ -279,9 +262,12 @@
                     </div>
                     <div class="col-4">
                       <label>Tahun</label>
-                      <input type="number" name="tahun"
-                        class="form-control @error('tahun') is-invalid @enderror"
-                        placeholder="Ketik Tahun" required>
+                      {!! Form::select('tahun', array_combine(range(2020, date('Y')), range(2020, date('Y'))), old('tahun'), [
+                        'id' => 'frmadd_tahun',
+                        'class' => 'form-control' . ($errors->has('tahun') ? ' is-invalid' : ''),
+                        'placeholder' => 'Pilih Tahun',
+                        'required' => true
+                      ]) !!}
                       @if ($errors->has('tahun'))
                         <div class="alert alert-danger mt-1 alert-validation-msg" role="alert">
                           <div class="alert-body d-flex align-items-center">
@@ -295,7 +281,7 @@
 
                   <div class="row">
                     <div class="col-4">
-                      <label>Data Laki-Laki </label>
+                      <label>Jumlah Laki-Laki </label>
                       <input type="text" name="laki"
                         class="form-control @error('laki') is-invalid @enderror"
                         placeholder="Ketik Data laki" required>
@@ -309,7 +295,7 @@
                       @endif
                     </div>
                     <div class="col-4">
-                      <label>Data Perempuan</label>
+                      <label>Jumlah Perempuan</label>
                       <input type="text" name="perempuan"
                         class="form-control @error('perempuan') is-invalid @enderror"
                         placeholder="Ketik Data perempuan" required>
