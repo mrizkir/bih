@@ -5,7 +5,8 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class APIInfrastrukturController extends Controller {  
+class APIInfrastrukturController extends Controller 
+{  
   //INFRASTRUKTUR Panjang Jalan Yang Dibangun dan Ditingkatkan (PJDD) - [m_28_jalan]
 	public function pjddIndex(Request $request)
 	{
