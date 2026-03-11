@@ -22,7 +22,8 @@ class Helper
     '4' => 'SMA/MA/SMK',
     '5' => 'D1/D2/D3',
     '6' => 'D4/S1',
-    '7' => 'S2/S3'
+    '7' => 'S2/S3',
+    '8' => 'Perguruan Tinggi',
   ];
   /**
    * digunakan untuk data series

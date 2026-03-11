@@ -40,7 +40,7 @@ Route::group(['prefix'=>'v1', 'middleware'=>'api'], function () use ($router)
   //SOSIAL Indeks Daya Beli - Purchasing Power Parity (IDB) - [m_15_idb]
   Route::get('/sosial/idb', [App\Http\Controllers\API\APISosialController::class, 'idbIndex'])->name('sosial-idb.index');    
   //SOSIAL Persentase Penduduk Usia 15 Tahun ke atas menurut Pendidikan yang Ditamatkan (PPU) - [m_16_lulusan_pendidikan]
-  Route::get('/sosial/ppu', [App\Http\Controllers\API\APISosialController::class, 'ppuIndex'])->name('sosial-ppu.index');   
+  Route::post('/sosial/ppu', [App\Http\Controllers\API\APISosialController::class, 'ppuIndex'])->name('sosial-ppu.index');   
   //SOSIAL  Indeks Pemberdayaan Gender (IPG) - [m_38_idg]
   Route::get('/sosial/ipgg', [App\Http\Controllers\API\APISosialController::class, 'ipggIndex'])->name('sosial-ipgg.index'); 
   

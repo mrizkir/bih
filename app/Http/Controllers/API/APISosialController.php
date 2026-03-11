@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Validation\ValidationException;
 
 use App\Models\Sosial\AMHModel;
 
@@ -105,9 +106,15 @@ class APISosialController extends Controller
   //SOSIAL Angka Melek Huruf (AMH) - [m_4_amh]
   public function amhIndex(Request $request)
 	{
-    $data = AMHModel::select('tahun', 'jumlah', 'status_data')
-      ->orderBy('tahun', 'desc')
-      ->get();
+    $data = AMHModel::from('m_4_amh AS A')->
+    select(\DB::raw('      
+      tahun,
+      jumlah,
+      B.jenis_data AS status_data
+    '))
+    ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
+    ->orderBy('tahun', 'desc')
+    ->get();
 
     $last_data = \DB::table('m_4_amh AS A')
     ->select(\DB::raw('      
@@ -493,8 +500,24 @@ class APISosialController extends Controller
   //SOSIAL Persentase Penduduk Usia 15 Tahun ke atas menurut Pendidikan yang Ditamatkan (PPU) - [m_16_lulusan_pendidikan]
   public function ppuIndex(Request $request)
 	{
+    try 
+    {
+      $request->validate([      
+        'pendidikan' => 'required|in:1,2,3,4,5,6,7',      
+      ]);
+    } 
+    catch (ValidationException $e) 
+    {
+      return response()->json([
+        'status' => '400',
+        'message' => 'Validasi gagal',
+        'errors' => $e->errors(),
+      ], 422)->setEncodingOptions(JSON_NUMERIC_CHECK);
+    }
+
     $data = \DB::table('m_16_lulusan_pendidikan AS A')
     ->select(\DB::raw('      
+      tahun,
       no,
       pendidikan,      
       laki,      
@@ -502,12 +525,14 @@ class APISosialController extends Controller
       total,      
       B.jenis_data AS status_data
     '))    
-    ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
+    ->join('m_jenis_data AS B', 'A.status_data', 'B.id')    
+    ->where('no', $request->input('pendidikan'))
     ->orderBy('no', 'asc')
     ->get();
 
     $last_data = \DB::table('m_16_lulusan_pendidikan AS A')
     ->select(\DB::raw('      
+      tahun,
       no,
       pendidikan,      
       laki,      
@@ -515,14 +540,15 @@ class APISosialController extends Controller
       total,      
       B.jenis_data AS status_data
     '))    
-    ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
+    ->join('m_jenis_data AS B', 'A.status_data', 'B.id')    
+    ->where('no', $request->input('pendidikan'))
     ->orderBy('no', 'desc')
     ->limit(1)
     ->get();
 
     return response()->json([
       'status'=>'100',
-      'message'=>'SOSIAL Angka Kelangsungan Hidup Bayi (AKHB) - [m_6_akhb] berhasil diperoleh',
+      'message'=>'SOSIAL Persentase Penduduk Usia 15 Tahun ke atas menurut Pendidikan yang Ditamatkan (PPU) - [m_16_lulusan_pendidikan] berhasil diperoleh',
       'last_data'=>$last_data,
       'result'=>$data,
     ], 200)->setEncodingOptions(JSON_NUMERIC_CHECK);

@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Validation\Rule;
+use App\Helpers\Helper;
 use App\Models\Sosial\LulusanPendidikanModel;
 
 class SosialPpuAdminController extends Controller
@@ -39,7 +40,7 @@ class SosialPpuAdminController extends Controller
     
     $this->validate($request, [
       'tahun' => 'required|numeric|digits:4|min:2016|max:'.date('Y'),
-      'pendidikan' => 'required|in:1,2,3,4,5,6,7',      
+      'pendidikan' => ['required', Rule::in(array_keys(Helper::getPendidikan()))],
       'laki' => 'required',
       'perempuan' => 'required',
       'total' => 'required',
