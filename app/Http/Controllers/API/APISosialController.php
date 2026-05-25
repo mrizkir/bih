@@ -584,4 +584,35 @@ class APISosialController extends Controller
       'result'=>$data,
     ], 200)->setEncodingOptions(JSON_NUMERIC_CHECK);
   }
+  // SOSIAL Prevalensi Stunting - [m_39_prevalensi_stunting]
+  public function stuntingIndex(Request $request)
+	{
+    $data = \DB::table('m_39_prevalensi_stunting AS A')
+    ->select(\DB::raw('      
+      tahun,
+      prevalensi,
+      B.jenis_data AS status_data
+    '))    
+    ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
+    ->orderBy('tahun', 'asc')
+    ->get();
+
+    $last_data = \DB::table('m_39_prevalensi_stunting AS A')
+    ->select(\DB::raw('      
+      tahun,
+      prevalensi,
+      B.jenis_data AS status_data
+    '))    
+    ->join('m_jenis_data AS B', 'A.status_data', 'B.id')
+    ->orderBy('tahun', 'desc')
+    ->limit(1)
+    ->get();
+    
+    return response()->json([
+      'status'=>'100',
+      'message'=>'SOSIAL Prevalensi Stunting - [m_39_prevalensi_stunting] berhasil diperoleh',
+      'last_data'=>$last_data,
+      'result'=>$data,
+    ], 200)->setEncodingOptions(JSON_NUMERIC_CHECK);
+  }
 }

@@ -299,6 +299,17 @@
               </a>
             </li>
           </ul>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="{{ route('sosial-stunting.index') }}" class="nav-link{!!Helper::isMenuActive ($page_active,'sosial-stunting',' active')!!}">
+                <div style="width:30px;height:35px;float:left;">
+                  <i class="far fa-circle nav-icon"
+                    style="color:rgb(255, 255, 255);font-size:10px;"></i>
+                </div>
+                <p style="font-size: 12px;">Prevalensi Stunting</p>
+              </a>
+            </li>
+          </ul>
         </li>
         <li class="nav-item{!!Helper::isMenuActive ($menu_active,'menu-ekonomi',' menu-open')!!}">
           <a href="#" class="nav-link{!!Helper::isMenuActive ($menu_active,'menu-ekonomi',' active')!!}">

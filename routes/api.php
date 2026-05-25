@@ -43,6 +43,8 @@ Route::group(['prefix'=>'v1', 'middleware'=>'api'], function () use ($router)
   Route::post('/sosial/ppu', [App\Http\Controllers\API\APISosialController::class, 'ppuIndex'])->name('sosial-ppu.index');   
   //SOSIAL  Indeks Pemberdayaan Gender (IPG) - [m_38_idg]
   Route::get('/sosial/ipgg', [App\Http\Controllers\API\APISosialController::class, 'ipggIndex'])->name('sosial-ipgg.index'); 
+  //SOSIAL Prevalensi Stunting - [m_39_prevalensi_stunting]
+  Route::get('/sosial/stunting', [App\Http\Controllers\API\APISosialController::class, 'stuntingIndex'])->name('sosial-stunting.index');
   
   //EKONOMI  uraian pdrb - [m_uraian_pdrb]
   Route::get('/ekonomi/uraian', [App\Http\Controllers\API\APIEkonomiController::class, 'uraianIndex'])->name('ekonomi-uraian.index');   

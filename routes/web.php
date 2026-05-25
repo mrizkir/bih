@@ -25,6 +25,7 @@ use App\Http\Controllers\SosialIgAdminController;
 use App\Http\Controllers\SosialIdbAdminController;
 use App\Http\Controllers\SosialPpuAdminController;
 use App\Http\Controllers\SosialIpggAdminController;
+use App\Http\Controllers\SosialStuntingAdminController;
 
 //EKONONI
 use App\Http\Controllers\EkonomiPeAdminController;
@@ -252,7 +253,12 @@ Route::group(
     Route::get('/ipggdel/{id}', [SosialIpggAdminController::class, 'ipggDel'])->name('sosial-ipgg.del');    
     Route::get('/ipggcetak', [SosialIpggAdminController::class, 'ipggCetak'])->name('ipggcetak');   
 
-
+    //SOSIAL Prevalensi Stunting - [m_39_prevalensi_stunting]
+    Route::get('/stunting', [SosialStuntingAdminController::class, 'stuntingIndex'])->name('sosial-stunting.index');
+    Route::post('/stunting/store', [SosialStuntingAdminController::class, 'stuntingStore'])->name('sosial-stunting.store');
+    Route::put('/stunting/{id}', [SosialStuntingAdminController::class, 'stuntingUpdate'])->name('sosial-stunting.update');
+    Route::get('/stuntingdel/{id}', [SosialStuntingAdminController::class, 'stuntingDel'])->name('sosial-stunting.del');
+    Route::get('/stuntingcetak', [SosialStuntingAdminController::class, 'stuntingCetak'])->name('stuntingcetak');
  
 
   // =================================EKONOMI===========================================
