@@ -1,2588 +1,368 @@
 <!DOCTYPE html>
 <html lang="id">
-  <head>
-    <title>Privacy Policy</title>
-    <style>
-        [data-custom-class='body'],
-        [data-custom-class='body'] * {
-            background: transparent !important;
-        }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kebijakan Privasi – Smart Bintan In Hand</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      color: #595959;
+      background: #ffffff;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 40px 24px;
+      line-height: 1.7;
+    }
+    h1 { font-size: 26px; color: #000000; margin-bottom: 4px; }
+    .subtitle { font-size: 14px; color: #595959; margin-bottom: 32px; }
+    h2 { font-size: 19px; color: #000000; margin-top: 36px; margin-bottom: 8px; }
+    h3 { font-size: 16px; color: #000000; margin-top: 24px; margin-bottom: 6px; }
+    p { margin: 10px 0; }
+    a { color: #3030F1; word-break: break-word; }
+    ul { padding-left: 24px; }
+    ul li { margin-bottom: 4px; }
+    table { border-collapse: collapse; width: 100%; margin: 16px 0; }
+    table th {
+      background: #f5f5f5;
+      color: #000;
+      font-weight: bold;
+      padding: 10px 14px;
+      border: 1px solid #d9d9d9;
+      text-align: left;
+    }
+    table td { padding: 10px 14px; border: 1px solid #d9d9d9; vertical-align: top; }
+    .toc { background: #f9f9f9; border: 1px solid #e0e0e0; padding: 20px 28px; border-radius: 6px; margin: 24px 0; }
+    .toc ol { margin: 0; padding-left: 20px; }
+    .toc li { margin-bottom: 6px; }
+    .highlight-box {
+      background: #f0f7ff;
+      border-left: 4px solid #3030F1;
+      padding: 14px 18px;
+      border-radius: 0 6px 6px 0;
+      margin: 16px 0;
+    }
+    .data-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 16px 0;
+    }
+    .data-category {
+      background: #f9f9f9;
+      border: 1px solid #e0e0e0;
+      border-radius: 6px;
+      padding: 12px 16px;
+    }
+    .data-category strong {
+      display: block;
+      color: #000;
+      margin-bottom: 6px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+    .data-category ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+    .data-category ul li {
+      font-size: 13px;
+      margin-bottom: 2px;
+    }
+    .footer-note { font-size: 13px; color: #888; margin-top: 40px; padding-top: 16px; border-top: 1px solid #e0e0e0; }
+    @media (max-width: 600px) {
+      .data-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
 
-        [data-custom-class='title'],
-        [data-custom-class='title'] * {
-            font-family: Arial !important;
-            font-size: 26px !important;
-            color: #000000 !important;
-        }
+  <h1>KEBIJAKAN PRIVASI</h1>
+  <p class="subtitle"><strong>Terakhir diperbarui: Juni 2026</strong></p>
 
-        [data-custom-class='subtitle'],
-        [data-custom-class='subtitle'] * {
-            font-family: Arial !important;
-            color: #595959 !important;
-            font-size: 14px !important;
-        }
+  <p>
+    Kebijakan Privasi ini dibuat oleh <strong>Badan Perencanaan, Penelitian dan Pengembangan Daerah
+    Kabupaten Bintan</strong> (&ldquo;<strong>kami</strong>&rdquo;) untuk aplikasi
+    <strong>Smart Bintan In Hand</strong> (&ldquo;<strong>Aplikasi</strong>&rdquo;).
+  </p>
+  <p>
+    Dokumen ini menjelaskan bagaimana kami menangani informasi saat Anda menggunakan Aplikasi kami.
+    Jika Anda memiliki pertanyaan, silakan hubungi kami di
+    <a href="mailto:bapelitbang@bintankab.go.id">bapelitbang@bintankab.go.id</a>.
+  </p>
 
-        [data-custom-class='heading_1'],
-        [data-custom-class='heading_1'] * {
-            font-family: Arial !important;
-            font-size: 19px !important;
-            color: #000000 !important;
-        }
+  <div class="highlight-box">
+    <strong>Ringkasan singkat:</strong> Aplikasi ini hanya menampilkan data statistik publik
+    Kabupaten Bintan. Kami <strong>tidak mengumpulkan data pribadi Anda</strong>, tidak meminta
+    izin perangkat apapun, dan tidak ada akun yang perlu dibuat. Server kami menerima data teknis
+    standar (seperti alamat IP) secara otomatis dari setiap koneksi jaringan.
+  </div>
 
-        [data-custom-class='heading_2'],
-        [data-custom-class='heading_2'] * {
-            font-family: Arial !important;
-            font-size: 17px !important;
-            color: #000000 !important;
-        }
+  <div class="toc">
+    <strong>DAFTAR ISI</strong>
+    <ol>
+      <li><a href="#s1">Apa itu Aplikasi Smart Bintan In Hand?</a></li>
+      <li><a href="#s2">Data apa yang diproses?</a></li>
+      <li><a href="#s3">Dasar hukum pemrosesan data</a></li>
+      <li><a href="#s4">Izin perangkat</a></li>
+      <li><a href="#s5">Komunikasi jaringan</a></li>
+      <li><a href="#s6">Pihak ketiga</a></li>
+      <li><a href="#s7">Keamanan data</a></li>
+      <li><a href="#s8">Informasi dari anak-anak di bawah umur</a></li>
+      <li><a href="#s9">Hak-hak Anda</a></li>
+      <li><a href="#s10">Pembaruan kebijakan ini</a></li>
+      <li><a href="#s11">Hubungi kami</a></li>
+    </ol>
+  </div>
 
-        [data-custom-class='body_text'],
-        [data-custom-class='body_text'] * {
-            color: #595959 !important;
-            font-size: 14px !important;
-            font-family: Arial !important;
-        }
+  <!-- 1 -->
+  <h2 id="s1">1. APA ITU APLIKASI SMART BINTAN IN HAND?</h2>
+  <p>
+    Smart Bintan In Hand adalah aplikasi informasi publik milik Pemerintah Kabupaten Bintan yang
+    menampilkan data statistik daerah secara <em>real-time</em> dari server kami di
+    <strong>bih.bintankab.go.id</strong>. Aplikasi ini mencakup enam kategori data pembangunan
+    daerah berikut:
+  </p>
 
-        [data-custom-class='link'],
-        [data-custom-class='link'] * {
-            color: #3030F1 !important;
-            font-size: 14px !important;
-            font-family: Arial !important;
-            word-break: break-word !important;
-        }
-    </style>
-  </head>
-  <body>
-    <div data-custom-class="body">
-      <div>
-        <strong>
-          <span style="font-size: 26px;">
-            <span data-custom-class="title">
-              <bdt class="block-component"></bdt>
-              <bdt class="question">PRIVACY POLICY</bdt>
-              <bdt class="statement-end-if-in-editor"></bdt>
-            </span>
-          </span>
-        </strong>
-      </div>
-      <div><br></div>
-      <div>
-        <span style="color: rgb(127, 127, 127);">
-          <strong>
-            <span style="font-size: 15px;">
-              <span data-custom-class="subtitle">
-                Last updated <bdt class="question">November 13, 2023</bdt>
-              </span>
-            </span>
-          </strong>
-        </span></div>
-        <div><br></div>
-        <div><br></div>
-        <div><br></div>
-          <div style="line-height: 1.5;"><span style="color: rgb(127, 127, 127);"><span
-                      style="color: rgb(89, 89, 89); font-size: 15px;"><span data-custom-class="body_text">This privacy
-                          notice for <bdt class="question">Badan Perencanaan, Penelitian dan Pengembangan Daerah Kabupaten
-                              Bintan<bdt class="block-component"></bdt>
-                          </bdt> (<bdt class="block-component"></bdt>"<strong>we</strong>," "<strong>us</strong>," or
-                          "<strong>our</strong>"<bdt class="statement-end-if-in-editor"></bdt></span><span
-                          data-custom-class="body_text">), describes how and why we might collect, store, use, and/or
-                          share (<bdt class="block-component"></bdt>"<strong>process</strong>"<bdt
-                              class="statement-end-if-in-editor"></bdt>) your information when you use our services (<bdt
-                              class="block-component"></bdt>"<strong>Services</strong>"<bdt
-                              class="statement-end-if-in-editor"></bdt>), such as when you:</span></span></span><span
-                  style="font-size: 15px;"><span style="color: rgb(127, 127, 127);"><span
-                          data-custom-class="body_text"><span style="color: rgb(89, 89, 89);"><span
-                                  data-custom-class="body_text">
-                                  <bdt class="block-component"></bdt>
-                              </span></span></span></span></span></span></span></span></li>
-              </ul>
-              <div>
-                  <bdt class="block-component"><span style="font-size: 15px;"><span style="font-size: 15px;"><span
-                                  style="color: rgb(127, 127, 127);"><span data-custom-class="body_text"><span
-                                          style="color: rgb(89, 89, 89);"><span data-custom-class="body_text">
-                                              <bdt class="block-component"></bdt>
-                                          </span></span></span></span></span></span></bdt>
-              </div>
-              <ul>
-                  <li style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                              style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                  data-custom-class="body_text">Download and use<bdt class="block-component"></bdt> our
-                                  mobile application<bdt class="block-component"></bdt> (<bdt class="question">Smart
-                                      Bintan In Hand)<span style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                              style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                  data-custom-class="body_text"><span style="font-size: 15px;"><span
-                                                          style="color: rgb(89, 89, 89);"><span
-                                                              data-custom-class="body_text"><span
-                                                                  style="font-size: 15px;"><span
-                                                                      style="color: rgb(89, 89, 89);">
-                                                                      <bdt class="statement-end-if-in-editor">,</bdt>
-                                                                  </span></span></span></span></span></span></span></span>
-                                  </bdt></span><span data-custom-class="body_text"><span style="font-size: 15px;"><span
-                                          style="color: rgb(89, 89, 89);"><span data-custom-class="body_text"><span
-                                                  style="font-size: 15px;"><span style="color: rgb(89, 89, 89);">
-                                                      <bdt class="statement-end-if-in-editor">
-                                                          <bdt class="block-component"> or any other application of ours
-                                                              that links to this privacy notice</bdt>
-                                                      </bdt>
-                                                  </span></span></span></span></span></span></span></span></li>
-              </ul>
-              <div style="line-height: 1.5;"><span style="font-size: 15px;"><span style="color: rgb(127, 127, 127);"><span
-                              data-custom-class="body_text"><span style="color: rgb(89, 89, 89);"><span
-                                      data-custom-class="body_text">
-                                      <bdt class="block-component"></bdt>
-                                  </span></span></span></span></span></div>
-              <ul>
-                  <li style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                              style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">Engage
-                                  with us in other related ways, including any sales, marketing, or events<span
-                                      style="font-size: 15px;"><span style="color: rgb(89, 89, 89);"><span
-                                              data-custom-class="body_text"><span style="font-size: 15px;"><span
-                                                      style="color: rgb(89, 89, 89);">
-                                                      <bdt class="statement-end-if-in-editor"></bdt>
-                                                  </span></span></span></span></span></span></span></span></li>
-              </ul>
-              <div style="line-height: 1.5;"><span style="font-size: 15px;"><span style="color: rgb(127, 127, 127);"><span
-                              data-custom-class="body_text"><strong>Questions or concerns? </strong>Reading this privacy
-                              notice will help you understand your privacy rights and choices. If you do not agree with
-                              our policies and practices, please do not use our Services.<bdt class="block-component">
-                              </bdt> If you still have any questions or concerns, please contact us at <bdt
-                                  class="question">smartbih4@gmail.com</bdt>.</span></span></span></div>
-              <div style="line-height: 1.5;"><br></div>
-              <div style="line-height: 1.5;"><br></div>
-              <div style="line-height: 1.5;"><strong><span style="font-size: 15px;"><span
-                              data-custom-class="heading_1">SUMMARY OF KEY POINTS</span></span></strong></div>
-              <div style="line-height: 1.5;"><br></div>
-              <div style="line-height: 1.5;"><span style="font-size: 15px;"><span
-                          data-custom-class="body_text"><strong><em>This summary provides key points from our privacy
-                                  notice, but you can find out more details about any of these topics by clicking the link
-                                  following each key point or by using our </em></strong></span></span><a
-                      data-custom-class="link" href="#toc"><span
-                          style="color: rgb(0, 58, 250); font-size: 15px;"><span
-                              data-custom-class="body_text"><strong><em>table of
-                                      contents</em></strong></span></span></a><span style="font-size: 15px;"><span
-                          data-custom-class="body_text"><strong><em> below to find the section you are looking
-                                  for.</em></strong></span></span></div>
-              <div style="line-height: 1.5;"><br></div>
-              <div style="line-height: 1.5;"><span style="font-size: 15px;"><span
-                          data-custom-class="body_text"><strong>What personal information do we process?</strong> When
-                          you visit, use, or navigate our Services, we may process personal information depending on how
-                          you interact with us and the Services, the choices you make, and the products and features you
-                          use. Learn more about </span></span><a data-custom-class="link" href="#personalinfo"><span
-                          style="color: rgb(0, 58, 250); font-size: 15px;"><span data-custom-class="body_text">personal
-                              information you disclose to us</span></span></a><span
-                      data-custom-class="body_text">.</span></div>
-              <div style="line-height: 1.5;"><br></div>
-              <div style="line-height: 1.5;"><span style="font-size: 15px;"><span
-                          data-custom-class="body_text"><strong>Do we process any sensitive personal
-                              information?</strong>
-                          <bdt class="block-component"></bdt>We do not process sensitive personal information.<bdt
-                              class="else-block"></bdt>
-                      </span></span></div>
-              <div style="line-height: 1.5;"><br></div>
-              <div style="line-height: 1.5;"><span style="font-size: 15px;"><span
-                          data-custom-class="body_text"><strong>Do we receive any information from third
-                              parties?</strong>
-                          <bdt class="block-component"></bdt>We do not receive any information from third parties.<bdt
-                              class="else-block"></bdt>
-                      </span></span></div>
-              <div style="line-height: 1.5;"><br></div>
-              <div style="line-height: 1.5;"><span style="font-size: 15px;"><span
-                          data-custom-class="body_text"><strong>How do we process your information?</strong> We process
-                          your information to provide, improve, and administer our Services, communicate with you, for
-                          security and fraud prevention, and to comply with law. We may also process your information for
-                          other purposes with your consent. We process your information only when we have a valid legal
-                          reason to do so. Learn more about </span></span><a data-custom-class="link"
-                      href="#infouse"><span style="color: rgb(0, 58, 250); font-size: 15px;"><span
-                              data-custom-class="body_text">how we process your information</span></span></a><span
-                      data-custom-class="body_text">.</span></div>
-              <div style="line-height: 1.5;"><br></div>
-              <div style="line-height: 1.5;"><span style="font-size: 15px;"><span
-                          data-custom-class="body_text"><strong>In what situations and with which <bdt
-                                  class="block-component"></bdt>parties do we share personal information?</strong> We may
-                          share information in specific situations and with specific <bdt class="block-component"></bdt>
-                          third parties. Learn more about </span></span><a data-custom-class="link"
-                      href="#whoshare"><span style="color: rgb(0, 58, 250); font-size: 15px;"><span
-                              data-custom-class="body_text">when and with whom we share your personal
-                              information</span></span></a><span style="font-size: 15px;"><span
-                          data-custom-class="body_text">.<bdt class="block-component"></bdt></span></span></div>
-              <div style="line-height: 1.5;"><br></div>
-              <div style="line-height: 1.5;"><span style="font-size: 15px;"><span
-                          data-custom-class="body_text"><strong>How do we keep your information safe?</strong> We have
-                          <bdt class="block-component"></bdt>organizational<bdt class="statement-end-if-in-editor">
-                          </bdt> and technical processes and procedures in place to protect your personal information.
-                          However, no electronic transmission over the internet or information storage technology can be
-                          guaranteed to be 100% secure, so we cannot promise or guarantee that hackers, cybercriminals, or
-                          other <bdt class="block-component"></bdt>unauthorized<bdt class="statement-end-if-in-editor">
-                          </bdt> third parties will not be able to defeat our security and improperly collect, access,
-                          steal, or modify your information. Learn more about </span></span><a data-custom-class="link"
-                      href="#infosafe"><span style="color: rgb(0, 58, 250); font-size: 15px;"><span
-                              data-custom-class="body_text">how we keep your information safe</span></span></a><span
-                      data-custom-class="body_text">.</span><span style="font-size: 15px;"><span
-                          data-custom-class="body_text">
-                          <bdt class="statement-end-if-in-editor"></bdt>
-                      </span></span></div>
-              <div style="line-height: 1.5;"><br></div>
-              <div style="line-height: 1.5;"><span style="font-size: 15px;"><span
-                          data-custom-class="body_text"><strong>What are your rights?</strong> Depending on where you are
-                          located geographically, the applicable privacy law may mean you have certain rights regarding
-                          your personal information. Learn more about </span></span><a data-custom-class="link"
-                      href="#privacyrights"><span style="color: rgb(0, 58, 250); font-size: 15px;"><span
-                              data-custom-class="body_text">your privacy rights</span></span></a><span
-                      data-custom-class="body_text">.</span></div>
-              <div style="line-height: 1.5;"><br></div>
-              <div style="line-height: 1.5;"><span style="font-size: 15px;"><span
-                          data-custom-class="body_text"><strong>How do you exercise your rights?</strong> The easiest way
-                          to exercise your rights is by <bdt class="block-component">submitting a </bdt></span></span><a
-                      data-custom-class="link" href="https://app.termly.io/notify/dcd1695d-1a9c-4d95-9cd1-08aa62694d0d"
-                      rel="noopener noreferrer" target="_blank"><span
-                          style="color: rgb(0, 58, 250); font-size: 15px;"><span data-custom-class="body_text">data
-                              subject access request</span></span></a><span style="font-size: 15px;"><span
-                          data-custom-class="body_text">
-                          <bdt class="block-component"></bdt>, or by contacting us. We will consider and act upon any
-                          request in accordance with applicable data protection laws.
-                      </span></span></div>
-              <div style="line-height: 1.5;"><br></div>
-              <div style="line-height: 1.5;"><span style="font-size: 15px;"><span data-custom-class="body_text">Want to
-                          learn more about what we do with any information we collect? </span></span><a
-                      data-custom-class="link" href="#toc"><span
-                          style="color: rgb(0, 58, 250); font-size: 15px;"><span data-custom-class="body_text">Review
-                              the privacy notice in full</span></span></a><span style="font-size: 15px;"><span
-                          data-custom-class="body_text">.</span></span></div>
-              <div style="line-height: 1.5;"><br></div>
-              <div style="line-height: 1.5;"><br></div>
-              <div id="toc" style="line-height: 1.5;"><span style="font-size: 15px;"><span
-                          style="color: rgb(127, 127, 127);"><span style="color: rgb(0, 0, 0);"><strong><span
-                                      data-custom-class="heading_1">TABLE OF
-                                      CONTENTS</span></strong></span></span></span></div>
-              <div style="line-height: 1.5;"><br></div>
-              <div style="line-height: 1.5;"><span style="font-size: 15px;"><a data-custom-class="link"
-                          href="#infocollect"><span style="color: rgb(0, 58, 250);">1. WHAT INFORMATION DO WE
-                              COLLECT?</span></a></span></div>
-              <div style="line-height: 1.5;"><span style="font-size: 15px;"><a data-custom-class="link"
-                          href="#infouse"><span style="color: rgb(0, 58, 250);">2. HOW DO WE PROCESS YOUR INFORMATION?
-                              <bdt class="block-component"></bdt></span></a></span></div>
-              <div style="line-height: 1.5;"><span style="font-size: 15px;"><span style="color: rgb(0, 58, 250);"><a
-                              data-custom-class="link" href="#whoshare">3. WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL
-                              INFORMATION?</a></span><span data-custom-class="body_text">
-                          <bdt class="block-component"></bdt></a><span style="color: rgb(127, 127, 127);"><span
-                                  style="color: rgb(89, 89, 89);"><span data-custom-class="body_text"><span
-                                          style="color: rgb(89, 89, 89);">
-                                          <bdt class="block-component"></bdt>
-                                      </span></span><span data-custom-class="body_text"><span
-                                          style="color: rgb(89, 89, 89);"><span style="color: rgb(89, 89, 89);"><span
-                                                  style="color: rgb(89, 89, 89);">
-                                                  <bdt class="block-component"></bdt>
-                                              </span></span>
-                                          <bdt class="block-component"></bdt>
-                                      </span></span></span></span>
-                      </span></div>
-              <div style="line-height: 1.5;"><span style="font-size: 15px;"><a data-custom-class="link"
-                          href="#inforetain"><span style="color: rgb(0, 58, 250);">4. HOW LONG DO WE KEEP YOUR
-                              INFORMATION?</span></a><span style="color: rgb(127, 127, 127);"><span
-                              style="color: rgb(89, 89, 89);"><span data-custom-class="body_text"><span
-                                      style="color: rgb(89, 89, 89);"><span style="color: rgb(89, 89, 89);">
-                                          <bdt class="block-component"></bdt>
-                                      </span></span></span></span></span></span></div>
-              <div style="line-height: 1.5;"><span style="font-size: 15px;"><a data-custom-class="link"
-                          href="#infosafe"><span style="color: rgb(0, 58, 250);">5. HOW DO WE KEEP YOUR INFORMATION
-                              SAFE?</span></a><span style="color: rgb(127, 127, 127);"><span
-                              style="color: rgb(89, 89, 89);"><span data-custom-class="body_text"><span
-                                      style="color: rgb(89, 89, 89);">
-                                      <bdt class="statement-end-if-in-editor"></bdt>
-                                      <bdt class="block-component"></bdt>
-                                  </span></span></span></span></span></div>
-              <div style="line-height: 1.5;"><span style="font-size: 15px;"><a data-custom-class="link"
-                          href="#infominors"><span style="color: rgb(0, 58, 250);">6. DO WE COLLECT INFORMATION FROM
-                              MINORS?</span></a><span style="color: rgb(127, 127, 127);"><span
-                              style="color: rgb(89, 89, 89);"><span data-custom-class="body_text"><span
-                                      style="color: rgb(89, 89, 89);">
-                                      <bdt class="statement-end-if-in-editor"></bdt>
-                                  </span></span></span></span></span></div>
-              <div style="line-height: 1.5;"><span style="font-size: 15px;"><span style="color: rgb(0, 58, 250);"><a
-                              data-custom-class="link" href="#privacyrights">7. WHAT ARE YOUR PRIVACY
-                              RIGHTS?</a></span></span></div>
-              <div style="line-height: 1.5;"><span style="font-size: 15px;"><a data-custom-class="link"
-                          href="#DNT"><span style="color: rgb(0, 58, 250);">8. CONTROLS FOR DO-NOT-TRACK FEATURES<bdt
-                                  class="block-component"></span>
-                          <bdt class="block-component"><span style="font-size: 15px;"><span
-                                      data-custom-class="body_text"></span></bdt></span></div>
-              <div style="line-height: 1.5;">
-                  <bdt class="block-component"><span style="font-size: 15px;"></bdt>
-                  <bdt class="block-component"></bdt>
-                  <bdt class="block-component"></bdt>
-                  <bdt class="block-component"></bdt>
-                  <bdt class="block-component"></bdt>
-                  <bdt class="block-component"></bdt>
-                  <bdt class="block-component"></bdt>
-                  <bdt class="block-component"></bdt>
-                  <bdt class="block-component"></bdt>
-                  <bdt class="block-component"></span></bdt>
-              </div>
-              <div style="line-height: 1.5;"><span style="font-size: 15px;"><a data-custom-class="link"
-                          href="#policyupdates"><span style="color: rgb(0, 58, 250);">9. DO WE MAKE UPDATES TO THIS
-                              NOTICE?</span></a></span></div>
-              <div style="line-height: 1.5;"><a data-custom-class="link" href="#contact"><span
-                          style="color: rgb(0, 58, 250); font-size: 15px;">10. HOW CAN YOU CONTACT US ABOUT THIS
-                          NOTICE?</span></a></div>
-              <div style="line-height: 1.5;"><a data-custom-class="link" href="#request"><span
-                          style="color: rgb(0, 58, 250);">11. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT
-                          FROM YOU?</span></a></div>
-              <div style="line-height: 1.5;"><br></div>
-              <div style="line-height: 1.5;"><br></div>
-              <div id="infocollect" style="line-height: 1.5;"><span style="color: rgb(0, 0, 0);"><span
-                          style="color: rgb(0, 0, 0); font-size: 15px;"><span
-                              style="font-size: 15px; color: rgb(0, 0, 0);"><span
-                                  style="font-size: 15px; color: rgb(0, 0, 0);"><span id="control"
-                                      style="color: rgb(0, 0, 0);"><strong><span data-custom-class="heading_1">1. WHAT
-                                              INFORMATION DO WE
-                                              COLLECT?</span></strong></span></span></span></span></span></div>
-              <div style="line-height: 1.5;"><br></div>
-              <div id="personalinfo" style="line-height: 1.5;"><span data-custom-class="heading_2"
-                      style="color: rgb(0, 0, 0);"><span style="font-size: 15px;"><strong>Personal information you
-                              disclose to us</strong></span></span></div>
-              <div>
-                  <div><br></div>
-                  <div style="line-height: 1.5;"><span style="color: rgb(127, 127, 127);"><span
-                              style="color: rgb(89, 89, 89); font-size: 15px;"><span data-custom-class="body_text"><span
-                                      style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                          style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                              data-custom-class="body_text"><strong><em>In
-                                                      Short:</em></strong></span></span></span></span><span
-                                  data-custom-class="body_text"><span
-                                      style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                          style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                              data-custom-class="body_text"><strong><em> </em></strong><em>We collect
-                                                  personal information that you provide to
-                                                  us.</em></span></span></span></span></span></span></div>
-              </div>
-              <div style="line-height: 1.5;"><br></div>
-              <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                          style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">We
-                              collect personal information that you voluntarily provide to us when you <span
-                                  style="font-size: 15px;">
-                                  <bdt class="block-component"></bdt>
-                              </span></span><span data-custom-class="body_text">express an interest in obtaining
-                              information about us or our products and Services, when you participate in activities on the
-                              Services, or otherwise when you contact us.</span></span></span></span></div>
-              <div style="line-height: 1.5;"><br></div>
-              <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                          style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text"><span
-                                  style="font-size: 15px;">
-                                  <bdt class="block-component"></bdt>
-                              </span></span></span></span></span></div>
-              <div id="sensitiveinfo" style="line-height: 1.5;"><span style="font-size: 15px;"><span
-                          data-custom-class="body_text"><strong>Sensitive Information.</strong>
-                          <bdt class="block-component"></bdt>We do not process sensitive information.
-                      </span></span></div>
-              <div style="line-height: 1.5;"><br></div>
-              <div style="line-height: 1.5;"><span style="font-size: 15px;"><span data-custom-class="body_text">
-                          <bdt class="else-block"></bdt>
-                      </span></span><span style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                          style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text"><span
-                                  style="font-size: 15px;"><span data-custom-class="body_text">
-                                      <bdt class="block-component">
-                                          <bdt class="block-component"></bdt>
-                                      </bdt>
-                                  </span></span></span></span>
-                      <bdt class="block-component">
-                          <bdt class="block-component"></bdt>
-                      </bdt>
-              </div>
-              <div style="line-height: 1.5;"><span data-custom-class="body_text"><span
-                          style="font-size: 15px;"><strong>Application Data.</strong> If you use our application(s), we
-                          also may collect the following information if you choose to provide us with access or
-                          permission:<bdt class="block-component"></bdt></span></span></div>
-              <ul>
-                  <li style="line-height: 1.5;"><span data-custom-class="body_text"><span
-                              style="font-size: 15px;"><em>Geolocation Information.</em> We may request access or
-                              permission to track location-based information from your mobile device, either continuously
-                              or while you are using our mobile application(s), to provide certain location-based
-                              services. If you wish to change our access or permissions, you may do so in your device's
-                              settings.<bdt class="statement-end-if-in-editor"></bdt></span></span></li>
-              </ul>
-              <div style="line-height: 1.5;">
-                  <bdt class="block-component"><span style="font-size: 15px;"><span
-                              data-custom-class="body_text"></span></span></bdt>
-              </div>
-              <ul>
-                  <li style="line-height: 1.5;"><span style="font-size: 15px;"><span
-                              data-custom-class="body_text"><em>Mobile Device Access.</em> We may request access or
-                              permission to certain features from your mobile device, including your mobile device's <bdt
-                                  class="forloop-component"></bdt>
-                              <bdt class="question">storage</bdt>, <bdt class="forloop-component"></bdt>
-                              <bdt class="question">camera</bdt>, <bdt class="forloop-component"></bdt>and other
-                              features. If you wish to change our access or permissions, you may do so in your device's
-                              settings.<bdt class="statement-end-if-in-editor"></bdt>
-                          </span></span></li>
-              </ul>
-              <div style="line-height: 1.5;">
-                  <bdt class="block-component"><span style="font-size: 15px;"><span data-custom-class="body_text">
-                  </bdt></span></span></li>
-                  </ul>
-                  <div style="line-height: 1.5;">
-                      <bdt class="block-component"><span style="font-size: 15px;"><span data-custom-class="body_text">
-                      </bdt></span></span></li>
-                      </ul>
-                      <div style="line-height: 1.5;"><span style="font-size: 15px;"><span
-                                  data-custom-class="body_text">This information is primarily needed to maintain the
-                                  security and operation of our application(s), for troubleshooting, and for our internal
-                                  analytics and reporting purposes.</span></span></div>
-                      <div style="line-height: 1.5;"><br></div>
-                      <div style="line-height: 1.5;">
-                          <bdt class="statement-end-if-in-editor"><span style="font-size: 15px;"><span
-                                      data-custom-class="body_text"></span></span></bdt>
-                      </div>
-                      <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                  style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                      data-custom-class="body_text">All personal information that you provide to us must
-                                      be true, complete, and accurate, and you must notify us of any changes to such
-                                      personal information.</span></span></span></div>
-                      <div style="line-height: 1.5;"><br></div>
-                      <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                  style="font-size: 15px; color: rgb(89, 89, 89);"><span data-custom-class="body_text">
-                                      <bdt class="block-component"></bdt>
-                                      </bdt>
-                                  </span><span data-custom-class="body_text"><span
-                                          style="color: rgb(89, 89, 89); font-size: 15px;"><span
-                                              data-custom-class="body_text"><span
-                                                  style="color: rgb(89, 89, 89); font-size: 15px;"><span
-                                                      data-custom-class="body_text">
-                                                      <bdt class="statement-end-if-in-editor">
-                                                          <bdt class="block-component"></bdt>
-                                                      </bdt>
-                                                  </span></span></span></span></bdt>
-                                      </span></span></span></span></span></span></span></span><span
-                              style="font-size: 15px;"><span data-custom-class="body_text">
-                                  <bdt class="block-component"></bdt>
-                              </span></span></div>
-                      <div id="infouse" style="line-height: 1.5;"><span style="color: rgb(127, 127, 127);"><span
-                                  style="color: rgb(89, 89, 89); font-size: 15px;"><span
-                                      style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                          style="font-size: 15px; color: rgb(89, 89, 89);"><span id="control"
-                                              style="color: rgb(0, 0, 0);"><strong><span
-                                                      data-custom-class="heading_1">2. HOW DO WE PROCESS YOUR
-                                                      INFORMATION?</span></strong></span></span></span></span></span>
-                      </div>
-                      <div>
-                          <div style="line-height: 1.5;"><br></div>
-                          <div style="line-height: 1.5;"><span style="color: rgb(127, 127, 127);"><span
-                                      style="color: rgb(89, 89, 89); font-size: 15px;"><span
-                                          data-custom-class="body_text"><span
-                                              style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                  style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                      data-custom-class="body_text"><strong><em>In
-                                                              Short: </em></strong><em>We process your information to
-                                                          provide, improve, and administer our Services, communicate with
-                                                          you, for security and fraud prevention, and to comply with law.
-                                                          We may also process your information for other purposes with
-                                                          your consent.</em></span></span></span></span></span></span>
-                          </div>
-                      </div>
-                      <div style="line-height: 1.5;"><br></div>
-                      <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                  style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                      data-custom-class="body_text"><strong>We process your personal information for a
-                                          variety of reasons, depending on how you interact with our Services,
-                                          including:</strong>
-                                      <bdt class="block-component"></bdt>
-                                  </span></span></span></span></span></span></span></span></span></span></span></span>
-                          </li>
-                          </ul>
-                          <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                      style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                          data-custom-class="body_text">
-                                          <bdt class="block-component"></bdt>
-                                      </span></span></span></div>
-                          <ul>
-                              <li style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                          style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                              data-custom-class="body_text"><strong>To deliver and facilitate delivery of
-                                                  services to the user. </strong>We may process your information to
-                                              provide you with the requested service.<span
-                                                  style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                      style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                          data-custom-class="body_text"><span
-                                                              style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                  style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                      data-custom-class="body_text"><span
-                                                                          style="font-size: 15px;"><span
-                                                                              style="color: rgb(89, 89, 89);"><span
-                                                                                  data-custom-class="body_text"><span
-                                                                                      style="font-size: 15px;"><span
-                                                                                          style="color: rgb(89, 89, 89);"><span
-                                                                                              data-custom-class="body_text">
-                                                                                              <bdt
-                                                                                                  class="statement-end-if-in-editor">
-                                                                                              </bdt>
-                                                                                          </span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
-                              </li>
-                          </ul>
-                          <div style="line-height: 1.5;"><span style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                      style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                          data-custom-class="body_text">
-                                          <bdt class="block-component"></bdt>
-                                      </span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>
-                              </li>
-                              </ul>
-                              <div style="line-height: 1.5;"><span
-                                      style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                          style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                              data-custom-class="body_text">
-                                              <bdt class="block-component"></bdt>
-                                          </span></span></span></span></span></span></span></span></span></span></span></span>
-                                  </li>
-                                  </ul>
-                                  <div style="line-height: 1.5;"><span
-                                          style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                              style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                  data-custom-class="body_text">
-                                                  <bdt class="block-component"></bdt>
-                                              </span></span></span></li>
-                                      </ul>
-                                      <div style="line-height: 1.5;">
-                                          <bdt class="block-component"><span style="font-size: 15px;"></bdt>
-                                          </span></span></span></span></span></span></li>
-                                          </ul>
-                                          <div style="line-height: 1.5;">
-                                              <bdt class="block-component"><span style="font-size: 15px;"></bdt>
-                                              </span></span></span></span></span></span></span></span></span></li>
-                                              </ul>
-                                              <div style="line-height: 1.5;">
-                                                  <bdt class="block-component"><span style="font-size: 15px;"></bdt>
-                                                  </span></span></span></span></span></span></span></span></span></span></span></span>
-                                                  </li>
-                                                  </ul>
-                                                  <div style="line-height: 1.5;">
-                                                      <bdt class="block-component"><span style="font-size: 15px;"><span
-                                                                  data-custom-class="body_text"></span></span></bdt>
-                                                      </li>
-                                                      </ul>
-                                                      <p style="font-size: 15px; line-height: 1.5;">
-                                                          <bdt class="block-component"><span style="font-size: 15px;">
-                                                          </bdt>
-                                                          </span></span></span></span></span></span></span></span></span></span></span>
-                                                          </li>
-                                                          </ul>
-                                                      <p style="font-size: 15px; line-height: 1.5;">
-                                                          <bdt class="block-component"><span style="font-size: 15px;">
-                                                          </bdt>
-                                                          </span></span></span></span></span></span></span></span></span></span></span>
-                                                          </li>
-                                                          </ul>
-                                                      <p style="font-size: 15px; line-height: 1.5;">
-                                                          <bdt class="block-component"></bdt>
-                                                          </span></span></span></span></span></span></span></span></span></span></span>
-                                                          </li>
-                                                          </ul>
-                                                      <p style="font-size: 15px; line-height: 1.5;">
-                                                          <bdt class="block-component"></bdt>
-                                                          </span></span></span></span></span></span></span></span></span></span></span>
-                                                          </li>
-                                                          </ul>
-                                                      <div style="line-height: 1.5;">
-                                                          <bdt class="block-component"><span
-                                                                  style="font-size: 15px;"><span
-                                                                      data-custom-class="body_text"></span></bdt></span>
-                                                          </li>
-                                                          </ul>
-                                                          <div style="line-height: 1.5;">
-                                                              <bdt class="block-component"><span
-                                                                      style="font-size: 15px;"></bdt>
-                                                              </span></span></span></li>
-                                                              </ul>
-                                                              <div style="line-height: 1.5;">
-                                                                  <bdt class="block-component"><span
-                                                                          style="font-size: 15px;"></bdt>
-                                                                  </span></span></span></li>
-                                                                  </ul>
-                                                                  <div style="line-height: 1.5;"><span
-                                                                          style="font-size: 15px;">
-                                                                          <bdt class="block-component"><span
-                                                                                  data-custom-class="body_text"></bdt>
-                                                                      </span></span></li>
-                                                                      </ul>
-                                                                      <div style="line-height: 1.5;">
-                                                                          <bdt class="block-component"><span
-                                                                                  style="font-size: 15px;"><span
-                                                                                      data-custom-class="body_text">
-                                                                          </bdt></span></span></li>
-                                                                          </ul>
-                                                                          <div style="line-height: 1.5;">
-                                                                              <bdt class="block-component"><span
-                                                                                      style="font-size: 15px;"><span
-                                                                                          data-custom-class="body_text"></span></span>
-                                                                              </bdt>
-                                                                              </li>
-                                                                              </ul>
-                                                                              <div style="line-height: 1.5;">
-                                                                                  <bdt class="block-component"><span
-                                                                                          style="font-size: 15px;"><span
-                                                                                              data-custom-class="body_text"></span></span>
-                                                                                  </bdt>
-                                                                                  </li>
-                                                                                  </ul>
-                                                                                  <div style="line-height: 1.5;">
-                                                                                      <bdt class="block-component"><span
-                                                                                              style="font-size: 15px;"><span
-                                                                                                  data-custom-class="body_text"></span></span>
-                                                                                      </bdt>
-                                                                                      </li>
-                                                                                      </ul>
-                                                                                      <div style="line-height: 1.5;">
-                                                                                          <bdt class="block-component">
-                                                                                              <span
-                                                                                                  style="font-size: 15px;"><span
-                                                                                                      data-custom-class="body_text"></span></span>
-                                                                                          </bdt>
-                                                                                          </li>
-                                                                                          </ul>
-                                                                                          <div style="line-height: 1.5;">
-                                                                                              <bdt
-                                                                                                  class="block-component">
-                                                                                                  <span
-                                                                                                      style="font-size: 15px;"><span
-                                                                                                          data-custom-class="body_text"></span></span>
-                                                                                              </bdt>
-                                                                                              </li>
-                                                                                              </ul>
-                                                                                              <div
-                                                                                                  style="line-height: 1.5;">
-                                                                                                  <bdt
-                                                                                                      class="block-component">
-                                                                                                      <span
-                                                                                                          style="font-size: 15px;"><span
-                                                                                                              data-custom-class="body_text"></span></span>
-                                                                                                  </bdt>
-                                                                                                  </li>
-                                                                                                  </ul>
-                                                                                                  <div
-                                                                                                      style="line-height: 1.5;">
-                                                                                                      <bdt
-                                                                                                          class="block-component">
-                                                                                                          <span
-                                                                                                              style="font-size: 15px;"><span
-                                                                                                                  data-custom-class="body_text">
-                                                                                                      </bdt></span></span>
-                                                                                                      </li>
-                                                                                                      </ul>
-                                                                                                      <div
-                                                                                                          style="line-height: 1.5;">
-                                                                                                          <bdt
-                                                                                                              class="block-component">
-                                                                                                              <span
-                                                                                                                  style="font-size: 15px;"><span
-                                                                                                                      data-custom-class="body_text">
-                                                                                                          </bdt>
-                                                                                                          </span></span>
-                                                                                                          </li>
-                                                                                                          </ul>
-                                                                                                          <div
-                                                                                                              style="line-height: 1.5;">
-                                                                                                              <bdt
-                                                                                                                  class="block-component">
-                                                                                                                  <span
-                                                                                                                      style="font-size: 15px;"><span
-                                                                                                                          data-custom-class="body_text">
-                                                                                                              </bdt>
-                                                                                                              </span></span>
-                                                                                                              </li>
-                                                                                                              </ul>
-                                                                                                              <div
-                                                                                                                  style="line-height: 1.5;">
-                                                                                                                  <bdt
-                                                                                                                      class="block-component">
-                                                                                                                      <span
-                                                                                                                          style="font-size: 15px;"><span
-                                                                                                                              data-custom-class="body_text"></span></span>
-                                                                                                                  </bdt>
-                                                                                                                  </li>
-                                                                                                                  </ul>
-                                                                                                                  <div
-                                                                                                                      style="line-height: 1.5;">
-                                                                                                                      <bdt
-                                                                                                                          class="block-component">
-                                                                                                                          <span
-                                                                                                                              style="font-size: 15px;"><span
-                                                                                                                                  data-custom-class="body_text"></span></span>
-                                                                                                                      </bdt>
-                                                                                                                      <bdt
-                                                                                                                          class="block-component">
-                                                                                                                          <span
-                                                                                                                              style="font-size: 15px;"><span
-                                                                                                                                  data-custom-class="body_text">
-                                                                                                                      </bdt>
-                                                                                                                      </span></span>
-                                                                                                                      <bdt
-                                                                                                                          class="block-component">
-                                                                                                                          <span
-                                                                                                                              style="font-size: 15px;"><span
-                                                                                                                                  data-custom-class="body_text"></span></span>
-                                                                                                                      </bdt>
-                                                                                                                      <bdt
-                                                                                                                          class="block-component">
-                                                                                                                          <span
-                                                                                                                              style="font-size: 15px;"><span
-                                                                                                                                  data-custom-class="body_text"></span></span>
-                                                                                                                      </bdt>
-                                                                                                                  </div>
-                                                                                                                  <div
-                                                                                                                      style="line-height: 1.5;">
-                                                                                                                      <br>
-                                                                                                                  </div>
-                                                                                                                  <div id="whoshare"
-                                                                                                                      style="line-height: 1.5;">
-                                                                                                                      <span
-                                                                                                                          style="color: rgb(127, 127, 127);"><span
-                                                                                                                              style="color: rgb(89, 89, 89); font-size: 15px;"><span
-                                                                                                                                  style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                      style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                          id="control"
-                                                                                                                                          style="color: rgb(0, 0, 0);"><strong><span
-                                                                                                                                                  data-custom-class="heading_1">3.
-                                                                                                                                                  WHEN
-                                                                                                                                                  AND
-                                                                                                                                                  WITH
-                                                                                                                                                  WHOM
-                                                                                                                                                  DO
-                                                                                                                                                  WE
-                                                                                                                                                  SHARE
-                                                                                                                                                  YOUR
-                                                                                                                                                  PERSONAL
-                                                                                                                                                  INFORMATION?</span></strong></span></span></span></span></span>
-                                                                                                                  </div>
-                                                                                                                  <div
-                                                                                                                      style="line-height: 1.5;">
-                                                                                                                      <br>
-                                                                                                                  </div>
-                                                                                                                  <div
-                                                                                                                      style="line-height: 1.5;">
-                                                                                                                      <span
-                                                                                                                          style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                              style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                  data-custom-class="body_text"><strong><em>In
-                                                                                                                                          Short:</em></strong><em> We
-                                                                                                                                      may
-                                                                                                                                      share
-                                                                                                                                      information
-                                                                                                                                      in
-                                                                                                                                      specific
-                                                                                                                                      situations
-                                                                                                                                      described
-                                                                                                                                      in
-                                                                                                                                      this
-                                                                                                                                      section
-                                                                                                                                      and/or
-                                                                                                                                      with
-                                                                                                                                      the
-                                                                                                                                      following
-                                                                                                                                      <bdt
-                                                                                                                                          class="block-component">
-                                                                                                                                      </bdt>
-                                                                                                                                      third
-                                                                                                                                      parties.</em></span></span></span>
-                                                                                                                  </div>
-                                                                                                                  <div
-                                                                                                                      style="line-height: 1.5;">
-                                                                                                                      <span
-                                                                                                                          style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                              style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                  data-custom-class="body_text">
-                                                                                                                                  <bdt
-                                                                                                                                      class="block-component">
-                                                                                                                              </span>
-                                                                                                                  </div>
-                                                                                                                  <div
-                                                                                                                      style="line-height: 1.5;">
-                                                                                                                      <br>
-                                                                                                                  </div>
-                                                                                                                  <div
-                                                                                                                      style="line-height: 1.5;">
-                                                                                                                      <span
-                                                                                                                          style="font-size: 15px;"><span
-                                                                                                                              data-custom-class="body_text">We
-                                                                                                                              <bdt
-                                                                                                                                  class="block-component">
-                                                                                                                              </bdt>
-                                                                                                                              may
-                                                                                                                              need
-                                                                                                                              to
-                                                                                                                              share
-                                                                                                                              your
-                                                                                                                              personal
-                                                                                                                              information
-                                                                                                                              in
-                                                                                                                              the
-                                                                                                                              following
-                                                                                                                              situations:</span></span>
-                                                                                                                  </div>
-                                                                                                                  <ul>
-                                                                                                                      <li
-                                                                                                                          style="line-height: 1.5;">
-                                                                                                                          <span
-                                                                                                                              style="font-size: 15px;"><span
-                                                                                                                                  data-custom-class="body_text"><strong>Business
-                                                                                                                                      Transfers.</strong>
-                                                                                                                                  We
-                                                                                                                                  may
-                                                                                                                                  share
-                                                                                                                                  or
-                                                                                                                                  transfer
-                                                                                                                                  your
-                                                                                                                                  information
-                                                                                                                                  in
-                                                                                                                                  connection
-                                                                                                                                  with,
-                                                                                                                                  or
-                                                                                                                                  during
-                                                                                                                                  negotiations
-                                                                                                                                  of,
-                                                                                                                                  any
-                                                                                                                                  merger,
-                                                                                                                                  sale
-                                                                                                                                  of
-                                                                                                                                  company
-                                                                                                                                  assets,
-                                                                                                                                  financing,
-                                                                                                                                  or
-                                                                                                                                  acquisition
-                                                                                                                                  of
-                                                                                                                                  all
-                                                                                                                                  or
-                                                                                                                                  a
-                                                                                                                                  portion
-                                                                                                                                  of
-                                                                                                                                  our
-                                                                                                                                  business
-                                                                                                                                  to
-                                                                                                                                  another
-                                                                                                                                  company.</span></span>
-                                                                                                                      </li>
-                                                                                                                  </ul>
-                                                                                                                  <div
-                                                                                                                      style="line-height: 1.5;">
-                                                                                                                      <span
-                                                                                                                          style="font-size: 15px;"><span
-                                                                                                                              data-custom-class="body_text">
-                                                                                                                              <bdt
-                                                                                                                                  class="block-component">
-                                                                                                                              </bdt>
-                                                                                                                          </span></span>
-                                                                                                                      </li>
-                                                                                                                      </ul>
-                                                                                                                      <div
-                                                                                                                          style="line-height: 1.5;">
-                                                                                                                          <span
-                                                                                                                              style="font-size: 15px;">
-                                                                                                                              <bdt
-                                                                                                                                  class="block-component">
-                                                                                                                                  <span
-                                                                                                                                      data-custom-class="body_text"></span>
-                                                                                                                              </bdt>
-                                                                                                                          </span>
-                                                                                                                          </li>
-                                                                                                                          </ul>
-                                                                                                                          <div
-                                                                                                                              style="line-height: 1.5;">
-                                                                                                                              <bdt
-                                                                                                                                  class="block-component">
-                                                                                                                                  <span
-                                                                                                                                      style="font-size: 15px;"><span
-                                                                                                                                          data-custom-class="body_text"></span></span>
-                                                                                                                              </bdt>
-                                                                                                                              </li>
-                                                                                                                              </ul>
-                                                                                                                              <div
-                                                                                                                                  style="line-height: 1.5;">
-                                                                                                                                  <bdt
-                                                                                                                                      class="block-component">
-                                                                                                                                      <span
-                                                                                                                                          style="font-size: 15px;"><span
-                                                                                                                                              data-custom-class="body_text">
-                                                                                                                                  </bdt>
-                                                                                                                                  </span></span>
-                                                                                                                                  </li>
-                                                                                                                                  </ul>
-                                                                                                                                  <div
-                                                                                                                                      style="line-height: 1.5;">
-                                                                                                                                      <bdt
-                                                                                                                                          class="block-component">
-                                                                                                                                          <span
-                                                                                                                                              style="font-size: 15px;"><span
-                                                                                                                                                  data-custom-class="body_text"></span></span>
-                                                                                                                                      </bdt>
-                                                                                                                                      <span
-                                                                                                                                          data-custom-class="body_text"><span
-                                                                                                                                              style="font-size: 15px;">
-                                                                                                                                              <bdt
-                                                                                                                                                  class="block-component">
-                                                                                                                                              </bdt>
-                                                                                                                                          </span></span>
-                                                                                                                                      <bdt
-                                                                                                                                          class="statement-end-if-in-editor">
-                                                                                                                                          <span
-                                                                                                                                              style="font-size: 15px;"><span
-                                                                                                                                                  data-custom-class="body_text"></span></span>
-                                                                                                                                      </bdt>
-                                                                                                                                      </li>
-                                                                                                                                      </ul>
-                                                                                                                                      <div
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <bdt
-                                                                                                                                              class="block-component">
-                                                                                                                                              <span
-                                                                                                                                                  style="font-size: 15px;"><span
-                                                                                                                                                      data-custom-class="body_text"></span></span>
-                                                                                                                                          </bdt>
-                                                                                                                                          <span
-                                                                                                                                              style="color: rgb(89, 89, 89); font-size: 15px;"><span
-                                                                                                                                                  style="font-size: 15px;"><span
-                                                                                                                                                      style="color: rgb(89, 89, 89);"><span
-                                                                                                                                                          style="font-size: 15px;"><span
-                                                                                                                                                              style="color: rgb(89, 89, 89);">
-                                                                                                                                                              <bdt
-                                                                                                                                                                  class="block-component">
-                                                                                                                                                                  <span
-                                                                                                                                                                      data-custom-class="heading_1">
-                                                                                                                                                              </bdt>
-                                                                                                                                                          </span></span></span></span></span></span></span></span><span
-                                                                                                                                              data-custom-class="body_text"><span
-                                                                                                                                                  style="color: rgb(89, 89, 89); font-size: 15px;"><span
-                                                                                                                                                      style="color: rgb(89, 89, 89); font-size: 15px;"><span
-                                                                                                                                                          style="color: rgb(89, 89, 89); font-size: 15px;"><span
-                                                                                                                                                              style="font-size: 15px;"><span
-                                                                                                                                                                  style="color: rgb(89, 89, 89);"><span
-                                                                                                                                                                      style="font-size: 15px;"><span
-                                                                                                                                                                          style="color: rgb(89, 89, 89);"><span
-                                                                                                                                                                              data-custom-class="body_text">
-                                                                                                                                                                              <bdt
-                                                                                                                                                                                  class="block-component">
-                                                                                                                                                                              </bdt>
-                                                                                                                                                                          </span>
-                                                                                                                                                                          <bdt
-                                                                                                                                                                              class="block-component">
-                                                                                                                                                                              <span
-                                                                                                                                                                                  data-custom-class="body_text">
-                                                                                                                                                                                  <bdt
-                                                                                                                                                                                      class="block-component">
-                                                                                                                                                                                  </bdt>
-                                                                                                                                                                              </span>
-                                                                                                                                                                      </span></span></span></span></span></span></span></span></span></span></span></span>
-                                                                                                                                      </div>
-                                                                                                                                      <div
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <br>
-                                                                                                                                      </div>
-                                                                                                                                      <div id="inforetain"
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <span
-                                                                                                                                              style="color: rgb(127, 127, 127);"><span
-                                                                                                                                                  style="color: rgb(89, 89, 89); font-size: 15px;"><span
-                                                                                                                                                      style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                          style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                              id="control"
-                                                                                                                                                              style="color: rgb(0, 0, 0);"><strong><span
-                                                                                                                                                                      data-custom-class="heading_1">4.
-                                                                                                                                                                      HOW
-                                                                                                                                                                      LONG
-                                                                                                                                                                      DO
-                                                                                                                                                                      WE
-                                                                                                                                                                      KEEP
-                                                                                                                                                                      YOUR
-                                                                                                                                                                      INFORMATION?</span></strong></span></span></span></span></span>
-                                                                                                                                      </div>
-                                                                                                                                      <div
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <br>
-                                                                                                                                      </div>
-                                                                                                                                      <div
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <span
-                                                                                                                                              style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                  style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                      data-custom-class="body_text"><strong><em>In
-                                                                                                                                                              Short: </em></strong><em>We
-                                                                                                                                                          keep
-                                                                                                                                                          your
-                                                                                                                                                          information
-                                                                                                                                                          for
-                                                                                                                                                          as
-                                                                                                                                                          long
-                                                                                                                                                          as
-                                                                                                                                                          necessary
-                                                                                                                                                          to
-                                                                                                                                                          <bdt
-                                                                                                                                                              class="block-component">
-                                                                                                                                                          </bdt>
-                                                                                                                                                          fulfill
-                                                                                                                                                          <bdt
-                                                                                                                                                              class="statement-end-if-in-editor">
-                                                                                                                                                          </bdt>
-                                                                                                                                                          the
-                                                                                                                                                          purposes
-                                                                                                                                                          outlined
-                                                                                                                                                          in
-                                                                                                                                                          this
-                                                                                                                                                          privacy
-                                                                                                                                                          notice
-                                                                                                                                                          unless
-                                                                                                                                                          otherwise
-                                                                                                                                                          required
-                                                                                                                                                          by
-                                                                                                                                                          law.</em></span></span></span>
-                                                                                                                                      </div>
-                                                                                                                                      <div
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <br>
-                                                                                                                                      </div>
-                                                                                                                                      <div
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <span
-                                                                                                                                              style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                  style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                      data-custom-class="body_text">We
-                                                                                                                                                      will
-                                                                                                                                                      only
-                                                                                                                                                      keep
-                                                                                                                                                      your
-                                                                                                                                                      personal
-                                                                                                                                                      information
-                                                                                                                                                      for
-                                                                                                                                                      as
-                                                                                                                                                      long
-                                                                                                                                                      as
-                                                                                                                                                      it
-                                                                                                                                                      is
-                                                                                                                                                      necessary
-                                                                                                                                                      for
-                                                                                                                                                      the
-                                                                                                                                                      purposes
-                                                                                                                                                      set
-                                                                                                                                                      out
-                                                                                                                                                      in
-                                                                                                                                                      this
-                                                                                                                                                      privacy
-                                                                                                                                                      notice,
-                                                                                                                                                      unless
-                                                                                                                                                      a
-                                                                                                                                                      longer
-                                                                                                                                                      retention
-                                                                                                                                                      period
-                                                                                                                                                      is
-                                                                                                                                                      required
-                                                                                                                                                      or
-                                                                                                                                                      permitted
-                                                                                                                                                      by
-                                                                                                                                                      law
-                                                                                                                                                      (such
-                                                                                                                                                      as
-                                                                                                                                                      tax,
-                                                                                                                                                      accounting,
-                                                                                                                                                      or
-                                                                                                                                                      other
-                                                                                                                                                      legal
-                                                                                                                                                      requirements).
-                                                                                                                                                      <bdt
-                                                                                                                                                          class="block-component">
-                                                                                                                                                          </span></span></span>
-                                                                                                                                      </div>
-                                                                                                                                      <div
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <br>
-                                                                                                                                      </div>
-                                                                                                                                      <div
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <span
-                                                                                                                                              style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                  style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                      data-custom-class="body_text">When
-                                                                                                                                                      we
-                                                                                                                                                      have
-                                                                                                                                                      no
-                                                                                                                                                      ongoing
-                                                                                                                                                      legitimate
-                                                                                                                                                      business
-                                                                                                                                                      need
-                                                                                                                                                      to
-                                                                                                                                                      process
-                                                                                                                                                      your
-                                                                                                                                                      personal
-                                                                                                                                                      information,
-                                                                                                                                                      we
-                                                                                                                                                      will
-                                                                                                                                                      either
-                                                                                                                                                      delete
-                                                                                                                                                      or
-                                                                                                                                                      <bdt
-                                                                                                                                                          class="block-component">
-                                                                                                                                                      </bdt>
-                                                                                                                                                      anonymize
-                                                                                                                                                      <bdt
-                                                                                                                                                          class="statement-end-if-in-editor">
-                                                                                                                                                      </bdt>
-                                                                                                                                                      such
-                                                                                                                                                      information,
-                                                                                                                                                      or,
-                                                                                                                                                      if
-                                                                                                                                                      this
-                                                                                                                                                      is
-                                                                                                                                                      not
-                                                                                                                                                      possible
-                                                                                                                                                      (for
-                                                                                                                                                      example,
-                                                                                                                                                      because
-                                                                                                                                                      your
-                                                                                                                                                      personal
-                                                                                                                                                      information
-                                                                                                                                                      has
-                                                                                                                                                      been
-                                                                                                                                                      stored
-                                                                                                                                                      in
-                                                                                                                                                      backup
-                                                                                                                                                      archives),
-                                                                                                                                                      then
-                                                                                                                                                      we
-                                                                                                                                                      will
-                                                                                                                                                      securely
-                                                                                                                                                      store
-                                                                                                                                                      your
-                                                                                                                                                      personal
-                                                                                                                                                      information
-                                                                                                                                                      and
-                                                                                                                                                      isolate
-                                                                                                                                                      it
-                                                                                                                                                      from
-                                                                                                                                                      any
-                                                                                                                                                      further
-                                                                                                                                                      processing
-                                                                                                                                                      until
-                                                                                                                                                      deletion
-                                                                                                                                                      is
-                                                                                                                                                      possible.<span
-                                                                                                                                                          style="color: rgb(89, 89, 89);">
-                                                                                                                                                          <bdt
-                                                                                                                                                              class="block-component">
-                                                                                                                                                          </bdt>
-                                                                                                                                                      </span></span></span></span>
-                                                                                                                                      </div>
-                                                                                                                                      <div
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <br>
-                                                                                                                                      </div>
-                                                                                                                                      <div id="infosafe"
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <span
-                                                                                                                                              style="color: rgb(127, 127, 127);"><span
-                                                                                                                                                  style="color: rgb(89, 89, 89); font-size: 15px;"><span
-                                                                                                                                                      style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                          style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                              id="control"
-                                                                                                                                                              style="color: rgb(0, 0, 0);"><strong><span
-                                                                                                                                                                      data-custom-class="heading_1">5.
-                                                                                                                                                                      HOW
-                                                                                                                                                                      DO
-                                                                                                                                                                      WE
-                                                                                                                                                                      KEEP
-                                                                                                                                                                      YOUR
-                                                                                                                                                                      INFORMATION
-                                                                                                                                                                      SAFE?</span></strong></span></span></span></span></span>
-                                                                                                                                      </div>
-                                                                                                                                      <div
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <br>
-                                                                                                                                      </div>
-                                                                                                                                      <div
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <span
-                                                                                                                                              style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                  style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                      data-custom-class="body_text"><strong><em>In
-                                                                                                                                                              Short: </em></strong><em>We
-                                                                                                                                                          aim
-                                                                                                                                                          to
-                                                                                                                                                          protect
-                                                                                                                                                          your
-                                                                                                                                                          personal
-                                                                                                                                                          information
-                                                                                                                                                          through
-                                                                                                                                                          a
-                                                                                                                                                          system
-                                                                                                                                                          of
-                                                                                                                                                          <bdt
-                                                                                                                                                              class="block-component">
-                                                                                                                                                          </bdt>
-                                                                                                                                                          organizational
-                                                                                                                                                          <bdt
-                                                                                                                                                              class="statement-end-if-in-editor">
-                                                                                                                                                          </bdt>
-                                                                                                                                                          and
-                                                                                                                                                          technical
-                                                                                                                                                          security
-                                                                                                                                                          measures.</em></span></span></span>
-                                                                                                                                      </div>
-                                                                                                                                      <div
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <br>
-                                                                                                                                      </div>
-                                                                                                                                      <div
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <span
-                                                                                                                                              style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                  style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                      data-custom-class="body_text">We
-                                                                                                                                                      have
-                                                                                                                                                      implemented
-                                                                                                                                                      appropriate
-                                                                                                                                                      and
-                                                                                                                                                      reasonable
-                                                                                                                                                      technical
-                                                                                                                                                      and
-                                                                                                                                                      <bdt
-                                                                                                                                                          class="block-component">
-                                                                                                                                                      </bdt>
-                                                                                                                                                      organizational
-                                                                                                                                                      <bdt
-                                                                                                                                                          class="statement-end-if-in-editor">
-                                                                                                                                                      </bdt>
-                                                                                                                                                      security
-                                                                                                                                                      measures
-                                                                                                                                                      designed
-                                                                                                                                                      to
-                                                                                                                                                      protect
-                                                                                                                                                      the
-                                                                                                                                                      security
-                                                                                                                                                      of
-                                                                                                                                                      any
-                                                                                                                                                      personal
-                                                                                                                                                      information
-                                                                                                                                                      we
-                                                                                                                                                      process.
-                                                                                                                                                      However,
-                                                                                                                                                      despite
-                                                                                                                                                      our
-                                                                                                                                                      safeguards
-                                                                                                                                                      and
-                                                                                                                                                      efforts
-                                                                                                                                                      to
-                                                                                                                                                      secure
-                                                                                                                                                      your
-                                                                                                                                                      information,
-                                                                                                                                                      no
-                                                                                                                                                      electronic
-                                                                                                                                                      transmission
-                                                                                                                                                      over
-                                                                                                                                                      the
-                                                                                                                                                      Internet
-                                                                                                                                                      or
-                                                                                                                                                      information
-                                                                                                                                                      storage
-                                                                                                                                                      technology
-                                                                                                                                                      can
-                                                                                                                                                      be
-                                                                                                                                                      guaranteed
-                                                                                                                                                      to
-                                                                                                                                                      be
-                                                                                                                                                      100%
-                                                                                                                                                      secure,
-                                                                                                                                                      so
-                                                                                                                                                      we
-                                                                                                                                                      cannot
-                                                                                                                                                      promise
-                                                                                                                                                      or
-                                                                                                                                                      guarantee
-                                                                                                                                                      that
-                                                                                                                                                      hackers,
-                                                                                                                                                      cybercriminals,
-                                                                                                                                                      or
-                                                                                                                                                      other
-                                                                                                                                                      <bdt
-                                                                                                                                                          class="block-component">
-                                                                                                                                                      </bdt>
-                                                                                                                                                      unauthorized
-                                                                                                                                                      <bdt
-                                                                                                                                                          class="statement-end-if-in-editor">
-                                                                                                                                                      </bdt>
-                                                                                                                                                      third
-                                                                                                                                                      parties
-                                                                                                                                                      will
-                                                                                                                                                      not
-                                                                                                                                                      be
-                                                                                                                                                      able
-                                                                                                                                                      to
-                                                                                                                                                      defeat
-                                                                                                                                                      our
-                                                                                                                                                      security
-                                                                                                                                                      and
-                                                                                                                                                      improperly
-                                                                                                                                                      collect,
-                                                                                                                                                      access,
-                                                                                                                                                      steal,
-                                                                                                                                                      or
-                                                                                                                                                      modify
-                                                                                                                                                      your
-                                                                                                                                                      information.
-                                                                                                                                                      Although
-                                                                                                                                                      we
-                                                                                                                                                      will
-                                                                                                                                                      do
-                                                                                                                                                      our
-                                                                                                                                                      best
-                                                                                                                                                      to
-                                                                                                                                                      protect
-                                                                                                                                                      your
-                                                                                                                                                      personal
-                                                                                                                                                      information,
-                                                                                                                                                      transmission
-                                                                                                                                                      of
-                                                                                                                                                      personal
-                                                                                                                                                      information
-                                                                                                                                                      to
-                                                                                                                                                      and
-                                                                                                                                                      from
-                                                                                                                                                      our
-                                                                                                                                                      Services
-                                                                                                                                                      is
-                                                                                                                                                      at
-                                                                                                                                                      your
-                                                                                                                                                      own
-                                                                                                                                                      risk.
-                                                                                                                                                      You
-                                                                                                                                                      should
-                                                                                                                                                      only
-                                                                                                                                                      access
-                                                                                                                                                      the
-                                                                                                                                                      Services
-                                                                                                                                                      within
-                                                                                                                                                      a
-                                                                                                                                                      secure
-                                                                                                                                                      environment.<span
-                                                                                                                                                          style="color: rgb(89, 89, 89);">
-                                                                                                                                                          <bdt
-                                                                                                                                                              class="statement-end-if-in-editor">
-                                                                                                                                                          </bdt>
-                                                                                                                                                      </span><span
-                                                                                                                                                          style="color: rgb(89, 89, 89); font-size: 15px;"><span
-                                                                                                                                                              data-custom-class="body_text">
-                                                                                                                                                              <bdt
-                                                                                                                                                                  class="block-component">
-                                                                                                                                                              </bdt>
-                                                                                                                                                          </span></span></span></span></span>
-                                                                                                                                      </div>
-                                                                                                                                      <div
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <br>
-                                                                                                                                      </div>
-                                                                                                                                      <div id="infominors"
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <span
-                                                                                                                                              style="color: rgb(127, 127, 127);"><span
-                                                                                                                                                  style="color: rgb(89, 89, 89); font-size: 15px;"><span
-                                                                                                                                                      style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                          style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                              id="control"
-                                                                                                                                                              style="color: rgb(0, 0, 0);"><strong><span
-                                                                                                                                                                      data-custom-class="heading_1">6.
-                                                                                                                                                                      DO
-                                                                                                                                                                      WE
-                                                                                                                                                                      COLLECT
-                                                                                                                                                                      INFORMATION
-                                                                                                                                                                      FROM
-                                                                                                                                                                      MINORS?</span></strong></span></span></span></span></span>
-                                                                                                                                      </div>
-                                                                                                                                      <div
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <br>
-                                                                                                                                      </div>
-                                                                                                                                      <div
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <span
-                                                                                                                                              style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                  style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                      data-custom-class="body_text"><strong><em>In
-                                                                                                                                                              Short:</em></strong><em> We
-                                                                                                                                                          do
-                                                                                                                                                          not
-                                                                                                                                                          knowingly
-                                                                                                                                                          collect
-                                                                                                                                                          data
-                                                                                                                                                          from
-                                                                                                                                                          or
-                                                                                                                                                          market
-                                                                                                                                                          to
-                                                                                                                                                          <bdt
-                                                                                                                                                              class="block-component">
-                                                                                                                                                          </bdt>
-                                                                                                                                                          children
-                                                                                                                                                          under
-                                                                                                                                                          18
-                                                                                                                                                          years
-                                                                                                                                                          of
-                                                                                                                                                          age
-                                                                                                                                                          <bdt
-                                                                                                                                                              class="else-block">
-                                                                                                                                                          </bdt>
-                                                                                                                                                          .</em>
-                                                                                                                                                      <bdt
-                                                                                                                                                          class="block-component">
-                                                                                                                                                      </bdt>
-                                                                                                                                                  </span></span></span>
-                                                                                                                                      </div>
-                                                                                                                                      <div
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <br>
-                                                                                                                                      </div>
-                                                                                                                                      <div
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <span
-                                                                                                                                              style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                  style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                      data-custom-class="body_text">We
-                                                                                                                                                      do
-                                                                                                                                                      not
-                                                                                                                                                      knowingly
-                                                                                                                                                      solicit
-                                                                                                                                                      data
-                                                                                                                                                      from
-                                                                                                                                                      or
-                                                                                                                                                      market
-                                                                                                                                                      to
-                                                                                                                                                      children
-                                                                                                                                                      under
-                                                                                                                                                      18
-                                                                                                                                                      years
-                                                                                                                                                      of
-                                                                                                                                                      age.
-                                                                                                                                                      By
-                                                                                                                                                      using
-                                                                                                                                                      the
-                                                                                                                                                      Services,
-                                                                                                                                                      you
-                                                                                                                                                      represent
-                                                                                                                                                      that
-                                                                                                                                                      you
-                                                                                                                                                      are
-                                                                                                                                                      at
-                                                                                                                                                      least
-                                                                                                                                                      18
-                                                                                                                                                      or
-                                                                                                                                                      that
-                                                                                                                                                      you
-                                                                                                                                                      are
-                                                                                                                                                      the
-                                                                                                                                                      parent
-                                                                                                                                                      or
-                                                                                                                                                      guardian
-                                                                                                                                                      of
-                                                                                                                                                      such
-                                                                                                                                                      a
-                                                                                                                                                      minor
-                                                                                                                                                      and
-                                                                                                                                                      consent
-                                                                                                                                                      to
-                                                                                                                                                      such
-                                                                                                                                                      minor
-                                                                                                                                                      dependent’s
-                                                                                                                                                      use
-                                                                                                                                                      of
-                                                                                                                                                      the
-                                                                                                                                                      Services.
-                                                                                                                                                      If
-                                                                                                                                                      we
-                                                                                                                                                      learn
-                                                                                                                                                      that
-                                                                                                                                                      personal
-                                                                                                                                                      information
-                                                                                                                                                      from
-                                                                                                                                                      users
-                                                                                                                                                      less
-                                                                                                                                                      than
-                                                                                                                                                      18
-                                                                                                                                                      years
-                                                                                                                                                      of
-                                                                                                                                                      age
-                                                                                                                                                      has
-                                                                                                                                                      been
-                                                                                                                                                      collected,
-                                                                                                                                                      we
-                                                                                                                                                      will
-                                                                                                                                                      deactivate
-                                                                                                                                                      the
-                                                                                                                                                      account
-                                                                                                                                                      and
-                                                                                                                                                      take
-                                                                                                                                                      reasonable
-                                                                                                                                                      measures
-                                                                                                                                                      to
-                                                                                                                                                      promptly
-                                                                                                                                                      delete
-                                                                                                                                                      such
-                                                                                                                                                      data
-                                                                                                                                                      from
-                                                                                                                                                      our
-                                                                                                                                                      records.
-                                                                                                                                                      If
-                                                                                                                                                      you
-                                                                                                                                                      become
-                                                                                                                                                      aware
-                                                                                                                                                      of
-                                                                                                                                                      any
-                                                                                                                                                      data
-                                                                                                                                                      we
-                                                                                                                                                      may
-                                                                                                                                                      have
-                                                                                                                                                      collected
-                                                                                                                                                      from
-                                                                                                                                                      children
-                                                                                                                                                      under
-                                                                                                                                                      age
-                                                                                                                                                      18,
-                                                                                                                                                      please
-                                                                                                                                                      contact
-                                                                                                                                                      us
-                                                                                                                                                      at
-                                                                                                                                                      <span
-                                                                                                                                                          style="color: rgb(89, 89, 89); font-size: 15px;"><span
-                                                                                                                                                              data-custom-class="body_text">
-                                                                                                                                                              <bdt
-                                                                                                                                                                  class="block-component">
-                                                                                                                                                              </bdt>
-                                                                                                                                                              <bdt
-                                                                                                                                                                  class="question">
-                                                                                                                                                                  smartbih4@gmail.com
-                                                                                                                                                              </bdt>
-                                                                                                                                                              <bdt
-                                                                                                                                                                  class="else-block">
-                                                                                                                                                              </bdt>
-                                                                                                                                                          </span></span>.</span><span
-                                                                                                                                                      data-custom-class="body_text">
-                                                                                                                                                      <bdt
-                                                                                                                                                          class="else-block">
-                                                                                                                                                          <bdt
-                                                                                                                                                              class="block-component">
-                                                                                                                                                          </bdt>
-                                                                                                                                                  </span></span></span></span></span></span>
-                                                                                                                                      </div>
-                                                                                                                                      <div
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <br>
-                                                                                                                                      </div>
-                                                                                                                                      <div id="privacyrights"
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <span
-                                                                                                                                              style="color: rgb(127, 127, 127);"><span
-                                                                                                                                                  style="color: rgb(89, 89, 89); font-size: 15px;"><span
-                                                                                                                                                      style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                          style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                              id="control"
-                                                                                                                                                              style="color: rgb(0, 0, 0);"><strong><span
-                                                                                                                                                                      data-custom-class="heading_1">7.
-                                                                                                                                                                      WHAT
-                                                                                                                                                                      ARE
-                                                                                                                                                                      YOUR
-                                                                                                                                                                      PRIVACY
-                                                                                                                                                                      RIGHTS?</span></strong></span></span></span></span></span>
-                                                                                                                                      </div>
-                                                                                                                                      <div
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <br>
-                                                                                                                                      </div>
-                                                                                                                                      <div
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <span
-                                                                                                                                              style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                  style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                      data-custom-class="body_text"><strong><em>In
-                                                                                                                                                              Short:</em></strong><em> <span
-                                                                                                                                                              style="color: rgb(89, 89, 89);"><span
-                                                                                                                                                                  style="font-size: 15px;"><span
-                                                                                                                                                                      data-custom-class="body_text"><em>
-                                                                                                                                                                          <bdt
-                                                                                                                                                                              class="block-component">
-                                                                                                                                                                          </bdt>
-                                                                                                                                                                      </em></span></span> </span>You
-                                                                                                                                                          may
-                                                                                                                                                          review,
-                                                                                                                                                          change,
-                                                                                                                                                          or
-                                                                                                                                                          terminate
-                                                                                                                                                          your
-                                                                                                                                                          account
-                                                                                                                                                          at
-                                                                                                                                                          any
-                                                                                                                                                          time.</em><span
-                                                                                                                                                          style="color: rgb(89, 89, 89);"><span
-                                                                                                                                                              style="font-size: 15px;">
-                                                                                                                                                              <bdt
-                                                                                                                                                                  class="block-component">
-                                                                                                                                                                  <bdt
-                                                                                                                                                                      class="block-component">
-                                                                                                                                                          </span></span></span>
-                                                                                                                                      </div>
-                                                                                                                                      <div
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <br>
-                                                                                                                                      </div>
-                                                                                                                                      <div id="withdrawconsent"
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <span
-                                                                                                                                              style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                  style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                      data-custom-class="body_text"><strong><u>Withdrawing
-                                                                                                                                                              your
-                                                                                                                                                              consent:</u></strong>
-                                                                                                                                                      If
-                                                                                                                                                      we
-                                                                                                                                                      are
-                                                                                                                                                      relying
-                                                                                                                                                      on
-                                                                                                                                                      your
-                                                                                                                                                      consent
-                                                                                                                                                      to
-                                                                                                                                                      process
-                                                                                                                                                      your
-                                                                                                                                                      personal
-                                                                                                                                                      information,
-                                                                                                                                                      <bdt
-                                                                                                                                                          class="block-component">
-                                                                                                                                                      </bdt>
-                                                                                                                                                      which
-                                                                                                                                                      may
-                                                                                                                                                      be
-                                                                                                                                                      express
-                                                                                                                                                      and/or
-                                                                                                                                                      implied
-                                                                                                                                                      consent
-                                                                                                                                                      depending
-                                                                                                                                                      on
-                                                                                                                                                      the
-                                                                                                                                                      applicable
-                                                                                                                                                      law,
-                                                                                                                                                      <bdt
-                                                                                                                                                          class="statement-end-if-in-editor">
-                                                                                                                                                      </bdt>
-                                                                                                                                                      you
-                                                                                                                                                      have
-                                                                                                                                                      the
-                                                                                                                                                      right
-                                                                                                                                                      to
-                                                                                                                                                      withdraw
-                                                                                                                                                      your
-                                                                                                                                                      consent
-                                                                                                                                                      at
-                                                                                                                                                      any
-                                                                                                                                                      time.
-                                                                                                                                                      You
-                                                                                                                                                      can
-                                                                                                                                                      withdraw
-                                                                                                                                                      your
-                                                                                                                                                      consent
-                                                                                                                                                      at
-                                                                                                                                                      any
-                                                                                                                                                      time
-                                                                                                                                                      by
-                                                                                                                                                      contacting
-                                                                                                                                                      us
-                                                                                                                                                      by
-                                                                                                                                                      using
-                                                                                                                                                      the
-                                                                                                                                                      contact
-                                                                                                                                                      details
-                                                                                                                                                      provided
-                                                                                                                                                      in
-                                                                                                                                                      the
-                                                                                                                                                      section
-                                                                                                                                                      <bdt
-                                                                                                                                                          class="block-component">
-                                                                                                                                                      </bdt>
-                                                                                                                                                      "
-                                                                                                                                                      <bdt
-                                                                                                                                                          class="statement-end-if-in-editor">
-                                                                                                                                                      </bdt>
-                                                                                                                                                      </span></span></span><a
-                                                                                                                                              data-custom-class="link"
-                                                                                                                                              href="#contact"><span
-                                                                                                                                                  style="font-size: 15px; color: rgb(0, 58, 250);"><span
-                                                                                                                                                      style="font-size: 15px; color: rgb(0, 58, 250);"><span
-                                                                                                                                                          data-custom-class="body_text">HOW
-                                                                                                                                                          CAN
-                                                                                                                                                          YOU
-                                                                                                                                                          CONTACT
-                                                                                                                                                          US
-                                                                                                                                                          ABOUT
-                                                                                                                                                          THIS
-                                                                                                                                                          NOTICE?</span></span></span></a><span
-                                                                                                                                              style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                  style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                      data-custom-class="body_text">
-                                                                                                                                                      <bdt
-                                                                                                                                                          class="block-component">
-                                                                                                                                                      </bdt>
-                                                                                                                                                      "
-                                                                                                                                                      <bdt
-                                                                                                                                                          class="statement-end-if-in-editor">
-                                                                                                                                                      </bdt>
-                                                                                                                                                      below
-                                                                                                                                                      <bdt
-                                                                                                                                                          class="block-component">
-                                                                                                                                                      </bdt>
-                                                                                                                                                      .
-                                                                                                                                                  </span></span></span>
-                                                                                                                                      </div>
-                                                                                                                                      <div
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <br>
-                                                                                                                                      </div>
-                                                                                                                                      <div
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <span
-                                                                                                                                              style="font-size: 15px;"><span
-                                                                                                                                                  data-custom-class="body_text">However,
-                                                                                                                                                  please
-                                                                                                                                                  note
-                                                                                                                                                  that
-                                                                                                                                                  this
-                                                                                                                                                  will
-                                                                                                                                                  not
-                                                                                                                                                  affect
-                                                                                                                                                  the
-                                                                                                                                                  lawfulness
-                                                                                                                                                  of
-                                                                                                                                                  the
-                                                                                                                                                  processing
-                                                                                                                                                  before
-                                                                                                                                                  its
-                                                                                                                                                  withdrawal
-                                                                                                                                                  nor,
-                                                                                                                                                  <bdt
-                                                                                                                                                      class="block-component">
-                                                                                                                                                  </bdt>
-                                                                                                                                                  when
-                                                                                                                                                  applicable
-                                                                                                                                                  law
-                                                                                                                                                  allows,
-                                                                                                                                                  <bdt
-                                                                                                                                                      class="statement-end-if-in-editor">
-                                                                                                                                                  </bdt>
-                                                                                                                                                  will
-                                                                                                                                                  it
-                                                                                                                                                  affect
-                                                                                                                                                  the
-                                                                                                                                                  processing
-                                                                                                                                                  of
-                                                                                                                                                  your
-                                                                                                                                                  personal
-                                                                                                                                                  information
-                                                                                                                                                  conducted
-                                                                                                                                                  in
-                                                                                                                                                  reliance
-                                                                                                                                                  on
-                                                                                                                                                  lawful
-                                                                                                                                                  processing
-                                                                                                                                                  grounds
-                                                                                                                                                  other
-                                                                                                                                                  than
-                                                                                                                                                  consent.
-                                                                                                                                                  <bdt
-                                                                                                                                                      class="block-component">
-                                                                                                                                                  </bdt>
-                                                                                                                                                  </span></span>
-                                                                                                                                          <bdt
-                                                                                                                                              class="block-component">
-                                                                                                                                              <span
-                                                                                                                                                  style="font-size: 15px;"><span
-                                                                                                                                                      data-custom-class="body_text"></span></span>
-                                                                                                                                          </bdt>
-                                                                                                                                          <span
-                                                                                                                                              style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                  style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                      data-custom-class="body_text"><span
-                                                                                                                                                          style="font-size: 15px;"><span
-                                                                                                                                                              style="color: rgb(89, 89, 89);"><span
-                                                                                                                                                                  style="font-size: 15px;"><span
-                                                                                                                                                                      style="color: rgb(89, 89, 89);"><span
-                                                                                                                                                                          data-custom-class="body_text"><span
-                                                                                                                                                                              style="font-size: 15px;"><span
-                                                                                                                                                                                  style="color: rgb(89, 89, 89);">
-                                                                                                                                                                                  <bdt
-                                                                                                                                                                                      class="block-component">
-                                                                                                                                                                                  </bdt>
-                                                                                                                                                                              </span></span></span></span></span></span></span></span></span></span></span></span>
-                                                                                                                                          <bdt
-                                                                                                                                              class="block-component">
-                                                                                                                                              <span
-                                                                                                                                                  style="font-size: 15px;"><span
-                                                                                                                                                      data-custom-class="body_text"></span></span>
-                                                                                                                                          </bdt>
-                                                                                                                                      </div>
-                                                                                                                                      <div
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <br>
-                                                                                                                                      </div>
-                                                                                                                                      <div
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <span
-                                                                                                                                              data-custom-class="body_text"><span
-                                                                                                                                                  style="font-size: 15px;">If
-                                                                                                                                                  you
-                                                                                                                                                  have
-                                                                                                                                                  questions
-                                                                                                                                                  or
-                                                                                                                                                  comments
-                                                                                                                                                  about
-                                                                                                                                                  your
-                                                                                                                                                  privacy
-                                                                                                                                                  rights,
-                                                                                                                                                  you
-                                                                                                                                                  may
-                                                                                                                                                  email
-                                                                                                                                                  us
-                                                                                                                                                  at
-                                                                                                                                                  <bdt
-                                                                                                                                                      class="question">
-                                                                                                                                                      smartbih4@gmail.com
-                                                                                                                                                  </bdt>
-                                                                                                                                                  .</span></span>
-                                                                                                                                          <bdt
-                                                                                                                                              class="statement-end-if-in-editor">
-                                                                                                                                              <span
-                                                                                                                                                  style="font-size: 15px;"><span
-                                                                                                                                                      data-custom-class="body_text"></span></span>
-                                                                                                                                          </bdt>
-                                                                                                                                      </div>
-                                                                                                                                      <div
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <br>
-                                                                                                                                      </div>
-                                                                                                                                      <div id="DNT"
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <span
-                                                                                                                                              style="color: rgb(127, 127, 127);"><span
-                                                                                                                                                  style="color: rgb(89, 89, 89); font-size: 15px;"><span
-                                                                                                                                                      style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                          style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                              id="control"
-                                                                                                                                                              style="color: rgb(0, 0, 0);"><strong><span
-                                                                                                                                                                      data-custom-class="heading_1">8.
-                                                                                                                                                                      CONTROLS
-                                                                                                                                                                      FOR
-                                                                                                                                                                      DO-NOT-TRACK
-                                                                                                                                                                      FEATURES</span></strong></span></span></span></span></span>
-                                                                                                                                      </div>
-                                                                                                                                      <div
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <br>
-                                                                                                                                      </div>
-                                                                                                                                      <div
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <span
-                                                                                                                                              style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                  style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                      data-custom-class="body_text">Most
-                                                                                                                                                      web
-                                                                                                                                                      browsers
-                                                                                                                                                      and
-                                                                                                                                                      some
-                                                                                                                                                      mobile
-                                                                                                                                                      operating
-                                                                                                                                                      systems
-                                                                                                                                                      and
-                                                                                                                                                      mobile
-                                                                                                                                                      applications
-                                                                                                                                                      include
-                                                                                                                                                      a
-                                                                                                                                                      Do-Not-Track
-                                                                                                                                                      (
-                                                                                                                                                      <bdt
-                                                                                                                                                          class="block-component">
-                                                                                                                                                      </bdt>
-                                                                                                                                                      "DNT"
-                                                                                                                                                      <bdt
-                                                                                                                                                          class="statement-end-if-in-editor">
-                                                                                                                                                      </bdt>
-                                                                                                                                                      )
-                                                                                                                                                      feature
-                                                                                                                                                      or
-                                                                                                                                                      setting
-                                                                                                                                                      you
-                                                                                                                                                      can
-                                                                                                                                                      activate
-                                                                                                                                                      to
-                                                                                                                                                      signal
-                                                                                                                                                      your
-                                                                                                                                                      privacy
-                                                                                                                                                      preference
-                                                                                                                                                      not
-                                                                                                                                                      to
-                                                                                                                                                      have
-                                                                                                                                                      data
-                                                                                                                                                      about
-                                                                                                                                                      your
-                                                                                                                                                      online
-                                                                                                                                                      browsing
-                                                                                                                                                      activities
-                                                                                                                                                      monitored
-                                                                                                                                                      and
-                                                                                                                                                      collected.
-                                                                                                                                                      At
-                                                                                                                                                      this
-                                                                                                                                                      stage
-                                                                                                                                                      no
-                                                                                                                                                      uniform
-                                                                                                                                                      technology
-                                                                                                                                                      standard
-                                                                                                                                                      for
-                                                                                                                                                      <bdt
-                                                                                                                                                          class="block-component">
-                                                                                                                                                      </bdt>
-                                                                                                                                                      recognizing
-                                                                                                                                                      <bdt
-                                                                                                                                                          class="statement-end-if-in-editor">
-                                                                                                                                                      </bdt>
-                                                                                                                                                      and
-                                                                                                                                                      implementing
-                                                                                                                                                      DNT
-                                                                                                                                                      signals
-                                                                                                                                                      has
-                                                                                                                                                      been
-                                                                                                                                                      <bdt
-                                                                                                                                                          class="block-component">
-                                                                                                                                                      </bdt>
-                                                                                                                                                      finalized
-                                                                                                                                                      <bdt
-                                                                                                                                                          class="statement-end-if-in-editor">
-                                                                                                                                                      </bdt>
-                                                                                                                                                      .
-                                                                                                                                                      As
-                                                                                                                                                      such,
-                                                                                                                                                      we
-                                                                                                                                                      do
-                                                                                                                                                      not
-                                                                                                                                                      currently
-                                                                                                                                                      respond
-                                                                                                                                                      to
-                                                                                                                                                      DNT
-                                                                                                                                                      browser
-                                                                                                                                                      signals
-                                                                                                                                                      or
-                                                                                                                                                      any
-                                                                                                                                                      other
-                                                                                                                                                      mechanism
-                                                                                                                                                      that
-                                                                                                                                                      automatically
-                                                                                                                                                      communicates
-                                                                                                                                                      your
-                                                                                                                                                      choice
-                                                                                                                                                      not
-                                                                                                                                                      to
-                                                                                                                                                      be
-                                                                                                                                                      tracked
-                                                                                                                                                      online.
-                                                                                                                                                      If
-                                                                                                                                                      a
-                                                                                                                                                      standard
-                                                                                                                                                      for
-                                                                                                                                                      online
-                                                                                                                                                      tracking
-                                                                                                                                                      is
-                                                                                                                                                      adopted
-                                                                                                                                                      that
-                                                                                                                                                      we
-                                                                                                                                                      must
-                                                                                                                                                      follow
-                                                                                                                                                      in
-                                                                                                                                                      the
-                                                                                                                                                      future,
-                                                                                                                                                      we
-                                                                                                                                                      will
-                                                                                                                                                      inform
-                                                                                                                                                      you
-                                                                                                                                                      about
-                                                                                                                                                      that
-                                                                                                                                                      practice
-                                                                                                                                                      in
-                                                                                                                                                      a
-                                                                                                                                                      revised
-                                                                                                                                                      version
-                                                                                                                                                      of
-                                                                                                                                                      this
-                                                                                                                                                      privacy
-                                                                                                                                                      notice.
-                                                                                                                                                      <bdt
-                                                                                                                                                          class="block-component">
-                                                                                                                                                      </bdt>
-                                                                                                                                                      </bdt>
-                                                                                                                                                      </span></span></span></span></span></span></span></span></span></span></span>
-                                                                                                                                          </bdt>
-                                                                                                                                          </span></span></span></span></span></span></span></span></span></span>
-                                                                                                                                          <bdt
-                                                                                                                                              class="block-component">
-                                                                                                                                              <span
-                                                                                                                                                  style="font-size: 15px;">
-                                                                                                                                          </bdt>
-                                                                                                                                          </span>
-                                                                                                                                          <bdt
-                                                                                                                                              class="block-component">
-                                                                                                                                              <span
-                                                                                                                                                  style="font-size: 15px;"></span>
-                                                                                                                                          </bdt>
-                                                                                                                                      </div>
-                                                                                                                                      <div
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <br>
-                                                                                                                                      </div>
-                                                                                                                                      <div id="policyupdates"
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <span
-                                                                                                                                              style="color: rgb(127, 127, 127);"><span
-                                                                                                                                                  style="color: rgb(89, 89, 89); font-size: 15px;"><span
-                                                                                                                                                      style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                          style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                              id="control"
-                                                                                                                                                              style="color: rgb(0, 0, 0);"><strong><span
-                                                                                                                                                                      data-custom-class="heading_1">9.
-                                                                                                                                                                      DO
-                                                                                                                                                                      WE
-                                                                                                                                                                      MAKE
-                                                                                                                                                                      UPDATES
-                                                                                                                                                                      TO
-                                                                                                                                                                      THIS
-                                                                                                                                                                      NOTICE?</span></strong></span></span></span></span></span>
-                                                                                                                                      </div>
-                                                                                                                                      <div
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <br>
-                                                                                                                                      </div>
-                                                                                                                                      <div
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <span
-                                                                                                                                              style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                  style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                      data-custom-class="body_text"><em><strong>In
-                                                                                                                                                              Short: </strong>Yes,
-                                                                                                                                                          we
-                                                                                                                                                          will
-                                                                                                                                                          update
-                                                                                                                                                          this
-                                                                                                                                                          notice
-                                                                                                                                                          as
-                                                                                                                                                          necessary
-                                                                                                                                                          to
-                                                                                                                                                          stay
-                                                                                                                                                          compliant
-                                                                                                                                                          with
-                                                                                                                                                          relevant
-                                                                                                                                                          laws.</em></span></span></span>
-                                                                                                                                      </div>
-                                                                                                                                      <div
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <br>
-                                                                                                                                      </div>
-                                                                                                                                      <div
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <span
-                                                                                                                                              style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                  style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                      data-custom-class="body_text">We
-                                                                                                                                                      may
-                                                                                                                                                      update
-                                                                                                                                                      this
-                                                                                                                                                      privacy
-                                                                                                                                                      notice
-                                                                                                                                                      from
-                                                                                                                                                      time
-                                                                                                                                                      to
-                                                                                                                                                      time.
-                                                                                                                                                      The
-                                                                                                                                                      updated
-                                                                                                                                                      version
-                                                                                                                                                      will
-                                                                                                                                                      be
-                                                                                                                                                      indicated
-                                                                                                                                                      by
-                                                                                                                                                      an
-                                                                                                                                                      updated
-                                                                                                                                                      <bdt
-                                                                                                                                                          class="block-component">
-                                                                                                                                                      </bdt>
-                                                                                                                                                      "Revised"
-                                                                                                                                                      <bdt
-                                                                                                                                                          class="statement-end-if-in-editor">
-                                                                                                                                                      </bdt>
-                                                                                                                                                      date
-                                                                                                                                                      and
-                                                                                                                                                      the
-                                                                                                                                                      updated
-                                                                                                                                                      version
-                                                                                                                                                      will
-                                                                                                                                                      be
-                                                                                                                                                      effective
-                                                                                                                                                      as
-                                                                                                                                                      soon
-                                                                                                                                                      as
-                                                                                                                                                      it
-                                                                                                                                                      is
-                                                                                                                                                      accessible.
-                                                                                                                                                      If
-                                                                                                                                                      we
-                                                                                                                                                      make
-                                                                                                                                                      material
-                                                                                                                                                      changes
-                                                                                                                                                      to
-                                                                                                                                                      this
-                                                                                                                                                      privacy
-                                                                                                                                                      notice,
-                                                                                                                                                      we
-                                                                                                                                                      may
-                                                                                                                                                      notify
-                                                                                                                                                      you
-                                                                                                                                                      either
-                                                                                                                                                      by
-                                                                                                                                                      prominently
-                                                                                                                                                      posting
-                                                                                                                                                      a
-                                                                                                                                                      notice
-                                                                                                                                                      of
-                                                                                                                                                      such
-                                                                                                                                                      changes
-                                                                                                                                                      or
-                                                                                                                                                      by
-                                                                                                                                                      directly
-                                                                                                                                                      sending
-                                                                                                                                                      you
-                                                                                                                                                      a
-                                                                                                                                                      notification.
-                                                                                                                                                      We
-                                                                                                                                                      encourage
-                                                                                                                                                      you
-                                                                                                                                                      to
-                                                                                                                                                      review
-                                                                                                                                                      this
-                                                                                                                                                      privacy
-                                                                                                                                                      notice
-                                                                                                                                                      frequently
-                                                                                                                                                      to
-                                                                                                                                                      be
-                                                                                                                                                      informed
-                                                                                                                                                      of
-                                                                                                                                                      how
-                                                                                                                                                      we
-                                                                                                                                                      are
-                                                                                                                                                      protecting
-                                                                                                                                                      your
-                                                                                                                                                      information.</span></span></span>
-                                                                                                                                      </div>
-                                                                                                                                      <div
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <br>
-                                                                                                                                      </div>
-                                                                                                                                      <div id="contact"
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <span
-                                                                                                                                              style="color: rgb(127, 127, 127);"><span
-                                                                                                                                                  style="color: rgb(89, 89, 89); font-size: 15px;"><span
-                                                                                                                                                      style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                          style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                              id="control"
-                                                                                                                                                              style="color: rgb(0, 0, 0);"><strong><span
-                                                                                                                                                                      data-custom-class="heading_1">10.
-                                                                                                                                                                      HOW
-                                                                                                                                                                      CAN
-                                                                                                                                                                      YOU
-                                                                                                                                                                      CONTACT
-                                                                                                                                                                      US
-                                                                                                                                                                      ABOUT
-                                                                                                                                                                      THIS
-                                                                                                                                                                      NOTICE?</span></strong></span></span></span></span></span>
-                                                                                                                                      </div>
-                                                                                                                                      <div
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <br>
-                                                                                                                                      </div>
-                                                                                                                                      <div
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <span
-                                                                                                                                              style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                  style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                      data-custom-class="body_text">If
-                                                                                                                                                      you
-                                                                                                                                                      have
-                                                                                                                                                      questions
-                                                                                                                                                      or
-                                                                                                                                                      comments
-                                                                                                                                                      about
-                                                                                                                                                      this
-                                                                                                                                                      notice,
-                                                                                                                                                      you
-                                                                                                                                                      may
-                                                                                                                                                      <span
-                                                                                                                                                          style="color: rgb(89, 89, 89); font-size: 15px;"><span
-                                                                                                                                                              data-custom-class="body_text">
-                                                                                                                                                              <bdt
-                                                                                                                                                                  class="block-component">
-                                                                                                                                                                  <bdt
-                                                                                                                                                                      class="block-component">
-                                                                                                                                                                  </bdt>
-                                                                                                                                                              </bdt>
-                                                                                                                                                              email
-                                                                                                                                                              us
-                                                                                                                                                              at
-                                                                                                                                                              <bdt
-                                                                                                                                                                  class="question">
-                                                                                                                                                                  smartbih4@gmail.com
-                                                                                                                                                                  or
-                                                                                                                                                              </bdt>
-                                                                                                                                                              <bdt
-                                                                                                                                                                  class="statement-end-if-in-editor">
-                                                                                                                                                                  <bdt
-                                                                                                                                                                      class="block-component">
-                                                                                                                                                                  </bdt>
-                                                                                                                                                              </bdt>
-                                                                                                                                                          </span></span><span
-                                                                                                                                                          style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                              style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                                  data-custom-class="body_text">contact
-                                                                                                                                                                  us
-                                                                                                                                                                  by
-                                                                                                                                                                  post
-                                                                                                                                                                  at:</span></span></span></span></span></span>
-                                                                                                                                      </div>
-                                                                                                                                      <div
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <br>
-                                                                                                                                      </div>
-                                                                                                                                      <div
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <span
-                                                                                                                                              style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                  style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                      data-custom-class="body_text"><span
-                                                                                                                                                          style="font-size: 15px;"><span
-                                                                                                                                                              style="color: rgb(89, 89, 89);"><span
-                                                                                                                                                                  style="color: rgb(89, 89, 89);"><span
-                                                                                                                                                                      data-custom-class="body_text">
-                                                                                                                                                                      <bdt
-                                                                                                                                                                          class="question">
-                                                                                                                                                                          Badan
-                                                                                                                                                                          Perencanaan,
-                                                                                                                                                                          Penelitian
-                                                                                                                                                                          dan
-                                                                                                                                                                          Pengembangan
-                                                                                                                                                                          Daerah
-                                                                                                                                                                          Kabupaten
-                                                                                                                                                                          Bintan
-                                                                                                                                                                      </bdt>
-                                                                                                                                                                  </span></span></span></span></span><span
-                                                                                                                                                      data-custom-class="body_text"><span
-                                                                                                                                                          style="color: rgb(89, 89, 89);"><span
-                                                                                                                                                              data-custom-class="body_text">
-                                                                                                                                                              <bdt
-                                                                                                                                                                  class="block-component">
-                                                                                                                                                              </bdt>
-                                                                                                                                                              </bdt>
-                                                                                                                                                          </span></span></span></span>
-                                                                                                                                      </div>
-                                                                                                                                      <div
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <span
-                                                                                                                                              style="font-size: 15px;"><span
-                                                                                                                                                  data-custom-class="body_text">
-                                                                                                                                                  <bdt
-                                                                                                                                                      class="question">
-                                                                                                                                                      Jl.
-                                                                                                                                                      Jend
-                                                                                                                                                      A
-                                                                                                                                                      Yani,
-                                                                                                                                                      KM
-                                                                                                                                                      5
-                                                                                                                                                      Atas
-                                                                                                                                                  </bdt>
-                                                                                                                                                  <span
-                                                                                                                                                      style="color: rgb(89, 89, 89);"><span
-                                                                                                                                                          style="font-size: 15px;">
-                                                                                                                                                          <bdt
-                                                                                                                                                              class="block-component">
-                                                                                                                                                          </bdt>
-                                                                                                                                                      </span></span>
-                                                                                                                                              </span>
-                                                                                                                                              </bdt>
-                                                                                                                                              </span>
-                                                                                                                                      </div>
-                                                                                                                                      <div
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <span
-                                                                                                                                              style="font-size: 15px;"><span
-                                                                                                                                                  data-custom-class="body_text">
-                                                                                                                                                  <bdt
-                                                                                                                                                      class="question">
-                                                                                                                                                      Tanjungpinang
-                                                                                                                                                  </bdt>
-                                                                                                                                                  <span
-                                                                                                                                                      style="color: rgb(89, 89, 89);"><span
-                                                                                                                                                          style="font-size: 15px;">
-                                                                                                                                                          <bdt
-                                                                                                                                                              class="block-component">
-                                                                                                                                                          </bdt>
-                                                                                                                                                          ,
-                                                                                                                                                          <bdt
-                                                                                                                                                              class="question">
-                                                                                                                                                              Kepulauan
-                                                                                                                                                              Riau
-                                                                                                                                                          </bdt>
-                                                                                                                                                          <bdt
-                                                                                                                                                              class="statement-end-if-in-editor">
-                                                                                                                                                          </bdt>
-                                                                                                                                                          <bdt
-                                                                                                                                                              class="block-component">
-                                                                                                                                                          </bdt>
-                                                                                                                                                          <bdt
-                                                                                                                                                              class="question">
-                                                                                                                                                              29122
-                                                                                                                                                          </bdt>
-                                                                                                                                                          <bdt
-                                                                                                                                                              class="statement-end-if-in-editor">
-                                                                                                                                                          </bdt>
-                                                                                                                                                          <bdt
-                                                                                                                                                              class="block-component">
-                                                                                                                                                          </bdt>
-                                                                                                                                                          <bdt
-                                                                                                                                                              class="block-component">
-                                                                                                                                                          </bdt>
-                                                                                                                                                      </span></span>
-                                                                                                                                              </span>
-                                                                                                                                              </bdt>
-                                                                                                                                              </span>
-                                                                                                                                      </div>
-                                                                                                                                      <div
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <span
-                                                                                                                                              style="font-size: 15px;"><span
-                                                                                                                                                  data-custom-class="body_text"><span
-                                                                                                                                                      style="font-size: 15px;"><span
-                                                                                                                                                          data-custom-class="body_text"><span
-                                                                                                                                                              style="color: rgb(89, 89, 89);">
-                                                                                                                                                              <bdt
-                                                                                                                                                                  class="block-component">
-                                                                                                                                                              </bdt>
-                                                                                                                                                          </span></span></span>
-                                                                                                                                                  <bdt
-                                                                                                                                                      class="question">
-                                                                                                                                                      Indonesia
-                                                                                                                                                  </bdt>
-                                                                                                                                                  <span
-                                                                                                                                                      style="font-size: 15px;"><span
-                                                                                                                                                          data-custom-class="body_text"><span
-                                                                                                                                                              style="color: rgb(89, 89, 89);">
-                                                                                                                                                              <bdt
-                                                                                                                                                                  class="statement-end-if-in-editor">
-                                                                                                                                                                  <span
-                                                                                                                                                                      style="font-size: 15px;"><span
-                                                                                                                                                                          data-custom-class="body_text"><span
-                                                                                                                                                                              style="color: rgb(89, 89, 89);">
-                                                                                                                                                                              <bdt
-                                                                                                                                                                                  class="statement-end-if-in-editor">
-                                                                                                                                                                                  <span
-                                                                                                                                                                                      style="font-size: 15px;"><span
-                                                                                                                                                                                          data-custom-class="body_text"><span
-                                                                                                                                                                                              style="color: rgb(89, 89, 89);">
-                                                                                                                                                                                              <bdt
-                                                                                                                                                                                                  class="statement-end-if-in-editor">
-                                                                                                                                                                                              </bdt>
-                                                                                                                                                                                          </span></span></span>
-                                                                                                                                                                              </bdt>
-                                                                                                                                                                              <bdt
-                                                                                                                                                                                  class="statement-end-if-in-editor">
-                                                                                                                                                                              </bdt>
-                                                                                                                                                                          </span></span></span><span
-                                                                                                                                                                      data-custom-class="body_text"><span
-                                                                                                                                                                          style="color: rgb(89, 89, 89);"><span
-                                                                                                                                                                              style="font-size: 15px;">
-                                                                                                                                                                              <bdt
-                                                                                                                                                                                  class="statement-end-if-in-editor">
-                                                                                                                                                                              </bdt>
-                                                                                                                                                                          </span></span></span>
-                                                                                                                                                              </bdt>
-                                                                                                                                                          </span></span></span>
-                                                                                                                                              </span><span
-                                                                                                                                                  data-custom-class="body_text"><span
-                                                                                                                                                      style="font-size: 15px;"><span
-                                                                                                                                                          data-custom-class="body_text"><span
-                                                                                                                                                              style="color: rgb(89, 89, 89);">
-                                                                                                                                                              <bdt
-                                                                                                                                                                  class="statement-end-if-in-editor">
-                                                                                                                                                                  <span
-                                                                                                                                                                      style="color: rgb(89, 89, 89);"><span
-                                                                                                                                                                          style="font-size: 15px;"><span
-                                                                                                                                                                              data-custom-class="body_text">
-                                                                                                                                                                              <bdt
-                                                                                                                                                                                  class="block-component">
-                                                                                                                                                                                  <bdt
-                                                                                                                                                                                      class="block-component">
-                                                                                                                                                                                  </bdt>
-                                                                                                                                                                          </span></span></span>
-                                                                                                                                                          </span></span></span>
-                                                                                                                                                  <bdt
-                                                                                                                                                      class="block-component">
-                                                                                                                                                      <span
-                                                                                                                                                          style="font-size: 15px;"></span>
-                                                                                                                                                  </bdt>
-                                                                                                                                                  <span
-                                                                                                                                                      style="font-size: 15px;"><span
-                                                                                                                                                          data-custom-class="body_text"><span
-                                                                                                                                                              style="color: rgb(89, 89, 89); font-size: 15px;"><span
-                                                                                                                                                                  style="font-size: 15px;"><span
-                                                                                                                                                                      data-custom-class="body_text">
-                                                                                                                                                                      <bdt
-                                                                                                                                                                          class="statement-end-if-in-editor">
-                                                                                                                                                                          <bdt
-                                                                                                                                                                              class="block-component">
-                                                                                                                                                                          </bdt>
-                                                                                                                                                                  </span></span>
-                                                                                                                                      </div>
-                                                                                                                                      <div
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <br>
-                                                                                                                                      </div>
-                                                                                                                                      <div id="request"
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <span
-                                                                                                                                              style="color: rgb(127, 127, 127);"><span
-                                                                                                                                                  style="color: rgb(89, 89, 89); font-size: 15px;"><span
-                                                                                                                                                      style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                          style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                              id="control"
-                                                                                                                                                              style="color: rgb(0, 0, 0);"><strong><span
-                                                                                                                                                                      data-custom-class="heading_1">11.
-                                                                                                                                                                      HOW
-                                                                                                                                                                      CAN
-                                                                                                                                                                      YOU
-                                                                                                                                                                      REVIEW,
-                                                                                                                                                                      UPDATE,
-                                                                                                                                                                      OR
-                                                                                                                                                                      DELETE
-                                                                                                                                                                      THE
-                                                                                                                                                                      DATA
-                                                                                                                                                                      WE
-                                                                                                                                                                      COLLECT
-                                                                                                                                                                      FROM
-                                                                                                                                                                      YOU?</span></strong></span></span></span></span></span>
-                                                                                                                                      </div>
-                                                                                                                                      <div
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <br>
-                                                                                                                                      </div>
-                                                                                                                                      <div
-                                                                                                                                          style="line-height: 1.5;">
-                                                                                                                                          <span
-                                                                                                                                              style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                  style="font-size: 15px; color: rgb(89, 89, 89);"><span
-                                                                                                                                                      data-custom-class="body_text">
-                                                                                                                                                      <bdt
-                                                                                                                                                          class="block-component">
-                                                                                                                                                      </bdt>
-                                                                                                                                                      Based
-                                                                                                                                                      on
-                                                                                                                                                      the
-                                                                                                                                                      applicable
-                                                                                                                                                      laws
-                                                                                                                                                      of
-                                                                                                                                                      your
-                                                                                                                                                      country,
-                                                                                                                                                      you
-                                                                                                                                                      may
-                                                                                                                                                      have
-                                                                                                                                                      the
-                                                                                                                                                      right
-                                                                                                                                                      to
-                                                                                                                                                      request
-                                                                                                                                                      access
-                                                                                                                                                      to
-                                                                                                                                                      the
-                                                                                                                                                      personal
-                                                                                                                                                      information
-                                                                                                                                                      we
-                                                                                                                                                      collect
-                                                                                                                                                      from
-                                                                                                                                                      you,
-                                                                                                                                                      change
-                                                                                                                                                      that
-                                                                                                                                                      information,
-                                                                                                                                                      or
-                                                                                                                                                      delete
-                                                                                                                                                      it.
-                                                                                                                                                      <bdt
-                                                                                                                                                          class="else-block">
-                                                                                                                                                          <bdt
-                                                                                                                                                              class="block-component">
-                                                                                                                                                          </bdt>
-                                                                                                                                                          To
-                                                                                                                                                          request
-                                                                                                                                                          to
-                                                                                                                                                          review,
-                                                                                                                                                          update,
-                                                                                                                                                          or
-                                                                                                                                                          delete
-                                                                                                                                                          your
-                                                                                                                                                          personal
-                                                                                                                                                          information,
-                                                                                                                                                          please
-                                                                                                                                                          <bdt
-                                                                                                                                                              class="block-component">
-                                                                                                                                                          </bdt>
-                                                                                                                                                          fill
-                                                                                                                                                          out
-                                                                                                                                                          and
-                                                                                                                                                          submit
-                                                                                                                                                          a
-                                                                                                                                                  </span><span
-                                                                                                                                                      style="color: rgb(0, 58, 250);"><span
-                                                                                                                                                          data-custom-class="body_text"><span
-                                                                                                                                                              style="color: rgb(0, 58, 250); font-size: 15px;"><a
-                                                                                                                                                                  data-custom-class="link"
-                                                                                                                                                                  href="https://app.termly.io/notify/dcd1695d-1a9c-4d95-9cd1-08aa62694d0d"
-                                                                                                                                                                  rel="noopener noreferrer"
-                                                                                                                                                                  target="_blank">data
-                                                                                                                                                                  subject
-                                                                                                                                                                  access
-                                                                                                                                                                  request</a></span></span></span>
-                                                                                                                                                  <bdt
-                                                                                                                                                      class="block-component">
-                                                                                                                                                      <span
-                                                                                                                                                          data-custom-class="body_text">
-                                                                                                                                                  </bdt>
-                                                                                                                                              </span></span><span
-                                                                                                                                              data-custom-class="body_text">.</span></span></span>
-                                                                                                                                      </div>
-                                                                                                                                      <style>
-                                                                                                                                          ul {
-                                                                                                                                              list-style-type: square;
-                                                                                                                                          }
+  <div class="data-grid">
+    <div class="data-category">
+      <strong>Sosial</strong>
+      <ul>
+        <li>Persentase Penduduk Miskin (PPM)</li>
+        <li>Indeks Pembangunan Manusia (IPM)</li>
+        <li>Angka Rata-Rata Lama Sekolah (RLS)</li>
+        <li>Angka Melek Huruf (AMH)</li>
+        <li>Angka Harapan Hidup (AHH)</li>
+        <li>Angka Kelangsungan Hidup Bayi (AKHB)</li>
+        <li>Angka Kematian Ibu Melahirkan (AKIM)</li>
+        <li>Kondisi Ketenagakerjaan (PKK)</li>
+        <li>Indeks Pembangunan Gender (IPG)</li>
+        <li>Indeks Pemberdayaan Gender (IPGG)</li>
+        <li>Angka Partisipasi Kasar SD/SMP/SMA (APK)</li>
+        <li>Angka Partisipasi Murni SD/SMP/SMA (APM)</li>
+        <li>Angka Harapan Lama Sekolah (HLS)</li>
+        <li>Jumlah Rumah Tidak Layak Huni (JRTLH)</li>
+        <li>Indeks Gini (IG)</li>
+        <li>Indeks Daya Beli / PPP (IDB)</li>
+        <li>Persentase Penduduk menurut Pendidikan (PPU)</li>
+        <li>Prevalensi Stunting</li>
+      </ul>
+    </div>
+    <div class="data-category">
+      <strong>Ekonomi</strong>
+      <ul>
+        <li>Pertumbuhan Ekonomi (PE)</li>
+        <li>Laju Inflasi (LI)</li>
+        <li>Distribusi PDRB Atas Dasar Harga Berlaku (ADHB) per sektor A&ndash;RSTU</li>
+        <li>Distribusi PDRB Atas Dasar Harga Konstan (ADHK) per sektor A&ndash;RSTU</li>
+        <li>Kunjungan Wisata (KW)</li>
+        <li>Realisasi Investasi PMA/PMDN</li>
+      </ul>
+    </div>
+    <div class="data-category">
+      <strong>Pertanian &amp; Perikanan</strong>
+      <ul>
+        <li>Produksi Perikanan Budidaya (PPB)</li>
+        <li>Produksi Perikanan Tangkap (PPT)</li>
+        <li>Capaian Produksi Komoditi Unggulan Perkebunan (CPKUP)</li>
+        <li>Capaian Produksi Komoditi Hortikultura (CPKH)</li>
+        <li>Jumlah Produksi Peternakan (JPP)</li>
+      </ul>
+    </div>
+    <div class="data-category">
+      <strong>Kependudukan</strong>
+      <ul>
+        <li>Jumlah Penduduk (JP)</li>
+        <li>Jumlah Penduduk per Kecamatan (JPBKT)</li>
+        <li>Jumlah Penduduk per Kelompok Umur (JPBKU)</li>
+        <li>Pertumbuhan Penduduk (PP)</li>
+      </ul>
+    </div>
+    <div class="data-category">
+      <strong>Infrastruktur</strong>
+      <ul>
+        <li>Panjang Jalan yang Dibangun dan Ditingkatkan (PJDD)</li>
+        <li>Persentase Rumah Tangga dengan Air Bersih (PRT)</li>
+        <li>Persentase Tingkat Kemantapan Jalan (PTKJ)</li>
+      </ul>
+    </div>
+    <div class="data-category">
+      <strong>Video Bintan</strong>
+      <ul>
+        <li>Video profil dan pembangunan daerah Kabupaten Bintan</li>
+      </ul>
+    </div>
+  </div>
 
-                                                                                                                                          ul>li>ul {
-                                                                                                                                              list-style-type: circle;
-                                                                                                                                          }
+  <p>Aplikasi ini <strong>tidak</strong>:</p>
+  <ul>
+    <li>Mengharuskan pengguna membuat akun atau melakukan login</li>
+    <li>Mengumpulkan nama, email, atau identitas pengguna</li>
+    <li>Meminta akses lokasi, kamera, atau penyimpanan perangkat</li>
+    <li>Menggunakan layanan iklan atau pelacak pihak ketiga (<em>third-party tracker</em>)</li>
+  </ul>
 
-                                                                                                                                          ul>li>ul>li>ul {
-                                                                                                                                              list-style-type: square;
-                                                                                                                                          }
+  <!-- 2 -->
+  <h2 id="s2">2. DATA APA YANG DIPROSES?</h2>
 
-                                                                                                                                          ol li {
-                                                                                                                                              font-family: Arial;
-                                                                                                                                          }
-                                                                                                                                      </style>
-                                                                                                                                  </div>
-                                                                                                                                  <div
-                                                                                                                                      style="color: #595959;font-size: 14px;font-family: Arial;padding-top:16px;">
-                                                                                                                                      This
-                                                                                                                                      privacy
-                                                                                                                                      policy
-                                                                                                                                      was
-                                                                                                                                      created
-                                                                                                                                      using
-                                                                                                                                      Termly's
-                                                                                                                                      <a style="color: rgb(48, 48, 241) !important;"
-                                                                                                                                          href="https://termly.io/products/privacy-policy-generator/">Privacy
-                                                                                                                                          Policy
-                                                                                                                                          Generator</a>.
-                                                                                                                                  </div>
-  </body>
+  <h3>Data yang tidak kami kumpulkan</h3>
+  <p>
+    Karena Aplikasi berfungsi sebagai tampilan informasi publik, <strong>kami tidak mengumpulkan,
+    menyimpan, atau memproses data pribadi pengguna</strong> dalam bentuk apapun secara aktif.
+    Kami tidak mengumpulkan:
+  </p>
+  <ul>
+    <li>Nama, email, nomor telepon, atau identitas apapun</li>
+    <li>Lokasi GPS atau lokasi perangkat</li>
+    <li>Data dari kamera, mikrofon, atau penyimpanan</li>
+    <li>Cookie atau <em>identifier</em> lintas sesi</li>
+    <li>Data perilaku pengguna di dalam Aplikasi</li>
+  </ul>
 
+  <h3>Data teknis yang diterima secara otomatis oleh server (log server)</h3>
+  <p>
+    Ketika Aplikasi mengambil data dari server kami, server secara otomatis mencatat informasi
+    teknis standar berikut dalam log sistem:
+  </p>
+  <table>
+    <tr>
+      <th>Data</th>
+      <th>Keterangan</th>
+    </tr>
+    <tr>
+      <td>Alamat IP</td>
+      <td>Diterima otomatis oleh server web dari setiap koneksi jaringan</td>
+    </tr>
+    <tr>
+      <td>User-Agent</td>
+      <td>Jenis perangkat dan versi sistem operasi</td>
+    </tr>
+    <tr>
+      <td>Waktu akses</td>
+      <td>Tanggal dan jam saat permintaan diterima</td>
+    </tr>
+    <tr>
+      <td>Endpoint yang diakses</td>
+      <td>URL API statistik yang diminta (misalnya <code>/api/penduduk</code>)</td>
+    </tr>
+  </table>
+  <p>
+    Data ini diterima <strong>secara pasif</strong> oleh infrastruktur server, bukan dikumpulkan
+    secara aktif oleh Aplikasi. Kami tidak menggunakan data ini untuk mengidentifikasi atau melacak
+    pengguna secara individual. Log server disimpan untuk keperluan keamanan sistem dan
+    pemeliharaan infrastruktur, kemudian dihapus otomatis setelah <strong>30 hari</strong>.
+  </p>
+
+  <!-- 3 -->
+  <h2 id="s3">3. DASAR HUKUM PEMROSESAN DATA</h2>
+  <p>
+    Sesuai <strong>Undang-Undang Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi (UU PDP)</strong>,
+    pemrosesan data teknis log server dilakukan atas dasar:
+  </p>
+  <ul>
+    <li>
+      <strong>Kepentingan yang sah (<em>legitimate interest</em>):</strong> menjaga keamanan dan
+      keandalan infrastruktur sistem informasi pemerintah daerah.
+    </li>
+    <li>
+      <strong>Kewajiban hukum:</strong> pemeliharaan sistem informasi pemerintah sesuai peraturan
+      perundang-undangan yang berlaku.
+    </li>
+  </ul>
+
+  <!-- 4 -->
+  <h2 id="s4">4. IZIN PERANGKAT</h2>
+  <p>
+    Aplikasi ini <strong>tidak meminta izin apapun</strong> pada perangkat Anda. Tidak ada akses ke:
+  </p>
+  <ul>
+    <li>Lokasi (GPS/jaringan)</li>
+    <li>Kamera</li>
+    <li>Penyimpanan / galeri</li>
+    <li>Kontak</li>
+    <li>Mikrofon</li>
+    <li>Identitas perangkat</li>
+  </ul>
+
+  <!-- 5 -->
+  <h2 id="s5">5. KOMUNIKASI JARINGAN</h2>
+  <p>
+    Aplikasi berkomunikasi dengan server <strong>bih.bintankab.go.id</strong> melalui koneksi
+    <strong>HTTPS terenkripsi</strong> untuk mengambil data statistik. Seluruh komunikasi bersifat
+    satu arah: Aplikasi hanya <em>menerima</em> data dari server, tidak mengirimkan data pengguna
+    ke server.
+  </p>
+
+  <!-- 6 -->
+  <h2 id="s6">6. PIHAK KETIGA</h2>
+  <p>
+    Kami <strong>tidak berbagi, menjual, atau mentransfer</strong> data apapun kepada pihak ketiga
+    karena kami memang tidak mengumpulkan data pengguna. Aplikasi tidak mengandung SDK iklan
+    (<em>advertising SDK</em>), SDK analitik pihak ketiga, maupun pelacak (<em>tracker</em>) apapun.
+  </p>
+
+  <!-- 7 -->
+  <h2 id="s7">7. KEAMANAN DATA</h2>
+  <p>
+    Kami menerapkan langkah-langkah teknis dan organisasional yang wajar untuk melindungi
+    infrastruktur server, termasuk enkripsi koneksi menggunakan HTTPS/TLS, pembatasan akses ke
+    log server, dan penghapusan log secara berkala. Namun demikian, tidak ada sistem yang 100%
+    aman. Transmisi data melalui internet dilakukan atas risiko pengguna sendiri.
+  </p>
+
+  <!-- 8 -->
+  <h2 id="s8">8. INFORMASI DARI ANAK-ANAK DI BAWAH UMUR</h2>
+  <p>
+    Aplikasi ini menampilkan informasi publik dan aman digunakan oleh semua kalangan. Kami tidak
+    mengumpulkan data pribadi dari siapapun, termasuk anak-anak di bawah 18 tahun.
+  </p>
+
+  <!-- 9 -->
+  <h2 id="s9">9. HAK-HAK ANDA</h2>
+  <p>
+    Sesuai UU PDP Nomor 27 Tahun 2022, Anda berhak untuk:
+  </p>
+  <ul>
+    <li><strong>Mengakses</strong> informasi tentang data yang berkaitan dengan Anda</li>
+    <li><strong>Meminta koreksi</strong> atas data yang tidak akurat</li>
+    <li><strong>Meminta penghapusan</strong> data Anda dari sistem kami</li>
+    <li><strong>Membatasi pemrosesan</strong> data dalam kondisi tertentu</li>
+    <li><strong>Mengajukan keberatan</strong> atas pemrosesan data Anda</li>
+  </ul>
+  <p>
+    Untuk menggunakan hak-hak tersebut, silakan hubungi kami melalui informasi kontak di bawah ini.
+    Kami akan mempertimbangkan dan menindaklanjuti setiap permintaan sesuai hukum perlindungan
+    data yang berlaku.
+  </p>
+
+  <!-- 10 -->
+  <h2 id="s10">10. PEMBARUAN KEBIJAKAN INI</h2>
+  <p>
+    Kami dapat memperbarui Kebijakan Privasi ini sewaktu-waktu. Perubahan akan ditandai dengan
+    pembaruan tanggal &ldquo;Terakhir diperbarui&rdquo; di bagian atas dokumen ini. Perubahan
+    yang bersifat material akan diberitahukan melalui notifikasi di dalam Aplikasi atau melalui
+    pembaruan di halaman ini. Kami menganjurkan Anda untuk meninjau kebijakan ini secara berkala.
+  </p>
+
+  <!-- 11 -->
+  <h2 id="s11">11. HUBUNGI KAMI</h2>
+  <p>
+    Jika Anda memiliki pertanyaan atau ingin menggunakan hak-hak privasi Anda, silakan hubungi:
+  </p>
+  <p>
+    <strong>Badan Perencanaan, Penelitian dan Pengembangan Daerah Kabupaten Bintan</strong><br>
+    Jl. Jend. A. Yani, KM 5 Atas<br>
+    Tanjungpinang, Kepulauan Riau 29122<br>
+    Indonesia<br><br>
+    Email: <a href="mailto:bapelitbang@bintankab.go.id">bapelitbang@bintankab.go.id</a><br>
+    Website: <a href="https://bih.bintankab.go.id" target="_blank">https://bih.bintankab.go.id</a>
+  </p>
+
+  <p class="footer-note">
+    Kebijakan Privasi ini berlaku mulai Juni 2026 dan menggantikan versi sebelumnya.
+  </p>
+
+</body>
 </html>
