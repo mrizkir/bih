@@ -108,4 +108,16 @@ return [
 
     'prefix' => env('CACHE_PREFIX', Str::slug(env('APP_NAME', 'laravel'), '_').'_cache_'),
 
+    /*
+    |--------------------------------------------------------------------------
+    | Serializable Classes
+    |--------------------------------------------------------------------------
+    |
+    | Laravel 13 menolak deserialisasi objek PHP di cache kecuali kelasnya
+    | didaftarkan di sini. Aplikasi ini hanya menyimpan nilai skalar.
+    |
+    */
+
+    'serializable_classes' => false,
+
 ];
