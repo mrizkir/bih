@@ -90,6 +90,23 @@ class AdminUiTest extends ApplicationTestCase
 
         $this->actingAs($this->admin)
             ->post('/pengguna', [
+                'name' => 'Pengguna Tanpa Foto',
+                'username' => 'pengguna-tanpa-foto',
+                'email' => 'pengguna-tanpa-foto@example.com',
+                'nomor_hp' => '0800000001992',
+                'password' => 'rahasia-uji',
+                'default_role' => 'operator',
+            ])
+            ->assertRedirect(route('pengguna.index'))
+            ->assertSessionHasNoErrors();
+
+        $withoutFoto = User::query()->where('username', 'pengguna-tanpa-foto')->firstOrFail();
+        $this->assertNull($withoutFoto->getFirstMedia('foto'));
+        $withoutFoto->syncRoles([]);
+        $withoutFoto->delete();
+
+        $this->actingAs($this->admin)
+            ->post('/pengguna', [
                 'name' => 'Pengguna Uji',
                 'username' => 'pengguna-uji',
                 'email' => 'pengguna-uji@example.com',
@@ -142,10 +159,12 @@ class AdminUiTest extends ApplicationTestCase
         DB::table('m_26_penduduk_umur')->where('tahun', 1991)->where('kelompok_umur', 1)->delete();
         DB::table('m_19_pdrb_berlaku')->where('tahun', 1991)->where('uraian', 1)->delete();
 
-        $user = User::query()->where('username', 'pengguna-uji')->first();
-        if ($user) {
-            $user->syncRoles([]);
-            $user->delete();
+        foreach (['pengguna-uji', 'pengguna-tanpa-foto'] as $username) {
+            $user = User::query()->where('username', $username)->first();
+            if ($user) {
+                $user->syncRoles([]);
+                $user->delete();
+            }
         }
     }
 }

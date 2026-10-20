@@ -43,7 +43,11 @@ class UserController extends Controller
         $data['isdeleted'] = 0;
 
         $user = User::query()->create($data);
-        $user->addMediaFromRequest('foto')->toMediaCollection('foto');
+
+        if ($request->hasFile('foto')) {
+            $user->addMediaFromRequest('foto')->toMediaCollection('foto');
+        }
+
         $user->assignRole($data['default_role']);
 
         return redirect()->route('pengguna.index')->with('success', 'Pengguna berhasil disimpan.');

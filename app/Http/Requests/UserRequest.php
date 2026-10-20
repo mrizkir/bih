@@ -24,7 +24,7 @@ class UserRequest extends FormRequest
             'nomor_hp' => ['required', 'string', 'max:300', Rule::unique('users', 'nomor_hp')->ignore($userId)],
             'password' => [$creating ? 'required' : 'nullable', 'string', 'max:300'],
             'default_role' => ['required', 'string', Rule::exists('roles', 'name')],
-            'foto' => [$creating ? 'required' : 'nullable', 'image', 'mimes:jpeg,png,jpg,gif,svg,webp', 'max:1024'],
+            'foto' => ['nullable', 'image', 'mimes:jpeg,png,jpg,gif,svg,webp', 'max:1024'],
         ];
     }
 }
