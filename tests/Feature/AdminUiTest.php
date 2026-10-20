@@ -102,6 +102,26 @@ class AdminUiTest extends ApplicationTestCase
 
         $user = User::query()->where('username', 'pengguna-uji')->firstOrFail();
         $this->assertTrue($user->hasRole('operator'));
+        $this->assertNotNull($user->getFirstMedia('foto'));
+        $this->assertNotSame('', $user->fotoUrl());
+
+        $password = $user->password;
+
+        $this->actingAs($this->admin)
+            ->post('/pengguna/'.$user->id, [
+                'name' => 'Pengguna Uji Diubah',
+                'username' => 'pengguna-uji',
+                'email' => 'pengguna-uji@example.com',
+                'nomor_hp' => '0800000001991',
+                'password' => '',
+                'default_role' => 'operator',
+            ])
+            ->assertRedirect(route('pengguna.index'))
+            ->assertSessionHasNoErrors();
+
+        $user->refresh();
+        $this->assertSame('Pengguna Uji Diubah', $user->name);
+        $this->assertSame($password, $user->password);
 
         $this->actingAs($this->admin)
             ->delete('/pengguna/'.$user->id)

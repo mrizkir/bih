@@ -503,7 +503,7 @@ class APISosialController extends Controller
     try 
     {
       $request->validate([      
-        'pendidikan' => 'required|in:1,2,3,4,5,6,7',      
+        'pendidikan' => 'required|in:1,2,3,4,5,6,7,8',      
       ]);
     } 
     catch (ValidationException $e) 

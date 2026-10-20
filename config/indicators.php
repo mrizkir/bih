@@ -58,6 +58,7 @@ $pendidikan = [
         ['value' => 'D1/D2/D3', 'label' => 'D1/D2/D3'],
         ['value' => 'D4/S1', 'label' => 'D4/S1'],
         ['value' => 'S2/S3', 'label' => 'S2/S3'],
+        ['value' => 'Perguruan Tinggi', 'label' => 'Perguruan Tinggi'],
     ],
     'rules' => ['required', 'string', 'max:255'],
 ];

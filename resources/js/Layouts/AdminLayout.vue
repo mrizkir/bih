@@ -1,5 +1,5 @@
 <script setup>
-import { computed, watch } from 'vue';
+import { computed, ref, watch } from 'vue';
 import { router, usePage } from '@inertiajs/vue3';
 import PanelMenu from 'primevue/panelmenu';
 import Button from 'primevue/button';
@@ -9,16 +9,35 @@ import { useToast } from 'primevue/usetoast';
 
 const page = usePage();
 const toast = useToast();
+const expandedKeys = ref({});
+
+function isCurrent(url) {
+    const path = new URL(url, window.location.origin).pathname;
+
+    return page.url === path || page.url.startsWith(`${path}/`) || page.url.startsWith(`${path}?`);
+}
 
 const menuModel = computed(() => (page.props.menu ?? []).map((group) => ({
     key: group.key,
     label: group.label,
     items: group.items.map((item) => ({
         label: item.label,
-        class: page.url.startsWith(new URL(item.url, window.location.origin).pathname) ? 'menu-active' : '',
+        class: isCurrent(item.url) ? 'menu-active' : '',
         command: () => router.visit(item.url),
     })),
 })));
+
+watch(() => page.url, () => {
+    const next = { ...expandedKeys.value };
+
+    for (const group of page.props.menu ?? []) {
+        if (group.items.some((item) => isCurrent(item.url))) {
+            next[group.key] = true;
+        }
+    }
+
+    expandedKeys.value = next;
+}, { immediate: true });
 
 watch(() => page.props.flash?.success, (message) => {
     if (message) {
@@ -41,7 +60,7 @@ function logout() {
     <div class="shell">
         <aside class="sidebar">
             <a class="brand" :href="route('dashboard')">BIH</a>
-            <PanelMenu :model="menuModel" multiple />
+            <PanelMenu v-model:expanded-keys="expandedKeys" :model="menuModel" multiple />
         </aside>
         <div class="main">
             <header class="topbar">

@@ -34,7 +34,7 @@ const filteredUsers = computed(() => {
         .some((value) => String(value ?? '').toLowerCase().includes(term)));
 });
 
-const form = useForm({
+const emptyForm = () => ({
     name: '',
     username: '',
     email: '',
@@ -44,10 +44,21 @@ const form = useForm({
     foto: null,
 });
 
-function openCreate() {
-    editingId.value = null;
+const form = useForm(emptyForm());
+const fileInputKey = ref(0);
+const formKey = ref(0);
+
+function blankForm() {
+    form.defaults(emptyForm());
     form.reset();
     form.clearErrors();
+    fileInputKey.value += 1;
+    formKey.value += 1;
+}
+
+function openCreate() {
+    editingId.value = null;
+    blankForm();
     visible.value = true;
 }
 
@@ -64,7 +75,18 @@ function openEdit(user) {
     });
     form.reset();
     form.clearErrors();
+    fileInputKey.value += 1;
+    formKey.value += 1;
     visible.value = true;
+}
+
+function onDialogHide() {
+    if (visible.value) {
+        return;
+    }
+
+    editingId.value = null;
+    blankForm();
 }
 
 function onFile(event) {
@@ -140,8 +162,8 @@ function remove(user) {
             </Column>
         </DataTable>
 
-        <Dialog v-model:visible="visible" modal :header="editingId ? 'Ubah Pengguna' : 'Tambah Pengguna'" :style="{ width: '36rem' }">
-            <form class="form-grid" @submit.prevent="save">
+        <Dialog v-model:visible="visible" modal :header="editingId ? 'Ubah Pengguna' : 'Tambah Pengguna'" :style="{ width: '36rem' }" @hide="onDialogHide">
+            <form :key="formKey" class="form-grid" autocomplete="off" @submit.prevent="save">
                 <div class="field">
                     <label for="name">Nama</label>
                     <InputText id="name" v-model="form.name" fluid />
@@ -174,7 +196,7 @@ function remove(user) {
                 </div>
                 <div class="field">
                     <label>Foto</label>
-                    <FileUpload mode="basic" accept="image/*" custom-upload choose-label="Pilih foto" @select="onFile" />
+                    <FileUpload :key="fileInputKey" mode="basic" accept="image/*" custom-upload choose-label="Pilih foto" @select="onFile" />
                     <div v-if="form.errors.foto" class="field-error">{{ form.errors.foto }}</div>
                 </div>
                 <div class="actions">

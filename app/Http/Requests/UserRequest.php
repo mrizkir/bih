@@ -15,7 +15,7 @@ class UserRequest extends FormRequest
     public function rules(): array
     {
         $userId = $this->route('user');
-        $creating = $this->isMethod('post');
+        $creating = $this->routeIs('pengguna.store');
 
         return [
             'name' => ['required', 'string', 'max:300'],

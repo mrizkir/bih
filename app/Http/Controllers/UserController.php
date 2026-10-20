@@ -15,6 +15,7 @@ class UserController extends Controller
     public function index(): Response
     {
         $users = User::query()
+            ->with('media')
             ->where('isdeleted', 0)
             ->orderByDesc('id')
             ->get()
@@ -25,7 +26,7 @@ class UserController extends Controller
                 'email' => $user->email,
                 'nomor_hp' => $user->nomor_hp,
                 'default_role' => $user->default_role,
-                'foto_url' => $this->fotoUrl($user->foto),
+                'foto_url' => $user->fotoUrl(),
             ]);
 
         return Inertia::render('Admin/Users/Index', [
@@ -40,9 +41,9 @@ class UserController extends Controller
         $data['theme'] = 'default';
         $data['active'] = 1;
         $data['isdeleted'] = 0;
-        $data['foto'] = $request->file('foto')->store('img_user', 'public');
 
         $user = User::query()->create($data);
+        $user->addMediaFromRequest('foto')->toMediaCollection('foto');
         $user->assignRole($data['default_role']);
 
         return redirect()->route('pengguna.index')->with('success', 'Pengguna berhasil disimpan.');
@@ -57,8 +58,10 @@ class UserController extends Controller
         }
 
         if ($request->hasFile('foto')) {
-            $this->deleteFoto($user->foto);
-            $data['foto'] = $request->file('foto')->store('img_user', 'public');
+            $legacyFoto = $user->foto;
+            $user->addMediaFromRequest('foto')->toMediaCollection('foto');
+            $this->deleteLegacyFoto($legacyFoto);
+            $data['foto'] = 'storage/images/users/no_photo.png';
         }
 
         $user->update($data);
@@ -76,30 +79,9 @@ class UserController extends Controller
         return redirect()->route('pengguna.index')->with('success', 'Pengguna berhasil dihapus.');
     }
 
-    private function fotoUrl(?string $foto): ?string
+    private function deleteLegacyFoto(?string $foto): void
     {
-        if ($foto === null || $foto === '') {
-            return null;
-        }
-
-        if (str_starts_with($foto, 'http://') || str_starts_with($foto, 'https://')) {
-            return $foto;
-        }
-
-        if (str_starts_with($foto, 'storage/')) {
-            return asset($foto);
-        }
-
-        if (str_starts_with($foto, 'img_user/')) {
-            return asset('storage/'.$foto);
-        }
-
-        return asset('storage/img_user/'.$foto);
-    }
-
-    private function deleteFoto(?string $foto): void
-    {
-        if ($foto === null || $foto === '' || str_starts_with($foto, 'storage/images/')) {
+        if ($foto === null || $foto === '' || str_starts_with($foto, 'storage/images/') || str_starts_with($foto, 'http://') || str_starts_with($foto, 'https://')) {
             return;
         }
 

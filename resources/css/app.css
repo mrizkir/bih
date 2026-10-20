@@ -41,6 +41,16 @@ body {
     width: 100%;
 }
 
+.sidebar .p-panelmenu-item.menu-active > .p-panelmenu-item-content {
+    background: #e8f1fb;
+    border-radius: 6px;
+}
+
+.sidebar .p-panelmenu-item.menu-active .p-panelmenu-item-label {
+    color: #0b3a75;
+    font-weight: 600;
+}
+
 .main {
     flex: 1;
     min-width: 0;
